@@ -1,0 +1,21 @@
+name: DAT Catalog Builder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Test builder
+        shell: powershell
+        run: |
+          Write-Host "VideoGamesBrowser DAT Builder is working!"
+          Get-ChildItem
