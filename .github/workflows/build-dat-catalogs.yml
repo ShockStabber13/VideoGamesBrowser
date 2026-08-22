@@ -1,21 +1,114 @@
-name: DAT Catalog Builder
+name: Build DAT Catalogs + Daily Chunks
 
 on:
   workflow_dispatch:
+
+concurrency:
+  group: dat-catalogs-daily-chunks
+  cancel-in-progress: false
 
 permissions:
   contents: read
 
 jobs:
-  test:
+  build:
     runs-on: windows-latest
+    timeout-minutes: 360
 
     steps:
-      - name: Download repository
+      - name: Checkout builder
         uses: actions/checkout@v4
 
-      - name: Test builder
-        shell: powershell
+      - name: Restore builder state
+        uses: actions/cache@v4
+        with:
+          path: |
+            DATs
+            _cache
+            catalog.json
+          key: dat-igdb-state-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            dat-igdb-state-${{ runner.os }}-
+
+      - name: Write API configs from GitHub Secrets
+        shell: pwsh
+        env:
+          IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
+          IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
         run: |
-          Write-Host "VideoGamesBrowser DAT Builder is working!"
-          Get-ChildItem
+          $ErrorActionPreference = 'Stop'
+
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) {
+            throw 'GitHub Secret IGDB_CLIENT_ID is missing.'
+          }
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) {
+            throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.'
+          }
+          if ([string]::IsNullOrWhiteSpace($env:STEAM_API_KEY)) {
+            throw 'GitHub Secret STEAM_API_KEY is missing.'
+          }
+
+          [ordered]@{
+            ClientId = $env:IGDB_CLIENT_ID
+            ClientSecret = $env:IGDB_CLIENT_SECRET
+          } | ConvertTo-Json | Set-Content -Path 'igdb-config.json' -Encoding UTF8
+
+          [ordered]@{
+            ApiKey = $env:STEAM_API_KEY
+            CountryCode = 'SG'
+          } | ConvertTo-Json | Set-Content -Path 'steam-config.json' -Encoding UTF8
+
+      - name: Update preservation DATs
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Local Web Server.ps1' -ForceDatRefresh
+          if ($LASTEXITCODE -ne 0) { throw "DAT update failed with exit code $LASTEXITCODE" }
+
+      - name: Compare with IGDB and rebuild DAT-backed catalogs
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Local Web Server.ps1' -BuildStaticCache
+          if ($LASTEXITCODE -ne 0) { throw "Catalog build failed with exit code $LASTEXITCODE" }
+
+      - name: Package DAT-backed Android catalog
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Build Android Database.ps1'
+          if ($LASTEXITCODE -ne 0) { throw "Database package failed with exit code $LASTEXITCODE" }
+
+      - name: Build Daily Chunks
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Build Daily Chunks.ps1'
+          if ($LASTEXITCODE -ne 0) { throw "Daily Chunk build failed with exit code $LASTEXITCODE" }
+
+      - name: Verify outputs
+        shell: pwsh
+        run: |
+          $expected = @(
+            '_android\GameBrowser-Data.zip',
+            '_android\GameBrowser-Data.sha256',
+            '_android\GameBrowser-DailyChunks.zip',
+            '_android\GameBrowser-DailyChunks.sha256'
+          )
+
+          foreach ($path in $expected) {
+            if (!(Test-Path -LiteralPath $path)) {
+              throw "Expected output missing: $path"
+            }
+          }
+
+          Get-Item $expected | Format-Table Name, Length, LastWriteTime -AutoSize
+
+      - name: Upload finished packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: GameBrowser-DAT-Catalog-and-Daily-Chunks
+          path: |
+            _android/GameBrowser-Data.zip
+            _android/GameBrowser-Data.sha256
+            _android/GameBrowser-DailyChunks.zip
+            _android/GameBrowser-DailyChunks.sha256
+          if-no-files-found: error
+          retention-days: 7
