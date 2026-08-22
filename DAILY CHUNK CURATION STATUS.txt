@@ -1,0 +1,63 @@
+DAILY CHUNK CURATION STATUS (candidate selections before platform validation)
+
+Total selected candidates: 6,094
+Explicit exact game-specific rules available: 1,220
+Candidates using exact game-specific priority: 1,177
+Candidates falling to franchise rules: 2,497
+Candidates falling to structured genre rules: 2,420
+
+IMPORTANT: these are pre-validation counts. BUILD DAILY CHUNKS prints the final validated chunkSource counts after DAT/IGDB/Steam eligibility checks.
+
+Per platform:
+3DO: game-specific=0, franchise=5, genre=195, total=200
+Atari 2600: game-specific=0, franchise=10, genre=40, total=50
+Atari 5200: game-specific=0, franchise=3, genre=47, total=50
+Atari 7800: game-specific=0, franchise=5, genre=45, total=50
+Atari Jaguar: game-specific=0, franchise=6, genre=64, total=70
+Atari Lynx: game-specific=0, franchise=3, genre=47, total=50
+ColecoVision: game-specific=0, franchise=2, genre=48, total=50
+Dreamcast: game-specific=1, franchise=39, genre=160, total=200
+Famicom Disk System: game-specific=0, franchise=7, genre=43, total=50
+Game Boy: game-specific=0, franchise=37, genre=13, total=50
+Game Boy Advance: game-specific=0, franchise=173, genre=27, total=200
+Game Boy Color: game-specific=1, franchise=45, genre=154, total=200
+Game Gear: game-specific=0, franchise=28, genre=22, total=50
+GameCube: game-specific=194, franchise=6, genre=0, total=200
+Genesis / Mega Drive: game-specific=0, franchise=50, genre=0, total=50
+Intellivision: game-specific=0, franchise=3, genre=47, total=50
+Master System: game-specific=0, franchise=19, genre=31, total=50
+NES: game-specific=1, franchise=44, genre=5, total=50
+Neo Geo CD: game-specific=0, franchise=7, genre=43, total=50
+Neo Geo Pocket: game-specific=0, franchise=1, genre=2, total=3
+Neo Geo Pocket Color: game-specific=0, franchise=6, genre=51, total=57
+Nintendo 3DS: game-specific=1, franchise=164, genre=35, total=200
+Nintendo 64: game-specific=1, franchise=58, genre=141, total=200
+Nintendo 64DD: game-specific=0, franchise=2, genre=5, total=7
+Nintendo DS: game-specific=1, franchise=197, genre=2, total=200
+Nintendo Switch: game-specific=200, franchise=0, genre=0, total=200
+PC Engine / TurboGrafx-16: game-specific=0, franchise=7, genre=43, total=50
+PC Engine CD / TurboGrafx-CD: game-specific=0, franchise=8, genre=42, total=50
+PS Vita: game-specific=4, franchise=103, genre=93, total=200
+PS1: game-specific=182, franchise=10, genre=8, total=200
+PS2: game-specific=194, franchise=5, genre=1, total=200
+PS3: game-specific=3, franchise=197, genre=0, total=200
+PS4: game-specific=1, franchise=105, genre=94, total=200
+PS5: game-specific=0, franchise=82, genre=118, total=200
+PSP: game-specific=191, franchise=8, genre=1, total=200
+SG-1000: game-specific=0, franchise=1, genre=49, total=50
+SNES: game-specific=0, franchise=50, genre=0, total=50
+Sega 32X: game-specific=0, franchise=4, genre=29, total=33
+Sega CD: game-specific=0, franchise=9, genre=41, total=50
+Sega Saturn: game-specific=0, franchise=50, genre=150, total=200
+SuperGrafx: game-specific=0, franchise=0, genre=3, total=3
+Vectrex: game-specific=0, franchise=0, genre=28, total=28
+Virtual Boy: game-specific=0, franchise=4, genre=26, total=30
+Wii: game-specific=0, franchise=200, genre=0, total=200
+Wii U: game-specific=0, franchise=198, genre=2, total=200
+Windows: game-specific=200, franchise=0, genre=0, total=200
+WonderSwan: game-specific=0, franchise=3, genre=91, total=94
+WonderSwan Color: game-specific=0, franchise=7, genre=62, total=69
+Xbox: game-specific=1, franchise=145, genre=54, total=200
+Xbox 360: game-specific=0, franchise=200, genre=0, total=200
+Xbox One: game-specific=0, franchise=104, genre=96, total=200
+Xbox Series X|S: game-specific=1, franchise=77, genre=122, total=200

@@ -1,0 +1,1900 @@
+[
+  {
+    "name": "Need for Speed",
+    "patterns": [
+      "need for speed"
+    ],
+    "dailyChunk": "Finish one event or short event chain, then spend winnings on one focused car upgrade before stopping.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Burnout",
+    "patterns": [
+      "burnout"
+    ],
+    "dailyChunk": "Complete one event and one Road Rage/Crash-style challenge, then stop after the next license or event unlock.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Forza",
+    "patterns": [
+      "forza horizon",
+      "forza motorsport"
+    ],
+    "dailyChunk": "Complete one championship/event set or 3 races, then tune or switch one car for the next objective.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Gran Turismo",
+    "patterns": [
+      "gran turismo"
+    ],
+    "dailyChunk": "Complete one license-test group or one championship/event series, then buy or tune only what the next event needs.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Ridge Racer",
+    "patterns": [
+      "ridge racer"
+    ],
+    "dailyChunk": "Finish one Grand Prix/tour set of 3–4 races, then stop after the next car/class unlock.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Mario Kart",
+    "patterns": [
+      "mario kart"
+    ],
+    "dailyChunk": "Complete one full cup, then do one Time Trial attempt on the track that gave you the most trouble.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "F-Zero",
+    "patterns": [
+      "f zero",
+      "fzero"
+    ],
+    "dailyChunk": "Complete one Grand Prix cup or 4 races, then stop after checking the next machine/course unlock.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Wipeout",
+    "patterns": [
+      "wipeout",
+      "wip3out"
+    ],
+    "dailyChunk": "Complete one event block or tournament round, then make one focused ship/class progression attempt.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "DiRT / Colin McRae",
+    "patterns": [
+      "dirt",
+      "colin mcrae"
+    ],
+    "dailyChunk": "Complete one rally/event block of 3–5 stages, repair or tune once, then stop at the next event screen.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "GRID",
+    "patterns": [
+      "grid autosport",
+      "race driver grid",
+      "grid legends",
+      "grid 2"
+    ],
+    "dailyChunk": "Complete one race weekend/event set, then stop after the standings and upgrade screen.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Trackmania",
+    "patterns": [
+      "trackmania"
+    ],
+    "dailyChunk": "Clear one medal block of 5 tracks, then spend the remaining time improving one personal-best run.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Midnight Club",
+    "patterns": [
+      "midnight club"
+    ],
+    "dailyChunk": "Win 2–3 city races for the same contact/series, then return to the garage and stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Driver",
+    "patterns": [
+      "driver san francisco",
+      "driver parallel lines",
+      "driv3r",
+      "driver 2",
+      "driver 3"
+    ],
+    "dailyChunk": "Complete one story driving mission plus one short side challenge, then stop at the next garage/save point.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "F1",
+    "patterns": [
+      "f1 2",
+      "f1 20",
+      "formula 1"
+    ],
+    "dailyChunk": "Complete one practice/qualifying/race segment or one short Grand Prix, then stop at the team hub.",
+    "minutes": 40,
+    "score": 8
+  },
+  {
+    "name": "Ace Combat",
+    "patterns": [
+      "ace combat"
+    ],
+    "dailyChunk": "Fly one campaign sortie from briefing through debrief, then choose/tune the aircraft for the next mission.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Sonic",
+    "patterns": [
+      "sonic"
+    ],
+    "dailyChunk": "Clear one zone or 3–5 stages, then make one focused time/collectible attempt before stopping.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Super Mario",
+    "patterns": [
+      "super mario",
+      "mario 64",
+      "mario sunshine",
+      "mario galaxy",
+      "mario odyssey",
+      "new super mario"
+    ],
+    "dailyChunk": "Clear one world/area objective or 3–5 levels, collect one optional star/moon/secret, then stop at the hub.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Donkey Kong",
+    "patterns": [
+      "donkey kong"
+    ],
+    "dailyChunk": "Clear one world section or 4–6 stages, including one collectible-focused replay, then stop at the map.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Kirby",
+    "patterns": [
+      "kirby"
+    ],
+    "dailyChunk": "Clear one world/area set of stages and one bonus/challenge room, then stop at the next map checkpoint.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Crash Bandicoot",
+    "patterns": [
+      "crash bandicoot"
+    ],
+    "dailyChunk": "Clear 3–5 levels, then replay one for a gem/relic target before returning to the map.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Spyro",
+    "patterns": [
+      "spyro"
+    ],
+    "dailyChunk": "Finish one realm/world objective and collect a focused batch of gems/dragons/orbs before returning to the hub.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Ratchet & Clank",
+    "patterns": [
+      "ratchet and clank",
+      "ratchet clank"
+    ],
+    "dailyChunk": "Finish one planet/mission objective, buy or upgrade one weapon, then stop at the next ship/save point.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Jak and Daxter",
+    "patterns": [
+      "jak and daxter",
+      "jak ii",
+      "jak 2",
+      "jak 3"
+    ],
+    "dailyChunk": "Complete one mission chain or major area objective, then collect one nearby optional objective before saving.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Sly Cooper",
+    "patterns": [
+      "sly cooper"
+    ],
+    "dailyChunk": "Complete one heist/job mission and one nearby clue/collectible objective, then return to the safehouse.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Rayman",
+    "patterns": [
+      "rayman"
+    ],
+    "dailyChunk": "Clear one world section or 4–6 stages, including one collectible/cage rescue attempt, then stop at the map.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Mega Man",
+    "patterns": [
+      "mega man",
+      "megaman"
+    ],
+    "dailyChunk": "Clear one Robot Master/Maverick stage or equivalent mission, then spend upgrades and stop at stage select.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Metroid",
+    "patterns": [
+      "metroid"
+    ],
+    "dailyChunk": "Explore from one save station to the next major upgrade/boss objective, then backtrack only for nearby pickups and save.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Castlevania",
+    "patterns": [
+      "castlevania"
+    ],
+    "dailyChunk": "Advance to the next major boss/save room or clear one stage, then spend a short cleanup pass on nearby secrets.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Prince of Persia",
+    "patterns": [
+      "prince of persia"
+    ],
+    "dailyChunk": "Advance through one major palace/area puzzle-and-combat section, then stop at the next safe checkpoint.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Tomb Raider",
+    "patterns": [
+      "tomb raider"
+    ],
+    "dailyChunk": "Complete one tomb/major area objective, pick up nearby collectibles, then stop at the next campsite/checkpoint.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Uncharted",
+    "patterns": [
+      "uncharted"
+    ],
+    "dailyChunk": "Finish one full chapter or major set-piece section, then stop at the next chapter/checkpoint.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "God of War",
+    "patterns": [
+      "god of war"
+    ],
+    "dailyChunk": "Complete one major objective/boss or one realm-area loop, spend upgrades, then stop at the next checkpoint.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Devil May Cry",
+    "patterns": [
+      "devil may cry"
+    ],
+    "dailyChunk": "Clear one mission, then spend 5–10 minutes practicing or upgrading one weapon/style before stopping.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Bayonetta",
+    "patterns": [
+      "bayonetta"
+    ],
+    "dailyChunk": "Clear one chapter, then replay one short verse/challenge for a better medal before stopping.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Ninja Gaiden",
+    "patterns": [
+      "ninja gaiden"
+    ],
+    "dailyChunk": "Clear one chapter or major checkpoint block, upgrade one weapon/skill, then stop before the next area.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Darksiders",
+    "patterns": [
+      "darksiders"
+    ],
+    "dailyChunk": "Finish one dungeon/area objective or boss, spend upgrades, then stop at the next Vulgrim/save checkpoint.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Batman Arkham",
+    "patterns": [
+      "batman arkham",
+      "arkham asylum",
+      "arkham city",
+      "arkham knight",
+      "arkham origins"
+    ],
+    "dailyChunk": "Complete one story objective and one nearby predator/combat/side mission, then return to free-roam and stop.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Spider-Man",
+    "patterns": [
+      "spider man",
+      "spiderman"
+    ],
+    "dailyChunk": "Complete one main mission and one nearby activity/crime/challenge, then stop after spending earned upgrades.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Assassin's Creed",
+    "patterns": [
+      "assassins creed",
+      "assassin s creed"
+    ],
+    "dailyChunk": "Complete one main memory or assassination objective plus one nearby side activity, then stop at a fast-travel/save point.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Far Cry",
+    "patterns": [
+      "far cry"
+    ],
+    "dailyChunk": "Complete one story/side mission and capture one nearby outpost/activity, then restock and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Watch Dogs",
+    "patterns": [
+      "watch dogs"
+    ],
+    "dailyChunk": "Complete one operation/mission and one nearby hack/activity, then spend a skill point and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Grand Theft Auto",
+    "patterns": [
+      "grand theft auto",
+      "gta "
+    ],
+    "dailyChunk": "Complete 2 story/side missions for the same contact, then save at a safehouse after one vehicle/property stop.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Saints Row",
+    "patterns": [
+      "saints row"
+    ],
+    "dailyChunk": "Complete 2 story/activity missions, spend rewards on one upgrade, then return to a crib/HQ and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Mafia",
+    "patterns": [
+      "mafia definitive",
+      "mafia ii",
+      "mafia 2",
+      "mafia iii",
+      "mafia 3"
+    ],
+    "dailyChunk": "Finish one story chapter or mission chain, then stop at the next chapter transition/checkpoint.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Like a Dragon / Yakuza",
+    "patterns": [
+      "yakuza",
+      "like a dragon"
+    ],
+    "dailyChunk": "Complete one story chapter segment or 2 substories, then finish at a safe/save point after one minigame or upgrade stop.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Red Dead Redemption",
+    "patterns": [
+      "red dead"
+    ],
+    "dailyChunk": "Complete one story/stranger mission plus one short camp/hunting task, then save at camp or a safe point.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Just Cause",
+    "patterns": [
+      "just cause"
+    ],
+    "dailyChunk": "Complete one mission or liberate one settlement/base, then spend upgrades and stop at a safe fast-travel point.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Sleeping Dogs",
+    "patterns": [
+      "sleeping dogs"
+    ],
+    "dailyChunk": "Complete one case/story mission and one nearby favor/race, then return to an apartment and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Max Payne",
+    "patterns": [
+      "max payne"
+    ],
+    "dailyChunk": "Clear one chapter or major checkpoint block, then stop at the next chapter/loading transition.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Hitman",
+    "patterns": [
+      "hitman"
+    ],
+    "dailyChunk": "Complete one full mission contract, then review challenges/mastery and pick one target for the next session.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Splinter Cell",
+    "patterns": [
+      "splinter cell"
+    ],
+    "dailyChunk": "Clear one full infiltration mission or one long checkpoint block, then stop after the debrief/save.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Metal Gear",
+    "patterns": [
+      "metal gear solid",
+      "metal gear"
+    ],
+    "dailyChunk": "Complete one major infiltration/objective section or boss, then stop at the next codec/save break.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Dishonored",
+    "patterns": [
+      "dishonored"
+    ],
+    "dailyChunk": "Complete one mission district/objective using your chosen route, then stop after the mission-summary screen.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Deus Ex",
+    "patterns": [
+      "deus ex"
+    ],
+    "dailyChunk": "Complete one main objective or hub mission branch, spend augmentations/inventory time, then save before the next area.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Resident Evil",
+    "patterns": [
+      "resident evil"
+    ],
+    "dailyChunk": "Advance from one save-room/typewriter checkpoint through the next major objective or boss, then save and organize inventory.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Silent Hill",
+    "patterns": [
+      "silent hill"
+    ],
+    "dailyChunk": "Explore one major area/puzzle block, reach the next safe/save point, then stop before entering the next zone.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Fatal Frame",
+    "patterns": [
+      "fatal frame",
+      "project zero"
+    ],
+    "dailyChunk": "Clear one chapter/haunting objective and save after upgrading the camera or reviewing clues.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Dead Space",
+    "patterns": [
+      "dead space"
+    ],
+    "dailyChunk": "Complete one chapter/objective block, upgrade gear at the next bench/store, then save and stop.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "The Evil Within",
+    "patterns": [
+      "evil within"
+    ],
+    "dailyChunk": "Clear one chapter or major encounter block, spend green gel/upgrades, then stop at the next safe room.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Outlast",
+    "patterns": [
+      "outlast"
+    ],
+    "dailyChunk": "Reach the next major safe/checkpoint objective or chapter transition, then stop before the next pursuit area.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Amnesia",
+    "patterns": [
+      "amnesia"
+    ],
+    "dailyChunk": "Solve one major puzzle/area objective and stop at the next safe room or chapter transition.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Five Nights at Freddy’s",
+    "patterns": [
+      "five nights at freddy",
+      "fnaf"
+    ],
+    "dailyChunk": "Clear one full night or one major challenge mode objective, then stop at the results/menu screen.",
+    "minutes": 20,
+    "score": 10
+  },
+  {
+    "name": "Left 4 Dead",
+    "patterns": [
+      "left 4 dead"
+    ],
+    "dailyChunk": "Complete one full campaign chapter/act or one entire short campaign on your chosen difficulty.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Dying Light",
+    "patterns": [
+      "dying light"
+    ],
+    "dailyChunk": "Complete one quest plus one nearby safe-zone/activity, then return to a safe house before stopping.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Dead Rising",
+    "patterns": [
+      "dead rising"
+    ],
+    "dailyChunk": "Play one case objective/time block, rescue one survivor or complete one side objective, then save and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "The Last of Us",
+    "patterns": [
+      "last of us"
+    ],
+    "dailyChunk": "Finish one chapter/major encounter section, then stop at the next quiet exploration/checkpoint transition.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Halo",
+    "patterns": [
+      "halo"
+    ],
+    "dailyChunk": "Complete one campaign mission or a fixed multiplayer set of 3–5 matches, then stop at the results screen.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Gears of War",
+    "patterns": [
+      "gears of war",
+      "gears 5",
+      "gears 4"
+    ],
+    "dailyChunk": "Finish one campaign chapter/act section or 3 Horde/Versus rounds, then stop at a checkpoint/results screen.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Call of Duty",
+    "patterns": [
+      "call of duty"
+    ],
+    "dailyChunk": "Complete 2–3 campaign missions or a fixed set of 4–5 multiplayer matches, then stop at the results screen.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Battlefield",
+    "patterns": [
+      "battlefield"
+    ],
+    "dailyChunk": "Complete one campaign war story/mission or 2–3 full multiplayer rounds, then stop after the scoreboard.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Medal of Honor",
+    "patterns": [
+      "medal of honor"
+    ],
+    "dailyChunk": "Complete one campaign mission from briefing to debrief, then stop at the next mission-select screen.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "DOOM",
+    "patterns": [
+      "doom"
+    ],
+    "dailyChunk": "Clear one full level/mission, finish nearby secrets if convenient, then stop at the mission-complete screen.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Quake",
+    "patterns": [
+      "quake"
+    ],
+    "dailyChunk": "Clear one episode map block or 4–6 levels, then stop at the next map/episode transition.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Wolfenstein",
+    "patterns": [
+      "wolfenstein"
+    ],
+    "dailyChunk": "Complete one mission/chapter objective block, spend upgrades, then stop at the next hub/checkpoint.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Half-Life",
+    "patterns": [
+      "half life"
+    ],
+    "dailyChunk": "Advance through one full chapter or major facility/area section, then stop at a calm autosave/checkpoint.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Portal",
+    "patterns": [
+      "portal"
+    ],
+    "dailyChunk": "Clear one test-chamber chapter or 5–8 chambers, then stop at the next chapter transition.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "BioShock",
+    "patterns": [
+      "bioshock"
+    ],
+    "dailyChunk": "Complete one major area objective, collect nearby upgrades/audio logs, then save before entering the next zone.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Borderlands",
+    "patterns": [
+      "borderlands"
+    ],
+    "dailyChunk": "Complete one main quest plus one nearby side quest, turn them in, sort loot, then stop at a hub.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Crysis",
+    "patterns": [
+      "crysis"
+    ],
+    "dailyChunk": "Complete one mission objective chain or major map section, then stop at the next checkpoint.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Titanfall",
+    "patterns": [
+      "titanfall"
+    ],
+    "dailyChunk": "Complete one campaign mission or 4–5 multiplayer matches, then stop after the results/loadout screen.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Apex Legends",
+    "patterns": [
+      "apex legends"
+    ],
+    "dailyChunk": "Play a fixed block of 3–5 matches or stop after one strong top-5/win result and review challenges.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Overwatch",
+    "patterns": [
+      "overwatch"
+    ],
+    "dailyChunk": "Play 4–6 matches or one complete competitive session block, then stop after challenge/progression review.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Counter-Strike",
+    "patterns": [
+      "counter strike",
+      "counterstrike"
+    ],
+    "dailyChunk": "Play one full competitive match or a fixed set of 3–5 shorter matches, then stop at the scoreboard.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Rainbow Six",
+    "patterns": [
+      "rainbow six"
+    ],
+    "dailyChunk": "Complete one mission/scenario or 3–5 multiplayer matches, then review loadouts and stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Ghost Recon",
+    "patterns": [
+      "ghost recon"
+    ],
+    "dailyChunk": "Complete one tactical mission/objective chain, restock or tune the squad loadout, then stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "The Division",
+    "patterns": [
+      "division 2",
+      "the division"
+    ],
+    "dailyChunk": "Complete one main/side mission plus one nearby control-point/activity, then return to a safe house and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Destiny",
+    "patterns": [
+      "destiny"
+    ],
+    "dailyChunk": "Complete one strike/mission/activity set plus a short bounty cleanup, then return to orbit and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Warframe",
+    "patterns": [
+      "warframe"
+    ],
+    "dailyChunk": "Complete one node/quest step or 3–5 missions, claim/craft upgrades, then return to the Orbiter and stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Mass Effect",
+    "patterns": [
+      "mass effect"
+    ],
+    "dailyChunk": "Complete one main/loyalty mission or one planet-side objective chain, then return to the ship and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Dragon Age",
+    "patterns": [
+      "dragon age"
+    ],
+    "dailyChunk": "Complete one quest chain or one dungeon/area objective, handle party/inventory upgrades, then save at camp/hub.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "The Elder Scrolls",
+    "patterns": [
+      "elder scrolls",
+      "skyrim",
+      "morrowind",
+      "oblivion"
+    ],
+    "dailyChunk": "Complete one quest or one dungeon/ruin, then return to town to sell, craft, and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Fallout",
+    "patterns": [
+      "fallout"
+    ],
+    "dailyChunk": "Complete one quest or one location/dungeon, then return to a settlement/town to sort loot and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "The Witcher",
+    "patterns": [
+      "witcher"
+    ],
+    "dailyChunk": "Complete one contract/quest step or one investigation-combat chain, then meditate/craft and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Cyberpunk 2077",
+    "patterns": [
+      "cyberpunk"
+    ],
+    "dailyChunk": "Complete one gig/side job or major quest step, then visit a safe fast-travel point and handle upgrades.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Baldur's Gate",
+    "patterns": [
+      "baldur s gate",
+      "baldurs gate"
+    ],
+    "dailyChunk": "Complete one quest objective or one dungeon/combat section, then camp, level/manage the party, and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Divinity",
+    "patterns": [
+      "divinity original sin"
+    ],
+    "dailyChunk": "Complete one quest/combat area objective, then regroup, manage gear, and save before moving on.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Diablo",
+    "patterns": [
+      "diablo"
+    ],
+    "dailyChunk": "Clear one dungeon/quest objective or one bounty/rift block, return to town, salvage gear, then stop.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Dark Souls",
+    "patterns": [
+      "dark souls"
+    ],
+    "dailyChunk": "Advance from one bonfire to the next boss/major shortcut, spend souls, then stop safely at a bonfire.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Demon's Souls",
+    "patterns": [
+      "demon s souls",
+      "demons souls"
+    ],
+    "dailyChunk": "Clear one archstone section or boss attempt block, return to the Nexus to level/upgrade, then stop.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Bloodborne",
+    "patterns": [
+      "bloodborne"
+    ],
+    "dailyChunk": "Advance from one lamp to the next shortcut/boss objective, spend echoes in the Dream, then stop.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Elden Ring",
+    "patterns": [
+      "elden ring"
+    ],
+    "dailyChunk": "Clear one dungeon/major exploration objective or boss attempt block, then rest and spend runes at grace.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Nioh",
+    "patterns": [
+      "nioh"
+    ],
+    "dailyChunk": "Complete one mission/sub-mission, dismantle or equip loot, spend skills, then stop at the mission map.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Monster Hunter",
+    "patterns": [
+      "monster hunter"
+    ],
+    "dailyChunk": "Complete one hunt, handle carving/crafting/upgrades, then stop back at the village/gathering hub.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Final Fantasy",
+    "patterns": [
+      "final fantasy"
+    ],
+    "dailyChunk": "Complete one story segment, dungeon section, or major boss objective, then save at the next clear checkpoint.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Dragon Quest",
+    "patterns": [
+      "dragon quest"
+    ],
+    "dailyChunk": "Complete one quest/dungeon objective or town-to-town story segment, then heal, shop, and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Persona",
+    "patterns": [
+      "persona"
+    ],
+    "dailyChunk": "Play one in-game day block—social activities or one dungeon objective—then stop after the next save opportunity.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Shin Megami Tensei",
+    "patterns": [
+      "shin megami tensei"
+    ],
+    "dailyChunk": "Complete one dungeon/map objective, fuse/manage demons, then save at the next terminal/leyline.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Kingdom Hearts",
+    "patterns": [
+      "kingdom hearts"
+    ],
+    "dailyChunk": "Complete one world/story objective or boss, handle abilities/equipment, then stop at the next save point.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Tales",
+    "patterns": [
+      "tales of"
+    ],
+    "dailyChunk": "Complete one story/dungeon objective or boss segment, cook/manage skills, then stop at the next save point.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Ys",
+    "patterns": [
+      "ys viii",
+      "ys ix",
+      "ys x",
+      "ys origin",
+      "ys "
+    ],
+    "dailyChunk": "Complete one exploration/dungeon objective or boss segment, upgrade gear, then stop at the next crystal/save point.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Xenoblade",
+    "patterns": [
+      "xenoblade"
+    ],
+    "dailyChunk": "Complete one story quest step plus one nearby side objective, then return to a landmark/camp and save.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Fire Emblem",
+    "patterns": [
+      "fire emblem"
+    ],
+    "dailyChunk": "Complete one full battle/map, then spend time on supports, inventory, and unit prep before stopping.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Pokémon",
+    "patterns": [
+      "pokemon",
+      "pokémon"
+    ],
+    "dailyChunk": "Reach the next town/gym/story checkpoint or complete one focused catching/training objective, then save.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "The Legend of Zelda",
+    "patterns": [
+      "legend of zelda",
+      "zelda"
+    ],
+    "dailyChunk": "Complete one shrine/dungeon objective or major quest step, collect nearby upgrades, then save at a safe point.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Chrono",
+    "patterns": [
+      "chrono trigger",
+      "chrono cross"
+    ],
+    "dailyChunk": "Complete one story area/dungeon section or boss objective, then save at the next world-map/checkpoint break.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Mana",
+    "patterns": [
+      "secret of mana",
+      "trials of mana",
+      "legend of mana",
+      "visions of mana"
+    ],
+    "dailyChunk": "Complete one dungeon/story objective or boss, upgrade gear/skills, then save before the next area.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Star Ocean",
+    "patterns": [
+      "star ocean"
+    ],
+    "dailyChunk": "Complete one story/dungeon objective, handle crafting/skills, then stop at the next save point or town.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Suikoden",
+    "patterns": [
+      "suikoden"
+    ],
+    "dailyChunk": "Complete one story recruitment/war objective or dungeon section, then return to HQ and save.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Golden Sun",
+    "patterns": [
+      "golden sun"
+    ],
+    "dailyChunk": "Complete one dungeon/puzzle area or major story objective, rebalance Djinn/equipment, then save.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Mario & Luigi",
+    "patterns": [
+      "mario and luigi"
+    ],
+    "dailyChunk": "Complete one major area/dungeon objective or boss, handle gear/beans, then save before the next zone.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Disgaea",
+    "patterns": [
+      "disgaea"
+    ],
+    "dailyChunk": "Clear one story map or focused Item World block, then manage equipment/reincarnation and stop at the hub.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Valkyria Chronicles",
+    "patterns": [
+      "valkyria chronicles"
+    ],
+    "dailyChunk": "Complete one full operation/battle, spend experience/upgrades at HQ, then stop before the next briefing.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "XCOM",
+    "patterns": [
+      "xcom"
+    ],
+    "dailyChunk": "Complete one tactical mission, then handle research/base/squad management before ending at mission control.",
+    "minutes": 45,
+    "score": 10
+  },
+  {
+    "name": "Civilization",
+    "patterns": [
+      "civilization"
+    ],
+    "dailyChunk": "Play a fixed 25–40 turn block or stop after completing one major civic/war/wonder objective.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Age of Empires",
+    "patterns": [
+      "age of empires"
+    ],
+    "dailyChunk": "Complete one campaign mission or one skirmish, then stop at the victory/results screen.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "StarCraft",
+    "patterns": [
+      "starcraft"
+    ],
+    "dailyChunk": "Complete one campaign mission or a fixed ladder set of 2–3 matches, then stop at results.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Warcraft",
+    "patterns": [
+      "warcraft iii",
+      "warcraft 3"
+    ],
+    "dailyChunk": "Complete one campaign mission or a fixed set of multiplayer matches, then stop at the mission/results screen.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Command & Conquer",
+    "patterns": [
+      "command and conquer",
+      "command conquer",
+      "red alert"
+    ],
+    "dailyChunk": "Complete one campaign mission or skirmish, then stop at the debrief/results screen.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Total War",
+    "patterns": [
+      "total war"
+    ],
+    "dailyChunk": "Play one campaign turn block ending after one major battle/settlement decision, then save on the campaign map.",
+    "minutes": 45,
+    "score": 8
+  },
+  {
+    "name": "Heroes of Might and Magic",
+    "patterns": [
+      "heroes of might and magic",
+      "heroes vii",
+      "heroes vi"
+    ],
+    "dailyChunk": "Complete one scenario objective or several campaign turns ending after a major battle, then save.",
+    "minutes": 45,
+    "score": 8
+  },
+  {
+    "name": "Advance Wars",
+    "patterns": [
+      "advance wars"
+    ],
+    "dailyChunk": "Complete one full mission/map, then stop at the next briefing/unit-selection screen.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Pikmin",
+    "patterns": [
+      "pikmin"
+    ],
+    "dailyChunk": "Spend one in-game day clearing one cave/treasure/route objective, then end safely at sunset.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "SimCity",
+    "patterns": [
+      "simcity"
+    ],
+    "dailyChunk": "Play one planning cycle focused on a single city goal—zoning, transport, budget, or services—then save.",
+    "minutes": 35,
+    "score": 8
+  },
+  {
+    "name": "The Sims",
+    "patterns": [
+      "the sims"
+    ],
+    "dailyChunk": "Play 1–2 in-game days focused on one household goal, then save after needs, work, and build tasks are stable.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Cities: Skylines",
+    "patterns": [
+      "cities skylines",
+      "cities skylines ii"
+    ],
+    "dailyChunk": "Spend one session solving one city problem—traffic, zoning, transit, utilities—then let the city stabilize and save.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "RollerCoaster Tycoon",
+    "patterns": [
+      "rollercoaster tycoon"
+    ],
+    "dailyChunk": "Complete one park objective milestone or build/optimize one major ride area, then save.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Planet Coaster",
+    "patterns": [
+      "planet coaster"
+    ],
+    "dailyChunk": "Build or optimize one themed park area or complete one career objective, then save after testing finances/queues.",
+    "minutes": 40,
+    "score": 8
+  },
+  {
+    "name": "Two Point",
+    "patterns": [
+      "two point hospital",
+      "two point campus",
+      "two point museum"
+    ],
+    "dailyChunk": "Complete one star/objective milestone or stabilize one facility wing, then save after staff/finances are settled.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Farming Simulator",
+    "patterns": [
+      "farming simulator"
+    ],
+    "dailyChunk": "Complete one field/contract cycle—prepare, plant, harvest, or deliver—then park equipment and save.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Euro Truck Simulator",
+    "patterns": [
+      "euro truck simulator"
+    ],
+    "dailyChunk": "Complete one delivery from pickup to parking, then repair/refuel and stop at the job screen.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "American Truck Simulator",
+    "patterns": [
+      "american truck simulator"
+    ],
+    "dailyChunk": "Complete one delivery from pickup to parking, then repair/refuel and stop at the job screen.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Microsoft Flight Simulator",
+    "patterns": [
+      "flight simulator"
+    ],
+    "dailyChunk": "Fly one complete short route from startup/takeoff through landing/shutdown, then stop at the world map.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "SnowRunner",
+    "patterns": [
+      "snowrunner",
+      "mudrunner",
+      "spintires"
+    ],
+    "dailyChunk": "Complete one contract/task leg or cargo delivery, recover/refuel the truck, then stop at a garage.",
+    "minutes": 45,
+    "score": 9
+  },
+  {
+    "name": "Harvest Moon / Story of Seasons",
+    "patterns": [
+      "harvest moon",
+      "story of seasons"
+    ],
+    "dailyChunk": "Play 2 in-game days focused on one farm goal—crop cycle, animal upgrade, festival prep, or relationship milestone.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Stardew Valley",
+    "patterns": [
+      "stardew valley"
+    ],
+    "dailyChunk": "Play 2 in-game days focused on one farm, mine, fishing, community, or relationship objective, then sleep/save.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Animal Crossing",
+    "patterns": [
+      "animal crossing"
+    ],
+    "dailyChunk": "Complete one daily checklist—shops, fossils, villagers, one island/town project—then save after tidying inventory.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Rune Factory",
+    "patterns": [
+      "rune factory"
+    ],
+    "dailyChunk": "Play one in-game day combining one farm/social goal with one dungeon/resource objective, then sleep/save.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "My Time",
+    "patterns": [
+      "my time at portia",
+      "my time at sandrock"
+    ],
+    "dailyChunk": "Play one in-game day centered on one commission/build, finish resource gathering, then sleep/save.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Minecraft",
+    "patterns": [
+      "minecraft"
+    ],
+    "dailyChunk": "Choose one build/exploration/resource objective, finish one clear milestone, return to base, store loot, then stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "Terraria",
+    "patterns": [
+      "terraria"
+    ],
+    "dailyChunk": "Complete one exploration/build/boss-prep objective, return home to sort loot and craft, then save/exit.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "LEGO Games",
+    "patterns": [
+      "lego star wars",
+      "lego batman",
+      "lego marvel",
+      "lego harry potter",
+      "lego indiana jones",
+      "lego jurassic",
+      "lego city",
+      "lego dc"
+    ],
+    "dailyChunk": "Finish one story level, then replay one short section for a collectible/True target before returning to the hub.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "LittleBigPlanet",
+    "patterns": [
+      "littlebigplanet"
+    ],
+    "dailyChunk": "Clear 2–3 story levels, then spend 10 minutes on collectibles or a community/creation objective before stopping.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Tony Hawk",
+    "patterns": [
+      "tony hawk",
+      "thps"
+    ],
+    "dailyChunk": "Complete one level’s goal set or one career competition, then make one score/combo attempt before moving on.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Skate",
+    "patterns": [
+      "skate 2",
+      "skate 3",
+      "skate.",
+      "skate "
+    ],
+    "dailyChunk": "Complete 3–5 career challenges or one contest, then spend 10 minutes on one line/trick goal before stopping.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "SSX",
+    "patterns": [
+      "ssx"
+    ],
+    "dailyChunk": "Complete one event block of 3–4 races/trick events, then retry one course for a medal/score target.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "NBA 2K",
+    "patterns": [
+      "nba 2k"
+    ],
+    "dailyChunk": "Play one full game or one MyCareer/season game plus one short training/management task, then stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "EA Sports FC / FIFA",
+    "patterns": [
+      "ea sports fc",
+      "fifa "
+    ],
+    "dailyChunk": "Play one full match or a 2–3 match tournament/career block, then handle one squad/training task and stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Madden NFL",
+    "patterns": [
+      "madden nfl"
+    ],
+    "dailyChunk": "Play one full game or one franchise-week matchup, then handle roster/training tasks and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "NHL",
+    "patterns": [
+      "nhl "
+    ],
+    "dailyChunk": "Play one full game or one career/franchise matchup, then handle one lineup/training task and stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "MLB The Show",
+    "patterns": [
+      "mlb the show"
+    ],
+    "dailyChunk": "Play one full game or one Road-to-the-Show series block, then handle training/lineup tasks and stop.",
+    "minutes": 40,
+    "score": 9
+  },
+  {
+    "name": "WWE 2K",
+    "patterns": [
+      "wwe 2k",
+      "wwe smackdown",
+      "smackdown vs raw"
+    ],
+    "dailyChunk": "Play one story/season match plus one exhibition or challenge, then stop after the next storyline/result screen.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "UFC",
+    "patterns": [
+      "ufc "
+    ],
+    "dailyChunk": "Play one career/fight event plus one training block, then stop at the post-fight/career hub.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "eFootball / PES",
+    "patterns": [
+      "efootball",
+      "pro evolution soccer",
+      "pes 20"
+    ],
+    "dailyChunk": "Play one full match or a 2–3 match league/cup block, then handle squad management and stop.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Everybody's Golf",
+    "patterns": [
+      "everybodys golf",
+      "everybody s golf",
+      "hot shots golf"
+    ],
+    "dailyChunk": "Play one 9-hole round or tournament block, then stop after the scorecard/reward screen.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Street Fighter",
+    "patterns": [
+      "street fighter"
+    ],
+    "dailyChunk": "Clear one Arcade route or play a fixed set of 8–10 matches, then practice one combo/punish for 10 minutes.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Tekken",
+    "patterns": [
+      "tekken"
+    ],
+    "dailyChunk": "Clear one Arcade/Treasure route or play 8–10 matches, then practice one launcher/combo/punish sequence.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Mortal Kombat",
+    "patterns": [
+      "mortal kombat"
+    ],
+    "dailyChunk": "Clear one tower/story chapter or play 8–10 matches, then practice one combo/fatality sequence.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Soulcalibur",
+    "patterns": [
+      "soulcalibur"
+    ],
+    "dailyChunk": "Clear one Arcade/Weapon Master/Chronicle segment, then play 5 matches learning one weapon style.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Guilty Gear",
+    "patterns": [
+      "guilty gear"
+    ],
+    "dailyChunk": "Clear one Arcade route or play 8–10 matches, then practice one Roman-Cancel/combo sequence.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "The King of Fighters",
+    "patterns": [
+      "king of fighters",
+      "kof "
+    ],
+    "dailyChunk": "Clear one Arcade team run or play 8–10 matches, then practice one team order/combo setup.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Super Smash Bros",
+    "patterns": [
+      "super smash bros",
+      "smash bros"
+    ],
+    "dailyChunk": "Clear one Classic/Adventure route or play 8–10 matches, then complete one challenge/spirit objective.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Marvel vs. Capcom",
+    "patterns": [
+      "marvel vs capcom",
+      "marvel vs. capcom"
+    ],
+    "dailyChunk": "Clear one Arcade route or play 8–10 matches, then practice one team assist/combo sequence.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Dragon Ball Fighting",
+    "patterns": [
+      "dragon ball z budokai",
+      "dragon ball xenoverse",
+      "dragon ball fighterz",
+      "dragon ball sparking",
+      "dragon ball raging blast"
+    ],
+    "dailyChunk": "Clear one story/mission block or play 6–8 fights, then spend upgrades/training time before stopping.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Naruto Ultimate Ninja",
+    "patterns": [
+      "naruto ultimate ninja",
+      "naruto shippuden ultimate ninja"
+    ],
+    "dailyChunk": "Complete one story mission block or 6–8 fights, then handle unlocks/training and stop.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Dynasty Warriors",
+    "patterns": [
+      "dynasty warriors"
+    ],
+    "dailyChunk": "Clear one battlefield scenario and spend rewards on one officer/weapon build before starting the next map.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Samurai Warriors",
+    "patterns": [
+      "samurai warriors"
+    ],
+    "dailyChunk": "Clear one battlefield scenario and spend rewards on one officer/weapon build before starting the next map.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Warriors Orochi",
+    "patterns": [
+      "warriors orochi"
+    ],
+    "dailyChunk": "Clear one battlefield scenario, upgrade one team/weapon setup, then stop at the camp/menu.",
+    "minutes": 35,
+    "score": 9
+  },
+  {
+    "name": "Armored Core",
+    "patterns": [
+      "armored core"
+    ],
+    "dailyChunk": "Complete one mission, review the debrief, make one focused AC loadout/tuning change, then stop.",
+    "minutes": 35,
+    "score": 10
+  },
+  {
+    "name": "Guitar Hero",
+    "patterns": [
+      "guitar hero"
+    ],
+    "dailyChunk": "Clear one venue/setlist of 4–6 songs and retry one song for a better star rating before ending.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Rock Band",
+    "patterns": [
+      "rock band"
+    ],
+    "dailyChunk": "Clear one venue/setlist of 4–6 songs and retry one song for a better star rating before ending.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Just Dance",
+    "patterns": [
+      "just dance"
+    ],
+    "dailyChunk": "Play one 5–7 song session or one playlist, then finish with one high-score retry and stop.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Taiko no Tatsujin",
+    "patterns": [
+      "taiko no tatsujin",
+      "taiko"
+    ],
+    "dailyChunk": "Play one 6–10 song block and retry one chart for a better clear/score before stopping.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Patapon",
+    "patterns": [
+      "patapon"
+    ],
+    "dailyChunk": "Complete one mission/quest, handle equipment/army setup, then stop at Patapolis before the next deployment.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Rhythm Heaven",
+    "patterns": [
+      "rhythm heaven"
+    ],
+    "dailyChunk": "Clear one rhythm-game set/remix and retry one weak stage for a medal before stopping.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Tetris",
+    "patterns": [
+      "tetris"
+    ],
+    "dailyChunk": "Play a fixed 20–30 minute score/mode block or stop immediately after setting a new personal best.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Puyo Puyo",
+    "patterns": [
+      "puyo puyo"
+    ],
+    "dailyChunk": "Clear one story/arcade block or play 8–10 matches, then stop after the results screen.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Professor Layton",
+    "patterns": [
+      "professor layton"
+    ],
+    "dailyChunk": "Solve 5–8 puzzles and advance one story investigation segment, then stop at the next save point.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Ace Attorney",
+    "patterns": [
+      "ace attorney",
+      "phoenix wright"
+    ],
+    "dailyChunk": "Complete one investigation/courtroom chapter segment or one full trial day, then save at the chapter break.",
+    "minutes": 40,
+    "score": 10
+  },
+  {
+    "name": "Picross",
+    "patterns": [
+      "picross",
+      "pic a pix"
+    ],
+    "dailyChunk": "Solve one puzzle set of 4–8 boards or one themed page, then stop after the completion screen.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Puzzle Quest",
+    "patterns": [
+      "puzzle quest"
+    ],
+    "dailyChunk": "Complete one quest/battle chain of 3–5 matches, spend upgrades, then stop at the map.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Lumines",
+    "patterns": [
+      "lumines"
+    ],
+    "dailyChunk": "Play one full Challenge/mission block or a 20–30 minute score run, then stop after results.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Katamari",
+    "patterns": [
+      "katamari"
+    ],
+    "dailyChunk": "Complete 2–3 stages/objectives, then replay one for a size/collection target before stopping.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Worms",
+    "patterns": [
+      "worms"
+    ],
+    "dailyChunk": "Complete one campaign/challenge mission or 3–5 skirmish matches, then stop at the results screen.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Bomberman",
+    "patterns": [
+      "bomberman"
+    ],
+    "dailyChunk": "Clear one world/area block or play 8–10 battle rounds, then stop at the map/results screen.",
+    "minutes": 30,
+    "score": 9
+  },
+  {
+    "name": "Pac-Man",
+    "patterns": [
+      "pac man"
+    ],
+    "dailyChunk": "Clear one stage/world block or play a fixed high-score run set, then stop after recording the best score.",
+    "minutes": 25,
+    "score": 9
+  },
+  {
+    "name": "Space Invaders",
+    "patterns": [
+      "space invaders"
+    ],
+    "dailyChunk": "Play a fixed 20–30 minute score/challenge block or stop after a new personal best.",
+    "minutes": 25,
+    "score": 9
+  },
+  {
+    "name": "Metal Slug",
+    "patterns": [
+      "metal slug"
+    ],
+    "dailyChunk": "Clear one mission or play one credit-focused run, then stop after the mission/results screen.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Contra",
+    "patterns": [
+      "contra"
+    ],
+    "dailyChunk": "Clear one stage block or make one full focused run attempt, then stop after the results/game-over screen.",
+    "minutes": 25,
+    "score": 10
+  },
+  {
+    "name": "Streets of Rage",
+    "patterns": [
+      "streets of rage"
+    ],
+    "dailyChunk": "Clear 2–3 stages or one full short run section, then stop after the next stage/results screen.",
+    "minutes": 30,
+    "score": 10
+  },
+  {
+    "name": "Final Fight",
+    "patterns": [
+      "final fight"
+    ],
+    "dailyChunk": "Clear 2–3 stages or one full short run section, then stop after the next stage/results screen.",
+    "minutes": 30,
+    "score": 9
+  }
+]

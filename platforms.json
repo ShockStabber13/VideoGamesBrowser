@@ -1,0 +1,978 @@
+{
+  "platforms": [
+    {
+      "name": "Nintendo Switch",
+      "mode": "igdb",
+      "igdbNames": [
+        "Nintendo Switch"
+      ]
+    },
+    {
+      "name": "Wii U",
+      "mode": "redump",
+      "datCode": "WIIU",
+      "igdbNames": [
+        "Wii U",
+        "Nintendo Wii U"
+      ],
+      "extraDatUrls": [
+        {
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Nintendo%20-%20Wii%20U.dat",
+          "label": "Libretro/GameTDB Wii U catalog"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5",
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "WIIU",
+          "label": "Redump Wii U"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Nintendo%20-%20Wii%20U.dat",
+          "label": "Libretro/GameTDB Wii U catalog"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Wii%20U%20(Digital).dat",
+          "label": "No-Intro Wii U Digital/eShop"
+        }
+      ]
+    },
+    {
+      "name": "Wii",
+      "mode": "redump",
+      "datCode": "WII",
+      "igdbNames": [
+        "Wii",
+        "Nintendo Wii"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "WII",
+          "label": "Redump Wii"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Wii%20(Digital).dat",
+          "label": "No-Intro Wii Digital/WiiWare"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Nintendo%20-%20Wii.dat",
+          "label": "Libretro/GameTDB Wii catalog"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "GameCube",
+      "mode": "redump",
+      "datCode": "GC",
+      "igdbNames": [
+        "Nintendo GameCube",
+        "GameCube"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "GC",
+          "label": "Redump GameCube"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Nintendo%20-%20GameCube.dat",
+          "label": "Libretro/GameTDB GameCube catalog"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Nintendo 3DS",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%203DS.dat",
+      "igdbNames": [
+        "Nintendo 3DS"
+      ],
+      "extraDatUrls": [
+        {
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%203DS%20%28Digital%29.dat",
+          "label": "No-Intro Nintendo 3DS Digital/eShop"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5",
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%203DS.dat",
+          "label": "No-Intro Nintendo 3DS"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%203DS%20%28Digital%29.dat",
+          "label": "No-Intro Nintendo 3DS Digital/eShop"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20New%20Nintendo%203DS.dat",
+          "label": "No-Intro New Nintendo 3DS"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20New%20Nintendo%203DS%20(Digital).dat",
+          "label": "No-Intro New Nintendo 3DS Digital"
+        }
+      ]
+    },
+    {
+      "name": "Nintendo DS",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%20DS.dat",
+      "igdbNames": [
+        "Nintendo DS"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%20DS.dat",
+          "label": "No-Intro Nintendo DS"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%20DS%20(Download%20Play).dat",
+          "label": "No-Intro Nintendo DS Download Play"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Game Boy Advance",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Game%20Boy%20Advance.dat",
+      "igdbNames": [
+        "Game Boy Advance"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Game%20Boy%20Advance.dat",
+          "label": "No-Intro Game Boy Advance"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Game Boy Color",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Game%20Boy%20Color.dat",
+      "igdbNames": [
+        "Game Boy Color"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Game%20Boy%20Color.dat",
+          "label": "No-Intro Game Boy Color"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Game Boy",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Game%20Boy.dat",
+      "igdbNames": [
+        "Game Boy"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Game%20Boy.dat",
+          "label": "No-Intro Game Boy"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Nintendo 64",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%2064.dat",
+      "igdbNames": [
+        "Nintendo 64"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%2064.dat",
+          "label": "No-Intro Nintendo 64"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "SNES",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.dat",
+      "igdbNames": [
+        "Super Nintendo Entertainment System",
+        "Super Nintendo Entertainment System (SNES)"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.dat",
+          "label": "No-Intro SNES"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System.dat",
+          "label": "Libretro supplemental SNES DAT"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "NES",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%20Entertainment%20System.dat",
+      "igdbNames": [
+        "Nintendo Entertainment System",
+        "Nintendo Entertainment System (NES)"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%20Entertainment%20System.dat",
+          "label": "No-Intro NES"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Nintendo%20-%20Nintendo%20Entertainment%20System.dat",
+          "label": "Libretro supplemental NES DAT"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Virtual Boy",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Virtual%20Boy.dat",
+      "igdbNames": [
+        "Virtual Boy"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Virtual%20Boy.dat",
+          "label": "No-Intro Virtual Boy"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Famicom Disk System",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Family%20Computer%20Disk%20System.dat",
+      "igdbNames": [
+        "Family Computer Disk System",
+        "Famicom Disk System"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Family%20Computer%20Disk%20System.dat",
+          "label": "No-Intro Famicom Disk System"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Nintendo 64DD",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%2064DD.dat",
+      "igdbNames": [
+        "Nintendo 64DD",
+        "64DD"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Nintendo%20-%20Nintendo%2064DD.dat",
+          "label": "No-Intro Nintendo 64DD"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PS5",
+      "mode": "igdb",
+      "igdbNames": [
+        "PlayStation 5"
+      ],
+      "catalogPolicy": "igdb-only-modern"
+    },
+    {
+      "name": "PS4",
+      "mode": "igdb",
+      "igdbNames": [
+        "PlayStation 4"
+      ],
+      "catalogPolicy": "igdb-only-modern"
+    },
+    {
+      "name": "PS3",
+      "mode": "redump",
+      "datCode": "PS3",
+      "igdbNames": [
+        "PlayStation 3"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "PS3",
+          "label": "Redump PS3"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sony%20-%20PlayStation%203%20(PSN).dat",
+          "label": "No-Intro PlayStation 3 PSN"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Sony%20-%20PlayStation%203.dat",
+          "label": "Libretro/GameTDB PlayStation 3 catalog"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PS2",
+      "mode": "redump",
+      "datCode": "PS2",
+      "igdbNames": [
+        "PlayStation 2"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "PS2",
+          "label": "Redump PS2"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PS1",
+      "mode": "redump",
+      "datCode": "PSX",
+      "igdbNames": [
+        "PlayStation",
+        "Sony PlayStation"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "PSX",
+          "label": "Redump PS1"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PSP",
+      "mode": "redump",
+      "datCode": "PSP",
+      "igdbNames": [
+        "PlayStation Portable"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "PSP",
+          "label": "Redump PSP"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sony%20-%20PlayStation%20Portable.dat",
+          "label": "No-Intro PlayStation Portable"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sony%20-%20PlayStation%20Portable%20(PSN).dat",
+          "label": "No-Intro PlayStation Portable PSN"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Sony%20-%20PlayStation%20Minis.dat",
+          "label": "Libretro PlayStation Minis"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PS Vita",
+      "mode": "nointro",
+      "igdbNames": [
+        "PlayStation Vita"
+      ],
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sony%20-%20PlayStation%20Vita.dat",
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sony%20-%20PlayStation%20Vita.dat",
+          "label": "No-Intro PS Vita"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sony%20-%20PlayStation%20Vita%20(PSN).dat",
+          "label": "No-Intro PlayStation Vita PSN"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Xbox Series X|S",
+      "mode": "igdb",
+      "igdbNames": [
+        "Xbox Series X|S",
+        "Xbox Series X/S"
+      ],
+      "catalogPolicy": "igdb-only-modern"
+    },
+    {
+      "name": "Xbox One",
+      "mode": "igdb",
+      "igdbNames": [
+        "Xbox One"
+      ],
+      "catalogPolicy": "igdb-only-modern"
+    },
+    {
+      "name": "Xbox 360",
+      "mode": "redump",
+      "datCode": "XBOX360",
+      "igdbNames": [
+        "Xbox 360"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "XBOX360",
+          "label": "Redump Xbox 360"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Microsoft%20-%20Xbox%20360.dat",
+          "label": "No-Intro Xbox 360"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Microsoft%20-%20Xbox%20360%20(Digital).dat",
+          "label": "No-Intro Xbox 360 Digital"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Microsoft%20-%20XBOX%20360%20(Games%20on%20Demand).dat",
+          "label": "No-Intro Xbox 360 Games on Demand"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Xbox",
+      "mode": "redump",
+      "datCode": "XBOX",
+      "igdbNames": [
+        "Xbox"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "XBOX",
+          "label": "Redump Xbox"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Windows",
+      "mode": "steam",
+      "igdbNames": [
+        "PC (Microsoft Windows)",
+        "Microsoft Windows",
+        "PC"
+      ],
+      "controllerIndex": true
+    },
+    {
+      "name": "Dreamcast",
+      "mode": "redump",
+      "datCode": "DC",
+      "igdbNames": [
+        "Dreamcast",
+        "Sega Dreamcast"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "DC",
+          "label": "Redump Dreamcast"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Sega Saturn",
+      "mode": "redump",
+      "datCode": "SS",
+      "igdbNames": [
+        "Sega Saturn",
+        "Saturn"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "SS",
+          "label": "Redump Sega Saturn"
+        },
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/dat/Sega%20-%20Saturn.dat",
+          "label": "Libretro supplemental Saturn DAT"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Sega CD",
+      "mode": "redump",
+      "datCode": "MCD",
+      "igdbNames": [
+        "Sega CD",
+        "Mega-CD",
+        "Sega Mega CD"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "MCD",
+          "label": "Redump Sega CD"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Genesis / Mega Drive",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20Mega%20Drive%20-%20Genesis.dat",
+      "igdbNames": [
+        "Sega Mega Drive/Genesis",
+        "Sega Genesis",
+        "Mega Drive"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20Mega%20Drive%20-%20Genesis.dat",
+          "label": "No-Intro Genesis / Mega Drive"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Sega 32X",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%2032X.dat",
+      "igdbNames": [
+        "Sega 32X",
+        "32X"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%2032X.dat",
+          "label": "No-Intro Sega 32X"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Master System",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20Master%20System%20-%20Mark%20III.dat",
+      "igdbNames": [
+        "Sega Master System/Mark III",
+        "Sega Master System"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20Master%20System%20-%20Mark%20III.dat",
+          "label": "No-Intro Master System"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Game Gear",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20Game%20Gear.dat",
+      "igdbNames": [
+        "Game Gear",
+        "Sega Game Gear"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20Game%20Gear.dat",
+          "label": "No-Intro Game Gear"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "SG-1000",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20SG-1000.dat",
+      "igdbNames": [
+        "SG-1000",
+        "Sega SG-1000"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Sega%20-%20SG-1000.dat",
+          "label": "No-Intro SG-1000"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PC Engine / TurboGrafx-16",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.dat",
+      "igdbNames": [
+        "TurboGrafx-16/PC Engine",
+        "PC Engine"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016.dat",
+          "label": "No-Intro PC Engine / TurboGrafx-16"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "PC Engine CD / TurboGrafx-CD",
+      "mode": "redump",
+      "datCode": "PCE",
+      "igdbNames": [
+        "TurboGrafx-16/PC Engine CD",
+        "PC Engine CD",
+        "TurboGrafx-CD"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "PCE",
+          "label": "Redump PC Engine CD / TurboGrafx-CD"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "SuperGrafx",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/NEC%20-%20PC%20Engine%20SuperGrafx.dat",
+      "igdbNames": [
+        "PC Engine SuperGrafx",
+        "SuperGrafx"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/NEC%20-%20PC%20Engine%20SuperGrafx.dat",
+          "label": "No-Intro SuperGrafx"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Neo Geo CD",
+      "mode": "redump",
+      "datCode": "NGCD",
+      "igdbNames": [
+        "Neo Geo CD"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "NGCD",
+          "label": "Redump Neo Geo CD"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Neo Geo Pocket Color",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/SNK%20-%20Neo%20Geo%20Pocket%20Color.dat",
+      "igdbNames": [
+        "Neo Geo Pocket Color"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/SNK%20-%20Neo%20Geo%20Pocket%20Color.dat",
+          "label": "No-Intro Neo Geo Pocket Color"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Neo Geo Pocket",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/SNK%20-%20Neo%20Geo%20Pocket.dat",
+      "igdbNames": [
+        "Neo Geo Pocket"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/SNK%20-%20Neo%20Geo%20Pocket.dat",
+          "label": "No-Intro Neo Geo Pocket"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "WonderSwan Color",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Bandai%20-%20WonderSwan%20Color.dat",
+      "igdbNames": [
+        "WonderSwan Color"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Bandai%20-%20WonderSwan%20Color.dat",
+          "label": "No-Intro WonderSwan Color"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "WonderSwan",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Bandai%20-%20WonderSwan.dat",
+      "igdbNames": [
+        "WonderSwan"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Bandai%20-%20WonderSwan.dat",
+          "label": "No-Intro WonderSwan"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Atari 2600",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%202600.dat",
+      "igdbNames": [
+        "Atari 2600"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%202600.dat",
+          "label": "No-Intro Atari 2600"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Atari 5200",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%205200.dat",
+      "igdbNames": [
+        "Atari 5200"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%205200.dat",
+          "label": "No-Intro Atari 5200"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Atari 7800",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%207800.dat",
+      "igdbNames": [
+        "Atari 7800"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%207800.dat",
+          "label": "No-Intro Atari 7800"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Atari Jaguar",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%20Jaguar.dat",
+      "igdbNames": [
+        "Atari Jaguar"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%20Jaguar.dat",
+          "label": "No-Intro Atari Jaguar"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Atari Lynx",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%20Lynx.dat",
+      "igdbNames": [
+        "Atari Lynx"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Atari%20-%20Lynx.dat",
+          "label": "No-Intro Atari Lynx"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "ColecoVision",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Coleco%20-%20ColecoVision.dat",
+      "igdbNames": [
+        "ColecoVision"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Coleco%20-%20ColecoVision.dat",
+          "label": "No-Intro ColecoVision"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Intellivision",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Mattel%20-%20Intellivision.dat",
+      "igdbNames": [
+        "Intellivision"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/Mattel%20-%20Intellivision.dat",
+          "label": "No-Intro Intellivision"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "Vectrex",
+      "mode": "nointro",
+      "datUrl": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/GCE%20-%20Vectrex.dat",
+      "igdbNames": [
+        "Vectrex"
+      ],
+      "preservationSources": [
+        {
+          "type": "dat-url",
+          "url": "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/GCE%20-%20Vectrex.dat",
+          "label": "No-Intro Vectrex"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    },
+    {
+      "name": "3DO",
+      "mode": "redump",
+      "datCode": "3DO",
+      "igdbNames": [
+        "3DO Interactive Multiplayer",
+        "3DO"
+      ],
+      "preservationSources": [
+        {
+          "type": "redump",
+          "datCode": "3DO",
+          "label": "Redump 3DO"
+        }
+      ],
+      "providerLabel": "Any configured preservation DAT",
+      "catalogMode": "igdb-any-preservation-dat-v5"
+    }
+  ],
+  "preservationRule": "Older preservation-backed systems: IGDB AND ANY configured DAT. Modern IGDB-only systems: IGDB full platform catalog on-demand.",
+  "schemaVersion": 5
+}

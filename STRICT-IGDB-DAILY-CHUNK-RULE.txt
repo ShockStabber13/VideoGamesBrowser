@@ -1,0 +1,23 @@
+STRICT DAILY CHUNK ID RULE
+
+Windows
+- A direct Daily Chunk row must have a real Steam AppID.
+- IGDB ID is not required for Windows cards.
+
+IGDB-only platforms (Nintendo Switch, PS4, PS5, Xbox One, Xbox Series X|S)
+- A direct Daily Chunk row must have a genuine positive IGDB ID.
+- No title-derived/hash fallback is allowed to stand in for an IGDB ID.
+- The normal Daily Chunk build reuses proven cached mappings, then tries exact-title IGDB resolution for unresolved curated titles.
+- If a title cannot be resolved exactly or is ambiguous, it is omitted.
+
+DAT-backed platforms
+- A direct Daily Chunk row must have a genuine positive IGDB ID and that ID must exist in the local IGDB + DAT intersection catalog.
+
+Offline repack
+- Does not invent or resolve IDs.
+- It retains only rows that already satisfy the rules above.
+
+Prepared package in this V3.2 ZIP
+- The previous Switch direct index contained 161 title-only rows with igdbId=0. Those rows were removed.
+- 39 already-proven Switch rows remain in the prepared package.
+- Run BUILD AND SHARE DAILY CHUNKS ONLY.bat with valid IGDB credentials to resolve additional curated Switch titles to genuine IGDB IDs.

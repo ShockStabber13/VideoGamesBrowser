@@ -1,0 +1,28 @@
+CURATED DAILY CHUNKS - ACTIVE SOURCE
+===================================
+
+Active daily-chunks.json: 1200 entries
+
+Currently fully curated systems:
+- GameCube: 200
+- Nintendo Switch: 200
+- PS1: 200
+- PS2: 200
+- PSP: 200
+- Windows: 200
+
+Generic auto-seeded rows removed: 7134
+
+Systems not listed above intentionally have no active Daily Chunk entries yet.
+They will be added only after proper game-by-game curation.
+
+Windows:
+- 200 curated Daily Chunk definitions
+- 199 have a Steam AppID in the frozen local cache
+- Alan Wake Remastered is intentionally not in the Steam direct index (no standalone Steam app)
+- Blank controllerSupport means Unknown and is marked checked so it is not rescanned.
+
+V3.2 strict-ID note:
+- Curated definitions may still total 200 per platform, but direct-index inclusion now requires the platform's real identifier rule.
+- Prepared Nintendo Switch direct index currently has 39 proven IGDB IDs after removing 161 igdbId=0 rows.
+- A normal Daily Chunk build will try to resolve additional exact Switch titles through IGDB.

@@ -1,0 +1,20 @@
+GameBrowser Database Builder V3.1 logic audit fixes
+
+- DAT-backed Daily Chunk direct-index rows can only come from the actual local IGDB + DAT platform catalog.
+- Removed unsafe curated/priority fallback for DAT-backed direct-index generation.
+- Builder keeps each DAT-backed Daily Chunk platform at up to 200 proven rows; title mismatches get a safe generic chunk instead of an unproven substitute.
+- IGDB-only systems keep the curated Daily Chunk title set; exact cached IGDB mappings enrich rows when available.
+- Offline repack re-validates DAT-backed IDs against local catalogs and Windows rows against Steam AppIDs.
+- Offline repack keeps safe builder-generated fallback chunks rather than silently dropping them.
+- JSON reads explicitly use UTF-8 under Windows PowerShell 5.1.
+- Existing cache repaired: 5,470 reversible mojibake strings fixed (e.g. PokÃ©mon -> Pokémon, ÅŒkami -> Ōkami).
+- Unicode-aware title normalization added for Daily Chunk matching.
+- Misleading catalog source label corrected from "IGDB + ANY DAT (Windows prebuilt)" to "IGDB + ANY DAT".
+- Rebuilt packaged Daily Chunk direct index: PS2/PSP/PS1/GameCube = 800/800 catalog-proven; Windows = 199/199 Steam-AppID proven; Nintendo Switch = 200 curated rows.
+
+V3.2 STRICT IGDB DAILY CHUNK RULE
+- IGDB-only direct-index rows now require a genuine positive IGDB ID.
+- Normal Daily Chunk builds reuse proven cached title mappings and try exact-title IGDB resolution for missing curated mappings when IGDB credentials are available.
+- Unresolved or ambiguous IGDB-only titles are omitted; no title/hash-derived IGDB IDs are generated.
+- Offline repacking also drops IGDB-only rows whose igdbId is missing/zero.
+- Windows remains Steam-AppID based; DAT-backed platforms remain IGDB + DAT catalog validated.

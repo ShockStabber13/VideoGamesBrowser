@@ -1,0 +1,7 @@
+GameBrowser Database Builder V3.4
+
+Changes from V3.3:
+1. Preservation cache fingerprint now includes SHA-256 of the ACTUAL local DAT bytes for every configured source, plus source configuration and matcher version. Replacing/updating a DAT at the same URL now invalidates only that platform catalog.
+2. Completed IGDB release maps perform a one-row incremental keyset probe (release ID > saved lastReleaseId). If newer platform release rows exist, that platform resumes from the saved ID instead of rescanning from zero.
+3. ANY-DAT matcher bumped to v5. Exact normalized title/IGDB alias matches are unchanged. Sorted-token smart matches are accepted only when the token signature resolves to exactly one canonical DAT title; ambiguous token signatures are skipped and counted in the build log.
+4. Cache mode bump to igdb-any-preservation-dat-v5 forces a one-time rebuild so old v4 results are not silently reused under the tighter matcher.

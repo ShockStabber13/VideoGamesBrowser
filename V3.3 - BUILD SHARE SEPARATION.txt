@@ -1,0 +1,15 @@
+GAMEBROWSER DATABASE BUILDER V3.3 - BUILD/SHARE SEPARATION
+===========================================================
+
+Changed only workflow/orchestration. Catalog eligibility and Daily Chunk rules are unchanged.
+
+- Database, Daily Chunks, and Both can be targeted independently.
+- Build and Share are independent switches.
+- Added one interactive GAMEBROWSER BUILDER MENU.bat.
+- Added nine explicit one-click BAT files covering Build Only, Share Existing Only, and Build + Share.
+- No Build means zero rebuild/repack/scan.
+- No Share means no LAN server.
+- Android Database Server.ps1 now has strict Database / DailyChunks / Both share modes.
+- Database-only share cannot expose Daily Chunks, and Daily-Chunks-only share cannot expose Database, even when both ZIPs exist.
+- Removed obsolete root BAT files and README instructions that bundled these actions together.
+- UPDATE DATS.bat and FORCE UPDATE DATS.bat remain separate and unchanged.

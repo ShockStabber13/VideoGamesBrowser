@@ -1,0 +1,8 @@
+# Local/generated build output
+_android/*.zip
+_android/*Report*.txt
+_cache/
+*.tmp
+
+# Keep config examples only; real keys belong in GitHub Secrets.
+steam-config.json

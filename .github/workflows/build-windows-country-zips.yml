@@ -1,0 +1,182 @@
+name: Build Windows Country ZIPs
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 5:00 AM Singapore time = 9:00 PM UTC previous day.
+    - cron: "0 21 * * *"
+
+concurrency:
+  group: windows-country-zips
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-country:
+    name: Build ${{ matrix.country }} Windows ZIP
+    runs-on: windows-latest
+    timeout-minutes: 360
+
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - country: US
+            display: United States
+            file_tag: US
+          - country: GB
+            display: United Kingdom
+            file_tag: GB
+          - country: SG
+            display: Singapore
+            file_tag: SG
+          - country: CA
+            display: Canada
+            file_tag: CA
+          - country: MY
+            display: Malaysia
+            file_tag: MY
+
+    steps:
+      - name: Checkout builder
+        uses: actions/checkout@v4
+
+      - name: Write steam-config.json
+        shell: pwsh
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+        run: |
+          $config = [ordered]@{
+            ApiKey = $env:STEAM_API_KEY
+            CountryCode = "${{ matrix.country }}"
+          }
+          $config | ConvertTo-Json -Depth 5 | Set-Content -Path "steam-config.json" -Encoding UTF8
+
+      - name: Build country ZIP
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File "_tools\Build Windows Steam Index One Country.ps1" -Country "${{ matrix.country }}" -ForceRebuild
+
+      - name: Collect ZIP output
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "release-assets" | Out-Null
+
+          $mainZip = "_android\GameBrowser-Windows-${{ matrix.file_tag }}.zip"
+          if (!(Test-Path $mainZip)) {
+            throw "Expected ZIP missing: $mainZip"
+          }
+          Copy-Item $mainZip "release-assets\" -Force
+
+          # UK uses Steam country code GB. Keep UK alias too, because the builder creates it.
+          if ("${{ matrix.country }}" -eq "GB") {
+            $ukAlias = "_android\GameBrowser-Windows-UK.zip"
+            if (Test-Path $ukAlias) {
+              Copy-Item $ukAlias "release-assets\" -Force
+            }
+          }
+
+          Get-ChildItem "release-assets" -File | Format-Table Name,Length -AutoSize
+
+      - name: Upload country artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-${{ matrix.country }}
+          path: release-assets/*.zip
+          if-no-files-found: error
+          retention-days: 7
+
+  publish-release:
+    name: Publish release assets
+    runs-on: windows-latest
+    needs: build-country
+    timeout-minutes: 30
+
+    steps:
+      - name: Download country artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: downloaded-artifacts
+
+      - name: Prepare release files and manifest
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tag = 'windows-latest'
+          $repo = $env:GITHUB_REPOSITORY
+
+          New-Item -ItemType Directory -Force -Path "release-assets" | Out-Null
+          Get-ChildItem "downloaded-artifacts" -Recurse -Filter "GameBrowser-Windows-*.zip" | ForEach-Object {
+            Copy-Item $_.FullName "release-assets\$($_.Name)" -Force
+          }
+
+          $expected = @(
+            'GameBrowser-Windows-US.zip',
+            'GameBrowser-Windows-GB.zip',
+            'GameBrowser-Windows-UK.zip',
+            'GameBrowser-Windows-SG.zip',
+            'GameBrowser-Windows-CA.zip',
+            'GameBrowser-Windows-MY.zip'
+          )
+
+          foreach ($name in $expected) {
+            if (!(Test-Path "release-assets\$name")) {
+              throw "Expected release file missing: $name"
+            }
+          }
+
+          $now = (Get-Date).ToUniversalTime().ToString('o')
+          $files = @()
+          foreach ($name in $expected) {
+            $path = "release-assets\$name"
+            $sha = (Get-FileHash -Path $path -Algorithm SHA256).Hash.ToLowerInvariant()
+            $files += [ordered]@{
+              name = $name
+              size = (Get-Item $path).Length
+              sha256 = $sha
+              url = "https://github.com/$repo/releases/download/$tag/$name"
+            }
+          }
+
+          $manifest = [ordered]@{
+            schema = 1
+            package = 'GameBrowser-Windows-Country-Zips'
+            generated_at = $now
+            release_tag = $tag
+            countries = [ordered]@{
+              US = 'GameBrowser-Windows-US.zip'
+              GB = 'GameBrowser-Windows-GB.zip'
+              UK = 'GameBrowser-Windows-UK.zip'
+              SG = 'GameBrowser-Windows-SG.zip'
+              CA = 'GameBrowser-Windows-CA.zip'
+              MY = 'GameBrowser-Windows-MY.zip'
+            }
+            files = $files
+          }
+
+          $manifest | ConvertTo-Json -Depth 10 | Set-Content -Path "release-assets\manifest.json" -Encoding UTF8
+          Get-ChildItem "release-assets" -File | Format-Table Name,Length -AutoSize
+
+      - name: Create or update GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tag = 'windows-latest'
+          $repo = $env:GITHUB_REPOSITORY
+
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title "Windows ZIPs Latest" --notes "Auto-built Windows country ZIPs."
+          }
+
+          Get-ChildItem "release-assets" -File | ForEach-Object {
+            gh release upload $tag $_.FullName --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to upload release asset: $($_.Name)"
+            }
+          }

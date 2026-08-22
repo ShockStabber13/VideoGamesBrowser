@@ -1,0 +1,65 @@
+PREBUILT DAILY CHUNK VALIDATION REPORT
+
+Candidate selections: 6,094
+Validated final index: 5,932
+Omitted candidates: 162
+
+Chunk source: game-specific=1,015, franchise=2,497, genre=2,420
+
+Per-platform validated counts:
+3DO: 200 validated / 200 selected
+Atari 2600: 50 validated / 50 selected
+Atari 5200: 50 validated / 50 selected
+Atari 7800: 50 validated / 50 selected
+Atari Jaguar: 70 validated / 70 selected
+Atari Lynx: 50 validated / 50 selected
+ColecoVision: 50 validated / 50 selected
+Dreamcast: 200 validated / 200 selected
+Famicom Disk System: 50 validated / 50 selected
+Game Boy: 50 validated / 50 selected
+Game Boy Advance: 200 validated / 200 selected
+Game Boy Color: 200 validated / 200 selected
+Game Gear: 50 validated / 50 selected
+GameCube: 200 validated / 200 selected
+Genesis / Mega Drive: 50 validated / 50 selected
+Intellivision: 50 validated / 50 selected
+Master System: 50 validated / 50 selected
+NES: 50 validated / 50 selected
+Neo Geo CD: 50 validated / 50 selected
+Neo Geo Pocket: 3 validated / 3 selected
+Neo Geo Pocket Color: 57 validated / 57 selected
+Nintendo 3DS: 200 validated / 200 selected
+Nintendo 64: 200 validated / 200 selected
+Nintendo 64DD: 7 validated / 7 selected
+Nintendo DS: 200 validated / 200 selected
+Nintendo Switch: 39 validated / 200 selected (161 omitted)
+PC Engine / TurboGrafx-16: 50 validated / 50 selected
+PC Engine CD / TurboGrafx-CD: 50 validated / 50 selected
+PS Vita: 200 validated / 200 selected
+PS1: 200 validated / 200 selected
+PS2: 200 validated / 200 selected
+PS3: 200 validated / 200 selected
+PS4: 200 validated / 200 selected
+PS5: 200 validated / 200 selected
+PSP: 200 validated / 200 selected
+SG-1000: 50 validated / 50 selected
+SNES: 50 validated / 50 selected
+Sega 32X: 33 validated / 33 selected
+Sega CD: 50 validated / 50 selected
+Sega Saturn: 200 validated / 200 selected
+SuperGrafx: 3 validated / 3 selected
+Vectrex: 28 validated / 28 selected
+Virtual Boy: 30 validated / 30 selected
+Wii: 200 validated / 200 selected
+Wii U: 200 validated / 200 selected
+Windows: 199 validated / 200 selected (1 omitted)
+WonderSwan: 94 validated / 94 selected
+WonderSwan Color: 69 validated / 69 selected
+Xbox: 200 validated / 200 selected
+Xbox 360: 200 validated / 200 selected
+Xbox One: 200 validated / 200 selected
+Xbox Series X|S: 200 validated / 200 selected
+
+Omitted titles (first 20 per platform):
+Nintendo Switch: A Little to the Left | Alba: A Wildlife Adventure | Baba Is You | Captain Toad: Treasure Tracker | Carto | Clubhouse Games: 51 Worldwide Classics | Cocoon | Dave the Diver | Dorfromantik | Golf Story | Good Job! | Grindstone | Kirby and the Forgotten Land | Kirby Star Allies | Kirby's Return to Dream Land Deluxe | Kirby's Dream Buffet | Super Mario 3D World + Bowser's Fury | New Super Mario Bros. U Deluxe | Mario Party Superstars | Super Mario Party
+Windows: Alan Wake

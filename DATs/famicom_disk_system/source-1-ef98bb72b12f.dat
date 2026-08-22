@@ -1,0 +1,2384 @@
+clrmamepro (
+	name "Nintendo - Family Computer Disk System"
+	description "Nintendo - Family Computer Disk System"
+	version "2026.08.01"
+	homepage "http://github.com/robloach/libretro-dats"
+)
+
+game (
+	name "Adian no Tsue (Japan)"
+	region "Japan"
+	serial "ADA"
+	rom ( name "Adian no Tsue (Japan).fds" size 131000 crc DCC7A8D6 md5 2155652BA2CE18282705337D03B3F505 sha1 1DB213B613D6706B5E97EA0F5AAD9BD804793A96 serial "ADA" )
+)
+game (
+	name "Adian no Tsue (Japan) (Beta)"
+	releaseyear "1986"
+	releasemonth "10"
+	releaseday "29"
+	region "Japan"
+	rom ( name "Adian no Tsue (Japan) (Beta) (1986-10-29).fds" size 131000 crc E342932F md5 93609D9F2A72CC6097679599E4BF425F sha1 C6AB5061E01B9BA3A20AD72310049C75A7DD11C3 )
+)
+game (
+	name "Ai Senshi Nicol (Japan)"
+	region "Japan"
+	serial "AIN"
+	rom ( name "Ai Senshi Nicol (Japan).fds" size 131000 crc 3FBDBE79 md5 7839C79CB30FAB6440114554508609FA sha1 506E72B65670E1D149751D166836BEAF5C261C5E serial "AIN" )
+)
+game (
+	name "Air Fortress (Japan) (Proto)"
+	releaseyear "1986"
+	releasemonth "10"
+	releaseday "20"
+	region "Japan"
+	serial "RAMD"
+	rom ( name "Air Fortress (Japan) (Proto) (1986-10-20).fds" size 131000 crc 4928D322 md5 1E6853A0D4C2B3BE38F14A73CF031C66 sha1 A43D7B1B536CD4B156C3BB0B0A6ED15B756688EC serial "RAMD" )
+)
+game (
+	name "Aki to Tsukasa no Fushigi no Kabe (Japan)"
+	region "Japan"
+	rom ( name "Aki to Tsukasa no Fushigi no Kabe (Japan) (Unl).fds" size 131000 crc 672B7F6C md5 BA576A03AEB7FC733C104043DE9964F2 sha1 35E204AD24D21818D3F014B728BFC7CC288F39C5 )
+)
+game (
+	name "Akumajou Dracula (Japan)"
+	region "Japan"
+	serial "AKM"
+	rom ( name "Akumajou Dracula (Japan).fds" size 131000 crc 90E99457 md5 62CE2CF11CCA70F6DB84F5E6D7ADA1C4 sha1 85977C0DFBBBF4362FB714F663A653F2DD8FC753 serial "AKM" )
+)
+game (
+	name "Akumajou Dracula (Japan) (Rev 1)"
+	region "Japan"
+	serial "AKM"
+	rom ( name "Akumajou Dracula (Japan) (Rev 1).fds" size 131000 crc 9661E6A4 md5 FE739E10EC1F70888A4CAC28D8562FAE sha1 3F32767A51C43D3472459240B7CC230DC6A11FD5 serial "AKM" )
+)
+game (
+	name "Akumajou Dracula (Japan) (Rev 2) (Disk Writer)"
+	region "Japan"
+	serial "AKM"
+	rom ( name "Akumajou Dracula (Japan) (Rev 2) (Disk Writer).fds" size 131000 crc 7448FB40 md5 33DEF5907D3561F6649A5E0CCF9A1D09 sha1 14366A2ABA5905896418D8B7FE05F4229489A980 serial "AKM" )
+)
+game (
+	name "Akumajou Dracula (Japan) (Rev 2) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "AKM"
+	rom ( name "Akumajou Dracula (Japan) (Rev 2) (Wii and Wii U Virtual Console).fds" size 131000 crc FC72B953 md5 958F03C1C054A528F22869CA84E03A32 sha1 A81AE854DB8DE25E3F404187894C2A1D50A5B132 serial "AKM" )
+)
+game (
+	name "Akuu Senki Raijin (Japan) (Beta)"
+	releaseyear "1987"
+	releasemonth "06"
+	releaseday "10"
+	region "Japan"
+	rom ( name "Akuu Senki Raijin (Japan) (Beta) (1987-06-10).fds" size 131000 crc CE97DDD2 md5 BD7E25FAA070C247015F2DFB09B20760 sha1 59057D1FB26F792B57AAEC61DCA4B12768443345 )
+)
+game (
+	name "Akuu Senki Raijin (Japan) (Disk Writer)"
+	region "Japan"
+	serial "RJN"
+	rom ( name "Akuu Senki Raijin (Japan) (Disk Writer).fds" size 131000 crc E188393F md5 9E7224595700636F69734E5B0E4A86DC sha1 F43863B8B24A21455151F957A0E99EF48AB711F8 serial "RJN" )
+)
+game (
+	name "Aliens - Alien 2 (Japan) (Proto)"
+	releaseyear "1986"
+	releasemonth "12"
+	releaseday "15"
+	region "Japan"
+	rom ( name "Aliens - Alien 2 (Japan) (Proto) (1986-12-15).fds" size 131000 crc 2B779EE3 md5 296BC8EC6482E70E5D098BB90343A2F8 sha1 E80992B0E3E2EC05DBD34B3D97AE39EE59244CA4 )
+)
+game (
+	name "All Night Nippon Super Mario Bros. (Japan) (En) (Promo)"
+	region "Japan"
+	serial "NSM"
+	rom ( name "All Night Nippon Super Mario Bros. (Japan) (En) (Promo).fds" size 65500 crc 43E7FE95 md5 C8719692D0B9D9649492FFB1C2D26AA3 sha1 F30BDD3C556604D7EAA6D0F4864D5566E519B5D4 serial "NSM" )
+)
+game (
+	name "Apple Town Monogatari - Little Computer People (Japan)"
+	region "Japan"
+	serial "APT"
+	rom ( name "Apple Town Monogatari - Little Computer People (Japan).fds" size 131000 crc 1967673E md5 CB3984D82C60541CAFAA8A6786647791 sha1 C6B15E0FE1887F60D31E95D72D9C8E19A3C6FEF1 serial "APT" )
+)
+game (
+	name "Armana no Kiseki (Japan)"
+	region "Japan"
+	serial "ARM"
+	rom ( name "Armana no Kiseki (Japan).fds" size 131000 crc EC6D5DE3 md5 98AC12E7F11B0AAF082C9CF45103C430 sha1 93D8D3B4B74FE087CC31B75AEE2607ECC7A1D2DD serial "ARM" )
+)
+game (
+	name "Aspic - Majaou no Noroi (Japan)"
+	region "Japan"
+	serial "ASP"
+	rom ( name "Aspic - Majaou no Noroi (Japan).fds" size 131000 crc 1999ADDB md5 7D6153486D7103C639659A2256E88E5C sha1 BEFB31B3FFBBE26993DE0DD8F15443DBD69F5D15 serial "ASP" )
+)
+game (
+	name "Backgammon (Japan)"
+	region "Japan"
+	serial "BAG"
+	rom ( name "Backgammon (Japan).fds" size 65500 crc 4D62DE66 md5 E8C43DC8426A03D55615AC5C968864D0 sha1 30AAF523960F6C31305CFC950A5A002E1EE45421 serial "BAG" )
+)
+game (
+	name "Bakutoushi Patton-kun (Japan)"
+	region "Japan"
+	serial "PAT"
+	rom ( name "Bakutoushi Patton-kun (Japan).fds" size 131000 crc 617942A4 md5 533B069C5AFBD5C98B330C60A46BE918 sha1 F6724CD414A094C6FC5603BC0D3D1F4F89A304D2 serial "PAT" )
+)
+game (
+	name "Balloon Fight (Japan) (En) (Proto)"
+	region "Japan"
+	serial "BFD"
+	rom ( name "Balloon Fight (Japan) (En) (Proto).fds" size 65500 crc 2724BA9A md5 2A9D1A67279AFBBCFB7CEAE8C8DFFC9B sha1 AD714F59AE654C3B83EBC578D0AC3647E72F5B0B serial "BFD" )
+)
+game (
+	name "Baseball (Japan)"
+	region "Japan"
+	serial "BAS"
+	rom ( name "Baseball (Japan).fds" size 65500 crc 23BD2653 md5 9C3ADAB712DC85876E0DAA938D298493 sha1 443E74EBB6FEECA4BC9D7C3EDBA2D7DE019764B6 serial "BAS" )
+)
+game (
+	name "Battle Battle League (Japan) (Proto) (Disk 1)"
+	region "Japan"
+	serial "Q.D."
+	rom ( name "Battle Battle League (Japan) (Proto) (Disk 1).fds" size 131000 crc D578702F md5 62854CAC6163B2FA5E2E7F091D31DBEB sha1 E951C85962E7499E0BCAFAE82774E489C1CA9942 serial "Q.D." )
+)
+game (
+	name "Battle Battle League (Japan) (Proto) (Disk 1)"
+	region "Japan"
+	serial "Q.D.-0"
+	rom ( name "Battle Battle League (Japan) (Proto) (Disk 1).fds" size 131000 crc D578702F md5 62854CAC6163B2FA5E2E7F091D31DBEB sha1 E951C85962E7499E0BCAFAE82774E489C1CA9942 serial "Q.D.-0" )
+)
+game (
+	name "Battle Battle League (Japan) (Proto) (Disk 2)"
+	region "Japan"
+	serial "Q.D."
+	rom ( name "Battle Battle League (Japan) (Proto) (Disk 2).fds" size 131000 crc 47531C2D md5 7F0C4015E1926CF8F34CA567F63CA167 sha1 E9AB7F7026A5CAB536A3874F1A9A6566407326BE serial "Q.D." )
+)
+game (
+	name "Battle Battle League (Japan) (Proto) (Disk 2)"
+	region "Japan"
+	serial "Q.D.-1"
+	rom ( name "Battle Battle League (Japan) (Proto) (Disk 2).fds" size 131000 crc 47531C2D md5 7F0C4015E1926CF8F34CA567F63CA167 sha1 E9AB7F7026A5CAB536A3874F1A9A6566407326BE serial "Q.D.-1" )
+)
+game (
+	name "Big Challenge! Dogfight Spirit (Japan)"
+	region "Japan"
+	serial "DFS"
+	rom ( name "Big Challenge! Dogfight Spirit (Japan).fds" size 131000 crc 4E92B68E md5 0BC3EB7EE9AA0D5D8DF3894A0B9896AF sha1 91EDBB216A7A8B3AD8ABA15229530670D1AD774D serial "DFS" )
+)
+game (
+	name "Big Challenge! Go! Go! Bowling (Japan)"
+	region "Japan"
+	serial "GGB"
+	rom ( name "Big Challenge! Go! Go! Bowling (Japan).fds" size 131000 crc A1CE4038 md5 D8EE9D7E3A4AC2490774C84CE5F9E45A sha1 C0C93462E460423BA85A7EDA9638BACAAF7A62FB serial "GGB" )
+)
+game (
+	name "Big Challenge! Gun Fighter (Japan)"
+	region "Japan"
+	serial "GNF"
+	rom ( name "Big Challenge! Gun Fighter (Japan).fds" size 131000 crc D9836FB3 md5 F19DEF771B919A6AD1B005597B52E5D5 sha1 63B51007F60BE5E789127A9E4A4505C1DE3E64B3 serial "GNF" )
+)
+game (
+	name "Big Challenge! Juudou Senshuken (Japan)"
+	region "Japan"
+	serial "CJS"
+	rom ( name "Big Challenge! Juudou Senshuken (Japan).fds" size 131000 crc 16C8CDD5 md5 73ED8CCA3F3DB319866D93BD13C249DE sha1 9293C072D53F1C52175627A1848AFC8613713FBF serial "CJS" )
+)
+game (
+	name "Bio Miracle Bokutte Upa (Japan)"
+	region "Japan"
+	serial "BOK"
+	rom ( name "Bio Miracle Bokutte Upa (Japan).fds" size 131000 crc C57B947F md5 57A1E7555064C2DBE3E2E6A82785D9F9 sha1 58DB028D52C3A538C92881EAFBC1C154E02F9241 serial "BOK" )
+)
+game (
+	name "Bio Miracle Bokutte Upa (Japan) (3DS Virtual Console)"
+	region "Japan"
+	serial "BOK"
+	rom ( name "Bio Miracle Bokutte Upa (Japan) (3DS Virtual Console).fds" size 131000 crc E6801342 md5 7D466E0D92A4D82FB8A8FC288C2130B8 sha1 E566544472E817E070394B4E4F3C4934F55802C4 serial "BOK" )
+)
+game (
+	name "Bio Miracle Bokutte Upa (Japan) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "BOK"
+	rom ( name "Bio Miracle Bokutte Upa (Japan) (Wii and Wii U Virtual Console).fds" size 131000 crc 494CC75E md5 727FBBF8DC67DCB24FB363F3343C961D sha1 6843008D71003589B49DB45D8193E19EF65855C2 serial "BOK" )
+)
+game (
+	name "Bishoujo Alien Battle (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Alien Battle (Japan) (Unl).fds" size 131000 crc E89FED10 md5 2895A7742CBFB80C9C64B7C5B079DEA6 sha1 659ADFF45A5B19930A74FED0D9B366B62DE982B0 )
+)
+game (
+	name "Bishoujo Control (Japan)"
+	region "Japan"
+	serial "WILD"
+	rom ( name "Bishoujo Control (Japan) (Unl).fds" size 131000 crc 058330FE md5 61E275EC04D5CFE0A2149346EBE1F8BE sha1 0A40EB7D5F516A2298826E933F8A4D581B09223C serial "WILD" )
+)
+game (
+	name "Bishoujo Hanafuda Club Vol.1 - Oichokabu Hen (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Hanafuda Club Vol.1 - Oichokabu Hen (Japan) (Unl).fds" size 131000 crc 798BEA42 md5 DB9BE15272EB28F4A0C39C5640E782C4 sha1 2E471B96A93F84A051816BCA7AD9DB7682D62D6C )
+)
+game (
+	name "Bishoujo Hanafuda Club Vol.2 - Koikoi Bakappana Hen (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Hanafuda Club Vol.2 - Koikoi Bakappana Hen (Japan) (Unl).fds" size 131000 crc 478F36D6 md5 AA90FC78932771005301B80BD12BCA23 sha1 11FA7A7344630FD5DEC4B66A870944A5CFFD930E )
+)
+game (
+	name "Bishoujo Kachinuki Renju - Gomoku Narabe (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Kachinuki Renju - Gomoku Narabe (Japan) (Unl).fds" size 131000 crc FF06EB11 md5 9607BE9AF87E542464FD218ECB58CD6E sha1 F6A58D5E5B01F4E7541933B38C1D8431BEE45FC7 )
+)
+game (
+	name "Bishoujo Mahjong Club (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Mahjong Club (Japan) (Unl).fds" size 131000 crc DEAEF7E0 md5 4C4C5BB719E686D4990CC5A376A823CE sha1 B740922DF5D72C75B11275D42D2CB3B0E74ACD2B )
+)
+game (
+	name "Bishoujo Sexy Derby (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Sexy Derby (Japan) (Unl).fds" size 131000 crc BEB6DD2A md5 3DE1E993FF82A4B56AF56302201FE63D sha1 25645AAD45483C2CAAB1DB8D6950B4874416CE1C )
+)
+game (
+	name "Bishoujo Sexy Puzzle (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Sexy Puzzle (Japan) (Unl).fds" size 131000 crc 6B0F343E md5 5E4630299D2077BF3BBF29303AB797D9 sha1 9154835F8FEFD9DBA570DBD05791579C08C41200 )
+)
+game (
+	name "Bishoujo Sexy Slot (Japan)"
+	region "Japan"
+	rom ( name "Bishoujo Sexy Slot (Japan) (Unl).fds" size 131000 crc BC15B7F1 md5 05E5227CA87A482EBF7DCA8F392710E1 sha1 65D2DF2996BCF13B8A7FE601E8A816E8EE9D637A )
+)
+game (
+	name "Bishoujo Shashinkan - Moving School (Japan)"
+	region "Japan"
+	serial "SYA2"
+	rom ( name "Bishoujo Shashinkan - Moving School (Japan) (Unl).fds" size 131000 crc 8E0BBA37 md5 B1C78E342353BC4B3FE2F0774C938961 sha1 15333DF7C64152AF4296418C64BE103EF2F5B859 serial "SYA2" )
+)
+game (
+	name "Bishoujo Shashinkan - Studio Cut (Japan)"
+	region "Japan"
+	serial "SYA1"
+	rom ( name "Bishoujo Shashinkan - Studio Cut (Japan) (Unl).fds" size 131000 crc D761A49C md5 C6278C2EF5476341D9B1EAD07D7FAEC3 sha1 8596F2E33D820855D0C2010D7042A56BF5128E24 serial "SYA1" )
+)
+game (
+	name "Bodyconquest I - Abakareshi Musumetachi (Japan) (Disk 1)"
+	region "Japan"
+	rom ( name "Bodyconquest I - Abakareshi Musumetachi (Japan) (Disk 1) (Unl).fds" size 131000 crc 6E59EC4F md5 B4A97E97261DA9DF74E41ED67AE4663D sha1 E75644E590A38487D39DD7B811F4EB6893D8A01A )
+)
+game (
+	name "Bodyconquest I - Abakareshi Musumetachi (Japan) (Disk 2)"
+	region "Japan"
+	rom ( name "Bodyconquest I - Abakareshi Musumetachi (Japan) (Disk 2) (Unl).fds" size 131000 crc DD80EA36 md5 8D6C5629815A2695B5A93CA3B70D5A8F sha1 E076F0F4E1A7255C39C50E75C4A4F204FA5D50F8 )
+)
+game (
+	name "Bomberman (Japan) (Disk Writer)"
+	region "Japan"
+	serial "BMD"
+	rom ( name "Bomberman (Japan) (Disk Writer).fds" size 65500 crc B84C2259 md5 BBAC7232E938AF706F1409B7D6CCB666 sha1 73EB98E8911773D2F193B7CBF15462272152376B serial "BMD" )
+)
+game (
+	name "Breeder (Japan)"
+	region "Japan"
+	serial "BRE"
+	rom ( name "Breeder (Japan).fds" size 131000 crc F8FC6D6E md5 308A23C253729D9B3B98BED494878AB1 sha1 A764C7D5215E557D44F778D844AB2274F80D0C61 serial "BRE" )
+)
+game (
+	name "Bubble Bobble (Japan)"
+	region "Japan"
+	serial "BUB"
+	rom ( name "Bubble Bobble (Japan).fds" size 131000 crc 8C8D153E md5 7DB302A54555C041D437B97665AD63CF sha1 A28D16FDF8472CE311A0B5F0454B5DA874AD86AF serial "BUB" )
+)
+game (
+	name "Bubble Bobble (Japan) (3DS Virtual Console)"
+	region "Japan"
+	serial "BUB"
+	rom ( name "Bubble Bobble (Japan) (3DS Virtual Console).fds" size 131000 crc E48F3EA6 md5 8CFCF849231E7870216B9B37CAB58FCB sha1 E8C787DAB4A947A8C1826A458C378FA97C351D27 serial "BUB" )
+)
+game (
+	name "Bubble Bobble (Japan) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "BUB"
+	rom ( name "Bubble Bobble (Japan) (Wii and Wii U Virtual Console).fds" size 131000 crc 1CFC87EC md5 82FAD6D7047964D26D122F153B67BDC9 sha1 72396FCDB53A05EEEAD09565827C614048EC3FCC serial "BUB" )
+)
+game (
+	name "BurgerTime (Japan) (Disk Writer)"
+	region "Japan"
+	serial "BGT"
+	rom ( name "BurgerTime (Japan) (Disk Writer).fds" size 65500 crc B3D3D6E5 md5 8CB74CFE93D17E45CB9E942A86E4A550 sha1 9610CD5B20D0CB0D0611C49C76D89A8D8CE27927 serial "BGT" )
+)
+game (
+	name "Chitei Tairiku Ordola (Japan)"
+	region "Japan"
+	serial "ORD"
+	rom ( name "Chitei Tairiku Ordola (Japan).fds" size 131000 crc 9671CE0C md5 DE77E98655BFE724EBDF478317AEF936 sha1 AA922B8DCD56A43D9E14CE07E6C37F54A482DB08 serial "ORD" )
+)
+game (
+	name "Cleopatra no Mahou (Japan)"
+	region "Japan"
+	serial "CLO"
+	rom ( name "Cleopatra no Mahou (Japan).fds" size 131000 crc FDEAA3D8 md5 C33B3326ED541C344737C20FAB36908A sha1 D797A6B9AF372A15203FB5158B19D01B44EDEC52 serial "CLO" )
+)
+game (
+	name "Clu Clu Land (Japan) (En) (Disk Writer)"
+	region "Japan"
+	serial "CLD"
+	rom ( name "Clu Clu Land (Japan) (En) (Disk Writer).fds" size 65500 crc 85E771B9 md5 A1802300B60961F7670F60ACEBC88842 sha1 DC1B3E6C0DB8D1AD94C619C310F47A28B7ADF884 serial "CLD" )
+)
+game (
+	name "Clu Clu Land (Japan) (En) (GameCube, Virtual Console)"
+	region "Japan"
+	serial "CLD"
+	rom ( name "Clu Clu Land (Japan) (En) (GameCube, Virtual Console).fds" size 65500 crc 406EDD8D md5 78FA67C8F40D951082178F334FD6DC28 sha1 B7A73DF77DA83D60B6A64918FCACBABBC0DA72F1 serial "CLD" )
+)
+game (
+	name "Cocona World (Japan)"
+	region "Japan"
+	serial "CCN"
+	rom ( name "Cocona World (Japan).fds" size 131000 crc C198AB00 md5 7A85E31A5E99537E9305A9BC4449A85C sha1 927485CDAE98FD20D18D36A28B11DE7D951DDBE3 serial "CCN" )
+)
+game (
+	name "Comic Sakka Series Touma Senki #1 - Mashoujo Gakuen Evil (Japan)"
+	region "Japan"
+	rom ( name "Comic Sakka Series Touma Senki #1 - Mashoujo Gakuen Evil (Japan) (Unl).fds" size 131000 crc 6F298C83 md5 4A05C2C690112F7E6B29608681A7DB5E sha1 CA5C531E47CC419A2E4F95402E49478EC2118CAE )
+)
+game (
+	name "Comic Sakka Series Touma Senki #2 - Mermaid no Gyakushuu (Japan)"
+	region "Japan"
+	rom ( name "Comic Sakka Series Touma Senki #2 - Mermaid no Gyakushuu (Japan) (Unl).fds" size 131000 crc 6532906E md5 89BAEC66B47F533211825CCEAA4AAC4B sha1 85519B50D21773B3C8431247816230D9ED3C26E8 )
+)
+game (
+	name "Comic Sakka Series Touma Senki #3 - Ryuujin Sensei Kikiippatsu (Japan)"
+	region "Japan"
+	rom ( name "Comic Sakka Series Touma Senki #3 - Ryuujin Sensei Kikiippatsu (Japan) (Unl).fds" size 131000 crc 6880B1F3 md5 32EFDB191EBD7D88E14DCC839DD99845 sha1 A58BE9B5FB84B78A3E0506335B176F0A0E01D17E )
+)
+game (
+	name "Comic Sakka Series Touma Senki #4 - Tenkuu Ryuumaou Fukkatsu (Japan)"
+	region "Japan"
+	rom ( name "Comic Sakka Series Touma Senki #4 - Tenkuu Ryuumaou Fukkatsu (Japan) (Unl).fds" size 131000 crc EDDB3816 md5 729BBA298E4459084F62A77961653ACA sha1 2939203E6514635C5250F1D52DB9B5C9D1E038E8 )
+)
+game (
+	name "Comic Sakka Series Touma Senki #5 - Youjuu Rudo no Chousen (Japan)"
+	region "Japan"
+	rom ( name "Comic Sakka Series Touma Senki #5 - Youjuu Rudo no Chousen (Japan) (Unl).fds" size 131000 crc A3BD4E0B md5 BBAA0D2F0F2B2E58EC1FB74DE80DA948 sha1 BA9D070CBB7835B272933E6AE4C89AC6D7223745 )
+)
+game (
+	name "Dandy - Zeuon no Fukkatsu (Japan)"
+	region "Japan"
+	serial "DAN"
+	rom ( name "Dandy - Zeuon no Fukkatsu (Japan).fds" size 131000 crc F027228E md5 AA1C671D6B5D3D3BFBE114588578B524 sha1 51062CC3E4806B1B94662ACEA969EF49C7C8FFED serial "DAN" )
+)
+game (
+	name "Date de Blackjack (Japan)"
+	region "Japan"
+	rom ( name "Date de Blackjack (Japan) (Unl).fds" size 131000 crc AD361F32 md5 64273A3A64EC6DD629EDBA1D0AA7B3DE sha1 F98C76DE0483F85B92CEC11AB1C106529A93FE51 )
+)
+game (
+	name "Dead Zone (Japan)"
+	region "Japan"
+	serial "DZN"
+	rom ( name "Dead Zone (Japan).fds" size 131000 crc DE673254 md5 0032B506D04AE902C44B8269CE902A55 sha1 89D1484FD5E2F6569C7CB73451ACF3418E0FAD23 serial "DZN" )
+)
+game (
+	name "Dead Zone (Japan) (Beta)"
+	releaseyear "1986"
+	releasemonth "10"
+	releaseday "06"
+	region "Japan"
+	rom ( name "Dead Zone (Japan) (Beta) (1986-10-06).fds" size 131000 crc 9B91F0F8 md5 7AA5000BF8F7D830AE0739C36A047D72 sha1 127329162D1E55D5273ACE359F3DE9F28AF18A92 )
+)
+game (
+	name "Dig Dug (Japan) (Disk Writer)"
+	region "Japan"
+	serial "DIG"
+	rom ( name "Dig Dug (Japan) (Disk Writer).fds" size 65500 crc 45D45F7F md5 19D1C0E25237027EC23AA5AA27C5A194 sha1 364549540CB096D667488B5A9A853DBEA1ED562A serial "DIG" )
+)
+game (
+	name "Dig Dug II (Japan) (Disk Writer)"
+	region "Japan"
+	serial "DD2"
+	rom ( name "Dig Dug II (Japan) (Disk Writer).fds" size 65500 crc 283D67AB md5 2FA8464847BD6B6232AF14CDCBF18D7A sha1 0B5F3E7238BF7DBAB94E7932F1F913FD4670C92A serial "DD2" )
+)
+game (
+	name "Dirty Pair - Project Eden (Japan)"
+	region "Japan"
+	serial "DPR"
+	rom ( name "Dirty Pair - Project Eden (Japan).fds" size 131000 crc 5F0A149B md5 3339FE118797D085A272F89578F83DD4 sha1 8710825437166A6C20687A9CA2D86EBA5B28B26C serial "DPR" )
+)
+game (
+	name "Dirty Pair - Project Eden (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "DPR"
+	rom ( name "Dirty Pair - Project Eden (Japan) (Rev 1) (Disk Writer).fds" size 131000 crc 700627B9 md5 4722EDF5CAA94B134DBAF7D62B854283 sha1 711370B62338BD063ABA8594BAFE813EAECD65C8 serial "DPR" )
+)
+game (
+	name "Disk Hacker - Version 1.0 (Japan)"
+	region "Japan"
+	rom ( name "Disk Hacker - Version 1.0 (Japan) (Unl).fds" size 65500 crc 853A611F md5 4D70B2DDB06F4BDDEA02627E2F79E8C4 sha1 3003FDD68F0980D9C0013614A9C0A1A7C72818E4 )
+)
+game (
+	name "Disk Hacker - Version 1.2 (Japan)"
+	region "Japan"
+	rom ( name "Disk Hacker - Version 1.2 (Japan) (Unl).fds" size 65500 crc 35039547 md5 F568272FA2FCE0A1742AD21FACF60CFB sha1 836985F616AB11BB36C5F836CD99D8CECD986D01 )
+)
+game (
+	name "Disk Hacker - Version 1.3 (Japan)"
+	region "Japan"
+	rom ( name "Disk Hacker - Version 1.3 (Japan) (Unl).fds" size 65500 crc 9C3790D3 md5 8AA014C78ED480C04E447757C5844904 sha1 C7119140C4C34B8D99DD701115FA885125E206E1 )
+)
+game (
+	name "Disk Hacker II - Copy Plus 3 (Japan)"
+	region "Japan"
+	rom ( name "Disk Hacker II - Copy Plus 3 (Japan) (Unl).fds" size 65500 crc 0DD82733 md5 430448C8A4E6E1949A9B38004883E861 sha1 ADF1141E2EE673ED96BD8DC2834437D406760405 )
+)
+game (
+	name "Disk Keeper (Japan)"
+	region "Japan"
+	rom ( name "Disk Keeper (Japan) (Unl).fds" size 65500 crc 9F87B85B md5 0E654366C759B458694E3520D3825E13 sha1 A5B0425BC543A690032AC8DEA9FF794BDE9B75AB )
+)
+game (
+	name "Donkey Kong (Japan) (Disk Writer)"
+	region "Japan"
+	serial "DKD"
+	rom ( name "Donkey Kong (Japan) (Disk Writer).fds" size 65500 crc 1DDB8EF7 md5 D2F158FF4C710683D8EFC7A4837C0599 sha1 E12212A43B728B614D8F574EC006B6AB94A7FE10 serial "DKD" )
+)
+game (
+	name "Donkey Kong Jr. (Japan) (Disk Writer)"
+	region "Japan"
+	serial "JRD"
+	rom ( name "Donkey Kong Jr. (Japan) (Disk Writer).fds" size 65500 crc 90E16269 md5 F161D86682E4E36FA0C4F93D7556B4ED sha1 EFE78E0B68A1287B945290B24E6CAABE5612A2E1 serial "JRD" )
+)
+game (
+	name "Doremikko (Japan)"
+	region "Japan"
+	serial "DRE"
+	rom ( name "Doremikko (Japan).fds" size 131000 crc BEE7A47B md5 B7FCE0E8721F2341386DDDD0184D5D8F sha1 69E5DAD9021F47807565571A4F27D7BF527C404E serial "DRE" )
+)
+game (
+	name "Dot E Creator Contest (Japan)"
+	region "Japan"
+	rom ( name "Dot E Creator Contest (Japan).fds" size 131000 crc 46B16B01 md5 296A421198F3738E13E29CC43C45EF4E sha1 33E96C640EE5980BFD9C3CAAD1FC969E0AD990BC )
+)
+game (
+	name "Dr. Chaos - Jigoku no Tobira (Japan)"
+	region "Japan"
+	serial "DRC"
+	rom ( name "Dr. Chaos - Jigoku no Tobira (Japan).fds" size 131000 crc 7954BD8F md5 8DF81DEDB34CD7EB9A36A95AE1E67ECE sha1 8F7A14369D99AF1AE861BC5E8EAAB25427C2E107 serial "DRC" )
+)
+game (
+	name "Dracula II - Noroi no Fuuin (Japan)"
+	region "Japan"
+	serial "DRK"
+	rom ( name "Dracula II - Noroi no Fuuin (Japan).fds" size 131000 crc 3A0BB17B md5 0EDA1DABCA3CDD01CFE34E24EF5155B7 sha1 82BE8E77C41C2E9D0675DAC8F20D6BF85C7F8F19 serial "DRK" )
+)
+game (
+	name "Dracula II - Noroi no Fuuin (Japan) (Virtual Console)"
+	region "Japan"
+	serial "DRK"
+	rom ( name "Dracula II - Noroi no Fuuin (Japan) (Virtual Console).fds" size 131000 crc F451269F md5 5BF41FFCEF22C7BCDA75EBB11DE60A3B sha1 2A7A6D31AF642203B3C8AEFC048C7C975C80B7F3 serial "DRK" )
+)
+game (
+	name "Druid - Kyoufu no Tobira (Japan)"
+	region "Japan"
+	serial "DRD"
+	rom ( name "Druid - Kyoufu no Tobira (Japan).fds" size 131000 crc 69139E45 md5 BF88D1C1FC7BF0D4783859264DD6BDA5 sha1 7B0C175A94D11DB939565AD0B40DD29D6A129A5D serial "DRD" )
+)
+game (
+	name "Druid - Kyoufu no Tobira (Japan) (Beta)"
+	releaseyear "1987"
+	releasemonth "12"
+	releaseday "24"
+	region "Japan"
+	serial "DRD"
+	rom ( name "Druid - Kyoufu no Tobira (Japan) (Beta) (1987-12-24).fds" size 131000 crc 47FF9438 md5 33610C9C63A9F8624F015F147CB55BC4 sha1 26C60D7181D4B107CE6FD33FC74607423B0511EF serial "DRD" )
+)
+game (
+	name "Egger Land (Japan)"
+	region "Japan"
+	serial "EGL"
+	rom ( name "Egger Land (Japan).fds" size 131000 crc 34688660 md5 EC94E229CDD700BBDC66D283D0E3801F sha1 8B84AA9A42046BDA2F6B2D16EB1803F41B0E6437 serial "EGL" )
+)
+game (
+	name "Egger Land (Japan) (Rev 1) (Possible Proto)"
+	region "Japan"
+	serial "EGL"
+	rom ( name "Egger Land (Japan) (Rev 1) (Possible Proto).fds" size 131000 crc CF2A8BF8 md5 9193E78A2BD7D64373C403E8BE7D5B51 sha1 D29A85FECAC83065A9D4DC60C78729B5DB406F11 serial "EGL" )
+)
+game (
+	name "Egger Land - Souzou e no Tabidachi (Japan) (Beta)"
+	releaseyear "1987"
+	releasemonth "11"
+	releaseday "11"
+	region "Japan"
+	rom ( name "Egger Land - Souzou e no Tabidachi (Japan) (Beta) (1987-11-11).fds" size 131000 crc 5C50B9FC md5 386E47174B9192F78ED6F911C7CF1A99 sha1 260F824C95772BBE4CB60702AD53A71CF4E11D3A )
+)
+game (
+	name "Egger Land - Souzou e no Tabidachi (Japan) (Disk Writer)"
+	region "Japan"
+	serial "EGS"
+	rom ( name "Egger Land - Souzou e no Tabidachi (Japan) (Disk Writer).fds" size 131000 crc 94DE6CCB md5 01DA73E5E3C38627E73AF19D219FB14A sha1 E6C3C80E7DD9F173EE3013DE99A2EB4B9B03F301 serial "EGS" )
+)
+game (
+	name "Electrician (Japan)"
+	region "Japan"
+	serial "ELC"
+	rom ( name "Electrician (Japan).fds" size 131000 crc 2CA83DFB md5 858C75BAC6E034CEE44AFE665C23069F sha1 DA2027EA081A5ABED68A92F5AF5F9AD9D474C7AA serial "ELC" )
+)
+game (
+	name "Emi-chan no Moero Yakyuuken! (Japan)"
+	region "Japan"
+	rom ( name "Emi-chan no Moero Yakyuuken! (Japan) (Unl).fds" size 131000 crc 13B688B4 md5 1ABEC9090440920265737A5B57992B38 sha1 C317500C50955DABA14EC8CB71246D1FB9B1CB8F )
+)
+game (
+	name "Esper Dream (Japan)"
+	region "Japan"
+	serial "ESP"
+	rom ( name "Esper Dream (Japan).fds" size 131000 crc E33C8305 md5 46F705409DE0AAC7289C269CC12EE558 sha1 2C4855362B38BEA5F1543038356E96FAE5625AF6 serial "ESP" )
+)
+game (
+	name "Esper Dream (Japan) (Rev 1) (3DS Virtual Console)"
+	region "Japan"
+	serial "ESP"
+	rom ( name "Esper Dream (Japan) (Rev 1) (3DS Virtual Console).fds" size 131000 crc EDAF1A42 md5 37AEC6AF89447C6AA81BC160CCC1E50A sha1 5C99EB99F77ED111FB1062512552C822C5017FDE serial "ESP" )
+)
+game (
+	name "Esper Dream (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "ESP"
+	rom ( name "Esper Dream (Japan) (Rev 1) (Disk Writer).fds" size 131000 crc 7AECF9D8 md5 6B6CF238668429511A027B1739403975 sha1 4DDDCE65694344DA9F83C9B85D6524DA0958962C serial "ESP" )
+)
+game (
+	name "Esper Dream (Japan) (Rev 1) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "ESP"
+	rom ( name "Esper Dream (Japan) (Rev 1) (Wii and Wii U Virtual Console).fds" size 131000 crc B954C11A md5 BFCBF0F8614F9290C6DAE6E1B13F33AB sha1 BB477227CBDC52B14A505D6C5DB0AB52D221FB26 serial "ESP" )
+)
+game (
+	name "Exciting Baseball (Japan)"
+	region "Japan"
+	serial "EBS"
+	rom ( name "Exciting Baseball (Japan).fds" size 131000 crc F63C93BD md5 BE5B835B566A1925649AC89E44487774 sha1 8DA3756936CA7B63E18028F0A82EDC6F4096AF18 serial "EBS" )
+)
+game (
+	name "Exciting Basket (Japan)"
+	region "Japan"
+	serial "EKB"
+	rom ( name "Exciting Basket (Japan).fds" size 131000 crc 96B5DCAE md5 94648C0BA3E5AF8D0DD75BC4843D8AE3 sha1 2BB87CCF77C37F5BC15D07BBE62E2ED347CA3007 serial "EKB" )
+)
+game (
+	name "Exciting Billiard (Japan)"
+	region "Japan"
+	serial "EKS"
+	rom ( name "Exciting Billiard (Japan).fds" size 131000 crc D6E57884 md5 9ED5F9577A941C770A82002FFB7A67A3 sha1 A3318F4D47A5A1EF7C82E9907EABCD389F006813 serial "EKS" )
+)
+game (
+	name "Exciting Soccer - Konami Cup (Japan)"
+	region "Japan"
+	serial "ESC"
+	rom ( name "Exciting Soccer - Konami Cup (Japan).fds" size 131000 crc D6C838FE md5 02B906E41F63B212887D33C5DA9C2FE1 sha1 D86409054BD3E90DB3E47C5201AF544C1390A5B9 serial "ESC" )
+)
+game (
+	name "FMC Disk Card Checker Ver 1.3 (Japan) (Rev 2) (Developer Card)"
+	region "Japan"
+	serial "CHK"
+	rom ( name "FMC Disk Card Checker Ver 1.3 (Japan) (Rev 2) (Developer Card).fds" size 131000 crc 57CB559E md5 F16637988B46ECBD28FA277895BD5C64 sha1 FC3BAFF1945D1379D0F453FF31E040EEFA578CD6 serial "CHK" )
+)
+game (
+	name "Fairy Pinball - Yousei Tachi no Pinball (Japan)"
+	region "Japan"
+	rom ( name "Fairy Pinball - Yousei Tachi no Pinball (Japan) (Unl).fds" size 131000 crc AC7ED005 md5 F8A81CBCEA63FB0DE0DC2CDEEB4B2A84 sha1 58E84C1BC6CFEBF6E548E65F055C6B70E1FE9579 )
+)
+game (
+	name "Fairytale (Japan)"
+	region "Japan"
+	serial "FYT"
+	rom ( name "Fairytale (Japan).fds" size 131000 crc A92BC067 md5 5B8C59259082182123ECAFC06A3B38EF sha1 3B20C3A9B0311461918F22EF19AA277FC813F7DB serial "FYT" )
+)
+game (
+	name "Falsion (Japan)"
+	region "Japan"
+	serial "FAL"
+	rom ( name "Falsion (Japan).fds" size 131000 crc 5442C889 md5 E1C635B2A67F2E683DB3D50B23D1F519 sha1 B81FE9F10FB19AFF6E5303E7B0445E4399811791 serial "FAL" )
+)
+game (
+	name "Famicom Grand Prix - F1 Race (Japan)"
+	region "Japan"
+	serial "FRGE"
+	rom ( name "Famicom Grand Prix - F1 Race (Japan).fds" size 131000 crc 0CE9573B md5 AEA1094EA6D91E486F11F33DA5117EC4 sha1 533322263A0C90E7113176F01AFC116CCE0A6854 serial "FRGE" )
+)
+game (
+	name "Famicom Grand Prix - F1 Race (Japan) (DV 1) (Disk Writer)"
+	region "Japan"
+	serial "FRGE"
+	rom ( name "Famicom Grand Prix - F1 Race (Japan) (DV 1) (Disk Writer).fds" size 131000 crc 81FADA11 md5 44936B51EBAD3A715F8F2B226DF9E7CB sha1 90E035C85B823C405D38CD9BB06E848285E1349B serial "FRGE" )
+)
+game (
+	name "Famicom Grand Prix II - 3D Hot Rally (Japan) (DV 5) (Famicom 3D System)"
+	region "Japan"
+	serial "TDRE"
+	rom ( name "Famicom Grand Prix II - 3D Hot Rally (Japan) (DV 5) (Famicom 3D System).fds" size 131000 crc A0F93B27 md5 D253950E2B8603BB101A80F11B026D79 sha1 8D5AA7CB21471DD4B1D4CE1B2DB810BDCF1CEF8E serial "TDRE" )
+)
+game (
+	name "Famicom Grand Prix II - 3D Hot Rally (Japan) (DV 7) (Famicom 3D System)"
+	region "Japan"
+	serial "TDRE"
+	rom ( name "Famicom Grand Prix II - 3D Hot Rally (Japan) (DV 7) (Famicom 3D System).fds" size 131000 crc A6A25143 md5 B0DD747AFCA81796B09BDB1555CBAD6E sha1 3DCF131AEA852D6ACEFE8798C91C2B9DF25970BA serial "TDRE" )
+)
+game (
+	name "Famicom Grand Prix II - 3D Hot Rally (Japan) (DV 8) (Disk Writer) (Famicom 3D System)"
+	region "Japan"
+	serial "TDRE"
+	rom ( name "Famicom Grand Prix II - 3D Hot Rally (Japan) (DV 8) (Disk Writer) (Famicom 3D System).fds" size 131000 crc 0B2C84E9 md5 6E578C64B129F5F84D5D38632BC06123 sha1 7ED5EFD72D5783B2046A54BB9AA9D3EDFAA0F17B serial "TDRE" )
+)
+game (
+	name "Famicom Mukashibanashi - Shin Onigashima - Kouhen (Japan)"
+	region "Japan"
+	serial "ON2"
+	rom ( name "Famicom Mukashibanashi - Shin Onigashima - Kouhen (Japan).fds" size 131000 crc 29DE8C55 md5 4ED16D918142773011F377F26F7025DF sha1 CA3A0FE11973E91D5930C341C2763E20753EEF09 serial "ON2" )
+)
+game (
+	name "Famicom Mukashibanashi - Shin Onigashima - Kouhen (Japan) (Virtual Console)"
+	region "Japan"
+	serial "ON2"
+	rom ( name "Famicom Mukashibanashi - Shin Onigashima - Kouhen (Japan) (Virtual Console).fds" size 131000 crc 7AF926AB md5 21D1DB2DB96A6EA45435DC9C81D69D0C sha1 5B3730027D93C8DC7A2788A61F59183FADB07011 serial "ON2" )
+)
+game (
+	name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 1)"
+	region "Japan"
+	serial "ON1"
+	rom ( name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 1).fds" size 131000 crc 72AD3E23 md5 3FEC4814765CF83CAE9C9F6DDE37874E sha1 1B22D8F2DA23AB9FD5AA4F8FFF0E3735972651E1 serial "ON1" )
+)
+game (
+	name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 2, 3) (Disk Writer)"
+	region "Japan"
+	serial "ON1"
+	rom ( name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 2, 3) (Disk Writer).fds" size 131000 crc 5BD86B7B md5 EFEBCB43329B1818035FF5EBDC347793 sha1 2D47856C27208BE90626E988AF77D74FE5BC2C59 serial "ON1" )
+)
+game (
+	name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 3) (3DS Virtual Console)"
+	region "Japan"
+	serial "ON1"
+	rom ( name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 3) (3DS Virtual Console).fds" size 131000 crc 4233BDF3 md5 D20245AB0ADF0979641A119172C40AB0 sha1 B8CAF3B70B6381E641BF2A6B5B46B6CD6A26F0A2 serial "ON1" )
+)
+game (
+	name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 3) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "ON1"
+	rom ( name "Famicom Mukashibanashi - Shin Onigashima - Zenpen (Japan) (DV 3) (Wii and Wii U Virtual Console).fds" size 131000 crc 5742BD49 md5 53621B34043E04F965C72142C74318FD sha1 D3D0FFE6B41733BB8C85F706B557A20FD06D7EC4 serial "ON1" )
+)
+game (
+	name "Famicom Mukashibanashi - Yuuyuuki - Kouhen (Japan)"
+	region "Japan"
+	serial "UU2"
+	rom ( name "Famicom Mukashibanashi - Yuuyuuki - Kouhen (Japan).fds" size 131000 crc 9CFD349B md5 2A0AEC24D6C5DFCA478175D8F6CAD105 sha1 6ADDF99E16232E5E757949C0937DA3B044BFF3DA serial "UU2" )
+)
+game (
+	name "Famicom Mukashibanashi - Yuuyuuki - Zenpen (Japan)"
+	region "Japan"
+	serial "UU1"
+	rom ( name "Famicom Mukashibanashi - Yuuyuuki - Zenpen (Japan).fds" size 131000 crc CB8CF11C md5 75A311A11D2E2C06921813F48EA30CD9 sha1 E201AD823A05AA2E7249C04233E1D4A82DEB9BB2 serial "UU1" )
+)
+game (
+	name "Famicom Tantei Club - Kieta Koukeisha - Kouhen (Japan)"
+	region "Japan"
+	serial "TC2"
+	rom ( name "Famicom Tantei Club - Kieta Koukeisha - Kouhen (Japan).fds" size 131000 crc 37DE7BD4 md5 9A37C64B86F851A010431C76E2B360FE sha1 57B678989BC6C1A2E90BD7C6944DE4C161169781 serial "TC2" )
+)
+game (
+	name "Famicom Tantei Club - Kieta Koukeisha - Kouhen (Japan) (3DS Virtual Console)"
+	region "Japan"
+	serial "TC2"
+	rom ( name "Famicom Tantei Club - Kieta Koukeisha - Kouhen (Japan) (3DS Virtual Console).fds" size 131000 crc 61360DA0 md5 5489E099A7D8802C397A55F349A8C162 sha1 15D4990871C5382A309D4F10E7EE9264E970BD42 serial "TC2" )
+)
+game (
+	name "Famicom Tantei Club - Kieta Koukeisha - Zenpen (Japan) (DV 1, 3)"
+	region "Japan"
+	serial "TC1"
+	rom ( name "Famicom Tantei Club - Kieta Koukeisha - Zenpen (Japan) (DV 1, 3).fds" size 131000 crc 1BF5F454 md5 0BDFF1170BECC5D77C7133839B5FD3CF sha1 2145EEFC46B35317E1DE8F254154716D5EA68FAB serial "TC1" )
+)
+game (
+	name "Famicom Tantei Club - Kieta Koukeisha - Zenpen (Japan) (DV 3) (3DS Virtual Console)"
+	region "Japan"
+	serial "TC1"
+	rom ( name "Famicom Tantei Club - Kieta Koukeisha - Zenpen (Japan) (DV 3) (3DS Virtual Console).fds" size 131000 crc 4D092907 md5 0082D7BBE5F6A970C16ADB0691C3CC8B sha1 DAFF108EE6420E6F429FB0780FEBEED216F989AF serial "TC1" )
+)
+game (
+	name "Famicom Tantei Club - Kieta Koukeisha - Zenpen (Japan) (DV 3) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "TC1"
+	rom ( name "Famicom Tantei Club - Kieta Koukeisha - Zenpen (Japan) (DV 3) (Wii and Wii U Virtual Console).fds" size 131000 crc 6DBF2FFC md5 416D9131B5607CC5BC9404E5B2489E39 sha1 4C6E9446655B4FBBD23015707BFBDA80F643C032 serial "TC1" )
+)
+game (
+	name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Kouhen (Japan) (DV 3, 4)"
+	region "Japan"
+	serial "TC4"
+	rom ( name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Kouhen (Japan) (DV 3, 4).fds" size 131000 crc EF5FC6B8 md5 C7B229806FFE03AFF5BE49C7CD64D32B sha1 3F9CC0920E65B283190D88B6F3BF5D60D23533ED serial "TC4" )
+)
+game (
+	name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Kouhen (Japan) (DV 4) (3DS Virtual Console)"
+	region "Japan"
+	serial "TC4"
+	rom ( name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Kouhen (Japan) (DV 4) (3DS Virtual Console).fds" size 131000 crc 91BC6638 md5 3C9D7028E353D6275482E0B5BA821773 sha1 77F28F1D83025CEE786E95F9620B6BD80F98F6AD serial "TC4" )
+)
+game (
+	name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan)"
+	region "Japan"
+	serial "TC3"
+	rom ( name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan).fds" size 131000 crc FE908A02 md5 D92BCB20C38A46A283F8950723B1F54E sha1 2AB438C93074649F8B6529D58C08B6D2478089BF serial "TC3" )
+)
+game (
+	name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan) (3DS Virtual Console)"
+	region "Japan"
+	serial "TC3"
+	rom ( name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan) (3DS Virtual Console).fds" size 131000 crc 26E56B6B md5 DE2E6226DC59BCD861AEA0003E5600C5 sha1 652401DB810427BE2FC25004D70B8387F9E9574F serial "TC3" )
+)
+game (
+	name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan) (Beta)"
+	region "Japan"
+	serial "TC3"
+	rom ( name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan) (Beta).fds" size 131000 crc E233B15A md5 AF5FC1434B50E6775280E27859B7F108 sha1 CBAA3A70B77E6A33A36BC3E6DEDB07F6EDF1D001 serial "TC3" )
+)
+game (
+	name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan) (Wii Virtual Console)"
+	region "Japan"
+	serial "TC3"
+	rom ( name "Famicom Tantei Club Part II - Ushiro ni Tatsu Shoujo - Zenpen (Japan) (Wii Virtual Console).fds" size 131000 crc 0C697954 md5 019983DEE58589D6F3E04A927534868F sha1 80A652BEFE3A56401A3A940730299E5DBA1615F0 serial "TC3" )
+)
+game (
+	name "Family Composer (Japan) (Disk Writer)"
+	region "Japan"
+	serial "FCO"
+	rom ( name "Family Composer (Japan) (Disk Writer).fds" size 131000 crc 01E451B9 md5 9DBBA23FC7660D1C5C53716A55829BDE sha1 E15A395393090B433CB2EDCB0CC3BF4D876A8E08 serial "FCO" )
+)
+game (
+	name "Family Composer (Japan) (Rev 1) (Possible Proto)"
+	region "Japan"
+	serial "FCO"
+	rom ( name "Family Composer (Japan) (Rev 1) (Possible Proto).fds" size 131000 crc FDDBC00D md5 A9DCB0D6C5CE6D2BA1EF0856DD8AB506 sha1 B1D0B50E37491EC268225D8207597B4CEAEC4CE9 serial "FCO" )
+)
+game (
+	name "Famimaga Disk Vol. 1 - Hong Kong (Japan)"
+	region "Japan"
+	serial "HKD"
+	rom ( name "Famimaga Disk Vol. 1 - Hong Kong (Japan).fds" size 65500 crc 31C155D8 md5 86F4A70B28BD7DA547C8315197A4CFE8 sha1 B401FE92C86A0496A3F7247BA8738B69BE120114 serial "HKD" )
+)
+game (
+	name "Famimaga Disk Vol. 2 - Panic Space (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PSD"
+	rom ( name "Famimaga Disk Vol. 2 - Panic Space (Japan) (Disk Writer).fds" size 131000 crc A2EBBB2F md5 03098A102C794338B7D17ACC83CFF9A0 sha1 FB1BB7CD9194F457EB40BA7638D720833FB5786B serial "PSD" )
+)
+game (
+	name "Famimaga Disk Vol. 3 - All 1 (Japan) (Disk Writer)"
+	region "Japan"
+	serial "ALD"
+	rom ( name "Famimaga Disk Vol. 3 - All 1 (Japan) (Disk Writer).fds" size 65500 crc 645B4C48 md5 5E19AA55C0A421CAD21CD4C732961BFA sha1 DB3459DC067E2C6CE5D8A39D288804CB0D2F9C79 serial "ALD" )
+)
+game (
+	name "Famimaga Disk Vol. 4 - Clocks (Japan) (Disk Writer)"
+	region "Japan"
+	serial "CKD"
+	rom ( name "Famimaga Disk Vol. 4 - Clocks (Japan) (Disk Writer).fds" size 65500 crc 135831C4 md5 F031C8428868AD84C6183F16DE2E90F2 sha1 7669CBC31FA9360588D997790ACB835E1BC07014 serial "CKD" )
+)
+game (
+	name "Famimaga Disk Vol. 5 - Puyo Puyo (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PYO"
+	rom ( name "Famimaga Disk Vol. 5 - Puyo Puyo (Japan) (Disk Writer).fds" size 131000 crc 58D3A655 md5 689509A8C0340687B026E3C5BF09657B sha1 B1CC1DB5235381F1A33AF7C42DDED562BE8F9C46 serial "PYO" )
+)
+game (
+	name "Famimaga Disk Vol. 6 - Janken Disk Jou (Japan) (Disk Writer)"
+	region "Japan"
+	serial "JKD"
+	rom ( name "Famimaga Disk Vol. 6 - Janken Disk Jou (Japan) (Disk Writer).fds" size 131000 crc 958201D8 md5 638186D22CA0DC03A93D858DF1B14E2F sha1 A10379F7F02F97A90D6B165B09B8795A65105189 serial "JKD" )
+)
+game (
+	name "Final Command - Akai Yousai (Japan)"
+	region "Japan"
+	serial "AKA"
+	rom ( name "Final Command - Akai Yousai (Japan).fds" size 131000 crc 08028E43 md5 31559F43A673A178B2F9498F7DDEFC79 sha1 C8A2EE105571D0DCC3099F9A96DB93F41B31BF5A serial "AKA" )
+)
+game (
+	name "Fire Bam (Japan)"
+	region "Japan"
+	serial "FBM"
+	rom ( name "Fire Bam (Japan).fds" size 131000 crc 744CD2F8 md5 736A9CA3EDB290730FD00FE692D068FD sha1 DE4A306D2D4F7AFFFED64644AA1568959D1A959D serial "FBM" )
+)
+game (
+	name "Fire Rock (Japan)"
+	region "Japan"
+	serial "FRC"
+	rom ( name "Fire Rock (Japan).fds" size 131000 crc 33B5B551 md5 0BA4A87A4920648109DD2D556F38827F sha1 8FBC2EA7DD9FE79EF25511815DC0A154C4591C4B serial "FRC" )
+)
+game (
+	name "Fruits Mahjong 1 - Disk 1 - Mahjong Game Hontai (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 1 - Disk 1 - Mahjong Game Hontai (Japan) (Unl).fds" size 131000 crc 722ECA6D md5 E41E573E4D819C982A21D2DEA480457D sha1 53524E738860CEC039DE3C3769A98DD8481B93E4 )
+)
+game (
+	name "Fruits Mahjong 1 - Disk 2 - Dai H Taikai (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 1 - Disk 2 - Dai H Taikai (Japan) (Unl).fds" size 131000 crc F4300462 md5 FD7C1E5687C2A492A3B23CF709920FD5 sha1 0D8EB9A88826E7096897E7970A950A8814F9CC4A )
+)
+game (
+	name "Fruits Mahjong 2 - Disk 1 - Tokimeki Gals (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 2 - Disk 1 - Tokimeki Gals (Japan) (Unl).fds" size 131000 crc D065DFCF md5 947861E03DAE327ECA8CD1A35AE0A6DC sha1 FB030CAC9556C74D872C4676DAF79393AF0C1CD3 )
+)
+game (
+	name "Fruits Mahjong 2 - Disk 2 - Yonin to Dai H Taikai (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 2 - Disk 2 - Yonin to Dai H Taikai (Japan) (Unl).fds" size 131000 crc EFF1B027 md5 FADCE3D67D3C6831419A77A7D63693AD sha1 414DCCEB652AE4D32545EB3CD74BE3DDCD19F31B )
+)
+game (
+	name "Fruits Mahjong 3 - Disk 1 - Yonin no Tenshi Tachi (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 3 - Disk 1 - Yonin no Tenshi Tachi (Japan) (Unl).fds" size 131000 crc 1F0E3CBC md5 4F4066C4C717B093C7652A180AEA6117 sha1 A202465CC38CC297A7CABE549008C3D90DDFC9CA )
+)
+game (
+	name "Fruits Mahjong 3 - Disk 2 - Tottemo H na Gogo (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 3 - Disk 2 - Tottemo H na Gogo (Japan) (Unl).fds" size 131000 crc 7D853EEC md5 DE9143DEE9CB282A505AB804D70AE5C7 sha1 C09A21C865C69D41B27AC83C5DDCCFD1DA23C739 )
+)
+game (
+	name "Fruits Mahjong 4 - Disk 1 - Bishoujo Connection (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 4 - Disk 1 - Bishoujo Connection (Japan) (Unl).fds" size 131000 crc F5DE88B1 md5 7F1E6325E434E27D6024F3223990B4E6 sha1 4F24ADBE3D1F8C2C0FF6889F51D2E134C4C1CD66 )
+)
+game (
+	name "Fruits Mahjong 4 - Disk 2 - Daitan H na Hirusagari (Japan)"
+	region "Japan"
+	rom ( name "Fruits Mahjong 4 - Disk 2 - Daitan H na Hirusagari (Japan) (Unl).fds" size 131000 crc 4A42467D md5 3D9CCA9523D3016362484210C43E00A8 sha1 B78C6B3B2504515EDAED1E5DE675BC0EE50F0B3B )
+)
+game (
+	name "Fuuun Shourin Ken (Japan)"
+	region "Japan"
+	serial "FSH"
+	rom ( name "Fuuun Shourin Ken (Japan).fds" size 131000 crc 620E0D98 md5 094DEC7F7C8A6B82A7660B34362EE8B0 sha1 B59DBF8FDF64E03EC508C40FC8CB59670A6DBF53 serial "FSH" )
+)
+game (
+	name "Fuuun Shourin Ken - Ankoku no Maou (Japan) (Famicom 3D System)"
+	region "Japan"
+	serial "SAM"
+	rom ( name "Fuuun Shourin Ken - Ankoku no Maou (Japan) (Famicom 3D System).fds" size 131000 crc 3C5F6468 md5 7910CF70C42F60E4FD1B9BE5AD286595 sha1 9D360E98D4CB6ADA219354C7915A4D7DB1459838 serial "SAM" )
+)
+game (
+	name "Galaga (Japan) (Disk Writer)"
+	region "Japan"
+	serial "GAG"
+	rom ( name "Galaga (Japan) (Disk Writer).fds" size 65500 crc AB413401 md5 C9C41539FE24999FB75A90E32034AF47 sha1 F9CD6ED88F26CA5D850CE6CA00C921B32BEA0847 serial "GAG" )
+)
+game (
+	name "Galaxian (Japan) (Disk Writer)"
+	region "Japan"
+	serial "GXN"
+	rom ( name "Galaxian (Japan) (Disk Writer).fds" size 65500 crc BA4B6FA8 md5 09555848FD304B2BD5B532030D2A9170 sha1 834D8A00362F0FC36A8FC3AC77F59598E69F2B5F serial "GXN" )
+)
+game (
+	name "Gall Force - Eternal Story (Japan)"
+	region "Japan"
+	serial "GAL"
+	rom ( name "Gall Force - Eternal Story (Japan).fds" size 131000 crc 2CF62AA9 md5 A0FF1B03BD2EAFF65AF51606446A52FD sha1 0964DD056041FE82E7F6AC66D7593034629A3032 serial "GAL" )
+)
+game (
+	name "Game no Tatsujin - Money Wars (Japan)"
+	region "Japan"
+	rom ( name "Game no Tatsujin - Money Wars (Japan) (Unl).fds" size 131000 crc DA1E66C9 md5 04F381D148759B60FBB81F7C89CCB33D sha1 4248B8FB6C2039BBE3B10945B637E23051F27D75 )
+)
+game (
+	name "German Tanteidan MarinGumi - Maruhi Jigomar Sousa File (Japan)"
+	region "Japan"
+	serial "MAR"
+	rom ( name "German Tanteidan MarinGumi - Maruhi Jigomar Sousa File (Japan).fds" size 131000 crc B1FDA4EC md5 E8B67E8BBBAD9A1AEEFE7CC0F269AF5B sha1 A1C01C819AEBF49B37288559B49D33A7DE5842E7 serial "MAR" )
+)
+game (
+	name "Ginga Denshou - Galaxy Odyssey (Japan)"
+	region "Japan"
+	serial "GIN"
+	rom ( name "Ginga Denshou - Galaxy Odyssey (Japan).fds" size 131000 crc 631D9FA8 md5 9B93834739BFDF9B536C461892588085 sha1 A69C12B4EA58EEA91088CCC88517E651D4BDC4B9 serial "GIN" )
+)
+game (
+	name "Ginga Denshou - Galaxy Odyssey (Japan) (Rev 1) (Possible Proto)"
+	region "Japan"
+	serial "GIN"
+	rom ( name "Ginga Denshou - Galaxy Odyssey (Japan) (Rev 1) (Possible Proto).fds" size 131000 crc 960D68B0 md5 2D5856800CE56D4990DDA73D47401E38 sha1 B19CF285A3F8D41033D62D9A6DEB9D41F95A8E26 serial "GIN" )
+)
+game (
+	name "Gokuraku Yuugi - Game Tengoku (Japan)"
+	region "Japan"
+	serial "GTG"
+	rom ( name "Gokuraku Yuugi - Game Tengoku (Japan).fds" size 131000 crc 42FC78AE md5 7896FA5DA72C5C3A3CC99C27612A2047 sha1 B88F958DDBB1AE3932D86FD112349E802241FB93 serial "GTG" )
+)
+game (
+	name "Golf (Japan)"
+	region "Japan"
+	serial "GLF"
+	rom ( name "Golf (Japan).fds" size 65500 crc 9AB768F5 md5 B61F0557BC844E25BFA389647BABFFF8 sha1 CDD113F54CE2E98E449C5C1848CF1A6F1745BBFC serial "GLF" )
+)
+game (
+	name "Golf (Japan) (Rev 1)"
+	region "Japan"
+	serial "GLF"
+	rom ( name "Golf (Japan) (Rev 1).fds" size 65500 crc A9451981 md5 5518478491D4405D98298BC012DA86A4 sha1 8E84F5CC553D9BB07480BC5F92CB42E2A031EAED serial "GLF" )
+)
+game (
+	name "Golf (Japan) (Rev 2) (Possible Proto)"
+	region "Japan"
+	serial "GLF"
+	rom ( name "Golf (Japan) (Rev 2) (Possible Proto).fds" size 65500 crc 04BBD0FC md5 9E30B10FB1F5546E3E451964F8D603E7 sha1 95EC0D893417045DFC73042CB37841418E37A24D serial "GLF" )
+)
+game (
+	name "Golf - Japan Course (Japan)"
+	region "Japan"
+	serial "GFJE"
+	rom ( name "Golf - Japan Course (Japan).fds" size 131000 crc F49129F6 md5 5538301297F13A4CA19F093630B3B0E4 sha1 81F0FF0CC9BD47195E5ACC1EE4FC95ED1DDA7596 serial "GFJE" )
+)
+game (
+	name "Golf - Japan Course (Japan) (DV 2)"
+	region "Japan"
+	serial "GFJE"
+	rom ( name "Golf - Japan Course (Japan) (DV 2).fds" size 131000 crc FD5B83A1 md5 33DD52AE0C66E52E142B9DC07E06A449 sha1 532214DACBAC874DEB1C944F894C450FEEFFD2EB serial "GFJE" )
+)
+game (
+	name "Golf - Japan Course (Japan) (Prize Card)"
+	region "Japan"
+	serial "GSJE"
+	rom ( name "Golf - Japan Course (Japan) (Prize Card).fds" size 131000 crc C1BD72F2 md5 55741F2EA46AADBBFA25FE7F1E07C77A sha1 31EB8B7E7C867E8DD3996633AB703CA318220519 serial "GSJE" )
+)
+game (
+	name "Golf - Special Course (Japan) (Prize Card)"
+	region "Japan"
+	serial "GSUE"
+	rom ( name "Golf - Special Course (Japan) (Prize Card).fds" size 131000 crc 528DA81F md5 B2D4BA1B88E9D05120331746F89BBEBF sha1 F9DF95725822161784598064F50BEF3EA639967D serial "GSUE" )
+)
+game (
+	name "Golf - US Course (Japan)"
+	region "Japan"
+	serial "GFUE"
+	rom ( name "Golf - US Course (Japan).fds" size 131000 crc BDEAC502 md5 C71912D90DC39B2EE41BFA05C83783F8 sha1 7FE5D5B21BBE6A15CE0A8D327FE4D6EEC87C184D serial "GFUE" )
+)
+game (
+	name "Golf - US Course (Japan) (DV 1)"
+	region "Japan"
+	serial "GFUE"
+	rom ( name "Golf - US Course (Japan) (DV 1).fds" size 131000 crc B1879EFD md5 A4A7CB14010E85A2D6280960A4B8EF6C sha1 D5A29613806FFD6C8FAE1D81050EA015C4476906 serial "GFUE" )
+)
+game (
+	name "Golf - US Course (Japan) (DV 2) (Disk Writer)"
+	region "Japan"
+	serial "GFUE"
+	rom ( name "Golf - US Course (Japan) (DV 2) (Disk Writer).fds" size 131000 crc BE6A0596 md5 9942A61CFD95AF14C2C66DBA4CC979CA sha1 BA9ACB65D9D009C08C0FDF521646FA84EBB4C69A serial "GFUE" )
+)
+game (
+	name "Golf, The - Bishoujo Classic (Japan)"
+	region "Japan"
+	rom ( name "Golf, The - Bishoujo Classic (Japan) (Unl).fds" size 131000 crc 6781C413 md5 BC7F03A9A6F39BF0392CE4ED927DEE0D sha1 3A7407ABEF761D8103AA4C3816460F4790599E30 )
+)
+game (
+	name "Gomoku Narabe (Japan) (Proto)"
+	region "Japan"
+	serial "GOD"
+	rom ( name "Gomoku Narabe (Japan) (Proto).fds" size 65500 crc D080F23A md5 3508A9284AE93C58C661389BCA94071D sha1 C2A4A53878A016F08B8CDC78E63179A68F43156D serial "GOD" )
+)
+game (
+	name "Goonies (Japan) (Disk Writer)"
+	region "Japan"
+	serial "GNS"
+	rom ( name "Goonies (Japan) (Disk Writer).fds" size 65500 crc 5BA05C82 md5 2889445D3DCBFE1FBA98182A956D6000 sha1 E12E6B521A68C8CF402714D84F6E5E8ACC7DF30A serial "GNS" )
+)
+game (
+	name "Graphic Editor Hokusai - Ver 1.2 (Japan)"
+	region "Japan"
+	serial "OUJI"
+	rom ( name "Graphic Editor Hokusai - Ver 1.2 (Japan) (Unl).fds" size 65500 crc 1D234703 md5 211EB4C04A292E13760D921D4D49965E sha1 81FC6D52B21B714F3A4445DEB46A1E563BB64258 serial "OUJI" )
+)
+game (
+	name "Green Beret (Japan)"
+	region "Japan"
+	serial "GRN"
+	rom ( name "Green Beret (Japan).fds" size 131000 crc D0916BB6 md5 7E0015D52386F1607EAB919F5C1ABA9A sha1 BC83A2A26CDFC4CAB97954371AE5C75F36F44993 serial "GRN" )
+)
+game (
+	name "Gun.Smoke (Japan)"
+	region "Japan"
+	serial "GUN"
+	rom ( name "Gun.Smoke (Japan).fds" size 131000 crc C6D3968A md5 1900DBF7A3B329C5B84578341DD89D4D sha1 E1D6D057C7551BC0E74B342A797C2733D4B861B1 serial "GUN" )
+)
+game (
+	name "Gyruss (Japan)"
+	region "Japan"
+	serial "GRS"
+	rom ( name "Gyruss (Japan).fds" size 131000 crc BFC78F7D md5 FEB7399972C2908687D2A39DFB646DAF sha1 7CAC3F8A1963BE84AA20888996922F0599797EBD serial "GRS" )
+)
+game (
+	name "Gyruss (Japan) (Beta)"
+	releaseyear "1988"
+	releasemonth "10"
+	releaseday "03"
+	region "Japan"
+	serial "GRS"
+	rom ( name "Gyruss (Japan) (Beta) (1988-10-03).fds" size 131000 crc 73B64FFE md5 7E5EDA201492D64229F0969D9512B241 sha1 283A4AAA3445B959DB14E1CFA20E4F086C50C3D9 serial "GRS" )
+)
+game (
+	name "Halley Wars (Japan)"
+	region "Japan"
+	serial "HAL"
+	rom ( name "Halley Wars (Japan).fds" size 131000 crc 4DE34546 md5 03545C4E608694C06DAEEFB511D46C8E sha1 C63334B4DC7DD3EF1141100953B9B1079355E505 serial "HAL" )
+)
+game (
+	name "Hao-kun no Fushigi na Tabi (Japan)"
+	region "Japan"
+	serial "HFT"
+	rom ( name "Hao-kun no Fushigi na Tabi (Japan).fds" size 131000 crc FD6BF87C md5 95E3BF05A5908EDF8E97D395FB45F8EA sha1 28FC0A9B9BEA9BD9B189C8512CD55C90BC276E18 serial "HFT" )
+)
+game (
+	name "Hayama Reiko no Date de Blackjack (Japan)"
+	region "Japan"
+	rom ( name "Hayama Reiko no Date de Blackjack (Japan) (Unl).fds" size 131000 crc E918A01A md5 ECEEBADAD508727B37107ECB7BFA928F sha1 24267A7BA5A8698B74318ACD0308D5820EDA8B6D )
+)
+game (
+	name "Hikari Shinwa - Palthena no Kagami (Japan)"
+	region "Japan"
+	serial "PTM"
+	rom ( name "Hikari Shinwa - Palthena no Kagami (Japan).fds" size 131000 crc 76217563 md5 46132BD343DE7B172A430526353E7943 sha1 3C3E9ADA001961221013F2117D7C05350609ED18 serial "PTM" )
+)
+game (
+	name "Hikari Shinwa - Palthena no Kagami (Japan) (Rev 1)"
+	region "Japan"
+	serial "PTM"
+	rom ( name "Hikari Shinwa - Palthena no Kagami (Japan) (Rev 1).fds" size 131000 crc E7E6E77A md5 E3761242B3BE50C25C6837B203100F75 sha1 BD9C5B936338BE350DD20BA3B6D25730429750C6 serial "PTM" )
+)
+game (
+	name "Hikari Shinwa - Palthena no Kagami (Japan) (Rev 1) (Virtual Console)"
+	region "Japan"
+	serial "PTM"
+	rom ( name "Hikari Shinwa - Palthena no Kagami (Japan) (Rev 1) (Virtual Console).fds" size 131000 crc B88D9BC2 md5 962C031A7611E3A682E1BD3988A1C2F4 sha1 42E38020DF7176E20D0BB90C2B3CF33291BBDE31 serial "PTM" )
+)
+game (
+	name "Hikaru Genji - Roller Panic (Japan)"
+	region "Japan"
+	serial "GEN"
+	rom ( name "Hikaru Genji - Roller Panic (Japan).fds" size 131000 crc 58CF45F3 md5 1DE9DE2116A20E6010DD2CE3DCC248F6 sha1 C0B7550965C8084F097AD3C0A90A5FF3FD8B46A1 serial "GEN" )
+)
+game (
+	name "I Am a Teacher - Super Mario no Sweater (Japan)"
+	region "Japan"
+	serial "ISM"
+	rom ( name "I Am a Teacher - Super Mario no Sweater (Japan).fds" size 131000 crc BB51C5D0 md5 BB0ECB99169AF05FA7C322DA5F80423B sha1 5B814FC2483C4ECE6B4877DD452889B9E250D5D3 serial "ISM" )
+)
+game (
+	name "I Am a Teacher - Teami no Kiso (Japan)"
+	region "Japan"
+	serial "ITK"
+	rom ( name "I Am a Teacher - Teami no Kiso (Japan).fds" size 131000 crc C54D80BF md5 7FE6AEF8D5FD02F0D7AE9C9CFB861F22 sha1 F2A35C2E5C5699D6C7BD74DE5454F1C9FD9C22BD serial "ITK" )
+)
+game (
+	name "Ice Climber (Japan) (En) (Disk Writer)"
+	region "Japan"
+	serial "ICD"
+	rom ( name "Ice Climber (Japan) (En) (Disk Writer).fds" size 65500 crc 036A80DD md5 6110C726EE6BB2768CAA35DD77D1F025 sha1 7A599BE966E9918F826AAC5E13473E822F34B89C serial "ICD" )
+)
+game (
+	name "Ice Hockey (Japan)"
+	region "Japan"
+	serial "ICE"
+	rom ( name "Ice Hockey (Japan).fds" size 65500 crc 189FA707 md5 0535C15240C5476D66067F755ED0534D sha1 55B801C3BF3DD86697F5FF858151EA1C5D3EEE8B serial "ICE" )
+)
+game (
+	name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 10)"
+	region "Japan"
+	serial "THSE"
+	rom ( name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 10).fds" size 131000 crc 9C9616B8 md5 DAB482F9791AF3AB7F607F92EED02631 sha1 DFB1931C10C8D8EE42BB807D8305EF9311C78E4D serial "THSE" )
+)
+game (
+	name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 11) (Disk Writer)"
+	region "Japan"
+	serial "THSE"
+	rom ( name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 11) (Disk Writer).fds" size 131000 crc 525C5BB1 md5 F03E048A438F353266F32060341D23B8 sha1 584398B941EA1B070F3BA6E8148ABEC1D4F06AF1 serial "THSE" )
+)
+game (
+	name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 13) (Disk Writer)"
+	region "Japan"
+	serial "THSE"
+	rom ( name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 13) (Disk Writer).fds" size 131000 crc ED26AB9F md5 26E24F896CEF199341B5461699F25CBF sha1 9F0A3179FF7AC29B2A9B125C596384F7C8D7D812 serial "THSE" )
+)
+game (
+	name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 4)"
+	region "Japan"
+	serial "THSE"
+	rom ( name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 4).fds" size 131000 crc 10266CDD md5 C872A738AE0C718FA08B3ED75F8A3872 sha1 95A764D66F6A6A032A45D67AAF0A39589B06A361 serial "THSE" )
+)
+game (
+	name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 6)"
+	region "Japan"
+	serial "THSE"
+	rom ( name "Idol Hotline - Nakayama Miho no Tokimeki High School (Japan) (DV 6).fds" size 131000 crc ABDDEC53 md5 B116D4AC001B2263F65D03E7CDABA512 sha1 48B3C14A3150537281D031007032CDAB726B56DA serial "THSE" )
+)
+game (
+	name "Igo - Kyuu Roban Taikyoku (Japan)"
+	region "Japan"
+	serial "IGO"
+	rom ( name "Igo - Kyuu Roban Taikyoku (Japan).fds" size 131000 crc 2E1E75AE md5 BAA90C058D18D7828C745C57D8A536D7 sha1 BAB72B9C0FC46550213F0D6EA37ED8673200FF28 serial "IGO" )
+)
+game (
+	name "Ishidou (Japan) (Disk Writer)"
+	region "Japan"
+	serial "ISD"
+	rom ( name "Ishidou (Japan) (Disk Writer).fds" size 131000 crc 0C54A19E md5 47858572048A5CB0B9801EA7EE51461A sha1 F3D5E79A2EC8C984BAB18741CC902C3BED9F912D serial "ISD" )
+)
+game (
+	name "Jikai Shounen Met Mag (Japan)"
+	region "Japan"
+	serial "MTM"
+	rom ( name "Jikai Shounen Met Mag (Japan).fds" size 131000 crc A25A1001 md5 96381239FED8A092ED35947C47E093AA sha1 ED161FD575FEDE0279567F6D524F39A48DDD2DC2 serial "MTM" )
+)
+game (
+	name "Jingorou (Japan)"
+	region "Japan"
+	serial "OUJI"
+	rom ( name "Jingorou (Japan) (Unl).fds" size 65500 crc 72A0BD81 md5 3536C5A5569FBBC8EE92303B26265122 sha1 6230486BB3653B5B3936671695D955B9A5C78BF4 serial "OUJI" )
+)
+game (
+	name "Kaettekita Mario Bros. (Japan) (Disk Writer)"
+	region "Japan"
+	serial "KMAR"
+	rom ( name "Kaettekita Mario Bros. (Japan) (Disk Writer).fds" size 131000 crc 4D5BFD77 md5 86DC38B22C2363178E5A0CD3D992B619 sha1 AE5941B4262D92E9C3254A86269A6FD56189A129 serial "KMAR" )
+)
+game (
+	name "Kalin no Tsurugi (Japan)"
+	region "Japan"
+	serial "KRN"
+	rom ( name "Kalin no Tsurugi (Japan).fds" size 131000 crc 30A753BE md5 DC9DA8D17DD74B36CF70E9C6BE0D009B sha1 B28A440AB0CF315A21B9B039F7FC0ACD79F8DA30 serial "KRN" )
+)
+game (
+	name "Kamen Rider Black - Taiketsu Shadow Moon (Japan)"
+	region "Japan"
+	serial "BLA"
+	rom ( name "Kamen Rider Black - Taiketsu Shadow Moon (Japan).fds" size 131000 crc 566C6DDF md5 0081176964E6409210AD0F3C4BB561A7 sha1 BFE8B644FAB411216614381649F0BC84F8CCCB46 serial "BLA" )
+)
+game (
+	name "Karate Champ (Japan)"
+	region "Japan"
+	serial "KAR"
+	rom ( name "Karate Champ (Japan).fds" size 131000 crc DFD06601 md5 EA2E0C2DD52A2D44BED229810C3DA05C sha1 6481D88145639EF0E2B827C3B94F6454FACFB017 serial "KAR" )
+)
+game (
+	name "Kattobi! Douji (Japan)"
+	region "Japan"
+	serial "KTD"
+	rom ( name "Kattobi! Douji (Japan).fds" size 131000 crc 8A54CE0B md5 A5936BAB5A16C9EFD4DC5058C2BE5889 sha1 CD8338B2ADCE9579A1876950AC1A2F275764EFB3 serial "KTD" )
+)
+game (
+	name "Kick Challenger - Air Foot - Yasai no Kuni no Ashi Senshi (Japan)"
+	region "Japan"
+	serial "AFT"
+	rom ( name "Kick Challenger - Air Foot - Yasai no Kuni no Ashi Senshi (Japan).fds" size 131000 crc 78A12D0A md5 9D98E570EE44A676755971E3ED907BBC sha1 73D42C954CB1B87C03D9D3AD47F983E00FCF5379 serial "AFT" )
+)
+game (
+	name "Kick and Run (Japan)"
+	region "Japan"
+	serial "KIC"
+	rom ( name "Kick and Run (Japan).fds" size 131000 crc E3D0DCFC md5 D12F7BFF55ECA89BB54667C9BD68AAB2 sha1 7F6F70759391B10936D295C36B2A56F10D9BBAC6 serial "KIC" )
+)
+game (
+	name "Kieta Princess (Japan)"
+	region "Japan"
+	serial "KIE"
+	rom ( name "Kieta Princess (Japan).fds" size 131000 crc 60D55CEA md5 07D6BF1266DB5DE287F3A8C0168321AF sha1 38148D65001C9784B7CE6B59348E1BF9DDC3FFF1 serial "KIE" )
+)
+game (
+	name "Kiki Kaikai - Dotou Hen (Japan)"
+	region "Japan"
+	serial "KIK"
+	rom ( name "Kiki Kaikai - Dotou Hen (Japan).fds" size 131000 crc 35838A29 md5 395309F36C8C739318BB695F5A5FE37E sha1 B7B98DBC286366C9B024D93AB77FD599AA6B9E00 serial "KIK" )
+)
+game (
+	name "Kiki Kaikai - Dotou Hen (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "KIK"
+	rom ( name "Kiki Kaikai - Dotou Hen (Japan) (Rev 1) (Disk Writer).fds" size 131000 crc 007AA4FD md5 50C982AFDFE889FD33792539A5E90451 sha1 72EECE33428159B71951573EFBD5AAB7F9490235 serial "KIK" )
+)
+game (
+	name "Kind Gal's (Japan) (Disk 1)"
+	region "Japan"
+	serial "K2"
+	rom ( name "Kind Gal's (Japan) (Disk 1) (Unl).fds" size 131000 crc 66686B06 md5 3FFC0F3046C94111B04BE4B5D087A0B9 sha1 27AB3FB36247A45857D8C9669FEBB8167A6FA12A serial "K2" )
+)
+game (
+	name "Kind Gal's (Japan) (Disk 1)"
+	region "Japan"
+	serial "K2-0"
+	rom ( name "Kind Gal's (Japan) (Disk 1) (Unl).fds" size 131000 crc 66686B06 md5 3FFC0F3046C94111B04BE4B5D087A0B9 sha1 27AB3FB36247A45857D8C9669FEBB8167A6FA12A serial "K2-0" )
+)
+game (
+	name "Kind Gal's (Japan) (Disk 2)"
+	region "Japan"
+	serial "K2"
+	rom ( name "Kind Gal's (Japan) (Disk 2) (Unl).fds" size 131000 crc 65C5AAEC md5 10E1082E0A63FC3BC4C97AA965DA71DE sha1 86E6C7F634155FF4321B68582F1F642FEAE95BC0 serial "K2" )
+)
+game (
+	name "Kind Gal's (Japan) (Disk 2)"
+	region "Japan"
+	serial "K2-1"
+	rom ( name "Kind Gal's (Japan) (Disk 2) (Unl).fds" size 131000 crc 65C5AAEC md5 10E1082E0A63FC3BC4C97AA965DA71DE sha1 86E6C7F634155FF4321B68582F1F642FEAE95BC0 serial "K2-1" )
+)
+game (
+	name "Kinnikuman - Kinnikusei Oui Soudatsusen (Japan)"
+	region "Japan"
+	serial "KNM"
+	rom ( name "Kinnikuman - Kinnikusei Oui Soudatsusen (Japan).fds" size 131000 crc 03D8CDB1 md5 043F08EC047AF5B29763D6AF3F07AF96 sha1 F4CFB1565857464856305FF96C55EA6C233E03EB serial "KNM" )
+)
+game (
+	name "Kinnikuman - Kinnikusei Oui Soudatsusen (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "KNM"
+	rom ( name "Kinnikuman - Kinnikusei Oui Soudatsusen (Japan) (Rev 1) (Disk Writer).fds" size 131000 crc 39E05966 md5 E5237686150960DD8817BACB7FB34F9B sha1 C05052AA34ADE9B7B2F869CC582D0EA623947876 serial "KNM" )
+)
+game (
+	name "Knight Lore - Majou no Ookami Otoko (Japan)"
+	region "Japan"
+	serial "KLM"
+	rom ( name "Knight Lore - Majou no Ookami Otoko (Japan).fds" size 131000 crc 70E55476 md5 8F72FF90D8A70C7E94602E6979F463E5 sha1 F672554A637497098368F7E7397174574E6E6628 serial "KLM" )
+)
+game (
+	name "Knight Move (Japan)"
+	region "Japan"
+	serial "KMV"
+	rom ( name "Knight Move (Japan).fds" size 65500 crc FD6EF8D7 md5 C1DEFD5A1B78F409B5951AD8988D820E sha1 CA24C31DB670CDFF703677FCE28F0A810B2D3350 serial "KMV" )
+)
+game (
+	name "Knight Move (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "KMV"
+	rom ( name "Knight Move (Japan) (Rev 1) (Disk Writer).fds" size 65500 crc 6D365E2F md5 1EB851F60FC09F3D5B61EA16E13B71C6 sha1 AC81CECD0C99CB7657681AD11D530C673941B59F serial "KMV" )
+)
+game (
+	name "Kobayashi Hitomi Shocking Tennis (Japan)"
+	region "Japan"
+	rom ( name "Kobayashi Hitomi Shocking Tennis (Japan) (Unl).fds" size 131000 crc 187EC24C md5 2078370192192BFFC602DB2EDBC42C81 sha1 7389DA745B2B2261C6708BBCB5F8A5700012F969 )
+)
+game (
+	name "Kobayashi Hitomi no Hold Up (Japan)"
+	region "Japan"
+	rom ( name "Kobayashi Hitomi no Hold Up (Japan) (Unl).fds" size 131000 crc 8A286B73 md5 AE23094DAC25CB88371EBE4F341A0A9E sha1 F5AD91E7EBF49E72AAAF4B44C63D9FA9142AA327 )
+)
+game (
+	name "Konamic Ice Hockey (Japan)"
+	region "Japan"
+	serial "HOC"
+	rom ( name "Konamic Ice Hockey (Japan).fds" size 131000 crc FEF5125F md5 1794CD0F37280F8E2CCB5D79D381473F sha1 7128D8BB30D6DCBBEE41FD5C8D97E080836BBD9D serial "HOC" )
+)
+game (
+	name "Konamic Tennis (Japan)"
+	region "Japan"
+	serial "TNI"
+	rom ( name "Konamic Tennis (Japan).fds" size 131000 crc EDBAEE55 md5 2D8C15C6C33D3ADC1A8A676B343A3876 sha1 F6DBFD739456DDDC6A21148100C912974B8C9E23 serial "TNI" )
+)
+game (
+	name "Konamic Tennis (Japan) (Beta)"
+	releaseyear "1986"
+	releasemonth "10"
+	releaseday "22"
+	region "Japan"
+	rom ( name "Konamic Tennis (Japan) (Beta) (1986-10-22).fds" size 131000 crc 694F064C md5 CC32B4C91579A4E69A1EC5E6EF04363C sha1 62FAA6D7500A0B4CB241DDBA76854D901756B43D )
+)
+game (
+	name "Koneko Monogatari - The Adventures of Chatran (Japan)"
+	region "Japan"
+	serial "KOM"
+	rom ( name "Koneko Monogatari - The Adventures of Chatran (Japan).fds" size 131000 crc 53A7A482 md5 AF8A32BC2EECA242A12B23C46C305F06 sha1 572279CE975E9BF6114BC6E919E1820316022090 serial "KOM" )
+)
+game (
+	name "Koneko Monogatari - The Adventures of Chatran (Japan) (Sample)"
+	releaseyear "1986"
+	releasemonth "07"
+	releaseday "03"
+	region "Japan"
+	rom ( name "Koneko Monogatari - The Adventures of Chatran (Japan) (Sample) (1986-07-03).fds" size 131000 crc 3438794B md5 38078E2E3B6A01473874608F1362C35A sha1 F94F3385DACF10BDE040494742657BF44E764EB3 )
+)
+game (
+	name "Kosodate Gokko (Japan)"
+	region "Japan"
+	serial "KGK"
+	rom ( name "Kosodate Gokko (Japan) (Unl).fds" size 65500 crc 2AEF8CC2 md5 D35ADFC3B99895D6A685537D834EE2FC sha1 93E34356A6FA262F1117402926E9A82A78CEE1D6 serial "KGK" )
+)
+game (
+	name "Link no Bouken - The Legend of Zelda 2 (Japan)"
+	region "Japan"
+	serial "LNK"
+	rom ( name "Link no Bouken - The Legend of Zelda 2 (Japan).fds" size 131000 crc 0C3EBC28 md5 DA8487686C3957B41AC907CBCB715ADA sha1 F5F72FFE9B222C2C3E0D38809BA7263CD0A03E16 serial "LNK" )
+)
+game (
+	name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1)"
+	region "Japan"
+	serial "LNK"
+	rom ( name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1).fds" size 131000 crc 3024CAD5 md5 4673E288B392EFC26326D8FC00C18B26 sha1 9D29FD1E38993AE67564262434B775E0A7DA1DE2 serial "LNK" )
+)
+game (
+	name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1) (Collector's Edition)"
+	region "Japan"
+	serial "LNK"
+	rom ( name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1) (Collector's Edition).fds" size 131000 crc D9D60599 md5 BA67BB9631BE2DC9591DF42F623E382A sha1 F4B5F7594BE7625F568BFCB1650288C977A07051 serial "LNK" )
+)
+game (
+	name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1) (Collector's Edition)"
+	region "Japan"
+	rom ( name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1) (Collector's Edition).qd" size 131072 crc DF122ED1 md5 A0594AA7521CB59E3C0BFB1CADC85C89 sha1 B95411A6492C02D336D743F71A0A6233C9FEC873 )
+)
+game (
+	name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "LNK"
+	rom ( name "Link no Bouken - The Legend of Zelda 2 (Japan) (Rev 1) (Wii and Wii U Virtual Console).fds" size 131000 crc 5F1D39CB md5 91D1089D011431C6006F78573D7E6437 sha1 AFDA1BE5C8A24872318BFE32C8DD2CA794E6F460 serial "LNK" )
+)
+game (
+	name "Lipstick #1 - Lolita Hen (Japan)"
+	region "Japan"
+	rom ( name "Lipstick #1 - Lolita Hen (Japan) (Unl).fds" size 131000 crc 25F0A30F md5 F8C71226E0D92F45B80B442BF312981C sha1 BA10E1C5B1B0AC6E69B14A1F729180E57138774B )
+)
+game (
+	name "Lipstick #2 - Joshi Gakusei Hen (Japan)"
+	region "Japan"
+	rom ( name "Lipstick #2 - Joshi Gakusei Hen (Japan) (Unl).fds" size 131000 crc 784EE9C5 md5 F6F8118395411205B7BDA78E04B44A12 sha1 BA2F17DFAA36B69AC0A8A6610C59B07B5686424A )
+)
+game (
+	name "Lipstick #3 - OL Hen (Japan)"
+	region "Japan"
+	rom ( name "Lipstick #3 - OL Hen (Japan) (Unl).fds" size 131000 crc 416315EC md5 9110148AA66FB605694BA7E78F7B2ED6 sha1 02B4664F89A4A59DBD0A1A1E7B2F59282D4A78BA )
+)
+game (
+	name "Lipstick #4 - Hakui no Tenshi Hen (Japan)"
+	region "Japan"
+	rom ( name "Lipstick #4 - Hakui no Tenshi Hen (Japan) (Unl).fds" size 131000 crc 3C636CE0 md5 B87AD01A363E7A228B89EBB21325E23D sha1 FB1BE79D4585F6292ED963382AC359092C8913DE )
+)
+game (
+	name "Lipstick #5 - Stewardess Hen (Japan)"
+	region "Japan"
+	rom ( name "Lipstick #5 - Stewardess Hen (Japan) (Unl).fds" size 131000 crc 30472B1E md5 5E62C1065B57754AA6F3B580E6836ABF sha1 F71A1105A86116CE8F56E716D25674BD1633CB02 )
+)
+game (
+	name "Lutter (Japan) (Disk Writer)"
+	region "Japan"
+	serial "LTD"
+	rom ( name "Lutter (Japan) (Disk Writer).fds" size 131000 crc 89EF45DD md5 B0F50985B8248FFE0A8D9A4052064638 sha1 18C20782F7225A2F47CD170A8134EEF9B4D5AA44 serial "LTD" )
+)
+game (
+	name "Madou Senki - Deep Dungeon (Japan)"
+	region "Japan"
+	serial "DPD"
+	rom ( name "Madou Senki - Deep Dungeon (Japan).fds" size 131000 crc 56F522D8 md5 D8927B0FCEEF207487B6F4DDB9D87EAB sha1 AB207B80754AD078FA7CEB22D22F831898126D79 serial "DPD" )
+)
+game (
+	name "Madou Senki - Deep Dungeon (Japan) (Rev 1)"
+	region "Japan"
+	serial "DPD"
+	rom ( name "Madou Senki - Deep Dungeon (Japan) (Rev 1).fds" size 131000 crc F70173FB md5 88D9AB9ED750E198C6D0696A5DDB1F1D sha1 8CB17EAAC59BA242A1C9D800598ED90CAAC59F07 serial "DPD" )
+)
+game (
+	name "Maerchen Veil (Japan)"
+	region "Japan"
+	serial "MVL"
+	rom ( name "Maerchen Veil (Japan).fds" size 131000 crc 973CF165 md5 D68F0E208820424009E05B0B9B255F8F sha1 C82EAF16BA4E9C271549C3C1CC95382FE3140933 serial "MVL" )
+)
+game (
+	name "Magma Project - Hacker (Japan)"
+	region "Japan"
+	serial "MPH"
+	rom ( name "Magma Project - Hacker (Japan).fds" size 131000 crc 1CEE986E md5 4889521FF82AB2A6C24001ED81D874BE sha1 09BBB12620DAC98F7745AB5F03A0325603056F46 serial "MPH" )
+)
+game (
+	name "Mahjong (Japan)"
+	region "Japan"
+	serial "MJA"
+	rom ( name "Mahjong (Japan).fds" size 65500 crc 9A8A4DBF md5 A09D709ABEC2E0C96001D7F544F80763 sha1 615659BFEA21919E11608031E8FE818A9E02D1E0 serial "MJA" )
+)
+game (
+	name "Mahjong Goraku - Bishoujo Meijinsen (Japan)"
+	region "Japan"
+	rom ( name "Mahjong Goraku - Bishoujo Meijinsen (Japan) (Unl).fds" size 131000 crc 19AE50DD md5 50D2F437E835CF6BA2E8859ECE2F3F8E sha1 069AA363C6CDE5ADEA3EDE5C56F487C83ED88D64 )
+)
+game (
+	name "Mahjong Kazoku (Japan)"
+	region "Japan"
+	serial "MJK"
+	rom ( name "Mahjong Kazoku (Japan).fds" size 131000 crc 0160BB59 md5 E494BD7E02AB5C41CD783A02CA216456 sha1 2E33B32E83470CD8B30C304005CE2994BC9CB5B0 serial "MJK" )
+)
+game (
+	name "Matou no Houkai - The Hero of Babel (Japan)"
+	region "Japan"
+	serial "MAT"
+	rom ( name "Matou no Houkai - The Hero of Babel (Japan).fds" size 131000 crc AC0615F9 md5 539584F24E97668D537EDDF530E72210 sha1 56F691B138792B69561B591315AFB23594191F23 serial "MAT" )
+)
+game (
+	name "Meikyuu Jiin Dababa (Japan)"
+	region "Japan"
+	serial "MIK"
+	rom ( name "Meikyuu Jiin Dababa (Japan).fds" size 131000 crc 8B54D368 md5 D82B4EF601DE5EEE81B3D9543E0BF6AF sha1 A8BE405F8CD5A0E2313F6A47AF86601C25E00C0C serial "MIK" )
+)
+game (
+	name "Metroid (Japan) (Rev 1)"
+	region "Japan"
+	serial "MET"
+	rom ( name "Metroid (Japan) (Rev 1).fds" size 131000 crc 9C8045DF md5 867EA5239CD206C5E2CD8B4F131A965B sha1 6C0F92D3FB532D689FDBB72472B1470AFB54383F serial "MET" )
+)
+game (
+	name "Metroid (Japan) (Rev 2)"
+	region "Japan"
+	serial "MET"
+	rom ( name "Metroid (Japan) (Rev 2).fds" size 131000 crc 1AD64B0F md5 D68F36D25A3474663BB1DECFE0FCB395 sha1 D902169F4DB2A5127D808CCA8539C3CA924F4039 serial "MET" )
+)
+game (
+	name "Metroid (Japan) (Rev 3)"
+	region "Japan"
+	serial "MET"
+	rom ( name "Metroid (Japan) (Rev 3).fds" size 131000 crc 5E4F013D md5 BB765939F75BCF9234B4BF77CA04281B sha1 741E51B01C3D9D814AE9ACDD4D1AB6D8C34EF446 serial "MET" )
+)
+game (
+	name "Metroid (Japan) (Rev 3) (3DS Virtual Console)"
+	region "Japan"
+	serial "MET"
+	rom ( name "Metroid (Japan) (Rev 3) (3DS Virtual Console).fds" size 131000 crc F45A0636 md5 2F1FF14CE96DCC83654C325D914CC165 sha1 76779CE9C1C25966016F6DA5B59906C91E357966 serial "MET" )
+)
+game (
+	name "Metroid (Japan) (Rev 3) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "MET"
+	rom ( name "Metroid (Japan) (Rev 3) (Wii and Wii U Virtual Console).fds" size 131000 crc 6AA1E4A2 md5 66AF3A6411DC8C251C9C0EA6579B0ED7 sha1 7CE90FDFCF841F346C8D55DD988E219A8BA30C00 serial "MET" )
+)
+game (
+	name "Michael English Daibouken (Japan)"
+	region "Japan"
+	serial "MEA"
+	rom ( name "Michael English Daibouken (Japan).fds" size 131000 crc D446FD96 md5 75AAA59EEC0D4747593F9A758B1D483A sha1 D67D02D9946F00BF139FCBE2D9D04420857BFD76 serial "MEA" )
+)
+game (
+	name "Michael English Daibouken (Japan) (Sample)"
+	releaseyear "1987"
+	releasemonth "03"
+	releaseday "25"
+	region "Japan"
+	rom ( name "Michael English Daibouken (Japan) (Sample) (1987-03-25).fds" size 131000 crc E1BF6B02 md5 670E27F42D69FE8155587C11A9E4BA2C sha1 BE1D4E1FB457695875476CCACBCDCAC4480872FB )
+)
+game (
+	name "Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan)"
+	region "Japan"
+	serial "TIN"
+	rom ( name "Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan).fds" size 131000 crc 05AFBD03 md5 39E28A625F0B35F600D582294DFE4013 sha1 990EAF24FE62B6E64EE4EC62740F253D3B46928D serial "TIN" )
+)
+game (
+	name "Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan) (Rev 1)"
+	region "Japan"
+	serial "TIN"
+	rom ( name "Moero TwinBee - Cinnamon Hakase wo Sukue! (Japan) (Rev 1).fds" size 131000 crc BDF795D5 md5 B2A76EBD0DFF79413FAE60A42F19BAA2 sha1 184D6C5EA348A6054A1920F3AD4580CB87E97258 serial "TIN" )
+)
+game (
+	name "Money Game, The (Japan) (Proto)"
+	region "Japan"
+	serial "TMG"
+	rom ( name "Money Game, The (Japan) (Proto).fds" size 131000 crc 6F81A8DA md5 20D09D065ABA9F292E63DA0F610B2456 sha1 A6B417B39F897ACC4BCD662090CFD1100102F6F1 serial "TMG" )
+)
+game (
+	name "Monitor Puzzle Kineko, The - Kinetic Connection (Japan)"
+	region "Japan"
+	serial "KIN"
+	rom ( name "Monitor Puzzle Kineko, The - Kinetic Connection (Japan).fds" size 131000 crc A8516D48 md5 762AA5C2093344491E95B36C1E6B9166 sha1 1A565CF2C53646E3A9BB4783A7942B9315FC02F5 serial "KIN" )
+)
+game (
+	name "Monitor Puzzle Kineko, The - Kinetic Connection (Japan) (Rev 1) (Possible Proto)"
+	region "Japan"
+	rom ( name "Monitor Puzzle Kineko, The - Kinetic Connection (Japan) (Rev 1) (Possible Proto).fds" size 131000 crc C51FAFB7 md5 91119C607D6422C23466FC6D34C4145A sha1 28F20B6F85CACB4E55B8B6903C0FE966F0218D5D )
+)
+game (
+	name "Monitor Puzzle Kineko, The - Kinetic Connection (Japan) (Rev 1) (Possible Proto)"
+	region "Japan"
+	serial "KIN"
+	rom ( name "Monitor Puzzle Kineko, The - Kinetic Connection (Japan) (Rev 1) (Possible Proto).qd" size 131072 crc 542F5CB8 md5 C102B714C263AAE5821494EA66F7AF89 sha1 0C5734D1AC97DBA65CAC052D92337AE374EEBCEB serial "KIN" )
+)
+game (
+	name "Monitor Puzzle Kineko, The - Kinetic Connection II (Japan) (Disk Writer)"
+	region "Japan"
+	serial "KI2"
+	rom ( name "Monitor Puzzle Kineko, The - Kinetic Connection II (Japan) (Disk Writer).fds" size 131000 crc DCED2708 md5 CBD2190225076FC650D80C9A0EA59FF6 sha1 17CA3E392CF6B5396848CB7DBB95A7EA8A4FB772 serial "KI2" )
+)
+game (
+	name "Monty on the Run - Monty no Doki Doki Dai Dassou (Japan)"
+	region "Japan"
+	serial "MDD"
+	rom ( name "Monty on the Run - Monty no Doki Doki Dai Dassou (Japan).fds" size 131000 crc 211CC78C md5 E3342CF9E7A012276C558C0B9A2CAC71 sha1 78F19927B50A769B4A3BCCA3793F5087211C451D serial "MDD" )
+)
+game (
+	name "Moonball Magic (Japan) (Disk Writer)"
+	region "Japan"
+	serial "MBM"
+	rom ( name "Moonball Magic (Japan) (Disk Writer).fds" size 131000 crc AAD5BEE4 md5 BCED9DDDFEBB4FBA421F671EEFF61AAB sha1 4EAF7A1116199CA2B510F4265CCDEF20CD51DD45 serial "MBM" )
+)
+game (
+	name "NESert Golfing (World)"
+	rom ( name "NESert Golfing (World) (Aftermarket) (Unl).fds" size 65500 crc 912CD8F8 md5 5FE8D15C7279B077BA7847BAA7E95A30 sha1 2BCF3D9836E390D28371823F4CBCBCA09CDB7677 )
+)
+game (
+	name "NESert Golfing (World) (v1.1)"
+	rom ( name "NESert Golfing (World) (v1.1) (Aftermarket) (Unl).fds" size 65500 crc E9E99977 md5 C3AF62F622AA9C46D30FDF84EDF93DE6 sha1 D84CC8A87A9F078318385632FE91F8B0D36ADD19 )
+)
+game (
+	name "Namida no Soukoban Special (Japan)"
+	region "Japan"
+	serial "001"
+	rom ( name "Namida no Soukoban Special (Japan).fds" size 131000 crc 0C5B12D6 md5 97337C0E5ABCD0223EC04FFE7EADBA93 sha1 57EE44B79875980363942288D552A63B22D34412 serial "001" )
+)
+game (
+	name "Nankin no Adventure (Japan) (Disk Writer)"
+	region "Japan"
+	serial "NAD"
+	rom ( name "Nankin no Adventure (Japan) (Disk Writer).fds" size 131000 crc 12892375 md5 DC3F5333F60186BBF37CB6B1C4C6D6EC sha1 CF4F3B1F9F206C6BCBA25E6350340E5244B055DD serial "NAD" )
+)
+game (
+	name "Nazo no Kabe - Block Kuzushi (Japan)"
+	region "Japan"
+	serial "NZN"
+	rom ( name "Nazo no Kabe - Block Kuzushi (Japan).fds" size 131000 crc 09292F11 md5 604356017AB4F240BA28B84029723A46 sha1 2E22B4FB1663960DCB3003147D21F31D8A7F8EF6 serial "NZN" )
+)
+game (
+	name "Nazo no Murasamejou (Japan)"
+	region "Japan"
+	serial "NMJ"
+	rom ( name "Nazo no Murasamejou (Japan).fds" size 131000 crc 9A523757 md5 FA04B0B2D99D560E7076198AB72A15D3 sha1 3102ABCAB2BEC46F63E88461F73539B94AA73CBD serial "NMJ" )
+)
+game (
+	name "Nazo no Murasamejou (Japan) (GameCube)"
+	region "Japan"
+	serial "NMJ"
+	rom ( name "Nazo no Murasamejou (Japan) (GameCube).fds" size 131000 crc DE74418B md5 5527076B402459560F37F0B7AAB929EA sha1 C2822590C892823D41A4F11DA8103930EFAA2B98 serial "NMJ" )
+)
+game (
+	name "Nazo no Murasamejou (Japan) (Wii and Wii U Virtual Console)"
+	region "Japan"
+	serial "NMJ"
+	rom ( name "Nazo no Murasamejou (Japan) (Wii and Wii U Virtual Console).fds" size 131000 crc 6D054479 md5 CA6CD31EF133561CCAB809E601A97FB5 sha1 8B1C5D6C99E02FA6C194E1CB4144A39D57D12193 serial "NMJ" )
+)
+game (
+	name "Nazo no Murasamejou (World) (Ja) (3DS Virtual Console)"
+	serial "NMJ"
+	rom ( name "Nazo no Murasamejou (World) (Ja) (3DS Virtual Console).fds" size 131000 crc 1DF004F6 md5 79CD5B28438F0C1857C1029820B768BA sha1 C650D0BEF18014426AC0BDDD80659FEAEDD5C4E6 serial "NMJ" )
+)
+game (
+	name "Nazoler Land - Dainigou (Japan)"
+	region "Japan"
+	serial "NZB"
+	rom ( name "Nazoler Land - Dainigou (Japan).fds" size 131000 crc 19DEACE2 md5 A64E513BB7675E686DBA4150F4CB8B5D sha1 FBD15BE09527DD6857902C92A2B1163D9A12B599 serial "NZB" )
+)
+game (
+	name "Nazoler Land - Daisangou (Japan)"
+	region "Japan"
+	serial "NZC"
+	rom ( name "Nazoler Land - Daisangou (Japan).fds" size 131000 crc 872CD3CF md5 2FC9A1ACBDE27981C08F2E0B35EB24A1 sha1 5C2F812F07A0F5150BBA3FF5ACFCB525D4EC66D4 serial "NZC" )
+)
+game (
+	name "Nazoler Land - Soukangou (Japan)"
+	region "Japan"
+	serial "NZL"
+	rom ( name "Nazoler Land - Soukangou (Japan).fds" size 131000 crc B42FD111 md5 3690EE1DBA023967EB28F5BC64BCEF5C sha1 2A4FE533B0DFEDA1E939344282F92A7AD9BF75CC serial "NZL" )
+)
+game (
+	name "Nazoler Land Special!! - Quiz Ou wo Sagase (Japan)"
+	region "Japan"
+	serial "NSP"
+	rom ( name "Nazoler Land Special!! - Quiz Ou wo Sagase (Japan).fds" size 131000 crc F449FC6C md5 7CBA45F117815E9CE216D465DB89CAEF sha1 03156138D89492F269F1F9CACD8F52F01D93C2B3 serial "NSP" )
+)
+game (
+	name "Neunzehn - 19 (Japan)"
+	region "Japan"
+	serial "NEU"
+	rom ( name "Neunzehn - 19 (Japan).fds" size 131000 crc 47B3BABD md5 3075AA99CF591CD5ED5366A30BE5043A sha1 B31C759EFD870F189ACCCD8B18E8928C2B070519 serial "NEU" )
+)
+game (
+	name "Nomura no Famicom Trade (Japan) (Proto) (FTAJ)"
+	region "Japan"
+	serial "FTAJ"
+	rom ( name "Nomura no Famicom Trade (Japan) (Proto) (FTAJ).fds" size 65500 crc 9E8CE7A8 md5 D83330691DFFDE4B99795CB3246D5526 sha1 6869A312BC7C2A8D768DB1FCEC63A71436D66538 serial "FTAJ" )
+)
+game (
+	name "Nomura no Famicom Trade (Japan) (Proto) (FTBJ)"
+	region "Japan"
+	serial "FTBJ"
+	rom ( name "Nomura no Famicom Trade (Japan) (Proto) (FTBJ).fds" size 65500 crc A8033D2F md5 06D83AE86E5EA37697F34A5333BBD9D4 sha1 D32C336DCFDD976AF1B58CBFCE7303663AE09F28 serial "FTBJ" )
+)
+game (
+	name "Nomura no Famicom Trade (Japan) (Proto) (FTEJ)"
+	region "Japan"
+	serial "FTEJ"
+	rom ( name "Nomura no Famicom Trade (Japan) (Proto) (FTEJ).fds" size 65500 crc 4D10B4F8 md5 841A3424833258B39513C1ED4A9E365C sha1 9B155E6E6E44FF76174396E9360D18998DBA0B5D serial "FTEJ" )
+)
+game (
+	name "Omoikkiri Tanteidan HaadoGumi - Matenrou no Chousenjou (Japan)"
+	region "Japan"
+	serial "HRD"
+	rom ( name "Omoikkiri Tanteidan HaadoGumi - Matenrou no Chousenjou (Japan).fds" size 131000 crc CBCA97F5 md5 6609CE22490E93C1A953F4FD940779A0 sha1 B3CBCFD3CE6FA546E927BE45F4FE1900FE38B9AA serial "HRD" )
+)
+game (
+	name "Othello (Japan) (DV 2)"
+	region "Japan"
+	serial "OTH"
+	rom ( name "Othello (Japan) (DV 2).fds" size 65500 crc 39709BF6 md5 907F107FCE9FE854C55827E9D0D72DF5 sha1 BDD5E27203860D84D34FD5F126C5BBC2B8EC709F serial "OTH" )
+)
+game (
+	name "Othello (Japan) (DV 3, 5) (Disk Writer)"
+	region "Japan"
+	serial "OTH"
+	rom ( name "Othello (Japan) (DV 3, 5) (Disk Writer).fds" size 65500 crc 7E901E0B md5 110B8B96EB9A47BA782B71FF6D34C535 sha1 DAEF0AC9C429228F25A99C041361F238CD09E080 serial "OTH" )
+)
+game (
+	name "Otocky (Japan)"
+	region "Japan"
+	serial "OTO"
+	rom ( name "Otocky (Japan).fds" size 131000 crc 673B4713 md5 4B9FD6C37DC7536CBF5F3054AD781ACA sha1 049A440E692CAADF8FE25668BB17E55A105B1093 serial "OTO" )
+)
+game (
+	name "Otocky (Japan) (Beta)"
+	releaseyear "1986"
+	releasemonth "04"
+	releaseday "15"
+	region "Japan"
+	rom ( name "Otocky (Japan) (Beta) (1986-04-15).fds" size 131000 crc 0CF97F84 md5 9D4BBB24E4CCF065F76D8AD0B999D3CE sha1 2A20B122A720C12364EB3789492AE6F619981D97 )
+)
+game (
+	name "Pac-Man (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PAC"
+	rom ( name "Pac-Man (Japan) (Disk Writer).fds" size 65500 crc CDF3CA4B md5 F1B5DB7482FED253196CA299B67DB218 sha1 1A0AC3F4C3D089F60F277831CF667B9FDFFF2B5B serial "PAC" )
+)
+game (
+	name "Pachicom (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PCD"
+	rom ( name "Pachicom (Japan) (Disk Writer).fds" size 65500 crc B1686472 md5 7FA925079D3F3BD9B2AB1AFA6D676F4A sha1 E75ECB9F623D12F5AF79CDB9C9215268A22E443A serial "PCD" )
+)
+game (
+	name "Pachinko Grand Prix (Japan)"
+	region "Japan"
+	serial "PGP"
+	rom ( name "Pachinko Grand Prix (Japan).fds" size 131000 crc 1C185588 md5 46A0E6A29A17132F1DBDC3F181A180BA sha1 8A97D3423A50388B2727E78666E9BA9D701BA094 serial "PGP" )
+)
+game (
+	name "Patlabor - The Mobile Police - Daini Shoutai Shutsudou seyo! (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PTL"
+	rom ( name "Patlabor - The Mobile Police - Daini Shoutai Shutsudou seyo! (Japan) (Disk Writer).fds" size 131000 crc EF1B1895 md5 09E838DD86576D8492E8628E4D6FE8B4 sha1 298F8DDB3D054663C613CEEF3131F38F3A0CD67A serial "PTL" )
+)
+game (
+	name "Pinball (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PND"
+	rom ( name "Pinball (Japan) (Disk Writer).fds" size 65500 crc 18E50AD4 md5 6456EFC70FEFCE18D61BE2DFF4A81106 sha1 57C7B8DF378D39FA2E37AC3AA5755F9BF7799BB6 serial "PND" )
+)
+game (
+	name "Pro Golfer Saru - Kage no Tournament (Japan)"
+	region "Japan"
+	serial "PGS"
+	rom ( name "Pro Golfer Saru - Kage no Tournament (Japan).fds" size 131000 crc 76966A72 md5 3E1FA35A8A91571E18F811C71C103341 sha1 BADADE6842BC124208FD971CCFAEC86C6F0CFB6A serial "PGS" )
+)
+game (
+	name "Pro Wres (Japan) (En)"
+	region "Japan"
+	serial "PRO"
+	rom ( name "Pro Wres (Japan) (En).fds" size 65500 crc D6CE8AC6 md5 4123185940971B3B5F3BBD00CBE1FDF7 sha1 1CE6B58EC4EE95856012478687B6038279772B42 serial "PRO" )
+)
+game (
+	name "Professional Mahjong Gokuu (Japan)"
+	region "Japan"
+	serial "GKU"
+	rom ( name "Professional Mahjong Gokuu (Japan).fds" size 131000 crc 38A67D37 md5 EAF4EBF9EBE0CAB5D5543176601BAE01 sha1 7FFC06F7B54C68732298F87C9B22A5154DE1E681 serial "GKU" )
+)
+game (
+	name "Pulsar no Hikari - Space Wars Simulation (Japan)"
+	region "Japan"
+	serial "PSR"
+	rom ( name "Pulsar no Hikari - Space Wars Simulation (Japan).fds" size 131000 crc 08344D4B md5 EB9C27D98C70D0241B6C75D8F52D32D4 sha1 029CCA5D0DFC5DBF7969E4B7810147FBC8B19929 serial "PSR" )
+)
+game (
+	name "Putt Putt Golf (Japan)"
+	region "Japan"
+	serial "PPG"
+	rom ( name "Putt Putt Golf (Japan).fds" size 131000 crc 98195A6A md5 54B408CDFB25F73CB8B5D663B703856F sha1 D2E55F03B358DD6536AB750835A4773550A7A013 serial "PPG" )
+)
+game (
+	name "Puzzle Boys (Japan) (Disk Writer)"
+	region "Japan"
+	serial "PUZ"
+	rom ( name "Puzzle Boys (Japan) (Disk Writer).fds" size 131000 crc 78F31548 md5 1790E6776A2196EA2DB7ED8F4F840263 sha1 CDADFB996FA81F6FF83D3EB8904431DC2A01500B serial "PUZ" )
+)
+game (
+	name "Quick Hunter (Japan)"
+	region "Japan"
+	rom ( name "Quick Hunter (Japan) (Unl).fds" size 65500 crc 3056129D md5 5828236B703B1139CBA73D3CD99E4D4D sha1 D637D958F185C40B2746EF1968449C85EAB08A68 )
+)
+game (
+	name "Quick Hunter - Parameter Disk Vol.1 (Japan)"
+	region "Japan"
+	rom ( name "Quick Hunter - Parameter Disk Vol.1 (Japan) (Unl).fds" size 65500 crc 20CC5678 md5 30413850BE77539C4D495B0F9CE0C90F sha1 B080EF79BB7930DE1DE3016860F5656B24E61B8F )
+)
+game (
+	name "Radical Bomber!! Jirai-kun (Japan) (Disk Writer)"
+	region "Japan"
+	serial "GRK"
+	rom ( name "Radical Bomber!! Jirai-kun (Japan) (Disk Writer).fds" size 131000 crc 9BDEDA19 md5 A02FFE34465994D143DE3C51C5F7FCDE sha1 A896836CFF997341F767F9F6F72D205809D82356 serial "GRK" )
+)
+game (
+	name "Reflect World (Japan)"
+	region "Japan"
+	serial "RWD"
+	rom ( name "Reflect World (Japan).fds" size 131000 crc 816E45D0 md5 872378473CA3778D2597F6A39F16D2DC sha1 3FE868C8F17644DA61E495EAD3FDFA759FDD482C serial "RWD" )
+)
+game (
+	name "Relics - Ankoku Yousai (Japan)"
+	region "Japan"
+	serial "RLC"
+	rom ( name "Relics - Ankoku Yousai (Japan).fds" size 131000 crc 5DE87797 md5 24F045E80D1FF30CEC6D9CC1F41764B5 sha1 6BFF8CFD463B1EB91AEC5BB427C60A84A4DB34A8 serial "RLC" )
+)
+game (
+	name "Relics - Ankoku Yousai (Japan) (Project EGG)"
+	region "Japan"
+	rom ( name "Relics - Ankoku Yousai (Japan) (Project EGG).fds" size 131000 crc 30B4FA8B md5 8026BB1081322B1A76432DB417BE00CD sha1 EB508FEAB933A563A98223E1591292F180A8FCE2 )
+)
+game (
+	name "Replicart (Japan)"
+	region "Japan"
+	serial "REP"
+	rom ( name "Replicart (Japan).fds" size 131000 crc C374C9ED md5 76EC00807B76AE276FD216EC80879DDA sha1 2FC98ED1B982C672F0CE9B0D8E04FB0A6781D97E serial "REP" )
+)
+game (
+	name "Risa no Yousei Densetsu (Japan)"
+	region "Japan"
+	serial "YOU"
+	rom ( name "Risa no Yousei Densetsu (Japan).fds" size 131000 crc D7943621 md5 487CE1D891FD3A36152C1FA0A36D55B1 sha1 0560CDEEFAE79DED6EC8CC8B334BECABDDA47768 serial "YOU" )
+)
+game (
+	name "Roger Rabbit (Japan)"
+	region "Japan"
+	serial "RRR"
+	rom ( name "Roger Rabbit (Japan).fds" size 131000 crc A7783DC0 md5 DD8D0CCAA15DA2AF308985DEA5C55BF5 sha1 B0D1728126E410832B38BFE9FEC9ECA1C20D60FB serial "RRR" )
+)
+game (
+	name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan)"
+	region "Japan"
+	serial "SGW"
+	rom ( name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan).fds" size 131000 crc D5F14605 md5 C39D148B70CE2834F4A4337AB2BFC682 sha1 5E79BA3383C3B72E053F4BBEBFA839BEDB43B76D serial "SGW" )
+)
+game (
+	name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Disk Writer)"
+	region "Japan"
+	serial "SG1"
+	rom ( name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Disk Writer).fds" size 131000 crc 189F7A6B md5 809B68DA7DA8B22F0C7AC6CFED8E3C90 sha1 9AAC46473395875562EE7AE207850E5B552CAE18 serial "SG1" )
+)
+game (
+	name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Rev 1)"
+	region "Japan"
+	serial "SGW"
+	rom ( name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Rev 1).fds" size 131000 crc 43F70704 md5 745DA85D17A6275D8AF779FD03174C41 sha1 3776C600AB4C67B8EA96DA73C96BF69E11F08FAC serial "SGW" )
+)
+game (
+	name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Rev 1) (3DS Virtual Console)"
+	region "Japan"
+	serial "SGW"
+	rom ( name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Rev 1) (3DS Virtual Console).fds" size 131000 crc F24355AF md5 D307AE3D07386606CB986EE10DBBB099 sha1 75DED78092E98EF28FFC039CA1B2B6156174B8ED serial "SGW" )
+)
+game (
+	name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Rev 1) (Wii Virtual Console)"
+	region "Japan"
+	serial "SGW"
+	rom ( name "SD Gundam World - Gachapon Senshi - Scramble Wars (Japan) (Rev 1) (Wii Virtual Console).fds" size 131000 crc 286FBAEB md5 FADF6D08280A703BB9A4DBED3AB3ACFD sha1 A1FF40F20792AB07E09F49E2B70A6478D5B5D703 serial "SGW" )
+)
+game (
+	name "SD Gundam World - Gachapon Senshi - Scramble Wars - Map Collection (Japan) (Disk Writer)"
+	region "Japan"
+	serial "SG2"
+	rom ( name "SD Gundam World - Gachapon Senshi - Scramble Wars - Map Collection (Japan) (Disk Writer).fds" size 131000 crc 98F12376 md5 6656FAC8A9C5297E83448D2FBC33DC7F sha1 034CAE978B1DD4490A6FE63F782B8F731B78BBD5 serial "SG2" )
+)
+game (
+	name "Sailor Fuku Bishoujo Zukan Vol. 1 (Japan)"
+	region "Japan"
+	rom ( name "Sailor Fuku Bishoujo Zukan Vol. 1 (Japan) (Unl).fds" size 131000 crc A6B85A58 md5 2BCA5BF355F5E93C41FF0760A0D4DC84 sha1 187D16EEC3150F6A0062690B39138C5A5204FB71 )
+)
+game (
+	name "Sailor Fuku Bishoujo Zukan Vol. 2 (Japan)"
+	region "Japan"
+	rom ( name "Sailor Fuku Bishoujo Zukan Vol. 2 (Japan) (Unl).fds" size 131000 crc 5FF683AF md5 BDF9E959C64FBC764D277E7D292A7CFF sha1 BEE90E52A3B4A50BBC4B2A423DFF86A581B54CBA )
+)
+game (
+	name "Sailor Fuku Bishoujo Zukan Vol. 3 (Japan)"
+	region "Japan"
+	rom ( name "Sailor Fuku Bishoujo Zukan Vol. 3 (Japan) (Unl).fds" size 131000 crc DA347669 md5 C9E9C640BBB6E2297DDADF851A8C1BBA sha1 EBAA942596296722E663B897405B3D39630FE357 )
+)
+game (
+	name "Sailor Fuku Bishoujo Zukan Vol. 4 (Japan)"
+	region "Japan"
+	rom ( name "Sailor Fuku Bishoujo Zukan Vol. 4 (Japan) (Unl).fds" size 131000 crc A887BC15 md5 EFEF6EE53082D70360FBF62016F47493 sha1 708C62D029FBADD55650B7C0B0E8D408B1FBBE3D )
+)
+game (
+	name "Sailor Fuku Bishoujo Zukan Vol. 5 (Japan)"
+	region "Japan"
+	rom ( name "Sailor Fuku Bishoujo Zukan Vol. 5 (Japan) (Unl).fds" size 131000 crc C09721A9 md5 E0183EA4E062569AC5BE777CBDC86EEA sha1 397524FCE303C741ABC8E8B1CBE16049C2354322 )
+)
+game (
+	name "Sailor Fuku Bishoujo Zukan Vol. 6 (Japan)"
+	region "Japan"
+	rom ( name "Sailor Fuku Bishoujo Zukan Vol. 6 (Japan) (Unl).fds" size 131000 crc 69B6AFED md5 B6B09494EC6C2FA0EAD05E335CD56844 sha1 1444A412B85A748DA47DF7FB00FEF83EEF159CF0 )
+)
+game (
+	name "Samurai Sword (Japan)"
+	region "Japan"
+	serial "SMU"
+	rom ( name "Samurai Sword (Japan).fds" size 131000 crc DA2D8561 md5 10C49F3E6B9CEFD4769C52E044AA7692 sha1 80CF0A44AED8545942D9E4F61BCF2C9FE60B1A44 serial "SMU" )
+)
+game (
+	name "Santa Claus no Takarabako (Japan)"
+	region "Japan"
+	serial "SAN"
+	rom ( name "Santa Claus no Takarabako (Japan).fds" size 131000 crc 645B2EC7 md5 D16A5D40FC7FE527F9FB396EB98B57F3 sha1 163B500A0D4D616926270277D79138A3ECD646A7 serial "SAN" )
+)
+game (
+	name "Section-Z (Japan)"
+	region "Japan"
+	serial "SCZ"
+	rom ( name "Section-Z (Japan).fds" size 131000 crc 0BCB926F md5 068AF7EA21CCE8574F1C835C579571AE sha1 AD890993E617150854A07D56C7C7C70607643A33 serial "SCZ" )
+)
+game (
+	name "Seiken Psychocalibur - Majuu no Mori Densetsu (Japan)"
+	region "Japan"
+	serial "MAJ"
+	rom ( name "Seiken Psychocalibur - Majuu no Mori Densetsu (Japan).fds" size 131000 crc 5CAC8BA1 md5 C07F699BF36AB4BB961F48F9CFAC473E sha1 FF53778F5DF3015FA7B01012241620C678B7502F serial "MAJ" )
+)
+game (
+	name "Sexy Invaders (Japan)"
+	region "Japan"
+	rom ( name "Sexy Invaders (Japan) (Unl).fds" size 131000 crc 413E49DA md5 FF65350D6E949A28B83C65943ECB27A3 sha1 F5948681A77BA264842FFF4E30272147F1E15711 )
+)
+game (
+	name "Sexy Yakyuuken Adventure II - Gal's Dungeon Part II (Japan)"
+	region "Japan"
+	rom ( name "Sexy Yakyuuken Adventure II - Gal's Dungeon Part II (Japan) (Unl).fds" size 131000 crc FAA53B67 md5 99E7EFE2D5187ACD29AB8E4B46C57408 sha1 075A18D541632E36A0980D8BF6E436A5BD0FE1F8 )
+)
+game (
+	name "Shanghai (Japan) (Proto)"
+	releaseyear "1986"
+	releasemonth "10"
+	releaseday "16"
+	region "Japan"
+	serial "DZN"
+	rom ( name "Shanghai (Japan) (Proto) (1986-10-16).fds" size 65500 crc B1ED9311 md5 4C0F529465E57180D2FE18C2FF6C2A2A sha1 E8C62D21B815818156D734ABD852D1E69A6E0530 serial "DZN" )
+)
+game (
+	name "Shanghai II (Japan) (Proto) (Dragon Layout)"
+	region "Japan"
+	serial "ILE"
+	rom ( name "Shanghai II (Japan) (Proto) (Dragon Layout).fds" size 65500 crc 4EAAEA69 md5 C0D701CE73B0BF40A35EB23F6CFD25FE sha1 AC34F61676E151EF2E1879CBAB254A8222C23601 serial "ILE" )
+)
+game (
+	name "Shanghai II (Japan) (Proto) (Scorpion Layout)"
+	region "Japan"
+	serial "ILE"
+	rom ( name "Shanghai II (Japan) (Proto) (Scorpion Layout).fds" size 65500 crc 4E10423E md5 4E900EFB7CA2BEBA4E2A85DFCFF421C0 sha1 FF1AE30461496AB4AC448F9100B228E8D68AC929 serial "ILE" )
+)
+game (
+	name "Silviana - Ai Ippai no Little Angel (Japan)"
+	region "Japan"
+	serial "SIL"
+	rom ( name "Silviana - Ai Ippai no Little Angel (Japan).fds" size 131000 crc 09F95CB9 md5 25DDE5ACF812C1DC5BAB53F6D4638A9E sha1 46A777B0A245A02F1257F4619387AF9DBD52693A serial "SIL" )
+)
+game (
+	name "Smash Ping Pong (Japan)"
+	region "Japan"
+	serial "PPN"
+	rom ( name "Smash Ping Pong (Japan).fds" size 65500 crc B235B657 md5 E6BF27ADEA0837055F82FC204D9FBF98 sha1 B3FFC3723F3D3BC1AF9E8180145483C332F409E0 serial "PPN" )
+)
+game (
+	name "Soccer (Japan) (En)"
+	region "Japan"
+	serial "SCC"
+	rom ( name "Soccer (Japan) (En).fds" size 65500 crc 638B6903 md5 2BE4505173DF2936B7992030EC4A38E5 sha1 CCA20A3A0FEC86B9295D61AEF093741F3E248839 serial "SCC" )
+)
+game (
+	name "Solomon no Kagi (Japan) (Disk Writer)"
+	region "Japan"
+	serial "SKD"
+	rom ( name "Solomon no Kagi (Japan) (Disk Writer).fds" size 65500 crc 9C2E3999 md5 CB0538F24EB64BDA28BC8CC36CBD9B58 sha1 B06BFF43FCCEEEB789BE73C96960E6947EEAF75F serial "SKD" )
+)
+game (
+	name "Souseiki Fammy - ROM-QD for 256K+64K (Japan)"
+	region "Japan"
+	rom ( name "Souseiki Fammy - ROM-QD for 256K+64K (Japan) (Unl).fds" size 131000 crc 837A5D11 md5 635355A5D5B4F744B6BA1F6AD01B0041 sha1 072F8A25E5D5309FBCB005A5E79EFE43FB033E80 )
+)
+game (
+	name "Suishou no Dragon (Japan)"
+	region "Japan"
+	serial "SSD"
+	rom ( name "Suishou no Dragon (Japan).fds" size 131000 crc 6B56808B md5 552C7310D3E27859667AAB109305B75B sha1 CD9F19A0721099601197C99B732CFE052DDF0543 serial "SSD" )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'D167B23' no. 1 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'D167B23' no. 1 (Japan).fds" size 131000 crc 8AD85107 md5 EBB671E971B187200BD4F0860E56DE43 sha1 EF31B6426FFA2222C3108CF50B6C63D3F56DBB09 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'D167B23' no. 2 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'D167B23' no. 2 (Japan).fds" size 131000 crc 2815D134 md5 719186E8464469CE76E056803128F8B0 sha1 A08348CA7218B3E3E14C02CB1D855AC22825561B )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'D167B23' no. 3 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'D167B23' no. 3 (Japan).fds" size 131000 crc 7054AF28 md5 F972572A74264DF7BB7E6256BAE27B81 sha1 437BCA97647D212AFB880A073259AE8E6678FA94 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'D167B23' no. 4 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'D167B23' no. 4 (Japan).fds" size 131000 crc 4A650886 md5 057C550AB6B399F3150B2678B4465C6F sha1 74AC71AFEE7365FCDD4F14DD9839F4B1495794EE )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'D167B23' no. 5 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'D167B23' no. 5 (Japan).fds" size 131000 crc 7590F76C md5 69852586A6FB26C71921B6C606232BAB sha1 D67D7593805BAD0603E60461A3A4C3694C11952D )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'D167B23' no. 6 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'D167B23' no. 6 (Japan).fds" size 131000 crc 547DE15E md5 68256840E7B5E925C3254EBDA66175B9 sha1 59DBB875429DCE023F0664951FB00306CB003184 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'E180L05' no. 1 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'E180L05' no. 1 (Japan).fds" size 131000 crc 9810A7D0 md5 8B9B56FD93CFD97F832773FE4950CD6F sha1 E655499D48F6959B01943CB57D75EE4F92F4D9DD )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'E180L05' no. 2 and no. 3 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'E180L05' no. 2 and no. 3 (Japan).fds" size 131000 crc 238D88E4 md5 735B84F9DA0F756A2B8EA95FC0394FF7 sha1 595C6A860DF3F596FF14517CC57E02A34EE445CF )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'E180L05' no. 4 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'E180L05' no. 4 (Japan).fds" size 131000 crc 7828517A md5 1531B63BB22A822F9038F7796174FD88 sha1 24E7D78C1B4396D666994312938288F605104D92 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'F087D22' (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'F087D22' (Japan).fds" size 131000 crc A4FE33BF md5 89D3075DDCA63E9EAD02380FE139119F sha1 1B7F45471D22B4EBA0D46796F159E11DC17CDF49 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'F266F13' (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'F266F13' (Japan).fds" size 131000 crc 91BFF1E3 md5 CEB928BA2383B92EB7CDF632D48E2478 sha1 41F329078AE613728EAA444C2A6FC984FAF20DF5 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'G188D21N' no. 1 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'G188D21N' no. 1 (Japan).fds" size 131000 crc 2F0D5D42 md5 C8A0C9E42D7CC4FF973611EB5A5A324C sha1 09E90627A8E2A4586FC1CFB6F4E3FFD607AE2D32 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'G188D21N' no. 2 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'G188D21N' no. 2 (Japan).fds" size 131000 crc 4FF0793D md5 2D74EF3D6E1674357459237F55A18039 sha1 BD3F6B7176F0378CCA0C6905B58AFF3B831A4DB0 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'G188D21N' no. 3 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'G188D21N' no. 3 (Japan).fds" size 131000 crc 3FEA310E md5 B5C3852DED92250200E8977200393CBD sha1 7C0BEB1A009A56D56F1B27432F44A067716D2941 )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'J226I22' no. 1 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'J226I22' no. 1 (Japan).fds" size 131000 crc 45D4A8A7 md5 FC8EEF4B2BBD39C910C0688DD390B34A sha1 7C77F7AE83DAF3DE9602BFFCCC7F42224018B0BD )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'J226I22' no. 3 (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'J226I22' no. 3 (Japan).fds" size 131000 crc 2DFFCF5E md5 91711F057E3E7BA9E45ED6EC781C6F84 sha1 D4AF81B804B4B7ECFC05293D414D64686E16C70C )
+)
+game (
+	name "Sunsoft Dev Disk Lot - 'K057G06' (Japan)"
+	region "Japan"
+	rom ( name "Sunsoft Dev Disk Lot - 'K057G06' (Japan).fds" size 131000 crc 0858AA6B md5 E50DF365E0BEAEFA022E2F6AF3B53451 sha1 C3358EE809BF5DEF0344AB7DC3837AEA6DBABF66 )
+)
+game (
+	name "Super Boy Allan (Japan)"
+	region "Japan"
+	serial "ALN"
+	rom ( name "Super Boy Allan (Japan).fds" size 131000 crc 72F6194B md5 81DB3C8A65400616D89903C913419C89 sha1 1C02088A34444CB45093527E840806E9F15DE9C2 serial "ALN" )
+)
+game (
+	name "Super Lode Runner (Japan)"
+	region "Japan"
+	serial "SLR"
+	rom ( name "Super Lode Runner (Japan).fds" size 131000 crc C5A7E32C md5 922D882527E0007D1B48851AAC665A7E sha1 223963573327F8E189A20A689D0DDF6070645345 serial "SLR" )
+)
+game (
+	name "Super Lode Runner II (Japan) (Disk Writer)"
+	region "Japan"
+	serial "SL2"
+	rom ( name "Super Lode Runner II (Japan) (Disk Writer).fds" size 131000 crc 042C902B md5 18C5674AAF15201FF32FE22E0B3B112B sha1 567FB5457815BEA1596369C4F1579B9AA26A38DB serial "SL2" )
+)
+game (
+	name "Super Mario Bros. (Japan) (En)"
+	region "Japan"
+	serial "SMA"
+	rom ( name "Super Mario Bros. (Japan) (En).fds" size 65500 crc E0890CF2 md5 293303FE565DE2333BC1E4115D38FA3F sha1 383AD8E3890A95DE9595F0A6087648F51177DA13 serial "SMA" )
+)
+game (
+	name "Super Mario Bros. 2 (Japan) (En)"
+	region "Japan"
+	serial "SMB"
+	rom ( name "Super Mario Bros. 2 (Japan) (En).fds" size 65500 crc F04CD4CD md5 7F38210A8A2BEFB8D347523B4FF6AE7C sha1 20E50128742162EE47561DB9E82B2836399C880C serial "SMB" )
+)
+game (
+	name "Super Mario Bros. 2 (Japan) (En) (DV 2)"
+	region "Japan"
+	serial "SMB"
+	rom ( name "Super Mario Bros. 2 (Japan) (En) (DV 2).fds" size 65500 crc 5C419EE8 md5 F62909AD7125ED94EF0FC1D44164A518 sha1 08927227B6FF67F42E759505D176CD924931BD14 serial "SMB" )
+)
+game (
+	name "Super Mario Bros. 2 (Japan) (En) (Game & Watch - Super Mario Bros.)"
+	region "Japan"
+	serial "SMB"
+	rom ( name "Super Mario Bros. 2 (Japan) (En) (Game & Watch - Super Mario Bros.).fds" size 65500 crc 42B63CA5 md5 2A322BD3832945CF8D5F71644A9E2135 sha1 CB9FB99B7731ED05B81D4B6BAE06E0FBF8D21FA8 serial "SMB" )
+)
+game (
+	name "Super Mario Bros. 2 (Japan) (En) (Game & Watch - Super Mario Bros.)"
+	region "Japan"
+	rom ( name "Super Mario Bros. 2 (Japan) (En) (Game & Watch - Super Mario Bros.).qd" size 57344 crc 88675F5C md5 652B3C9E31328DB7C637037E39AA1CDB sha1 426287581F2E1E1B9F24A42AFE60796587234B4E )
+)
+game (
+	name "Super Mario Bros. 2 (World) (GameCube, Wii and Wii U Virtual Console)"
+	serial "SMB"
+	rom ( name "Super Mario Bros. 2 (World) (GameCube, Wii and Wii U Virtual Console).fds" size 65500 crc 5D08DD11 md5 B210C0F117D46819CC81720FF521D762 sha1 B2DBC55EFCAE77ABAD6207B802C0A76D7A47ED0D serial "SMB" )
+)
+game (
+	name "Super Yume Kojo (Japan) (Pirate)"
+	region "Japan"
+	rom ( name "Super Yume Kojo (Japan) (Pirate).fds" size 131000 crc D899DC5E md5 F728DBCDA8C54A8A7F83C9D413142F3D sha1 D6EB6F50EF52FC5B193C8FDDDE0CDDB9B5DC0DBF )
+)
+game (
+	name "Tama & Friends - Sanchoume Daibouken (Japan)"
+	region "Japan"
+	serial "UTM"
+	rom ( name "Tama & Friends - Sanchoume Daibouken (Japan).fds" size 131000 crc 37CE763B md5 1547C76D011F191B3BA98F4576C63DC5 sha1 CE1535766986FFC83BDA6481F8B3110405BF0F0F serial "UTM" )
+)
+game (
+	name "Tanigawa Kouji no Shougi Shinan II - Meijin e no Michi (Japan)"
+	region "Japan"
+	serial "SHO"
+	rom ( name "Tanigawa Kouji no Shougi Shinan II - Meijin e no Michi (Japan).fds" size 131000 crc 6CAD684C md5 40009723F37205F9DADAFECE6B5F6A5E sha1 3CFFF39AAA5E4192CA40C747C8004ABC80A7204A serial "SHO" )
+)
+game (
+	name "Tanigawa Kouji no Shougi Shinan II - Meijin e no Michi (Japan) (Beta)"
+	releaseyear "1987"
+	releasemonth "11"
+	releaseday "13"
+	region "Japan"
+	rom ( name "Tanigawa Kouji no Shougi Shinan II - Meijin e no Michi (Japan) (Beta) (1987-11-13).fds" size 131000 crc FC14D862 md5 7F3F4A66AE195BADF5A1D81659CC8D70 sha1 4EFA88A859A0E60CB53C4D722A090ABE6247562C )
+)
+game (
+	name "Tanigawa Kouji no Shougi Shinan II - Meijin e no Michi - Shinban Tsumeshougi - Tsugi no Itte (Japan) (Disk Writer)"
+	region "Japan"
+	serial "SHO"
+	rom ( name "Tanigawa Kouji no Shougi Shinan II - Meijin e no Michi - Shinban Tsumeshougi - Tsugi no Itte (Japan) (Disk Writer).fds" size 65500 crc 94ED2D89 md5 23DCDB7DAF623DB5C8D8AA1DA1D789FB sha1 E33F06627CC4FE9F1477FC5AD66E6D27C9E1DBE2 serial "SHO" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Kiken na Futari - Kouhen (Japan)"
+	region "Japan"
+	serial "KF1"
+	rom ( name "Tantei Jinguuji Saburou - Kiken na Futari - Kouhen (Japan).fds" size 131000 crc FB9E5E31 md5 38EBD16B064832C019771CE584C77BC7 sha1 658456ACA84AC406B512033DEFCD2C71D56D0661 serial "KF1" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Kiken na Futari - Kouhen (Japan) (Virtual Console)"
+	region "Japan"
+	serial "KF1"
+	rom ( name "Tantei Jinguuji Saburou - Kiken na Futari - Kouhen (Japan) (Virtual Console).fds" size 131000 crc C139F698 md5 F2A451AE1FF8C6C21D9F8DFE1C7713B4 sha1 CA38ED325F0B15A3A40E02106D09D48AB10186EF serial "KF1" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Kiken na Futari - Zenpen (Japan)"
+	region "Japan"
+	serial "KF1"
+	rom ( name "Tantei Jinguuji Saburou - Kiken na Futari - Zenpen (Japan).fds" size 131000 crc 05376233 md5 ED8861840DA220D4EFE8A982E6B19459 sha1 FFA76F47530B53D92D93B307C585AECB960D9CF3 serial "KF1" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Kiken na Futari - Zenpen (Japan) (Virtual Console)"
+	region "Japan"
+	serial "KF1"
+	rom ( name "Tantei Jinguuji Saburou - Kiken na Futari - Zenpen (Japan) (Virtual Console).fds" size 131000 crc 9AC78F51 md5 DC1B4830367095369D0D34A7725521B0 sha1 A1AEE4E7C40D68914D5098A91DB3F0D5556CE16A serial "KF1" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Shinjuku Chuuou Kouen Satsujin Jiken (Japan)"
+	region "Japan"
+	serial "JUK"
+	rom ( name "Tantei Jinguuji Saburou - Shinjuku Chuuou Kouen Satsujin Jiken (Japan).fds" size 131000 crc 5855AE09 md5 6D235E48E56F22F933CEA9B2F06DA909 sha1 4D9BA804201FA35C3D5A509095F5E0176B5F2BA8 serial "JUK" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Shinjuku Chuuou Kouen Satsujin Jiken (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "JUK"
+	rom ( name "Tantei Jinguuji Saburou - Shinjuku Chuuou Kouen Satsujin Jiken (Japan) (Rev 1) (Disk Writer).fds" size 131000 crc 6EA9AF07 md5 A31105D86CBC839C7FA0FCEE281A5B84 sha1 F7709E6F6B40430FB1B2F6D0E51222639284D215 serial "JUK" )
+)
+game (
+	name "Tantei Jinguuji Saburou - Shinjuku Chuuou Kouen Satsujin Jiken (Japan) (Rev 1) (Virtual Console)"
+	region "Japan"
+	serial "JUK"
+	rom ( name "Tantei Jinguuji Saburou - Shinjuku Chuuou Kouen Satsujin Jiken (Japan) (Rev 1) (Virtual Console).fds" size 131000 crc C4BE81E1 md5 B17C31288607F1D26DA312A65AD17234 sha1 BDA6E858719B38A4C21F09F4F4C08D4C462522F4 serial "JUK" )
+)
+game (
+	name "Tarot Uranai (Japan)"
+	region "Japan"
+	serial "TAR"
+	rom ( name "Tarot Uranai (Japan).fds" size 131000 crc 8DB1881A md5 B225BC8286F379A5BD7CC5A7C99A2C35 sha1 CCEB98544716C861AAFE58BFC582709A4962129F serial "TAR" )
+)
+game (
+	name "Tennis (Japan)"
+	region "Japan"
+	serial "TEN"
+	rom ( name "Tennis (Japan).fds" size 65500 crc E45BA8B2 md5 A4633A2572302CAE0DB034E34F6C909E sha1 AC08D53AB452DB6F4DECCB6EC02F3F9C77B37FE3 serial "TEN" )
+)
+game (
+	name "Tenshitachi no Houkago (Japan) (Disk 1)"
+	region "Japan"
+	rom ( name "Tenshitachi no Houkago (Japan) (Disk 1) (Unl).fds" size 131000 crc 0082D965 md5 CDDDAEA7FBFFAB05C03ECD3BEB9C97EC sha1 2DB649717E5880029C50E229A03486177DA73129 )
+)
+game (
+	name "Tenshitachi no Houkago (Japan) (Disk 2)"
+	region "Japan"
+	rom ( name "Tenshitachi no Houkago (Japan) (Disk 2) (Unl).fds" size 131000 crc 1D47C48F md5 BD02AF9406F6E648F8E0663C91FE7039 sha1 1BBF3A29636C08429EFCC6B18D106421DFD0E3C6 )
+)
+game (
+	name "Time Twist - Rekishi no Katasumi de... - Kouhen (Japan)"
+	region "Japan"
+	serial "TT2"
+	rom ( name "Time Twist - Rekishi no Katasumi de... - Kouhen (Japan).fds" size 131000 crc A7D51BFA md5 134F65BD93A5E5C0ABAB3E560FF146A8 sha1 E0747E6BA6111FAD733C832E6CA7C0172F4C056E serial "TT2" )
+)
+game (
+	name "Time Twist - Rekishi no Katasumi de... - Zenpen (Japan)"
+	region "Japan"
+	serial "TT1"
+	rom ( name "Time Twist - Rekishi no Katasumi de... - Zenpen (Japan).fds" size 131000 crc 63F06A01 md5 6012EFC460E648F48504F2C1D9BF4043 sha1 BBFA10026698E01C5DCDA7E7F2F86C34C2E2B7B8 serial "TT1" )
+)
+game (
+	name "Titanic Mystery - Ao no Senritsu (Japan)"
+	region "Japan"
+	serial "TIT"
+	rom ( name "Titanic Mystery - Ao no Senritsu (Japan).fds" size 131000 crc FB36075C md5 089D20E91E17A0C9C1871CAD1A7BB0F4 sha1 716786692CF9CBA9C5B02745025D648237571C43 serial "TIT" )
+)
+game (
+	name "Tobidase Daisakusen (Japan) (Famicom 3D System)"
+	region "Japan"
+	serial "TDS"
+	rom ( name "Tobidase Daisakusen (Japan) (Famicom 3D System).fds" size 131000 crc CAA25A7F md5 73BB054ECB2B710A19D79467E99AF80E sha1 26CD51C5598677734BB936E82114564D9A7269E7 serial "TDS" )
+)
+game (
+	name "Tonkachi Editor (Japan)"
+	region "Japan"
+	serial "TE"
+	rom ( name "Tonkachi Editor (Japan) (Unl).fds" size 65500 crc BEA8B9A2 md5 E19FCB32FF02B557B55CC39D6A9377E6 sha1 3F8594BDC787944835CE73692D5529BA1230EF7F serial "TE" )
+)
+game (
+	name "Tooyama no Kinsan Space Chou - Mr. Gold (Japan)"
+	region "Japan"
+	serial "MRG"
+	rom ( name "Tooyama no Kinsan Space Chou - Mr. Gold (Japan).fds" size 131000 crc 8EE50DAE md5 E0F53A8479E77719E024ADC139A0A8E4 sha1 33947802DD0620BAB95F093F162545CBE30E612F serial "MRG" )
+)
+game (
+	name "Topple Zip (Japan)"
+	region "Japan"
+	serial "TPZ"
+	rom ( name "Topple Zip (Japan).fds" size 131000 crc 84591D73 md5 C2F4AE141AC73DAA00B70D9C71338506 sha1 E53CBC375B9F32CB5682AF8AAFBFB594F47A4DD1 serial "TPZ" )
+)
+game (
+	name "Topple Zip (Japan) (Project EGG)"
+	region "Japan"
+	serial "TPZ"
+	rom ( name "Topple Zip (Japan) (Project EGG).fds" size 131000 crc A461BF9B md5 EBB3CCD86E68DE110B4FE528129D52D5 sha1 065C0137021B5097ADA7C347EF50857D777720BD serial "TPZ" )
+)
+game (
+	name "Transformers - The Headmasters (Japan)"
+	region "Japan"
+	serial "TFH"
+	rom ( name "Transformers - The Headmasters (Japan).fds" size 131000 crc A6D5E984 md5 58C19695E9050CAFA383FC4464729CCD sha1 F9B7F47BD85FDDD18BD20F21C1AF65039518FCE4 serial "TFH" )
+)
+game (
+	name "TwinBee (Japan) (En) (Disk Writer)"
+	region "Japan"
+	serial "TWN"
+	rom ( name "TwinBee (Japan) (En) (Disk Writer).fds" size 65500 crc 4A5480E1 md5 087BC15B6C352F7B270B6ACE0FEECC2C sha1 96A8147AB43E4460D2E9B4893EB2902D23EDADF0 serial "TWN" )
+)
+game (
+	name "Ultraman - Kaijuu Teikoku no Gyakushuu (Japan)"
+	region "Japan"
+	serial "ULM"
+	rom ( name "Ultraman - Kaijuu Teikoku no Gyakushuu (Japan).fds" size 131000 crc CC64BA9B md5 D4E6E916E559AEC3B6C14D51C4D96850 sha1 120580CB6025C68B27DDA91607EA8D9C7E3B9E6B serial "ULM" )
+)
+game (
+	name "Ultraman - Kaijuu Teikoku no Gyakushuu (Japan) (Disk Writer)"
+	region "Japan"
+	serial "UL1"
+	rom ( name "Ultraman - Kaijuu Teikoku no Gyakushuu (Japan) (Disk Writer).fds" size 131000 crc 9A2F16CF md5 BBD0BA54490BDBDDF97AD6042F6205D2 sha1 1C9E86B169562C4945CAFC11B0A3F27F9DDD2944 serial "UL1" )
+)
+game (
+	name "Ultraman 2 - Shutsugeki Katokutai (Japan)"
+	region "Japan"
+	serial "UL2"
+	rom ( name "Ultraman 2 - Shutsugeki Katokutai (Japan).fds" size 131000 crc 8F7F0352 md5 F4EB6D2E54B67A85D8E0957103B7FBE7 sha1 6D1B890D3AE55541C7CEF6BF1DF31A39FBB398B0 serial "UL2" )
+)
+game (
+	name "Ultraman Club - Chikyuu Dakkan Sakusen (Japan)"
+	region "Japan"
+	serial "ULC"
+	rom ( name "Ultraman Club - Chikyuu Dakkan Sakusen (Japan).fds" size 131000 crc AD5183DB md5 A19A8F966590F0E7DCA455C2AF311485 sha1 6156A65AAD9406DAD4FEEF916225DEA5D3AA1A46 serial "ULC" )
+)
+game (
+	name "Ultraman Club - Chikyuu Dakkan Sakusen (Japan) (Rev 1)"
+	region "Japan"
+	serial "ULC"
+	rom ( name "Ultraman Club - Chikyuu Dakkan Sakusen (Japan) (Rev 1).fds" size 131000 crc 74C0CD54 md5 1B2ADC69D70C35A76D315E87DB97B1E5 sha1 E804A5F841F79261F6950354DB039399B418AE15 serial "ULC" )
+)
+game (
+	name "Volleyball (Japan)"
+	region "Japan"
+	serial "VBW"
+	rom ( name "Volleyball (Japan).fds" size 65500 crc F2040D16 md5 A1F9DE6F87BECF29D3FC0C7E5AA68AD6 sha1 FB2D7FE3866765EC34249A2853A592BD0DC2217D serial "VBW" )
+)
+game (
+	name "Vs. Excitebike (Japan) (En)"
+	region "Japan"
+	serial "EBD"
+	rom ( name "Vs. Excitebike (Japan) (En).fds" size 131000 crc FEBE1841 md5 8681DD0370E520D52274EBD5DD7EAC24 sha1 010F6DC860B0BAE80E55C199B3206E95EC14E31F serial "EBD" )
+)
+game (
+	name "Vs. Excitebike (Japan, USA) (En) (Virtual Console)"
+	region "Japan"
+	serial "EBD"
+	rom ( name "Vs. Excitebike (Japan, USA) (En) (Virtual Console).fds" size 131000 crc A1A824BF md5 D07F5F79E9FD1CCDD219637EE630AEE6 sha1 080E960BC9C11DD0DA378776EA776B456348BC6A serial "EBD" )
+)
+game (
+	name "Wakusei Aton Gaiden (Japan) (National Tax Agency Demo)"
+	region "Japan"
+	serial "WAG"
+	rom ( name "Wakusei Aton Gaiden (Japan) (National Tax Agency Demo).fds" size 131000 crc 74F0C830 md5 59580324FC6AA2CBCE2B4223674B111F sha1 9AD5C840382BF073DFEDD66875B65CBDD47B455C serial "WAG" )
+)
+game (
+	name "Wardner no Mori (Japan)"
+	region "Japan"
+	serial "WAD"
+	rom ( name "Wardner no Mori (Japan).fds" size 131000 crc 26C78381 md5 A8C72C53DB21604DC94D1988C2179095 sha1 A100BC4047CDD1D041C800489DE7A275A7E97B02 serial "WAD" )
+)
+game (
+	name "Winter Games (Japan)"
+	region "Japan"
+	serial "WIN"
+	rom ( name "Winter Games (Japan).fds" size 131000 crc 4BF6E7BC md5 B77DD9AB677FE8F081C406844108EA3D sha1 E731294194BAAEE54468087E29B7A87150FEEA10 serial "WIN" )
+)
+game (
+	name "Wrecking Crew (Japan) (Disk Writer)"
+	region "Japan"
+	serial "WRD"
+	rom ( name "Wrecking Crew (Japan) (Disk Writer).fds" size 65500 crc 68B88428 md5 468ABBE42ABA80D5859ABDCFE6EA7995 sha1 8847D38111952C56B399F54FD622FCC395BF1752 serial "WRD" )
+)
+game (
+	name "Xevious (Japan) (Disk Writer)"
+	region "Japan"
+	serial "XEV"
+	rom ( name "Xevious (Japan) (Disk Writer).fds" size 65500 crc 50B8E0A1 md5 C02C267C6CB0D8E3A263EF2FF54DC1A5 sha1 004554EBF64CAE5674A11E7CB6FCBB7596779FDA serial "XEV" )
+)
+game (
+	name "Yakyuuken Part II - Gal's Dungeon (Japan)"
+	region "Japan"
+	rom ( name "Yakyuuken Part II - Gal's Dungeon (Japan) (Unl).fds" size 131000 crc 616B9385 md5 1FFB8B1F5C91F0C3F47EB45C7CC9CD54 sha1 441F4055517C8CCE2C2A5048672044911C5579A2 )
+)
+game (
+	name "Youkai Yashiki (Japan)"
+	region "Japan"
+	serial "YOK"
+	rom ( name "Youkai Yashiki (Japan).fds" size 131000 crc 335EFCC9 md5 ED934F1D3DB315A20D110470FD824940 sha1 00370BBD71D2C488DBA788312F9CC0F23B626681 serial "YOK" )
+)
+game (
+	name "Yume Koujou - Doki Doki Panic (Japan) (DV 1)"
+	region "Japan"
+	serial "DRM"
+	rom ( name "Yume Koujou - Doki Doki Panic (Japan) (DV 1).fds" size 131000 crc 4D44FC43 md5 8BBB37133FFBC3189BEF2625665956E0 sha1 6F227B22C1FFF3B8DD9CB20ED6DFA3E4CFFB91C8 serial "DRM" )
+)
+game (
+	name "Yume Koujou - Doki Doki Panic (Japan) (DV 2)"
+	region "Japan"
+	serial "DRM"
+	rom ( name "Yume Koujou - Doki Doki Panic (Japan) (DV 2).fds" size 131000 crc 4096F677 md5 DDE8A651A7A57D58F1A0E6AD576F99C5 sha1 138C6821CE826EFD26C04C015CA6A1463CE21D87 serial "DRM" )
+)
+game (
+	name "Yuu Maze (Japan)"
+	region "Japan"
+	serial "UMZ"
+	rom ( name "Yuu Maze (Japan).fds" size 131000 crc 7DB80E2B md5 E01B342774822FB15EA1C4D684EE21DD sha1 9EE5CE6176EA859EE56CA80518F0CFC40DA791E0 serial "UMZ" )
+)
+game (
+	name "Yuushi no Monshou - Deep Dungeon (Japan)"
+	region "Japan"
+	serial "YSM"
+	rom ( name "Yuushi no Monshou - Deep Dungeon (Japan).fds" size 131000 crc BFCC8051 md5 E01786932621E53E749260D2A4A4B3EE sha1 FD41DECD8B9FB5DA5D38DD6FEC316FC3958EBA11 serial "YSM" )
+)
+game (
+	name "Yuushi no Monshou - Deep Dungeon (Japan) (Rev 1) (Disk Writer)"
+	region "Japan"
+	serial "YSM"
+	rom ( name "Yuushi no Monshou - Deep Dungeon (Japan) (Rev 1) (Disk Writer).fds" size 131000 crc 4C5E542B md5 3EC9FFDFC07DE369C9FAF4DE17D4D9E0 sha1 C19D3ADDDC08E79644305F5D08384018F059E6DA serial "YSM" )
+)
+game (
+	name "Zanac (AI) (Japan)"
+	region "Japan"
+	serial "ZAN"
+	rom ( name "Zanac (AI) (Japan).fds" size 65500 crc 2D90879B md5 27C2CE4FD60739B39BB6F30C1AB558F0 sha1 4409175D876A28BCB8AFA857D7E97453DF20A8B4 serial "ZAN" )
+)
+game (
+	name "Zanac (AI) (Japan) (Project EGG)"
+	region "Japan"
+	rom ( name "Zanac (AI) (Japan) (Project EGG).qd" size 65516 crc 349B244B md5 B152912CCD919322FA577470AC1F84F8 sha1 FBDB20149C17EAEA37650FEE8246B5334E59D730 )
+)
+game (
+	name "Zatsugaku Olympic Quiz - Watanabe Wataru Hen (Japan)"
+	region "Japan"
+	serial "PHOE"
+	rom ( name "Zatsugaku Olympic Quiz - Watanabe Wataru Hen (Japan) (Unl).fds" size 131000 crc A646F79E md5 D852A35F92404E01B61EB85A122D09C8 sha1 CE7DCB159EC014CBBCFDBF8A76A8288C7AFF04B0 serial "PHOE" )
+)
+game (
+	name "Zatsugaku Olympic Quiz Part II (Japan)"
+	region "Japan"
+	serial "PHOE"
+	rom ( name "Zatsugaku Olympic Quiz Part II (Japan) (Unl).fds" size 131000 crc D69A4D87 md5 A7F5CAB4367F60DFE1844BBDA5C3ADD6 sha1 89771A0409372DA56B7DF65B246E6686518DA42D serial "PHOE" )
+)
+game (
+	name "Zelda no Densetsu - The Hyrule Fantasy (Japan)"
+	region "Japan"
+	serial "ZEL"
+	rom ( name "Zelda no Densetsu - The Hyrule Fantasy (Japan).fds" size 131000 crc 1F22CCB1 md5 5C0785479D5149F18F77D23DDBA1DF41 sha1 135AC9CBDF3983AA77D7581B26D685D02615D36A serial "ZEL" )
+)
+game (
+	name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Beta)"
+	releaseyear "1985"
+	releasemonth "12"
+	releaseday "28"
+	region "Japan"
+	rom ( name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Beta) (1985-12-28).fds" size 131000 crc 2F222391 md5 D295F0282B1A8718A189AF3D2CF3DC8F sha1 2C3FF158C3716ABB66677D149B3E1D23993C1BFE )
+)
+game (
+	name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Collector's Edition)"
+	region "Japan"
+	serial "ZEL"
+	rom ( name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Collector's Edition).fds" size 131000 crc B64B1456 md5 659C5F15E548CD4075091C6E9B7F4893 sha1 EB72C80FEF3F55395AD3FC9A0F845935593CFD61 serial "ZEL" )
+)
+game (
+	name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (GameCube)"
+	region "Japan"
+	serial "ZEL"
+	rom ( name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (GameCube).fds" size 131000 crc 3F9E421C md5 E54440C35BD79EBE3F4BD271ADAC7178 sha1 391A14143328F45AE7CDD0E38FE3D39082C9F786 serial "ZEL" )
+)
+game (
+	name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Rev 1)"
+	region "Japan"
+	serial "ZEL"
+	rom ( name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Rev 1).fds" size 131000 crc 8F2202BF md5 18D20A07FD107D9DB045451578914C94 sha1 1429FBE3E62059994B6FF7C5E5E2A330831FAF63 serial "ZEL" )
+)
+game (
+	name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Virtual Console)"
+	region "Japan"
+	serial "ZEL"
+	rom ( name "Zelda no Densetsu - The Hyrule Fantasy (Japan) (Virtual Console).fds" size 131000 crc 0FB00A60 md5 4D4A13629AEAC9407EC40F59954CD8C5 sha1 21D7A4FA72C8D78319797EEF812DFF23BAB08A43 serial "ZEL" )
+)
