@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -115,3 +115,74 @@ jobs:
             _android/GameBrowser-DailyChunks.sha256
           if-no-files-found: error
           retention-days: 7
+
+      - name: Prepare permanent release files
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tag = 'dat-catalogs-latest'
+          $repo = $env:GITHUB_REPOSITORY
+
+          New-Item -ItemType Directory -Force -Path 'release-assets' | Out-Null
+
+          $names = @(
+            'GameBrowser-Data.zip',
+            'GameBrowser-Data.sha256',
+            'GameBrowser-DailyChunks.zip',
+            'GameBrowser-DailyChunks.sha256'
+          )
+
+          foreach ($name in $names) {
+            $source = Join-Path '_android' $name
+            if (!(Test-Path -LiteralPath $source)) {
+              throw "Expected release file missing: $source"
+            }
+            Copy-Item -LiteralPath $source -Destination (Join-Path 'release-assets' $name) -Force
+          }
+
+          $now = (Get-Date).ToUniversalTime().ToString('o')
+          $files = @()
+
+          foreach ($name in $names) {
+            $path = Join-Path 'release-assets' $name
+            $files += [ordered]@{
+              name = $name
+              size = (Get-Item -LiteralPath $path).Length
+              url = "https://github.com/$repo/releases/download/$tag/$name"
+            }
+          }
+
+          [ordered]@{
+            schema = 1
+            package = 'GameBrowser-DAT-Catalog-and-Daily-Chunks'
+            generated_at = $now
+            release_tag = $tag
+            files = $files
+          } | ConvertTo-Json -Depth 10 | Set-Content -Path 'release-assets\manifest.json' -Encoding UTF8
+
+          Get-ChildItem 'release-assets' -File | Format-Table Name, Length -AutoSize
+
+      - name: Create or update permanent GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tag = 'dat-catalogs-latest'
+          $repo = $env:GITHUB_REPOSITORY
+
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title "DAT Catalogs + Daily Chunks Latest" --notes "Auto-built DAT-backed catalog and Daily Chunk packages."
+            if ($LASTEXITCODE -ne 0) {
+              throw 'Failed to create GitHub Release.'
+            }
+          }
+
+          Get-ChildItem 'release-assets' -File | ForEach-Object {
+            gh release upload $tag $_.FullName --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to upload release asset: $($_.Name)"
+            }
+          }
+
