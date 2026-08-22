@@ -3,8 +3,8 @@ name: Build Windows Country ZIPs
 on:
   workflow_dispatch:
   schedule:
-    # 5:00 AM Singapore time = 9:00 PM UTC previous day.
-    - cron: "0 21 * * *"
+    - cron: '30 8 * * *'
+      timezone: 'Asia/Singapore'
 
 concurrency:
   group: windows-country-zips

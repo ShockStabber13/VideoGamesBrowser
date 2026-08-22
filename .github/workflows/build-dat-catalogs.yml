@@ -2,6 +2,9 @@ name: Build DAT Catalogs + Daily Chunks
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'
+      timezone: 'Asia/Singapore'
 
 concurrency:
   group: dat-catalogs-daily-chunks
