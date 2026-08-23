@@ -1,0 +1,67 @@
+name: Update IGDB Platform Index
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 4 * * *'
+      timezone: 'Asia/Singapore'
+
+concurrency:
+  group: update-igdb-platform-index
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout builder
+        uses: actions/checkout@v4
+
+      - name: Build compact IGDB game/platform index
+        shell: pwsh
+        env:
+          IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
+          IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) { throw 'GitHub Secret IGDB_CLIENT_ID is missing.' }
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) { throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.' }
+          & '_tools\Build IGDB Platform Index.ps1' -OutputDirectory '_android\igdb-platform-index'
+          if ($LASTEXITCODE -ne 0) { throw "IGDB index build failed with exit code $LASTEXITCODE" }
+          foreach ($path in @('_android\GameBrowser-IGDB-Platform-Index.zip','_android\GameBrowser-IGDB-Platform-Index.zip.sha256')) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Expected output missing: $path" }
+          }
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GameBrowser-IGDB-Platform-Index
+          path: |
+            _android/GameBrowser-IGDB-Platform-Index.zip
+            _android/GameBrowser-IGDB-Platform-Index.zip.sha256
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Publish IGDB index release asset
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tag = 'igdb-index-latest'
+          $repo = $env:GITHUB_REPOSITORY
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title 'IGDB Platform Index Latest' --notes 'Compact IGDB game ID, title, platform and release-date index for VideoGamesBrowser tooling.'
+            if ($LASTEXITCODE -ne 0) { throw 'Failed to create igdb-index-latest release.' }
+          }
+          foreach ($path in @('_android\GameBrowser-IGDB-Platform-Index.zip','_android\GameBrowser-IGDB-Platform-Index.zip.sha256')) {
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
+          }
+          Write-Host "Published: https://github.com/$repo/releases/download/igdb-index-latest/GameBrowser-IGDB-Platform-Index.zip"
