@@ -31,8 +31,12 @@ jobs:
           $ErrorActionPreference = 'Stop'
           if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) { throw 'GitHub Secret IGDB_CLIENT_ID is missing.' }
           if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) { throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.' }
+
+          # This is a PowerShell script, not an external executable. If it throws,
+          # ErrorActionPreference=Stop fails the step. Do not use $LASTEXITCODE here;
+          # it can be blank after a successful .ps1 invocation.
           & '_tools\Build IGDB Platform Index.ps1' -OutputDirectory '_android\igdb-platform-index'
-          if ($LASTEXITCODE -ne 0) { throw "IGDB index build failed with exit code $LASTEXITCODE" }
+
           foreach ($path in @('_android\GameBrowser-IGDB-Platform-Index.zip','_android\GameBrowser-IGDB-Platform-Index.zip.sha256')) {
             if (!(Test-Path -LiteralPath $path)) { throw "Expected output missing: $path" }
           }

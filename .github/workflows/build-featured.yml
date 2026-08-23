@@ -2,9 +2,11 @@ name: Update Featured Games
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '30 7 * * *'
-      timezone: 'Asia/Singapore'
+  push:
+    branches:
+      - main
+    paths:
+      - '_curated/featured/featured_game_index.json'
 
 concurrency:
   group: update-featured-games
@@ -14,119 +16,22 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  publish:
     runs-on: windows-latest
-    timeout-minutes: 360
+    timeout-minutes: 30
 
     steps:
-      - name: Checkout builder
+      - name: Checkout curated data
         uses: actions/checkout@v4
 
-      - name: Restore shared builder state
-        uses: actions/cache@v4
-        with:
-          path: |
-            DATs
-            _cache
-            catalog.json
-          key: gamebrowser-builder-state-${{ runner.os }}-${{ github.run_id }}
-          restore-keys: |
-            gamebrowser-builder-state-${{ runner.os }}-
-
-      - name: Ensure validated platform catalogs
+      - name: Validate and package curated Featured Games
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
-          $catalogRoot = '_cache\platform-catalogs'
-          $existing = @(Get-ChildItem -LiteralPath $catalogRoot -Filter '*.json' -File -ErrorAction SilentlyContinue)
-          if ($existing.Count -gt 0) {
-            Write-Host "Using $($existing.Count) validated platform catalogs restored from GitHub cache."
-            exit 0
-          }
-
-          # Separate GitHub Actions runs do not share a runner filesystem. If the cache is
-          # empty, reconstruct the strict per-platform validation catalogs from the latest
-          # published GameBrowser-Data.zip produced by the DAT Catalog workflow.
-          $repo = $env:GITHUB_REPOSITORY
-          $url = "https://github.com/$repo/releases/download/dat-catalogs-latest/GameBrowser-Data.zip"
-          $tempRoot = Join-Path $env:RUNNER_TEMP 'gamebrowser-published-data'
-          $zipPath = Join-Path $tempRoot 'GameBrowser-Data.zip'
-          $extractRoot = Join-Path $tempRoot 'extract'
-          Remove-Item -LiteralPath $tempRoot -Recurse -Force -ErrorAction SilentlyContinue
-          New-Item -ItemType Directory -Force -Path $extractRoot | Out-Null
-
-          try {
-            Write-Host "No shared cache found. Downloading validated DAT catalog package: $url"
-            Invoke-WebRequest -Uri $url -OutFile $zipPath -UseBasicParsing -TimeoutSec 300
-          } catch {
-            throw "Validated platform catalogs are unavailable. Run 'Update DAT Catalogs' successfully once first. Download failed: $($_.Exception.Message)"
-          }
-
-          Expand-Archive -LiteralPath $zipPath -DestinationPath $extractRoot -Force
-          $combined = Join-Path $extractRoot 'game_catalog.json'
-          if (!(Test-Path -LiteralPath $combined)) { throw 'Published GameBrowser-Data.zip is missing game_catalog.json.' }
-
-          $rows = @((Get-Content -LiteralPath $combined -Raw -Encoding UTF8 | ConvertFrom-Json) | ForEach-Object { $_ })
-          if ($rows.Count -eq 0) { throw 'Published game_catalog.json contains no validated games.' }
-          New-Item -ItemType Directory -Force -Path $catalogRoot | Out-Null
-          $utf8 = New-Object System.Text.UTF8Encoding($false)
-          $files = 0
-          foreach ($group in @($rows | Group-Object platform)) {
-            $platform = [string]$group.Name
-            if ([string]::IsNullOrWhiteSpace($platform)) { continue }
-            $slug = (($platform.ToLowerInvariant() -replace '[^a-z0-9]+','_').Trim('_'))
-            if ([string]::IsNullOrWhiteSpace($slug)) { continue }
-            $out = Join-Path $catalogRoot ($slug + '.json')
-            $json = @($group.Group) | ConvertTo-Json -Depth 20
-            [IO.File]::WriteAllText($out, $json, $utf8)
-            $files++
-          }
-          if ($files -eq 0) { throw 'Could not reconstruct any per-platform validation catalogs.' }
-          Write-Host "Reconstructed $files validated platform catalogs from GameBrowser-Data.zip."
-
-      - name: Write API configs from GitHub Secrets
-        shell: pwsh
-        env:
-          IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
-          IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
-          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-        run: |
-          $ErrorActionPreference = 'Stop'
-          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) { throw 'GitHub Secret IGDB_CLIENT_ID is missing.' }
-          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) { throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.' }
-          if ([string]::IsNullOrWhiteSpace($env:STEAM_API_KEY)) { throw 'GitHub Secret STEAM_API_KEY is missing.' }
-          [ordered]@{ ClientId=$env:IGDB_CLIENT_ID; ClientSecret=$env:IGDB_CLIENT_SECRET } | ConvertTo-Json | Set-Content 'igdb-config.json' -Encoding UTF8
-          [ordered]@{ ApiKey=$env:STEAM_API_KEY; CountryCode='SG' } | ConvertTo-Json | Set-Content 'steam-config.json' -Encoding UTF8
-
-      - name: Validate hand-curated Featured Games
-        shell: pwsh
-        run: |
-          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Build Daily Chunks.ps1'
-          if ($LASTEXITCODE -ne 0) { throw "Featured validation/build failed with exit code $LASTEXITCODE" }
-
-      - name: Verify Featured package
-        shell: pwsh
-        run: |
-          $ErrorActionPreference = 'Stop'
-          foreach ($path in @('_android\GameBrowser-Featured.zip','_android\GameBrowser-Featured.sha256','_android\featured_game_index.json')) {
+          & '_tools\Package Curated Game Data.ps1' -Package Featured
+          foreach ($path in @('_android\GameBrowser-Featured.zip','_android\GameBrowser-Featured.sha256')) {
             if (!(Test-Path -LiteralPath $path)) { throw "Expected output missing: $path" }
           }
-          $sourceDoc = Get-Content 'featured-games-curated.json' -Raw -Encoding UTF8 | ConvertFrom-Json
-          $source = @($sourceDoc.games)
-          $featured = @((Get-Content '_android\featured_game_index.json' -Raw -Encoding UTF8 | ConvertFrom-Json) | ForEach-Object { $_ })
-          if ($source.Count -eq 0) { throw 'featured-games-curated.json is empty.' }
-          if ($featured.Count -eq 0) { throw 'No Featured games survived validation.' }
-          if ($featured.Count -gt $source.Count) { throw 'Featured output contains more games than the curated source. Auto-fill is forbidden.' }
-          $dupes=@($featured | Group-Object { "$($_.platform)::$($_.igdbId)::$($_.steamAppId)" } | Where-Object { $_.Count -gt 1 })
-          if ($dupes.Count -gt 0) { throw "Duplicate Featured identities detected: $($dupes.Count)" }
-          Add-Type -AssemblyName System.IO.Compression.FileSystem
-          $zip=[IO.Compression.ZipFile]::OpenRead((Resolve-Path '_android\GameBrowser-Featured.zip'))
-          try {
-            $names=@($zip.Entries | ForEach-Object { $_.FullName })
-            if ('featured_game_index.json' -notin $names) { throw 'Featured ZIP is missing featured_game_index.json.' }
-            if ('daily_chunk_index.json' -in $names) { throw 'Featured ZIP incorrectly contains Daily Chunk data.' }
-          } finally { $zip.Dispose() }
-          Write-Host "Featured: $($featured.Count)/$($source.Count) hand-curated choices validated. No auto-fill or score-based selection."
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
@@ -148,11 +53,11 @@ jobs:
           $repo = $env:GITHUB_REPOSITORY
           gh release view $tag --repo $repo *> $null
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --title 'Featured Games Latest' --notes 'Hand-curated Featured Games validated against the current platform sources. No automatic filler or rating-based selection.'
+            gh release create $tag --repo $repo --title 'Featured Games Latest' --notes 'Hand-curated Featured Games. GitHub packages and publishes only; it does not select games.'
             if ($LASTEXITCODE -ne 0) { throw 'Failed to create featured-latest release.' }
           }
           foreach ($path in @('_android\GameBrowser-Featured.zip','_android\GameBrowser-Featured.sha256')) {
             gh release upload $tag $path --repo $repo --clobber
             if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
           }
-          Write-Host 'Published: https://github.com/'$repo'/releases/download/featured-latest/GameBrowser-Featured.zip'
+          Write-Host "Published: https://github.com/$repo/releases/download/featured-latest/GameBrowser-Featured.zip"
