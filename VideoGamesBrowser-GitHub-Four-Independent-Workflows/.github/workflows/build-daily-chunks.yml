@@ -33,12 +33,56 @@ jobs:
           restore-keys: |
             gamebrowser-builder-state-${{ runner.os }}-
 
-      - name: Require validated platform catalogs
+      - name: Ensure validated platform catalogs
         shell: pwsh
         run: |
-          if (!(Test-Path -LiteralPath '_cache\platform-catalogs')) {
-            throw 'Validated platform catalogs are not cached yet. Run the Update DAT Catalogs workflow once first.'
+          $ErrorActionPreference = 'Stop'
+          $catalogRoot = '_cache\platform-catalogs'
+          $existing = @(Get-ChildItem -LiteralPath $catalogRoot -Filter '*.json' -File -ErrorAction SilentlyContinue)
+          if ($existing.Count -gt 0) {
+            Write-Host "Using $($existing.Count) validated platform catalogs restored from GitHub cache."
+            exit 0
           }
+
+          # Separate GitHub Actions runs do not share a runner filesystem. If the cache is
+          # empty, reconstruct the strict per-platform validation catalogs from the latest
+          # published GameBrowser-Data.zip produced by the DAT Catalog workflow.
+          $repo = $env:GITHUB_REPOSITORY
+          $url = "https://github.com/$repo/releases/download/dat-catalogs-latest/GameBrowser-Data.zip"
+          $tempRoot = Join-Path $env:RUNNER_TEMP 'gamebrowser-published-data'
+          $zipPath = Join-Path $tempRoot 'GameBrowser-Data.zip'
+          $extractRoot = Join-Path $tempRoot 'extract'
+          Remove-Item -LiteralPath $tempRoot -Recurse -Force -ErrorAction SilentlyContinue
+          New-Item -ItemType Directory -Force -Path $extractRoot | Out-Null
+
+          try {
+            Write-Host "No shared cache found. Downloading validated DAT catalog package: $url"
+            Invoke-WebRequest -Uri $url -OutFile $zipPath -UseBasicParsing -TimeoutSec 300
+          } catch {
+            throw "Validated platform catalogs are unavailable. Run 'Update DAT Catalogs' successfully once first. Download failed: $($_.Exception.Message)"
+          }
+
+          Expand-Archive -LiteralPath $zipPath -DestinationPath $extractRoot -Force
+          $combined = Join-Path $extractRoot 'game_catalog.json'
+          if (!(Test-Path -LiteralPath $combined)) { throw 'Published GameBrowser-Data.zip is missing game_catalog.json.' }
+
+          $rows = @((Get-Content -LiteralPath $combined -Raw -Encoding UTF8 | ConvertFrom-Json) | ForEach-Object { $_ })
+          if ($rows.Count -eq 0) { throw 'Published game_catalog.json contains no validated games.' }
+          New-Item -ItemType Directory -Force -Path $catalogRoot | Out-Null
+          $utf8 = New-Object System.Text.UTF8Encoding($false)
+          $files = 0
+          foreach ($group in @($rows | Group-Object platform)) {
+            $platform = [string]$group.Name
+            if ([string]::IsNullOrWhiteSpace($platform)) { continue }
+            $slug = (($platform.ToLowerInvariant() -replace '[^a-z0-9]+','_').Trim('_'))
+            if ([string]::IsNullOrWhiteSpace($slug)) { continue }
+            $out = Join-Path $catalogRoot ($slug + '.json')
+            $json = @($group.Group) | ConvertTo-Json -Depth 20
+            [IO.File]::WriteAllText($out, $json, $utf8)
+            $files++
+          }
+          if ($files -eq 0) { throw 'Could not reconstruct any per-platform validation catalogs.' }
+          Write-Host "Reconstructed $files validated platform catalogs from GameBrowser-Data.zip."
 
       - name: Write API configs from GitHub Secrets
         shell: pwsh
