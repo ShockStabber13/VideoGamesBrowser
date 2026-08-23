@@ -1,13 +1,13 @@
-name: Build DAT Catalogs + Daily Chunks
+name: Update DAT Catalogs
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 6 * * *'
+    - cron: '30 5 * * *'
       timezone: 'Asia/Singapore'
 
 concurrency:
-  group: dat-catalogs-daily-chunks
+  group: update-dat-catalogs
   cancel-in-progress: false
 
 permissions:
@@ -22,45 +22,30 @@ jobs:
       - name: Checkout builder
         uses: actions/checkout@v4
 
-      - name: Restore builder state
+      - name: Restore shared builder state
         uses: actions/cache@v4
         with:
           path: |
             DATs
             _cache
             catalog.json
-          key: dat-igdb-state-${{ runner.os }}-${{ github.run_id }}
+          key: gamebrowser-builder-state-${{ runner.os }}-${{ github.run_id }}
           restore-keys: |
-            dat-igdb-state-${{ runner.os }}-
+            gamebrowser-builder-state-${{ runner.os }}-
 
-      - name: Write API configs from GitHub Secrets
+      - name: Write IGDB config from GitHub Secrets
         shell: pwsh
         env:
           IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
           IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
-          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
         run: |
           $ErrorActionPreference = 'Stop'
-
-          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) {
-            throw 'GitHub Secret IGDB_CLIENT_ID is missing.'
-          }
-          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) {
-            throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.'
-          }
-          if ([string]::IsNullOrWhiteSpace($env:STEAM_API_KEY)) {
-            throw 'GitHub Secret STEAM_API_KEY is missing.'
-          }
-
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) { throw 'GitHub Secret IGDB_CLIENT_ID is missing.' }
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) { throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.' }
           [ordered]@{
             ClientId = $env:IGDB_CLIENT_ID
             ClientSecret = $env:IGDB_CLIENT_SECRET
           } | ConvertTo-Json | Set-Content -Path 'igdb-config.json' -Encoding UTF8
-
-          [ordered]@{
-            ApiKey = $env:STEAM_API_KEY
-            CountryCode = 'SG'
-          } | ConvertTo-Json | Set-Content -Path 'steam-config.json' -Encoding UTF8
 
       - name: Update preservation DATs
         shell: pwsh
@@ -74,95 +59,26 @@ jobs:
           powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Local Web Server.ps1' -BuildStaticCache
           if ($LASTEXITCODE -ne 0) { throw "Catalog build failed with exit code $LASTEXITCODE" }
 
-      - name: Package DAT-backed Android catalog
+      - name: Package GameBrowser-Data.zip
         shell: pwsh
         run: |
           powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Build Android Database.ps1'
           if ($LASTEXITCODE -ne 0) { throw "Database package failed with exit code $LASTEXITCODE" }
-
-      - name: Build Daily Chunks
-        shell: pwsh
-        run: |
-          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Build Daily Chunks.ps1'
-          if ($LASTEXITCODE -ne 0) { throw "Daily Chunk build failed with exit code $LASTEXITCODE" }
-
-      - name: Verify outputs
-        shell: pwsh
-        run: |
-          $expected = @(
-            '_android\GameBrowser-Data.zip',
-            '_android\GameBrowser-Data.sha256',
-            '_android\GameBrowser-DailyChunks.zip',
-            '_android\GameBrowser-DailyChunks.sha256'
-          )
-
-          foreach ($path in $expected) {
-            if (!(Test-Path -LiteralPath $path)) {
-              throw "Expected output missing: $path"
-            }
+          foreach ($path in @('_android\GameBrowser-Data.zip','_android\GameBrowser-Data.sha256')) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Expected output missing: $path" }
           }
 
-          Get-Item $expected | Format-Table Name, Length, LastWriteTime -AutoSize
-
-      - name: Upload finished packages
+      - name: Upload workflow artifact
         uses: actions/upload-artifact@v4
         with:
-          name: GameBrowser-DAT-Catalog-and-Daily-Chunks
+          name: GameBrowser-Data
           path: |
             _android/GameBrowser-Data.zip
             _android/GameBrowser-Data.sha256
-            _android/GameBrowser-DailyChunks.zip
-            _android/GameBrowser-DailyChunks.sha256
           if-no-files-found: error
           retention-days: 7
 
-      - name: Prepare permanent release files
-        shell: pwsh
-        run: |
-          $ErrorActionPreference = 'Stop'
-          $tag = 'dat-catalogs-latest'
-          $repo = $env:GITHUB_REPOSITORY
-
-          New-Item -ItemType Directory -Force -Path 'release-assets' | Out-Null
-
-          $names = @(
-            'GameBrowser-Data.zip',
-            'GameBrowser-Data.sha256',
-            'GameBrowser-DailyChunks.zip',
-            'GameBrowser-DailyChunks.sha256'
-          )
-
-          foreach ($name in $names) {
-            $source = Join-Path '_android' $name
-            if (!(Test-Path -LiteralPath $source)) {
-              throw "Expected release file missing: $source"
-            }
-            Copy-Item -LiteralPath $source -Destination (Join-Path 'release-assets' $name) -Force
-          }
-
-          $now = (Get-Date).ToUniversalTime().ToString('o')
-          $files = @()
-
-          foreach ($name in $names) {
-            $path = Join-Path 'release-assets' $name
-            $files += [ordered]@{
-              name = $name
-              size = (Get-Item -LiteralPath $path).Length
-              url = "https://github.com/$repo/releases/download/$tag/$name"
-            }
-          }
-
-          [ordered]@{
-            schema = 1
-            package = 'GameBrowser-DAT-Catalog-and-Daily-Chunks'
-            generated_at = $now
-            release_tag = $tag
-            files = $files
-          } | ConvertTo-Json -Depth 10 | Set-Content -Path 'release-assets\manifest.json' -Encoding UTF8
-
-          Get-ChildItem 'release-assets' -File | Format-Table Name, Length -AutoSize
-
-      - name: Create or update permanent GitHub Release
+      - name: Publish DAT catalog release asset
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
@@ -170,19 +86,13 @@ jobs:
           $ErrorActionPreference = 'Stop'
           $tag = 'dat-catalogs-latest'
           $repo = $env:GITHUB_REPOSITORY
-
           gh release view $tag --repo $repo *> $null
           if ($LASTEXITCODE -ne 0) {
-            gh release create $tag --repo $repo --title "DAT Catalogs + Daily Chunks Latest" --notes "Auto-built DAT-backed catalog and Daily Chunk packages."
-            if ($LASTEXITCODE -ne 0) {
-              throw 'Failed to create GitHub Release.'
-            }
+            gh release create $tag --repo $repo --title 'DAT Catalogs + Daily Chunks Latest' --notes 'Independent latest DAT catalog and Daily Chunk release assets.'
+            if ($LASTEXITCODE -ne 0) { throw 'Failed to create dat-catalogs-latest release.' }
           }
-
-          Get-ChildItem 'release-assets' -File | ForEach-Object {
-            gh release upload $tag $_.FullName --repo $repo --clobber
-            if ($LASTEXITCODE -ne 0) {
-              throw "Failed to upload release asset: $($_.Name)"
-            }
+          foreach ($path in @('_android\GameBrowser-Data.zip','_android\GameBrowser-Data.sha256')) {
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
           }
-
+          Write-Host 'Published: https://github.com/'$repo'/releases/download/dat-catalogs-latest/GameBrowser-Data.zip'

@@ -1,0 +1,114 @@
+name: Update Featured Games
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 7 * * *'
+      timezone: 'Asia/Singapore'
+
+concurrency:
+  group: update-featured-games
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout builder
+        uses: actions/checkout@v4
+
+      - name: Restore shared builder state
+        uses: actions/cache@v4
+        with:
+          path: |
+            DATs
+            _cache
+            catalog.json
+          key: gamebrowser-builder-state-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            gamebrowser-builder-state-${{ runner.os }}-
+
+      - name: Require validated platform catalogs
+        shell: pwsh
+        run: |
+          if (!(Test-Path -LiteralPath '_cache\platform-catalogs')) {
+            throw 'Validated platform catalogs are not cached yet. Run the Update DAT Catalogs workflow once first.'
+          }
+
+      - name: Write API configs from GitHub Secrets
+        shell: pwsh
+        env:
+          IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
+          IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_ID)) { throw 'GitHub Secret IGDB_CLIENT_ID is missing.' }
+          if ([string]::IsNullOrWhiteSpace($env:IGDB_CLIENT_SECRET)) { throw 'GitHub Secret IGDB_CLIENT_SECRET is missing.' }
+          if ([string]::IsNullOrWhiteSpace($env:STEAM_API_KEY)) { throw 'GitHub Secret STEAM_API_KEY is missing.' }
+          [ordered]@{ ClientId=$env:IGDB_CLIENT_ID; ClientSecret=$env:IGDB_CLIENT_SECRET } | ConvertTo-Json | Set-Content 'igdb-config.json' -Encoding UTF8
+          [ordered]@{ ApiKey=$env:STEAM_API_KEY; CountryCode='SG' } | ConvertTo-Json | Set-Content 'steam-config.json' -Encoding UTF8
+
+      - name: Validate hand-curated Featured Games
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File '_tools\Build Daily Chunks.ps1'
+          if ($LASTEXITCODE -ne 0) { throw "Featured validation/build failed with exit code $LASTEXITCODE" }
+
+      - name: Verify Featured package
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          foreach ($path in @('_android\GameBrowser-Featured.zip','_android\GameBrowser-Featured.sha256','_android\featured_game_index.json')) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Expected output missing: $path" }
+          }
+          $sourceDoc = Get-Content 'featured-games-curated.json' -Raw -Encoding UTF8 | ConvertFrom-Json
+          $source = @($sourceDoc.games)
+          $featured = @((Get-Content '_android\featured_game_index.json' -Raw -Encoding UTF8 | ConvertFrom-Json) | ForEach-Object { $_ })
+          if ($source.Count -eq 0) { throw 'featured-games-curated.json is empty.' }
+          if ($featured.Count -eq 0) { throw 'No Featured games survived validation.' }
+          if ($featured.Count -gt $source.Count) { throw 'Featured output contains more games than the curated source. Auto-fill is forbidden.' }
+          $dupes=@($featured | Group-Object { "$($_.platform)::$($_.igdbId)::$($_.steamAppId)" } | Where-Object { $_.Count -gt 1 })
+          if ($dupes.Count -gt 0) { throw "Duplicate Featured identities detected: $($dupes.Count)" }
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          $zip=[IO.Compression.ZipFile]::OpenRead((Resolve-Path '_android\GameBrowser-Featured.zip'))
+          try {
+            $names=@($zip.Entries | ForEach-Object { $_.FullName })
+            if ('featured_game_index.json' -notin $names) { throw 'Featured ZIP is missing featured_game_index.json.' }
+            if ('daily_chunk_index.json' -in $names) { throw 'Featured ZIP incorrectly contains Daily Chunk data.' }
+          } finally { $zip.Dispose() }
+          Write-Host "Featured: $($featured.Count)/$($source.Count) hand-curated choices validated. No auto-fill or score-based selection."
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GameBrowser-Featured
+          path: |
+            _android/GameBrowser-Featured.zip
+            _android/GameBrowser-Featured.sha256
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Publish Featured release asset
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $tag = 'featured-latest'
+          $repo = $env:GITHUB_REPOSITORY
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title 'Featured Games Latest' --notes 'Hand-curated Featured Games validated against the current platform sources. No automatic filler or rating-based selection.'
+            if ($LASTEXITCODE -ne 0) { throw 'Failed to create featured-latest release.' }
+          }
+          foreach ($path in @('_android\GameBrowser-Featured.zip','_android\GameBrowser-Featured.sha256')) {
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
+          }
+          Write-Host 'Published: https://github.com/'$repo'/releases/download/featured-latest/GameBrowser-Featured.zip'

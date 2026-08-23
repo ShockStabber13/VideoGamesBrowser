@@ -1,0 +1,3208 @@
+{
+  "schemaVersion": 1,
+  "selectionPolicy": "Hand-curated Featured membership. GitHub/build scripts validate and resolve these exact choices only. Ratings, review scores, popularity and Daily Chunk order do not add or rank games. Invalid or ambiguous entries are omitted rather than replaced.",
+  "maxRecommendedPerPlatform": 50,
+  "games": [
+    {
+      "platform": "Nintendo Switch",
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "igdbId": 7346
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "The Legend of Zelda: Tears of the Kingdom",
+      "igdbId": 119388
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Super Mario Odyssey",
+      "igdbId": 26758
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Super Mario Bros. Wonder",
+      "igdbId": 254339
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Mario Kart 8 Deluxe",
+      "igdbId": 26764
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Super Smash Bros. Ultimate",
+      "igdbId": 90101
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Metroid Dread",
+      "igdbId": 15698
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Fire Emblem: Three Houses",
+      "igdbId": 26845
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Animal Crossing: New Horizons",
+      "igdbId": 109462
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Luigi's Mansion 3",
+      "igdbId": 109455
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Hades",
+      "igdbId": 113112
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Hollow Knight",
+      "igdbId": 14593
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Celeste",
+      "igdbId": 26226
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Persona 5 Royal",
+      "igdbId": 114283
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Into the Breach",
+      "igdbId": 27117
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Slay the Spire",
+      "igdbId": 40477
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Balatro",
+      "igdbId": 251833
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Dredge",
+      "igdbId": 164867
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Stardew Valley",
+      "igdbId": 17000
+    },
+    {
+      "platform": "Nintendo Switch",
+      "title": "Pokémon Legends: Arceus",
+      "igdbId": 144054
+    },
+    {
+      "platform": "Wii U",
+      "title": "Super Mario 3D World"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Mario Kart 8"
+    },
+    {
+      "platform": "Wii U",
+      "title": "The Legend of Zelda: The Wind Waker HD"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Super Smash Bros. for Wii U"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Splatoon"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Bayonetta 2"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Pikmin 3"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Donkey Kong Country: Tropical Freeze"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Xenoblade Chronicles X"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Captain Toad: Treasure Tracker"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Yoshi's Woolly World"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Nintendo Land"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Hyrule Warriors"
+    },
+    {
+      "platform": "Wii U",
+      "title": "Super Mario Maker"
+    },
+    {
+      "platform": "Wii U",
+      "title": "The Wonderful 101"
+    },
+    {
+      "platform": "Wii",
+      "title": "Super Mario Galaxy"
+    },
+    {
+      "platform": "Wii",
+      "title": "Super Mario Galaxy 2"
+    },
+    {
+      "platform": "Wii",
+      "title": "The Legend of Zelda: Skyward Sword"
+    },
+    {
+      "platform": "Wii",
+      "title": "Wii Sports"
+    },
+    {
+      "platform": "Wii",
+      "title": "Mario Kart Wii"
+    },
+    {
+      "platform": "Wii",
+      "title": "Super Smash Bros. Brawl"
+    },
+    {
+      "platform": "Wii",
+      "title": "Metroid Prime 3: Corruption"
+    },
+    {
+      "platform": "Wii",
+      "title": "Xenoblade Chronicles"
+    },
+    {
+      "platform": "Wii",
+      "title": "Donkey Kong Country Returns"
+    },
+    {
+      "platform": "Wii",
+      "title": "New Super Mario Bros. Wii"
+    },
+    {
+      "platform": "Wii",
+      "title": "Punch-Out!!",
+      "igdbId": 2194
+    },
+    {
+      "platform": "Wii",
+      "title": "Sin & Punishment: Star Successor"
+    },
+    {
+      "platform": "Wii",
+      "title": "Zack & Wiki: Quest for Barbaros' Treasure"
+    },
+    {
+      "platform": "Wii",
+      "title": "No More Heroes"
+    },
+    {
+      "platform": "Wii",
+      "title": "Kirby's Return to Dream Land"
+    },
+    {
+      "platform": "Wii",
+      "title": "Ōkami"
+    },
+    {
+      "platform": "GameCube",
+      "title": "The Legend of Zelda: The Wind Waker"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Metroid Prime"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Resident Evil 4"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Super Mario Sunshine"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Super Smash Bros. Melee"
+    },
+    {
+      "platform": "GameCube",
+      "title": "F-Zero GX"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Paper Mario: The Thousand-Year Door"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Eternal Darkness: Sanity's Requiem"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Luigi's Mansion",
+      "igdbId": 2485
+    },
+    {
+      "platform": "GameCube",
+      "title": "Pikmin",
+      "igdbId": 2239
+    },
+    {
+      "platform": "GameCube",
+      "title": "Pikmin 2",
+      "igdbId": 2240
+    },
+    {
+      "platform": "GameCube",
+      "title": "Fire Emblem: Path of Radiance"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Mario Kart: Double Dash!!"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Animal Crossing"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Viewtiful Joe"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Chibi-Robo!"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Ikaruga"
+    },
+    {
+      "platform": "GameCube",
+      "title": "Baten Kaitos: Eternal Wings and the Lost Ocean"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "The Legend of Zelda: A Link Between Worlds"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "The Legend of Zelda: Ocarina of Time 3D"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "The Legend of Zelda: Majora's Mask 3D"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Super Mario 3D Land"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Mario Kart 7"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Fire Emblem Awakening"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Animal Crossing: New Leaf"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Kid Icarus: Uprising"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Pokémon X"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Pokémon Omega Ruby"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Pokémon Sun"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Metroid: Samus Returns"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Luigi's Mansion: Dark Moon"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Bravely Default"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Shin Megami Tensei IV"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Monster Hunter 4 Ultimate"
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Fantasy Life",
+      "igdbId": 6770
+    },
+    {
+      "platform": "Nintendo 3DS",
+      "title": "Phoenix Wright: Ace Attorney Trilogy"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Mario Kart DS"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "New Super Mario Bros."
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Pokémon HeartGold Version"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "The Legend of Zelda: Phantom Hourglass"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "The Legend of Zelda: Spirit Tracks"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Nine Hours, Nine Persons, Nine Doors"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Professor Layton and the Curious Village"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Phoenix Wright: Ace Attorney"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Grand Theft Auto: Chinatown Wars"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Animal Crossing: Wild World"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Mario & Luigi: Bowser's Inside Story"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "The World Ends with You"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Ghost Trick: Phantom Detective"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Castlevania: Dawn of Sorrow"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Castlevania: Order of Ecclesia"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Rhythm Heaven"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Advance Wars: Dual Strike"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Chrono Trigger"
+    },
+    {
+      "platform": "Nintendo DS",
+      "title": "Dragon Quest IX: Sentinels of the Starry Skies"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Pokémon Emerald Version"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "The Legend of Zelda: The Minish Cap"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Metroid Fusion"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Metroid: Zero Mission"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Castlevania: Aria of Sorrow"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Mario & Luigi: Superstar Saga"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Mario Kart: Super Circuit"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Mother 3"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Final Fantasy Tactics Advance"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Golden Sun"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Fire Emblem"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Advance Wars"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "WarioWare, Inc.: Mega Microgame$!"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Wario Land 4"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Mega Man Zero"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Kirby & the Amazing Mirror"
+    },
+    {
+      "platform": "Game Boy Advance",
+      "title": "Advance Wars 2: Black Hole Rising"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Pokémon Crystal Version"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "The Legend of Zelda: Oracle of Seasons"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "The Legend of Zelda: Oracle of Ages"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Wario Land 3"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Super Mario Bros. Deluxe"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Metal Gear: Ghost Babel"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Shantae"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Pokémon Puzzle Challenge"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Kirby Tilt 'n' Tumble"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Mario Golf"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Mario Tennis"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Lufia: The Legend Returns"
+    },
+    {
+      "platform": "Game Boy Color",
+      "title": "Dragon Warrior III"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Tetris",
+      "igdbId": 86490
+    },
+    {
+      "platform": "Game Boy",
+      "title": "The Legend of Zelda: Link's Awakening"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Super Mario Land"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Super Mario Land 2: 6 Golden Coins"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Kirby's Dream Land"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Wario Land: Super Mario Land 3"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Metroid II: Return of Samus"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Final Fantasy Adventure"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Gargoyle's Quest"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Mega Man IV"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Kid Dracula"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Operation C"
+    },
+    {
+      "platform": "Game Boy",
+      "title": "Ninja Gaiden Shadow"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "The Legend of Zelda: Ocarina of Time"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Super Mario 64"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "The Legend of Zelda: Majora's Mask"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Mario Kart 64"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Super Smash Bros."
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "GoldenEye 007"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Banjo-Kazooie"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Perfect Dark"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Paper Mario"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Star Fox 64"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "F-Zero X"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Diddy Kong Racing"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Conker's Bad Fur Day"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Pokémon Snap"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Wave Race 64"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Doom 64"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Mario Tennis"
+    },
+    {
+      "platform": "Nintendo 64",
+      "title": "Jet Force Gemini"
+    },
+    {
+      "platform": "SNES",
+      "title": "Super Mario World",
+      "igdbId": 1070
+    },
+    {
+      "platform": "SNES",
+      "title": "The Legend of Zelda: A Link to the Past"
+    },
+    {
+      "platform": "SNES",
+      "title": "Chrono Trigger",
+      "igdbId": 1802
+    },
+    {
+      "platform": "SNES",
+      "title": "Super Metroid"
+    },
+    {
+      "platform": "SNES",
+      "title": "Final Fantasy III"
+    },
+    {
+      "platform": "SNES",
+      "title": "Super Mario World 2: Yoshi's Island"
+    },
+    {
+      "platform": "SNES",
+      "title": "Donkey Kong Country"
+    },
+    {
+      "platform": "SNES",
+      "title": "EarthBound"
+    },
+    {
+      "platform": "SNES",
+      "title": "Donkey Kong Country 2: Diddy's Kong Quest"
+    },
+    {
+      "platform": "SNES",
+      "title": "Super Mario Kart"
+    },
+    {
+      "platform": "SNES",
+      "title": "Mega Man X"
+    },
+    {
+      "platform": "SNES",
+      "title": "Super Mario RPG: Legend of the Seven Stars"
+    },
+    {
+      "platform": "SNES",
+      "title": "Secret of Mana"
+    },
+    {
+      "platform": "SNES",
+      "title": "Super Castlevania IV"
+    },
+    {
+      "platform": "SNES",
+      "title": "F-Zero"
+    },
+    {
+      "platform": "SNES",
+      "title": "Star Fox"
+    },
+    {
+      "platform": "SNES",
+      "title": "Teenage Mutant Ninja Turtles IV: Turtles in Time"
+    },
+    {
+      "platform": "SNES",
+      "title": "Contra III: The Alien Wars"
+    },
+    {
+      "platform": "SNES",
+      "title": "Terranigma"
+    },
+    {
+      "platform": "NES",
+      "title": "Super Mario Bros."
+    },
+    {
+      "platform": "NES",
+      "title": "Super Mario Bros. 3",
+      "igdbId": 1068
+    },
+    {
+      "platform": "NES",
+      "title": "The Legend of Zelda"
+    },
+    {
+      "platform": "NES",
+      "title": "Tetris",
+      "igdbId": 8197
+    },
+    {
+      "platform": "NES",
+      "title": "Mega Man 2"
+    },
+    {
+      "platform": "NES",
+      "title": "Castlevania"
+    },
+    {
+      "platform": "NES",
+      "title": "Final Fantasy",
+      "igdbId": 385
+    },
+    {
+      "platform": "NES",
+      "title": "Metroid"
+    },
+    {
+      "platform": "NES",
+      "title": "Kirby's Adventure"
+    },
+    {
+      "platform": "NES",
+      "title": "Excitebike"
+    },
+    {
+      "platform": "NES",
+      "title": "Disney's DuckTales"
+    },
+    {
+      "platform": "NES",
+      "title": "Castlevania III: Dracula's Curse"
+    },
+    {
+      "platform": "NES",
+      "title": "Mike Tyson's Punch-Out!!",
+      "igdbId": 2195
+    },
+    {
+      "platform": "NES",
+      "title": "Contra"
+    },
+    {
+      "platform": "NES",
+      "title": "Ninja Gaiden"
+    },
+    {
+      "platform": "NES",
+      "title": "River City Ransom"
+    },
+    {
+      "platform": "NES",
+      "title": "Crystalis"
+    },
+    {
+      "platform": "NES",
+      "title": "Blaster Master"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Virtual Boy Wario Land"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Mario's Tennis"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Jack Bros."
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Red Alarm"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Teleroboxer"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Galactic Pinball"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Mario Clash"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Vertical Force"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Panic Bomber"
+    },
+    {
+      "platform": "Virtual Boy",
+      "title": "Space Squash"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "The Legend of Zelda"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Super Mario Bros.: The Lost Levels"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Castlevania"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Zelda II: The Adventure of Link"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "The Mysterious Murasame Castle"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Metroid"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Vs. Excitebike"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Bio Miracle Bokutte Upa"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Ai Senshi Nicol"
+    },
+    {
+      "platform": "Famicom Disk System",
+      "title": "Esper Dream"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "Doshin the Giant 1"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "F-Zero X Expansion Kit"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "Mario Artist: Paint Studio"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "Mario Artist: Polygon Studio"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "Mario Artist: Talent Studio"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "Mario Artist: Communication Kit"
+    },
+    {
+      "platform": "Nintendo 64DD",
+      "title": "SimCity 64"
+    },
+    {
+      "platform": "PS5",
+      "title": "Demon's Souls",
+      "igdbId": 134606
+    },
+    {
+      "platform": "PS5",
+      "title": "Ratchet & Clank: Rift Apart",
+      "igdbId": 134582
+    },
+    {
+      "platform": "PS5",
+      "title": "Returnal",
+      "igdbId": 134584
+    },
+    {
+      "platform": "PS5",
+      "title": "Astro's Playroom",
+      "igdbId": 134597
+    },
+    {
+      "platform": "PS5",
+      "title": "Marvel's Spider-Man 2",
+      "igdbId": 127044
+    },
+    {
+      "platform": "PS5",
+      "title": "God of War Ragnarök",
+      "igdbId": 112875
+    },
+    {
+      "platform": "PS5",
+      "title": "Horizon Forbidden West",
+      "igdbId": 112874
+    },
+    {
+      "platform": "PS5",
+      "title": "Final Fantasy XVI",
+      "igdbId": 31551
+    },
+    {
+      "platform": "PS5",
+      "title": "Final Fantasy VII Rebirth"
+    },
+    {
+      "platform": "PS5",
+      "title": "Silent Hill 2",
+      "igdbId": 222341
+    },
+    {
+      "platform": "PS5",
+      "title": "Resident Evil 4",
+      "igdbId": 132181
+    },
+    {
+      "platform": "PS5",
+      "title": "Elden Ring",
+      "igdbId": 119133
+    },
+    {
+      "platform": "PS5",
+      "title": "Baldur's Gate III",
+      "igdbId": 119171
+    },
+    {
+      "platform": "PS5",
+      "title": "Astro Bot"
+    },
+    {
+      "platform": "PS5",
+      "title": "Clair Obscur: Expedition 33",
+      "igdbId": 305152
+    },
+    {
+      "platform": "PS5",
+      "title": "Black Myth: Wukong",
+      "igdbId": 136879
+    },
+    {
+      "platform": "PS4",
+      "title": "Bloodborne",
+      "igdbId": 7334
+    },
+    {
+      "platform": "PS4",
+      "title": "God of War",
+      "igdbId": 19560
+    },
+    {
+      "platform": "PS4",
+      "title": "Uncharted 4: A Thief's End",
+      "igdbId": 7331
+    },
+    {
+      "platform": "PS4",
+      "title": "Horizon Zero Dawn",
+      "igdbId": 11156
+    },
+    {
+      "platform": "PS4",
+      "title": "The Last of Us Part II",
+      "igdbId": 26192
+    },
+    {
+      "platform": "PS4",
+      "title": "Ghost of Tsushima",
+      "igdbId": 75235
+    },
+    {
+      "platform": "PS4",
+      "title": "Persona 5",
+      "igdbId": 9927
+    },
+    {
+      "platform": "PS4",
+      "title": "Marvel's Spider-Man",
+      "igdbId": 19565
+    },
+    {
+      "platform": "PS4",
+      "title": "NieR: Automata",
+      "igdbId": 11208
+    },
+    {
+      "platform": "PS4",
+      "title": "Metal Gear Solid V: The Phantom Pain",
+      "igdbId": 1985
+    },
+    {
+      "platform": "PS4",
+      "title": "The Witcher 3: Wild Hunt",
+      "igdbId": 1942
+    },
+    {
+      "platform": "PS4",
+      "title": "Sekiro: Shadows Die Twice",
+      "igdbId": 76882
+    },
+    {
+      "platform": "PS4",
+      "title": "Resident Evil 2",
+      "igdbId": 19686
+    },
+    {
+      "platform": "PS4",
+      "title": "Outer Wilds",
+      "igdbId": 11737
+    },
+    {
+      "platform": "PS4",
+      "title": "Hollow Knight",
+      "igdbId": 14593
+    },
+    {
+      "platform": "PS4",
+      "title": "Hades",
+      "igdbId": 113112
+    },
+    {
+      "platform": "PS4",
+      "title": "Death Stranding",
+      "igdbId": 19564
+    },
+    {
+      "platform": "PS4",
+      "title": "Shadow of the Colossus"
+    },
+    {
+      "platform": "PS3",
+      "title": "The Last of Us"
+    },
+    {
+      "platform": "PS3",
+      "title": "Uncharted 2: Among Thieves"
+    },
+    {
+      "platform": "PS3",
+      "title": "Red Dead Redemption"
+    },
+    {
+      "platform": "PS3",
+      "title": "Metal Gear Solid 4: Guns of the Patriots"
+    },
+    {
+      "platform": "PS3",
+      "title": "Demon's Souls"
+    },
+    {
+      "platform": "PS3",
+      "title": "Dark Souls"
+    },
+    {
+      "platform": "PS3",
+      "title": "LittleBigPlanet 2"
+    },
+    {
+      "platform": "PS3",
+      "title": "Journey"
+    },
+    {
+      "platform": "PS3",
+      "title": "Ni no Kuni: Wrath of the White Witch"
+    },
+    {
+      "platform": "PS3",
+      "title": "Persona 5"
+    },
+    {
+      "platform": "PS3",
+      "title": "Grand Theft Auto IV"
+    },
+    {
+      "platform": "PS3",
+      "title": "Mass Effect 2"
+    },
+    {
+      "platform": "PS3",
+      "title": "Portal 2"
+    },
+    {
+      "platform": "PS3",
+      "title": "Batman: Arkham City"
+    },
+    {
+      "platform": "PS3",
+      "title": "BioShock"
+    },
+    {
+      "platform": "PS3",
+      "title": "Fallout: New Vegas"
+    },
+    {
+      "platform": "PS3",
+      "title": "Ratchet & Clank Future: A Crack in Time"
+    },
+    {
+      "platform": "PS3",
+      "title": "Dead Space"
+    },
+    {
+      "platform": "PS2",
+      "title": "Grand Theft Auto: San Andreas"
+    },
+    {
+      "platform": "PS2",
+      "title": "God of War"
+    },
+    {
+      "platform": "PS2",
+      "title": "God of War II"
+    },
+    {
+      "platform": "PS2",
+      "title": "Shadow of the Colossus"
+    },
+    {
+      "platform": "PS2",
+      "title": "Metal Gear Solid 3: Snake Eater"
+    },
+    {
+      "platform": "PS2",
+      "title": "Final Fantasy X"
+    },
+    {
+      "platform": "PS2",
+      "title": "Final Fantasy XII"
+    },
+    {
+      "platform": "PS2",
+      "title": "Persona 4"
+    },
+    {
+      "platform": "PS2",
+      "title": "Kingdom Hearts II"
+    },
+    {
+      "platform": "PS2",
+      "title": "Dragon Quest VIII: Journey of the Cursed King"
+    },
+    {
+      "platform": "PS2",
+      "title": "Gran Turismo 4"
+    },
+    {
+      "platform": "PS2",
+      "title": "Burnout 3: Takedown"
+    },
+    {
+      "platform": "PS2",
+      "title": "Ōkami"
+    },
+    {
+      "platform": "PS2",
+      "title": "Silent Hill 2"
+    },
+    {
+      "platform": "PS2",
+      "title": "Resident Evil 4"
+    },
+    {
+      "platform": "PS2",
+      "title": "Jak and Daxter: The Precursor Legacy"
+    },
+    {
+      "platform": "PS2",
+      "title": "Ratchet & Clank: Up Your Arsenal"
+    },
+    {
+      "platform": "PS2",
+      "title": "Sly 2: Band of Thieves"
+    },
+    {
+      "platform": "PS2",
+      "title": "Devil May Cry 3: Dante's Awakening"
+    },
+    {
+      "platform": "PS2",
+      "title": "Katamari Damacy"
+    },
+    {
+      "platform": "PS2",
+      "title": "SSX 3"
+    },
+    {
+      "platform": "PS1",
+      "title": "Final Fantasy VII",
+      "igdbId": 427
+    },
+    {
+      "platform": "PS1",
+      "title": "Metal Gear Solid"
+    },
+    {
+      "platform": "PS1",
+      "title": "Castlevania: Symphony of the Night"
+    },
+    {
+      "platform": "PS1",
+      "title": "Resident Evil 2"
+    },
+    {
+      "platform": "PS1",
+      "title": "Silent Hill"
+    },
+    {
+      "platform": "PS1",
+      "title": "Crash Bandicoot: Warped"
+    },
+    {
+      "platform": "PS1",
+      "title": "Crash Team Racing"
+    },
+    {
+      "platform": "PS1",
+      "title": "Spyro 2: Ripto's Rage!"
+    },
+    {
+      "platform": "PS1",
+      "title": "Gran Turismo"
+    },
+    {
+      "platform": "PS1",
+      "title": "Tekken 3"
+    },
+    {
+      "platform": "PS1",
+      "title": "Tony Hawk's Pro Skater 2"
+    },
+    {
+      "platform": "PS1",
+      "title": "Vagrant Story"
+    },
+    {
+      "platform": "PS1",
+      "title": "Suikoden II"
+    },
+    {
+      "platform": "PS1",
+      "title": "Xenogears"
+    },
+    {
+      "platform": "PS1",
+      "title": "Parasite Eve"
+    },
+    {
+      "platform": "PS1",
+      "title": "Dino Crisis 2"
+    },
+    {
+      "platform": "PS1",
+      "title": "Ape Escape"
+    },
+    {
+      "platform": "PS1",
+      "title": "Chrono Cross"
+    },
+    {
+      "platform": "PS1",
+      "title": "Final Fantasy Tactics"
+    },
+    {
+      "platform": "PS1",
+      "title": "R4: Ridge Racer Type 4"
+    },
+    {
+      "platform": "PSP",
+      "title": "Crisis Core: Final Fantasy VII"
+    },
+    {
+      "platform": "PSP",
+      "title": "God of War: Chains of Olympus"
+    },
+    {
+      "platform": "PSP",
+      "title": "God of War: Ghost of Sparta"
+    },
+    {
+      "platform": "PSP",
+      "title": "Persona 3 Portable"
+    },
+    {
+      "platform": "PSP",
+      "title": "Final Fantasy Tactics: The War of the Lions"
+    },
+    {
+      "platform": "PSP",
+      "title": "Tactics Ogre: Let Us Cling Together"
+    },
+    {
+      "platform": "PSP",
+      "title": "Metal Gear Solid: Peace Walker"
+    },
+    {
+      "platform": "PSP",
+      "title": "Daxter"
+    },
+    {
+      "platform": "PSP",
+      "title": "Lumines"
+    },
+    {
+      "platform": "PSP",
+      "title": "Patapon 2"
+    },
+    {
+      "platform": "PSP",
+      "title": "LocoRoco 2"
+    },
+    {
+      "platform": "PSP",
+      "title": "Burnout Legends"
+    },
+    {
+      "platform": "PSP",
+      "title": "Grand Theft Auto: Vice City Stories"
+    },
+    {
+      "platform": "PSP",
+      "title": "Monster Hunter Freedom Unite"
+    },
+    {
+      "platform": "PSP",
+      "title": "Jeanne d'Arc"
+    },
+    {
+      "platform": "PSP",
+      "title": "Castlevania: The Dracula X Chronicles"
+    },
+    {
+      "platform": "PSP",
+      "title": "Dissidia Final Fantasy"
+    },
+    {
+      "platform": "PSP",
+      "title": "Gran Turismo"
+    },
+    {
+      "platform": "PSP",
+      "title": "Half-Minute Hero"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Persona 4 Golden"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Uncharted: Golden Abyss"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Gravity Rush"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Tearaway"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Killzone: Mercenary"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Soul Sacrifice Delta"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Danganronpa: Trigger Happy Havoc"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Zero Escape: Virtue's Last Reward"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Spelunky"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Hotline Miami"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Guacamelee!"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Axiom Verge"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Muramasa Rebirth"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Odin Sphere Leifthrasir"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "Dragon's Crown"
+    },
+    {
+      "platform": "PS Vita",
+      "title": "SteamWorld Dig 2"
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Halo Infinite",
+      "igdbId": 103281
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Forza Horizon 5",
+      "igdbId": 141503
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Hi-Fi Rush",
+      "igdbId": 233585
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Starfield",
+      "igdbId": 96437
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Psychonauts 2",
+      "igdbId": 14741
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Ori and the Will of the Wisps",
+      "igdbId": 37001
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Gears 5",
+      "igdbId": 103292
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Indiana Jones and the Great Circle",
+      "igdbId": 142415
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Forza Motorsport"
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Pentiment"
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Grounded"
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Microsoft Flight Simulator"
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Elden Ring",
+      "igdbId": 119133
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Baldur's Gate III",
+      "igdbId": 119171
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Cyberpunk 2077",
+      "igdbId": 1877
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Resident Evil 4",
+      "igdbId": 132181
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Clair Obscur: Expedition 33",
+      "igdbId": 305152
+    },
+    {
+      "platform": "Xbox Series X|S",
+      "title": "Alan Wake 2"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Forza Horizon 4",
+      "igdbId": 82090
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Forza Horizon 3"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Halo 5: Guardians"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Gears 5"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Ori and the Blind Forest",
+      "igdbId": 7344
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Ori and the Will of the Wisps",
+      "igdbId": 37001
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Sunset Overdrive"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Rare Replay"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Quantum Break",
+      "igdbId": 3750
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Cuphead",
+      "igdbId": 9061
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Sea of Thieves"
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Titanfall 2",
+      "igdbId": 17447
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Red Dead Redemption 2",
+      "igdbId": 25076
+    },
+    {
+      "platform": "Xbox One",
+      "title": "The Witcher 3: Wild Hunt",
+      "igdbId": 1942
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Doom",
+      "igdbId": 7351
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Metal Gear Solid V: The Phantom Pain",
+      "igdbId": 1985
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Resident Evil 2",
+      "igdbId": 19686
+    },
+    {
+      "platform": "Xbox One",
+      "title": "Outer Wilds",
+      "igdbId": 11737
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Halo 3"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Halo: Reach"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Gears of War 2"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Gears of War 3"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Forza Horizon"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Mass Effect 2"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Red Dead Redemption"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Grand Theft Auto V"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "The Elder Scrolls V: Skyrim"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Fallout: New Vegas"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Portal 2"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "BioShock"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Batman: Arkham City"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Dead Space"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Lost Odyssey"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Blue Dragon"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Crackdown"
+    },
+    {
+      "platform": "Xbox 360",
+      "title": "Geometry Wars: Retro Evolved 2"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Halo: Combat Evolved"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Halo 2"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Star Wars: Knights of the Old Republic"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Star Wars: Knights of the Old Republic II - The Sith Lords"
+    },
+    {
+      "platform": "Xbox",
+      "title": "The Elder Scrolls III: Morrowind"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Ninja Gaiden Black"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Fable: The Lost Chapters"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Tom Clancy's Splinter Cell: Chaos Theory"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Panzer Dragoon Orta"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Jet Set Radio Future"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Psychonauts"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Burnout 3: Takedown"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Project Gotham Racing 2"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Crimson Skies: High Road to Revenge"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Jade Empire"
+    },
+    {
+      "platform": "Xbox",
+      "title": "Star Wars: Republic Commando"
+    },
+    {
+      "platform": "Windows",
+      "title": "Portal 2",
+      "steamAppId": "620"
+    },
+    {
+      "platform": "Windows",
+      "title": "Half-Life 2",
+      "steamAppId": "220"
+    },
+    {
+      "platform": "Windows",
+      "title": "Hades",
+      "steamAppId": "1145360"
+    },
+    {
+      "platform": "Windows",
+      "title": "Stardew Valley",
+      "steamAppId": "413150"
+    },
+    {
+      "platform": "Windows",
+      "title": "Terraria",
+      "steamAppId": "105600"
+    },
+    {
+      "platform": "Windows",
+      "title": "The Witcher 3: Wild Hunt",
+      "steamAppId": "292030"
+    },
+    {
+      "platform": "Windows",
+      "title": "ELDEN RING",
+      "steamAppId": "1245620"
+    },
+    {
+      "platform": "Windows",
+      "title": "Baldur's Gate 3",
+      "steamAppId": "1086940"
+    },
+    {
+      "platform": "Windows",
+      "title": "Cyberpunk 2077",
+      "steamAppId": "1091500"
+    },
+    {
+      "platform": "Windows",
+      "title": "DOOM Eternal",
+      "steamAppId": "782330"
+    },
+    {
+      "platform": "Windows",
+      "title": "Titanfall 2",
+      "steamAppId": "1237970"
+    },
+    {
+      "platform": "Windows",
+      "title": "Dishonored",
+      "steamAppId": "205100"
+    },
+    {
+      "platform": "Windows",
+      "title": "Prey",
+      "steamAppId": "480490"
+    },
+    {
+      "platform": "Windows",
+      "title": "XCOM 2",
+      "steamAppId": "268500"
+    },
+    {
+      "platform": "Windows",
+      "title": "Slay the Spire",
+      "steamAppId": "646570"
+    },
+    {
+      "platform": "Windows",
+      "title": "Balatro",
+      "steamAppId": "2379780"
+    },
+    {
+      "platform": "Windows",
+      "title": "Hollow Knight",
+      "steamAppId": "367520"
+    },
+    {
+      "platform": "Windows",
+      "title": "Celeste",
+      "steamAppId": "504230"
+    },
+    {
+      "platform": "Windows",
+      "title": "Dead Cells",
+      "steamAppId": "588650"
+    },
+    {
+      "platform": "Windows",
+      "title": "Factorio",
+      "steamAppId": "427520"
+    },
+    {
+      "platform": "Windows",
+      "title": "RimWorld",
+      "steamAppId": "294100"
+    },
+    {
+      "platform": "Windows",
+      "title": "Sid Meier's Civilization VI",
+      "steamAppId": "289070"
+    },
+    {
+      "platform": "Windows",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "steamAppId": "435150"
+    },
+    {
+      "platform": "Windows",
+      "title": "Disco Elysium - The Final Cut",
+      "steamAppId": "632470"
+    },
+    {
+      "platform": "Windows",
+      "title": "Outer Wilds",
+      "steamAppId": "753640"
+    },
+    {
+      "platform": "Windows",
+      "title": "God of War",
+      "steamAppId": "1593500"
+    },
+    {
+      "platform": "Windows",
+      "title": "Crash Bandicoot 4: It’s About Time",
+      "steamAppId": "1378990"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Sonic Adventure"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Sonic Adventure 2"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Shenmue"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Shenmue II"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "SoulCalibur"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Crazy Taxi"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Jet Grind Radio"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Skies of Arcadia"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Resident Evil Code: Veronica"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Power Stone"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Power Stone 2"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Marvel vs. Capcom 2: New Age of Heroes"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Rez"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Grandia II"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "Virtua Tennis"
+    },
+    {
+      "platform": "Dreamcast",
+      "title": "The House of the Dead 2"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Nights Into Dreams..."
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Panzer Dragoon Saga"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Sega Rally Championship"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Virtua Fighter 2"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Guardian Heroes"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Radiant Silvergun"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Dragon Force"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Shining Force III"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Burning Rangers"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Saturn Bomberman"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Panzer Dragoon II Zwei"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "The House of the Dead"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Tomb Raider"
+    },
+    {
+      "platform": "Sega Saturn",
+      "title": "Marvel Super Heroes vs. Street Fighter"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Sonic CD",
+      "igdbId": 5452
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Snatcher"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Lunar: The Silver Star"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Lunar: Eternal Blue"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Shining Force CD"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "The Adventures of Willy Beamish"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Final Fight CD"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Robo Aleste"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Lords of Thunder"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Earthworm Jim: Special Edition"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "NHL '94"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Ecco: The Tides of Time"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "The Secret of Monkey Island"
+    },
+    {
+      "platform": "Sega CD",
+      "title": "Night Trap"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Sonic the Hedgehog"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Sonic the Hedgehog 2"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Sonic the Hedgehog 3",
+      "igdbId": 6797
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Sonic & Knuckles"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Streets of Rage 2"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Gunstar Heroes"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Shining Force"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Shining Force II"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Castlevania: Bloodlines"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Contra: Hard Corps"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Rocket Knight Adventures"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Shinobi III: Return of the Ninja Master"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "ToeJam & Earl"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Comix Zone"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Ecco the Dolphin"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Road Rash"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Teenage Mutant Ninja Turtles: The HyperStone Heist"
+    },
+    {
+      "platform": "Genesis / Mega Drive",
+      "title": "Herzog Zwei"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Knuckles' Chaotix"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Virtua Racing Deluxe"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Star Wars Arcade"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Doom"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Virtua Fighter"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Space Harrier"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Blackthorne"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Kolibri"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Tempo"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Shadow Squadron"
+    },
+    {
+      "platform": "Sega 32X",
+      "title": "Mortal Kombat II"
+    },
+    {
+      "platform": "Master System",
+      "title": "Phantasy Star"
+    },
+    {
+      "platform": "Master System",
+      "title": "Wonder Boy III: The Dragon's Trap"
+    },
+    {
+      "platform": "Master System",
+      "title": "Alex Kidd in Miracle World"
+    },
+    {
+      "platform": "Master System",
+      "title": "Sonic the Hedgehog"
+    },
+    {
+      "platform": "Master System",
+      "title": "Sonic the Hedgehog 2"
+    },
+    {
+      "platform": "Master System",
+      "title": "Land of Illusion Starring Mickey Mouse"
+    },
+    {
+      "platform": "Master System",
+      "title": "Castle of Illusion Starring Mickey Mouse"
+    },
+    {
+      "platform": "Master System",
+      "title": "R-Type"
+    },
+    {
+      "platform": "Master System",
+      "title": "Golden Axe Warrior"
+    },
+    {
+      "platform": "Master System",
+      "title": "Shinobi"
+    },
+    {
+      "platform": "Master System",
+      "title": "Fantasy Zone"
+    },
+    {
+      "platform": "Master System",
+      "title": "Kenseiden"
+    },
+    {
+      "platform": "Master System",
+      "title": "Golvellius: Valley of Doom"
+    },
+    {
+      "platform": "Master System",
+      "title": "Power Strike II"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Sonic the Hedgehog: Triple Trouble"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Sonic the Hedgehog 2"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Sonic the Hedgehog Chaos"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Tails Adventure"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Shinobi II: The Silent Fury"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Castle of Illusion Starring Mickey Mouse"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Land of Illusion Starring Mickey Mouse"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Columns"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Dragon Crystal"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Vampire: Master of Darkness"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "GG Aleste"
+    },
+    {
+      "platform": "Game Gear",
+      "title": "Defenders of Oasis"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Girl's Garden"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Flicky"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Doki-doki Penguin Land"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "The Black Onyx"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Lode Runner"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "H.E.R.O."
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Zaxxon"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Pitfall II: The Lost Caverns"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Soko-Ban"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Bank Panic"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Choplifter!"
+    },
+    {
+      "platform": "SG-1000",
+      "title": "Elevator Action"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Bomberman '94"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Bonk's Adventure"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Bonk's Revenge"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Blazing Lazers"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Soldier Blade"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Devil's Crush"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Alien Crush"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Military Madness"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Ninja Spirit"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Splatterhouse"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Air Zonk"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "The Legendary Axe"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Dungeon Explorer"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Galaga '88"
+    },
+    {
+      "platform": "PC Engine / TurboGrafx-16",
+      "title": "Street Fighter II: Champion Edition"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Castlevania: Rondo of Blood"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Ys: Book I & II"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Lords of Thunder"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Zero Wing"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Dungeon Explorer II"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Seirei Senshi Spriggan"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Ys III: Wanderers from Ys"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Princess Maker 2"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Bonk 3: Bonk's Big Adventure"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Wonder Boy III: Monster Lair"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Loom"
+    },
+    {
+      "platform": "PC Engine CD / TurboGrafx-CD",
+      "title": "Valis III"
+    },
+    {
+      "platform": "SuperGrafx",
+      "title": "1941: Counter Attack"
+    },
+    {
+      "platform": "SuperGrafx",
+      "title": "Battle Ace"
+    },
+    {
+      "platform": "SuperGrafx",
+      "title": "Daimakaimura"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Metal Slug"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Metal Slug 2"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "The King of Fighters '97"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "The King of Fighters '95"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Twinkle Star Sprites"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Pulstar"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Viewpoint"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Last Resort"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Top Hunter: Roddy & Cathy"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Breakers"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Neo Drift Out: New Technology"
+    },
+    {
+      "platform": "Neo Geo CD",
+      "title": "Shinsetsu Samurai Spirits: Bushido Retsuden"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Sonic the Hedgehog Pocket Adventure"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "SNK vs. Capcom: The Match of the Millennium"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Metal Slug 1st Mission"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Metal Slug 2nd Mission"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Faselei!"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Biomotor Unitron"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Dark Arms: Beast Buster 1999"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "SNK vs. Capcom Card Fighters' Clash - SNK Card Fighter's Version"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Rockman Battle & Fighters"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Cotton: Fantastic Night Dreams"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Puzzle Link 2"
+    },
+    {
+      "platform": "Neo Geo Pocket Color",
+      "title": "Magical Drop Pocket"
+    },
+    {
+      "platform": "Neo Geo Pocket",
+      "title": "King of Fighters R-1"
+    },
+    {
+      "platform": "Neo Geo Pocket",
+      "title": "Puzzle Link"
+    },
+    {
+      "platform": "Neo Geo Pocket",
+      "title": "Renketsu Puzzle Tsunagete Pon!"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Final Fantasy"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Final Fantasy II"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Final Fantasy IV"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Judgement Silversword: Rebirth Edition"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Riviera: Yakusoku no Chi Riviera"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Gunpey EX"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Mr. Driller"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Dicing Knight."
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Blue Wing Blitz"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Guilty Gear Petit 2"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Rockman EXE WS"
+    },
+    {
+      "platform": "WonderSwan Color",
+      "title": "Digimon: Battle Spirit 2"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Gunpey"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Kaze no Klonoa: Moonlight Museum"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Makaimura for WonderSwan"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Chocobo no Fushigi na Dungeon for WonderSwan"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Beatmania for WonderSwan"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Clock Tower for WonderSwan"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Digimon Adventure 02: Tag Tamers"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Final Lap 2000"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Pocket Fighter"
+    },
+    {
+      "platform": "WonderSwan",
+      "title": "Magical Drop for WonderSwan"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Adventure"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Pitfall!"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Pitfall II: The Lost Caverns"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "River Raid"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Yars' Revenge"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "H.E.R.O."
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Breakout"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Combat"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Kaboom!"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Keystone Kapers"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Enduro"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Demon Attack"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Seaquest"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Montezuma's Revenge featuring Panama Joe"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Haunted House"
+    },
+    {
+      "platform": "Atari 2600",
+      "title": "Pac-Man"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Star Raiders"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Robotron: 2084"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Miner 2049er"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Ballblazer"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Bounty Bob Strikes Back!"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "H.E.R.O."
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Joust"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Missile Command"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Centipede"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Dig Dug"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Pole Position"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Carol Shaw's River Raid"
+    },
+    {
+      "platform": "Atari 5200",
+      "title": "Pengo",
+      "igdbId": 282071
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Food Fight"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Robotron: 2084"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Ballblazer"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Ninja Golf"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Commando"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Asteroids"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Galaga"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Joust"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Ms. Pac-Man"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Dark Chambers"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Alien Brigade"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Midnight Mutants"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Xevious"
+    },
+    {
+      "platform": "Atari 7800",
+      "title": "Pole Position II"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Tempest 2000"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Alien vs Predator"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Doom"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Iron Soldier"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Atari Karts"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Worms"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Flashback: The Quest for Identity"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Cannon Fodder"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Raiden"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "NBA Jam Tournament Edition"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "BattleSphere"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Defender 2000"
+    },
+    {
+      "platform": "Atari Jaguar",
+      "title": "Attack of the Mutant Penguins"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Chip's Challenge"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "California Games"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Blue Lightning"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Todd's Adventures in Slime World"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Gates of Zendocon"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Klax"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Rygar"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Robotron: 2084"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "S.T.U.N. Runner"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Xybots"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Raiden"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "Shadow of the Beast"
+    },
+    {
+      "platform": "Atari Lynx",
+      "title": "RoadBlasters"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Donkey Kong",
+      "igdbId": 171951
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Zaxxon"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Venture"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Lady Bug"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Pepper II"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "B.C.'s Quest for Tires"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Smurf: Rescue in Gargamel's Castle"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Time Pilot"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "BurgerTime"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Pitfall!"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "River Raid"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Spy Hunter"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Frogger II: ThreeeDeep!"
+    },
+    {
+      "platform": "ColecoVision",
+      "title": "Beamrider"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Astrosmash"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Utopia"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Night Stalker"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Advanced Dungeons & Dragons Cartridge"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Advanced Dungeons & Dragons: Treasure of Tarmin"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "BurgerTime",
+      "igdbId": 276442
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Lock 'n' Chase"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Sea Battle"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "B-17 Bomber"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Thunder Castle"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Beamrider"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Pitfall!"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Space Battle"
+    },
+    {
+      "platform": "Intellivision",
+      "title": "Frog Bog"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Mine Storm"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Armor Attack"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Scramble"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Berzerk"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Cosmic Chasm"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Star Castle"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Spike"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Solar Quest"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Pole Position"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Space Wars"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Web Wars"
+    },
+    {
+      "platform": "Vectrex",
+      "title": "Hyperchase Auto Race"
+    },
+    {
+      "platform": "3DO",
+      "title": "Road Rash"
+    },
+    {
+      "platform": "3DO",
+      "title": "Star Control II"
+    },
+    {
+      "platform": "3DO",
+      "title": "Super Street Fighter II Turbo"
+    },
+    {
+      "platform": "3DO",
+      "title": "Gex"
+    },
+    {
+      "platform": "3DO",
+      "title": "Return Fire"
+    },
+    {
+      "platform": "3DO",
+      "title": "Policenauts"
+    },
+    {
+      "platform": "3DO",
+      "title": "Wing Commander III: Heart of the Tiger"
+    },
+    {
+      "platform": "3DO",
+      "title": "Lucienne's Quest"
+    },
+    {
+      "platform": "3DO",
+      "title": "D"
+    },
+    {
+      "platform": "3DO",
+      "title": "Alone in the Dark"
+    },
+    {
+      "platform": "3DO",
+      "title": "Myst"
+    },
+    {
+      "platform": "3DO",
+      "title": "Cannon Fodder"
+    },
+    {
+      "platform": "3DO",
+      "title": "Theme Park"
+    },
+    {
+      "platform": "3DO",
+      "title": "Samurai Shodown"
+    },
+    {
+      "platform": "3DO",
+      "title": "Doom"
+    }
+  ]
+}

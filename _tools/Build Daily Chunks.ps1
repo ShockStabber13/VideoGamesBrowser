@@ -7,6 +7,7 @@ $Root = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $ChunksPath = Join-Path $Root 'daily-chunks.json'
 $SeriesPath = Join-Path $Root 'daily-chunk-series.json'
 $GameSpecificPath = Join-Path $Root 'daily-chunk-game-specific.json'
+$FeaturedCuratedPath = Join-Path $Root 'featured-games-curated.json'
 $PlatformsPath = Join-Path $Root 'platforms.json'
 $IgdbConfigPath = Join-Path $Root 'igdb-config.json'
 $SteamConfigPath = Join-Path $Root 'steam-config.json'
@@ -19,13 +20,18 @@ $OutRoot = Join-Path $Root '_android'
 $ChunksOut = Join-Path $OutRoot 'daily_chunks.json'
 $SeriesOut = Join-Path $OutRoot 'daily_chunk_series.json'
 $IndexOut = Join-Path $OutRoot 'daily_chunk_index.json'
+$FeaturedOut = Join-Path $OutRoot 'featured_game_index.json'
 $ManifestOut = Join-Path $OutRoot 'daily_chunks_manifest.json'
 $ZipOut = Join-Path $OutRoot 'GameBrowser-DailyChunks.zip'
 $HashOut = Join-Path $OutRoot 'GameBrowser-DailyChunks.sha256'
+$FeaturedManifestOut = Join-Path $OutRoot 'featured_manifest.json'
+$FeaturedZipOut = Join-Path $OutRoot 'GameBrowser-Featured.zip'
+$FeaturedHashOut = Join-Path $OutRoot 'GameBrowser-Featured.sha256'
 
 if(!(Test-Path -LiteralPath $ChunksPath)){ throw "daily-chunks.json not found: $ChunksPath" }
 if(!(Test-Path -LiteralPath $SeriesPath)){ throw "daily-chunk-series.json not found: $SeriesPath" }
 if(!(Test-Path -LiteralPath $GameSpecificPath)){ throw "daily-chunk-game-specific.json not found: $GameSpecificPath" }
+if(!(Test-Path -LiteralPath $FeaturedCuratedPath)){ throw "featured-games-curated.json not found: $FeaturedCuratedPath" }
 if(!(Test-Path -LiteralPath $PlatformsPath)){ throw "platforms.json not found: $PlatformsPath" }
 New-Item -ItemType Directory -Force -Path $OutRoot | Out-Null
 New-Item -ItemType Directory -Force -Path $CacheRoot | Out-Null
@@ -79,24 +85,6 @@ function Normalize-ControllerClass([string]$Value) {
     if($Value -eq 'Full Controller Support'){ return $Value }
     if($Value -eq 'Partial Controller Support'){ return $Value }
     return ''
-}
-
-function New-SafeGenericChunk($Row) {
-    $title=[string](Get-Prop $Row 'title' 'this game')
-    $genres=@(Array-Of (Get-Prop $Row 'catalogGenres' (Get-Prop $Row 'genreNames' @())) | ForEach-Object {[string]$_})
-    $genreText=($genres -join ' ').ToLowerInvariant()
-    $text = if($genreText -match 'racing') {
-        "Play $title for about 30 minutes. Finish the current race or event before stopping."
-    } elseif($genreText -match 'sport') {
-        "Play $title for about 30 minutes. Finish the current match, round, or event before stopping."
-    } elseif($genreText -match 'fighting') {
-        "Play $title for about 30 minutes. Finish the current fight, set, or arcade stage before stopping."
-    } elseif($genreText -match 'puzzle|strategy|turn-based|tactical') {
-        "Play $title for about 30 minutes. Stop after the next completed puzzle, turn sequence, battle, or clear checkpoint."
-    } else {
-        "Play $title for about 30 minutes. Stop at the next natural checkpoint, save point, completed mission, level, or chapter break."
-    }
-    return [pscustomobject]@{ dailyChunk=$text; minutes=30; chunkability=4 }
 }
 
 function Find-SeriesDailyChunk([string]$Title) {
@@ -154,15 +142,9 @@ function Resolve-DailyChunkDefinition([string]$Platform,[string]$Title,$Row) {
         }
     }
 
-    # PRIORITY 3: structured genre fallback, using resolved catalog metadata.
-    $g=New-SafeGenericChunk $Row
-    return [pscustomobject]@{
-        dailyChunk=[string](Get-Prop $g 'dailyChunk' '')
-        minutes=To-Int (Get-Prop $g 'minutes' 30)
-        chunkability=To-Int (Get-Prop $g 'chunkability' 4)
-        chunkSource='genre'
-        chunkRule='genre fallback'
-    }
+    # QUALITY-ONLY: no generic/genre fallback. If a game has neither an exact per-game rule
+    # nor a franchise rule, it is deliberately omitted from the Daily Chunk package.
+    return $null
 }
 
 
@@ -295,8 +277,17 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
         $gid=Extract-IgdbId $cr
         $k=Norm ([string](Get-Prop $cr 'title' ''))
         $row=$null
-        if($gid -gt 0){ $row=$cr }
-        elseif($k -and $cachedByTitle.ContainsKey($k)){ $row=$cachedByTitle[$k] }
+        # Prefer a previously proven cached mapping because it also carries the rich IGDB metadata
+        # needed by direct Featured/Daily cards. An explicit source ID is used immediately only when
+        # it agrees with that previously proven cached title mapping.
+        if($k -and $cachedByTitle.ContainsKey($k)){
+            $cachedRow=$cachedByTitle[$k]
+            $cachedId=Extract-IgdbId $cachedRow
+            if($gid -le 0 -or $cachedId -eq $gid){ $row=$cachedRow }
+        }
+        # Never trust a hand-entered IGDB ID by itself. A supplied ID is accepted immediately
+        # only when it agrees with a previously proven cached title mapping. Otherwise the exact
+        # title + platform is verified live below, and any supplied ID must agree with that result.
         if($null -ne $row){
             $rid=Extract-IgdbId $row
             if($rid -gt 0 -and -not $usedIds.ContainsKey([string]$rid)){
@@ -306,7 +297,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
                 $copy['title']=[string](Get-Prop $cr 'title' '')
                 $copy['igdbId']=[long]$rid
                 $copy['curatedTitle']=[string](Get-Prop $cr 'title' '')
-                    $copy['dailyPriority']=$true
+                $copy['dailyPriority']=$true
                 $copy['dailyOrder']=$order
                 [void]$resolved.Add([pscustomobject]$copy)
                 $usedIds[[string]$rid]=$true
@@ -319,7 +310,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
     $platformId=Get-DailyIgdbPlatformId $Platform
     $cfg=Get-DailyIgdbConfig
     if($unresolved.Count -gt 0 -and $platformId -gt 0 -and $null -ne $cfg){
-        if(!$Quiet){ Write-Host ("[$Platform] resolving {0} curated Daily Chunk titles to genuine IGDB IDs..." -f $unresolved.Count) -ForegroundColor DarkCyan }
+        if(!$Quiet){ Write-Host ("[$Platform] resolving {0} curated titles to genuine IGDB IDs..." -f $unresolved.Count) -ForegroundColor DarkCyan }
         for($base=0;$base -lt $unresolved.Count;$base+=10){
             $group=@($unresolved | Select-Object -Skip $base -First 10)
             $parts=New-Object 'System.Collections.Generic.List[string]'
@@ -352,7 +343,9 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
                         if($isExact){ [void]$exact.Add($candidate) }
                     }
                     $exactRows=@($exact.ToArray() | Group-Object { [string](Get-Prop $_ 'id' '') } | ForEach-Object {$_.Group[0]})
-                    if($exactRows.Count -ne 1){continue} # Ambiguous or no exact canonical/alternate title: fail closed.
+                    $wantId=Extract-IgdbId $item.curated
+                    if($wantId -gt 0){ $exactRows=@($exactRows | Where-Object { (To-Long (Get-Prop $_ 'id' 0)) -eq $wantId }) }
+                    if($exactRows.Count -ne 1){continue} # Ambiguous, wrong explicit ID, or no exact canonical/alternate title: fail closed.
                     $row=Convert-DailyIgdbGame $Platform $item.curated $exactRows[0] ([int]$item.order)
                     if($null -eq $row){continue}
                     $rid=Extract-IgdbId $row
@@ -362,7 +355,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
                     $cachedByTitle[$want]=$row
                 }
             } catch {
-                if(!$Quiet){ Write-Warning ("[$Platform] IGDB Daily Chunk title resolution failed for one batch: "+$_.Exception.Message) }
+                if(!$Quiet){ Write-Warning ("[$Platform] IGDB curated-title resolution failed for one batch: "+$_.Exception.Message) }
             }
         }
 
@@ -409,6 +402,8 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
                         if($isExact){ [void]$exact.Add($candidate) }
                     }
                     $exactRows=@($exact.ToArray() | Group-Object { [string](Get-Prop $_ 'id' '') } | ForEach-Object {$_.Group[0]})
+                    $wantId=Extract-IgdbId $item.curated
+                    if($wantId -gt 0){ $exactRows=@($exactRows | Where-Object { (To-Long (Get-Prop $_ 'id' 0)) -eq $wantId }) }
                     if($exactRows.Count -ne 1){ continue }
                     $row=Convert-DailyIgdbGame $Platform $item.curated $exactRows[0] ([int]$item.order)
                     if($null -eq $row){ continue }
@@ -423,7 +418,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
             }
         }
     } elseif($unresolved.Count -gt 0 -and !$Quiet) {
-        Write-Warning ("[$Platform] {0} curated Daily Chunk titles have no proven IGDB ID and IGDB resolution is unavailable. They will be omitted." -f $unresolved.Count)
+        Write-Warning ("[$Platform] {0} curated titles have no proven IGDB ID and IGDB resolution is unavailable. They will be omitted." -f $unresolved.Count)
     }
 
     $final=@($resolved.ToArray() | Where-Object {(Extract-IgdbId $_) -gt 0} | Sort-Object @{Expression={To-Int (Get-Prop $_ 'dailyOrder' 999999)}},title)
@@ -439,7 +434,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
     }
 
     if(!$Quiet -and $final.Count -lt $target.Count){
-        Write-Warning ("[$Platform] strict IGDB rule kept {0}/{1} curated Daily Chunk titles; unresolved/ambiguous titles were omitted." -f $final.Count,$target.Count)
+        Write-Warning ("[$Platform] strict IGDB rule kept {0}/{1} curated titles; unresolved/ambiguous titles were omitted." -f $final.Count,$target.Count)
     }
     return $final
 }
@@ -457,6 +452,31 @@ foreach($gs in $gameSpecific){
     if($gp -and $gt -and $gc){ $gameSpecificLookup[$gp.ToLowerInvariant()+'::'+(Norm $gt)]=$gs }
 }
 $config = Get-Content -LiteralPath $PlatformsPath -Raw -Encoding UTF8 | ConvertFrom-Json
+
+# ---------- Hand-curated Featured source ----------
+# This file is the ONLY source of Featured membership. The builder validates/resolves these
+# choices; it never auto-adds games from ratings, review scores, popularity or Daily Chunk order.
+$featuredDocument = Get-Content -LiteralPath $FeaturedCuratedPath -Raw -Encoding UTF8 | ConvertFrom-Json
+$featuredCurated = @(Array-Of (Get-Prop $featuredDocument 'games' @()) | ForEach-Object { $_ })
+if($featuredCurated.Count -eq 0){ throw 'featured-games-curated.json contains no games.' }
+$configuredFeaturedPlatforms=@{}
+foreach($p in @($config.platforms)){ $configuredFeaturedPlatforms[[string]$p.name]=$true }
+$featuredSeen=@{}
+$featuredSourceCounts=@{}
+foreach($fr in $featuredCurated){
+    $fp=[string](Get-Prop $fr 'platform' '')
+    $ft=[string](Get-Prop $fr 'title' '')
+    if([string]::IsNullOrWhiteSpace($fp) -or [string]::IsNullOrWhiteSpace($ft)){
+        throw 'Every Featured entry must contain non-empty platform and title fields.'
+    }
+    if(!$configuredFeaturedPlatforms.ContainsKey($fp)){ throw "Featured entry uses unknown platform: $fp :: $ft" }
+    $fk=$fp.ToLowerInvariant()+'::'+(Norm $ft)
+    if($featuredSeen.ContainsKey($fk)){ throw "Duplicate Featured entry: $fp :: $ft" }
+    $featuredSeen[$fk]=$true
+    if(!$featuredSourceCounts.ContainsKey($fp)){ $featuredSourceCounts[$fp]=0 }
+    $featuredSourceCounts[$fp]++
+    if($featuredSourceCounts[$fp] -gt 50){ throw "Featured curation exceeds 50 games for platform: $fp" }
+}
 
 $valid = New-Object 'System.Collections.Generic.List[object]'
 $platformCounts = @{}
@@ -933,6 +953,111 @@ function Ensure-WindowsSteamCache($WindowsRows) {
     return $cache
 }
 
+# ---------- Hand-curated Featured validation/resolution ----------
+function Resolve-FeaturedAgainstCatalog([string]$Platform,$CuratedRows,[string]$CatalogPath) {
+    $target=@($CuratedRows | ForEach-Object {$_})
+    if($target.Count -eq 0){ return @() }
+    if(!(Test-Path -LiteralPath $CatalogPath)){
+        if(!$Quiet){ Write-Warning "[$Platform] Featured validation catalog is missing: $CatalogPath" }
+        return @()
+    }
+    try { $all=@((Get-Content -LiteralPath $CatalogPath -Raw -Encoding UTF8 | ConvertFrom-Json) | ForEach-Object {$_}) }
+    catch {
+        if(!$Quiet){ Write-Warning ("[$Platform] Featured catalog could not be read: "+$_.Exception.Message) }
+        return @()
+    }
+    $byId=@{}
+    $byTitle=@{}
+    foreach($row in $all){
+        $gid=Extract-IgdbId $row
+        if($gid -gt 0 -and -not $byId.ContainsKey([string]$gid)){ $byId[[string]$gid]=$row }
+        $nk=Norm ([string](Get-Prop $row 'title' ''))
+        if($nk){
+            if(!$byTitle.ContainsKey($nk)){ $byTitle[$nk]=New-Object 'System.Collections.Generic.List[object]' }
+            [void]$byTitle[$nk].Add($row)
+        }
+    }
+    $resolved=New-Object 'System.Collections.Generic.List[object]'
+    $usedIds=@{}
+    $order=0
+    foreach($cr in $target){
+        $order++
+        $chosen=$null
+        $wantId=Extract-IgdbId $cr
+        if($wantId -gt 0 -and $byId.ContainsKey([string]$wantId)){
+            $chosen=$byId[[string]$wantId]
+        } else {
+            $nk=Norm ([string](Get-Prop $cr 'title' ''))
+            if($nk -and $byTitle.ContainsKey($nk)){
+                $unique=@{}
+                foreach($candidate in @($byTitle[$nk].ToArray())){
+                    $candidateId=Extract-IgdbId $candidate
+                    if($candidateId -gt 0 -and -not $unique.ContainsKey([string]$candidateId)){ $unique[[string]$candidateId]=$candidate }
+                }
+                if($unique.Count -eq 1){ $chosen=@($unique.Values)[0] }
+            }
+        }
+        if($null -eq $chosen){
+            if(!$Quiet){ Write-Warning ("[$Platform] hand-curated Featured choice was not an unambiguous verified catalog match and was omitted: "+[string](Get-Prop $cr 'title' '')) }
+            continue
+        }
+        $gid=Extract-IgdbId $chosen
+        if($gid -le 0 -or $usedIds.ContainsKey([string]$gid)){ continue }
+        $copy=[ordered]@{}
+        foreach($prop in $chosen.PSObject.Properties){ $copy[$prop.Name]=$prop.Value }
+        $copy['curatedTitle']=[string](Get-Prop $cr 'title' '')
+        $copy['featuredSourceOrder']=$order
+        [void]$resolved.Add([pscustomobject]$copy)
+        $usedIds[[string]$gid]=$true
+    }
+    return @($resolved.ToArray() | Sort-Object @{Expression={To-Int (Get-Prop $_ 'featuredSourceOrder' 999999)}},title)
+}
+
+function Resolve-WindowsFeaturedRows($CuratedRows) {
+    $target=@($CuratedRows | ForEach-Object {$_})
+    if($target.Count -eq 0){ return @() }
+    $steamApps=@()
+    try { $steamApps=@(Get-SteamTitleIndexForMapping) }
+    catch {
+        if(!$Quiet){ Write-Warning ("[Windows] Featured Steam game index unavailable: "+$_.Exception.Message) }
+        return @()
+    }
+    if($steamApps.Count -eq 0){ return @() }
+    $byId=@{}
+    foreach($a in $steamApps){
+        $sid=[string](Get-Prop $a 'appid' '')
+        if($sid -match '^\d+$'){ $byId[$sid]=$a }
+    }
+    $need=New-Object 'System.Collections.Generic.List[object]'
+    $resolvedByKey=@{}
+    $order=0
+    foreach($cr in $target){
+        $order++
+        $title=[string](Get-Prop $cr 'title' '')
+        $key='featured:'+([string]$order)+':'+(Norm $title)
+        $sid=[string](Get-Prop $cr 'steamAppId' '')
+        if($sid -match '^\d+$' -and $byId.ContainsKey($sid)){
+            $resolvedByKey[$key]=[pscustomobject]@{title=$title;steamAppId=$sid;featuredSourceOrder=$order}
+        } else {
+            [void]$need.Add([pscustomobject]@{cacheKey=$key;title=$title;order=$order})
+        }
+    }
+    if($need.Count -gt 0){
+        $mapped=Resolve-SteamIdsByTitle $need.ToArray() $steamApps
+        foreach($item in @($need.ToArray())){
+            $key=[string]$item.cacheKey
+            if(!$mapped.ContainsKey($key)){
+                if(!$Quiet){ Write-Warning ("[Windows] hand-curated Featured choice could not be resolved uniquely to a Steam game and was omitted: "+[string]$item.title) }
+                continue
+            }
+            $sid=[string]$mapped[$key]
+            if(!$byId.ContainsKey($sid)){ continue }
+            $resolvedByKey[$key]=[pscustomobject]@{title=[string]$item.title;steamAppId=$sid;featuredSourceOrder=[int]$item.order}
+        }
+    }
+    return @($resolvedByKey.Values | Sort-Object featuredSourceOrder,title)
+}
+
 # ---------- Build direct curated per-platform index ----------
 # The source daily-chunks.json is now authoritative for BOTH selection and per-platform count.
 # This lets older systems use 50 rows while PS1-era-and-newer systems use 200 (or every verified
@@ -999,7 +1124,7 @@ foreach($pcfg in @($config.platforms)){
                     $copy=[ordered]@{}
                     foreach($prop in $chosen.PSObject.Properties){ $copy[$prop.Name]=$prop.Value }
                     $copy['curatedTitle']=[string](Get-Prop $cr 'title' '')
-                    $copy['dailyPriority']=$true
+                $copy['dailyPriority']=$true
                     $copy['dailyOrder']=$ord
                     $copy['dailyChunk']=[string](Get-Prop $cr 'dailyChunk' '')
                     $copy['chunkMinutes']=To-Int (Get-Prop $cr 'minutes' 30)
@@ -1028,6 +1153,67 @@ foreach($pcfg in @($config.platforms)){
 }
 $windowsSteam=Ensure-WindowsSteamCache $windowsRowsForCache
 
+# ---------- Featured games ----------
+# Featured membership comes ONLY from featured-games-curated.json. Each platform is resolved
+# against its own authoritative source. Invalid/ambiguous choices are omitted; nothing replaces them.
+$featured=New-Object 'System.Collections.Generic.List[object]'
+$featuredPlatformCounts=@{}
+foreach($pcfg in @($config.platforms)){
+    $platform=[string]$pcfg.name
+    $mode=[string](Get-Prop $pcfg 'mode' '')
+    $slug=State-Key $platform
+    $curatedRows=@($featuredCurated | Where-Object { ([string](Get-Prop $_ 'platform' '')) -eq $platform })
+    if($curatedRows.Count -eq 0){ continue }
+    $resolved=@()
+    if($platform -eq 'Windows' -or $mode -eq 'steam'){
+        $resolved=@(Resolve-WindowsFeaturedRows $curatedRows)
+    } elseif($mode -eq 'igdb'){
+        $featuredPriorityPath=Join-Path $CacheRoot ('featured-priority-'+$slug+'-v1.json')
+        $dailyPrioritySeed=Join-Path $CacheRoot ('daily-priority-'+$slug+'-v2.json')
+        if(!(Test-Path -LiteralPath $featuredPriorityPath) -and (Test-Path -LiteralPath $dailyPrioritySeed)){
+            Copy-Item -LiteralPath $dailyPrioritySeed -Destination $featuredPriorityPath -Force
+        }
+        $resolved=@(Resolve-IgdbOnlyCuratedRows $platform $curatedRows $featuredPriorityPath)
+    } else {
+        $catalogPath=Join-Path $CatalogRoot ($slug+'.json')
+        $resolved=@(Resolve-FeaturedAgainstCatalog $platform $curatedRows $catalogPath)
+    }
+
+    $featuredOrder=0
+    foreach($row in $resolved){
+        $title=[string](Get-Prop $row 'title' (Get-Prop $row 'curatedTitle' ''))
+        if([string]::IsNullOrWhiteSpace($title)){ continue }
+        $gid=Extract-IgdbId $row
+        $sid=[string](Get-Prop $row 'steamAppId' '')
+        if($platform -eq 'Windows'){
+            if($sid -notmatch '^\d+$'){ continue }
+            $gid=0L
+        } elseif($gid -le 0){
+            continue
+        }
+        $featuredOrder++
+        [void]$featured.Add([pscustomobject][ordered]@{
+            platform=$platform
+            title=$title
+            igdbId=[long]$gid
+            steamAppId=$sid
+            controllerSupport=[string](Get-Prop $row 'controllerSupport' '')
+            year=To-Int (Get-Prop $row 'releaseYear' (Get-Prop $row 'year' 0))
+            rating=$(if($platform -eq 'Windows'){0.0}else{To-Double (Get-Prop $row 'rating' 0.0)})
+            genreIds=@(Array-Of (Get-Prop $row 'catalogGenreIds' (Get-Prop $row 'genreIds' @())) | ForEach-Object {To-Int $_} | Where-Object {$_ -gt 0})
+            genreNames=@(Array-Of (Get-Prop $row 'catalogGenres' (Get-Prop $row 'genreNames' @())) | ForEach-Object {[string]$_} | Where-Object {$_})
+            coverUrl=[string](Get-Prop $row 'coverUrl' '')
+            summary=[string](Get-Prop $row 'summary' '')
+            featuredOrder=$featuredOrder
+        })
+        if(!$featuredPlatformCounts.ContainsKey($platform)){$featuredPlatformCounts[$platform]=0}
+        $featuredPlatformCounts[$platform]++
+    }
+    if(!$Quiet -and $featuredOrder -lt $curatedRows.Count){
+        Write-Warning ("[$platform] Featured validation kept {0}/{1} hand-curated choices; invalid/ambiguous entries were omitted and NOT replaced." -f $featuredOrder,$curatedRows.Count)
+    }
+}
+
 foreach($pcfg in @($config.platforms)){
     $platform=[string]$pcfg.name
     $mode=[string](Get-Prop $pcfg 'mode' '')
@@ -1045,8 +1231,9 @@ foreach($pcfg in @($config.platforms)){
         if($platform -ne 'Windows' -and $gid -le 0){ continue }
 
         # Daily Chunk text priority is deliberately independent from selection/resolution:
-        # exact game-specific curation > franchise rule > structured genre fallback.
+        # exact game-specific curation > franchise rule. No generic fallback is allowed.
         $chunk=Resolve-DailyChunkDefinition $platform $title $row
+        if($null -eq $chunk -or [string]::IsNullOrWhiteSpace([string](Get-Prop $chunk 'dailyChunk' ''))){ continue }
 
         if($platform -eq 'Windows'){
             $winKey=Get-WindowsSteamCacheKey $row
@@ -1073,7 +1260,7 @@ foreach($pcfg in @($config.platforms)){
             dailyChunk=[string](Get-Prop $chunk 'dailyChunk' '')
             minutes=To-Int (Get-Prop $chunk 'minutes' 30)
             chunkability=To-Int (Get-Prop $chunk 'chunkability' 4)
-            chunkSource=[string](Get-Prop $chunk 'chunkSource' 'genre')
+            chunkSource=[string](Get-Prop $chunk 'chunkSource' '')
             chunkRule=[string](Get-Prop $chunk 'chunkRule' '')
             dailyOrder=$order
         }
@@ -1088,6 +1275,7 @@ $packageChunks=@($direct.ToArray() | ForEach-Object { [pscustomobject]@{ id=([st
 [IO.File]::WriteAllText($ChunksOut,($packageChunks | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
 [IO.File]::WriteAllText($SeriesOut,($series | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
 [IO.File]::WriteAllText($IndexOut,($direct.ToArray() | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
+[IO.File]::WriteAllText($FeaturedOut,($featured.ToArray() | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
 
 $counts = @($platformCounts.GetEnumerator() | Sort-Object Name | ForEach-Object {
     [pscustomobject]@{ platform=[string]$_.Name; chunks=[int]$_.Value }
@@ -1095,10 +1283,11 @@ $counts = @($platformCounts.GetEnumerator() | Sort-Object Name | ForEach-Object 
 $indexCounts=@($directPlatformCounts.GetEnumerator() | Sort-Object Name | ForEach-Object {
     [pscustomobject]@{ platform=[string]$_.Name; indexedGames=[int]$_.Value }
 })
+$featuredCounts=@($featuredPlatformCounts.GetEnumerator() | Sort-Object Name | ForEach-Object { [pscustomobject]@{ platform=[string]$_.Name; featuredGames=[int]$_.Value } })
 $chunkSourceCounts=@($direct.ToArray() | Group-Object chunkSource | Sort-Object Name | ForEach-Object { [pscustomobject]@{source=[string]$_.Name;games=[int]$_.Count} })
 $manifest = [ordered]@{
-    format = 'gamebrowser-daily-chunks-v2'
-    schemaVersion = 2
+    format = 'gamebrowser-daily-chunks-v3'
+    schemaVersion = 3
     generatedAt = (Get-Date).ToUniversalTime().ToString('o')
     totalChunks = $packageChunks.Count
     directIndexGames = $direct.Count
@@ -1107,9 +1296,21 @@ $manifest = [ordered]@{
     chunkSourceCounts = $chunkSourceCounts
     platformCounts = $counts
     directIndexPlatformCounts = $indexCounts
-    note = 'Independent Daily Chunk package. Eligibility is validated first. Daily Chunk text priority is exact game-specific rule, then franchise rule, then structured genre fallback. DAT-backed rows require the local IGDB + same-system DAT catalog; IGDB-only rows require a genuine positive IGDB ID; Windows rows require a Steam AppID.'
+    note = 'Independent Daily Chunk package. Daily Chunks are quality-only: exact game-specific rule, then franchise rule; there is NO generic/genre fallback. Featured Games are published separately in GameBrowser-Featured.zip.'
 }
 [IO.File]::WriteAllText($ManifestOut,($manifest | ConvertTo-Json -Depth 10),$utf8NoBom)
+
+$featuredManifest = [ordered]@{
+    format = 'gamebrowser-featured-v1'
+    schemaVersion = 1
+    generatedAt = (Get-Date).ToUniversalTime().ToString('o')
+    featuredGames = $featured.Count
+    featuredCuratedChoices = $featuredCurated.Count
+    featuredPlatformCounts = $featuredCounts
+    selectionPolicy = 'hand-curated-only'
+    note = 'Featured membership comes ONLY from featured-games-curated.json. Ratings, Steam review scores, popularity and Daily Chunk order do not select or rank Featured games. Invalid/ambiguous entries are omitted without replacement.'
+}
+[IO.File]::WriteAllText($FeaturedManifestOut,($featuredManifest | ConvertTo-Json -Depth 10),$utf8NoBom)
 
 if(Test-Path -LiteralPath $ZipOut){ Remove-Item -LiteralPath $ZipOut -Force }
 Add-Type -AssemblyName System.IO.Compression
@@ -1132,10 +1333,28 @@ try {
 
 $hash=(Get-FileHash -LiteralPath $ZipOut -Algorithm SHA256).Hash.ToLowerInvariant()
 [IO.File]::WriteAllText($HashOut,"$hash  GameBrowser-DailyChunks.zip`r`n",$utf8NoBom)
+
+if(Test-Path -LiteralPath $FeaturedZipOut){ Remove-Item -LiteralPath $FeaturedZipOut -Force }
+$ffs=[IO.File]::Open($FeaturedZipOut,[IO.FileMode]::CreateNew,[IO.FileAccess]::ReadWrite,[IO.FileShare]::None)
+try {
+    $fzip=New-Object IO.Compression.ZipArchive($ffs,[IO.Compression.ZipArchiveMode]::Create,$false)
+    foreach($item in @(
+        @{Path=$FeaturedOut;Name='featured_game_index.json'},
+        @{Path=$FeaturedManifestOut;Name='manifest.json'}
+    )) {
+        $entry=$fzip.CreateEntry($item.Name,[IO.Compression.CompressionLevel]::Optimal)
+        $entryStream=$entry.Open();$input=[IO.File]::OpenRead($item.Path)
+        try { $input.CopyTo($entryStream) } finally { $input.Dispose();$entryStream.Dispose() }
+    }
+    $fzip.Dispose()
+} finally { $ffs.Dispose() }
+$featuredHash=(Get-FileHash -LiteralPath $FeaturedZipOut -Algorithm SHA256).Hash.ToLowerInvariant()
+[IO.File]::WriteAllText($FeaturedHashOut,"$featuredHash  GameBrowser-Featured.zip`r`n",$utf8NoBom)
 $size=(Get-Item -LiteralPath $ZipOut).Length
 Write-Host ''
-Write-Host ("Daily Chunk package ready: {0:N0} chunks across {1:N0} systems" -f $valid.Count,$platformCounts.Count) -ForegroundColor Green
-Write-Host ("Direct Daily Chunk index: {0:N0} validated games" -f $direct.Count) -ForegroundColor Green
+Write-Host ("Daily Chunk package ready: {0:N0} quality chunks across {1:N0} systems" -f $packageChunks.Count,$directPlatformCounts.Count) -ForegroundColor Green
+Write-Host ("Direct Daily Chunk index: {0:N0} validated quality games" -f $direct.Count) -ForegroundColor Green
+Write-Host ("Featured index: {0:N0}/{1:N0} hand-curated choices validated across {2:N0} systems" -f $featured.Count,$featuredCurated.Count,$featuredPlatformCounts.Count) -ForegroundColor Green
 foreach($cs in $chunkSourceCounts){ Write-Host ("  {0}: {1:N0}" -f $cs.source,$cs.games) -ForegroundColor DarkGray }
 if($directPlatformCounts.ContainsKey('Windows')){
     $win=@($direct.ToArray() | Where-Object {$_.platform -eq 'Windows'})
@@ -1144,7 +1363,11 @@ if($directPlatformCounts.ContainsKey('Windows')){
     $other=$win.Count-$full-$partial
     Write-Host ("Windows indexed: {0} total | {1} Full | {2} Partial | {3} All-only/unflagged" -f $win.Count,$full,$partial,$other) -ForegroundColor DarkGray
 }
-Write-Host ("File: {0}" -f $ZipOut) -ForegroundColor Green
-Write-Host ("Size: {0:N1} MB" -f ($size/1MB)) -ForegroundColor DarkGray
-Write-Host ("SHA-256: {0}" -f $hash) -ForegroundColor DarkGray
+Write-Host ("Daily Chunk file: {0}" -f $ZipOut) -ForegroundColor Green
+Write-Host ("Daily Chunk size: {0:N1} MB" -f ($size/1MB)) -ForegroundColor DarkGray
+Write-Host ("Daily Chunk SHA-256: {0}" -f $hash) -ForegroundColor DarkGray
+$featuredSize=(Get-Item -LiteralPath $FeaturedZipOut).Length
+Write-Host ("Featured file: {0}" -f $FeaturedZipOut) -ForegroundColor Green
+Write-Host ("Featured size: {0:N1} MB" -f ($featuredSize/1MB)) -ForegroundColor DarkGray
+Write-Host ("Featured SHA-256: {0}" -f $featuredHash) -ForegroundColor DarkGray
 Write-Host ''

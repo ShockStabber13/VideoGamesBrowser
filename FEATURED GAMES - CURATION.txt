@@ -1,0 +1,72 @@
+GameBrowser Featured Games - Hand Curation
+==========================================
+
+Featured Games are NOT selected automatically from IGDB ratings, Steam review scores,
+popularity, Daily Chunk order, or any other ranking.
+
+THE ONLY FEATURED SOURCE
+------------------------
+Edit:
+
+    featured-games-curated.json
+
+The order of games in that file is the Featured order for each platform.
+
+CURATION RULES
+--------------
+1. Pick games deliberately. Featured should represent worthwhile, notable, platform-defining,
+   historically important, interesting, or genuinely recommendable games.
+2. A high IGDB rating or Steam review score is NOT required.
+3. Do not add filler just to reach a target. Fewer good choices are better.
+4. Maximum supported curation is 50 games per platform, but there is no minimum.
+5. Try to keep a useful mix of genres, eras, major games and hidden gems instead of letting one
+   franchise dominate the list.
+6. Featured membership is independent from Daily Chunks. A Featured game does not need a
+   Daily Chunk, and a Daily Chunk game does not need to be Featured.
+
+WHAT GITHUB DOES
+----------------
+The GitHub workflow does NOT choose Featured games. It only validates/resolves the exact games
+listed in featured-games-curated.json:
+
+- DAT-backed platform: must resolve to a genuine IGDB game in that platform's strict IGDB + DAT
+  catalog.
+- IGDB-only platform: must resolve to a genuine IGDB game for that exact platform.
+- Windows: must resolve to a real Steam game AppID. Supplying steamAppId in the curated file is
+  preferred when known.
+
+If an entry cannot be verified or is ambiguous, it is OMITTED. GitHub does not replace it with
+another game.
+
+OUTPUT
+------
+The normal workflow:
+
+    Build DAT Catalogs + Daily Chunks + Featured
+
+creates:
+
+    _android\featured_game_index.json
+
+and packages it inside the existing:
+
+    _android\GameBrowser-DailyChunks.zip
+
+There is no separate Featured download package to maintain.
+
+DAILY CHUNK QUALITY RULE
+------------------------
+Daily Chunks are separate from Featured. A Daily Chunk is included only when it has:
+
+1. a game-specific Daily Chunk rule, or
+2. a franchise-specific Daily Chunk rule.
+
+There is no generic/genre fallback. A game with no quality rule is omitted rather than padded.
+
+GITHUB USE
+----------
+After committing this builder to GitHub, open Actions and run:
+
+    Build DAT Catalogs + Daily Chunks + Featured
+
+The existing daily schedule remains enabled.
