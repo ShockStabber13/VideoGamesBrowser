@@ -1,4 +1,4 @@
-param(
+﻿param(
     [string]$OutputDirectory = '_android\igdb-platform-index'
 )
 
@@ -91,16 +91,16 @@ while ($true) {
     if ($page.Count -eq 0) { break }
 
     foreach ($p in $page) {
-        $pid = [long]$p.id
+        $platformId = [long]$p.id
         $row = [pscustomobject][ordered]@{
-            platform_id = $pid
+            platform_id = $platformId
             platform_name = [string]$p.name
             abbreviation = [string]$p.abbreviation
             slug = [string]$p.slug
         }
         $platformRows.Add($row)
-        $platformById[[string]$pid] = $row
-        if ($pid -gt $lastPlatformId) { $lastPlatformId = $pid }
+        $platformById[[string]$platformId] = $row
+        if ($platformId -gt $lastPlatformId) { $lastPlatformId = $platformId }
     }
     if ($page.Count -lt 500) { break }
 }
@@ -156,8 +156,8 @@ limit 500;
         $seenPlatforms = @{}
         foreach ($pidRaw in @($g.platforms)) {
             if ($null -eq $pidRaw) { continue }
-            $pid = [long]$pidRaw
-            $pidText = [string]$pid
+            $platformId = [long]$pidRaw
+            $pidText = [string]$platformId
             if ($seenPlatforms.ContainsKey($pidText)) { continue }
             $seenPlatforms[$pidText] = $true
 
@@ -172,7 +172,7 @@ limit 500;
                 game_id = $gid
                 title = [string]$g.name
                 slug = [string]$g.slug
-                platform_id = $pid
+                platform_id = $platformId
                 platform_name = if ($null -ne $platform) { [string]$platform.platform_name } else { '' }
                 platform_abbreviation = if ($null -ne $platform) { [string]$platform.abbreviation } else { '' }
                 release_date = $platformDate
