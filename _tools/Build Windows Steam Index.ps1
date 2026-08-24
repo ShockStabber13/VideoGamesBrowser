@@ -1,4 +1,4 @@
-﻿param(
+param(
     [switch]$ForceRebuild,
     [int]$BatchSize = 500
 )
@@ -7,7 +7,7 @@ $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $Root = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 $Android = Join-Path $Root '_android'
-$CacheRoot = Join-Path $Root '_cache\windows-steam-index'
+$CacheRoot = Join-Path $Root '_cache\windows-steam-index-no-adult-v1'
 $SteamConfigPath = Join-Path $Root 'steam-config.json'
 $Endpoint = 'https://api.steampowered.com/IStoreQueryService/Query/v1/'
 $BatchSize = [Math]::Max(1,[Math]::Min(500,$BatchSize))
@@ -150,6 +150,19 @@ function Convert-Batch($Response){
         if($null -eq $appId -or [string]::IsNullOrWhiteSpace($title)){continue}
         try{$appId=[int64]$appId}catch{continue}
         if($appId -le 0){continue}
+
+        # Steam's official content descriptors are more reliable than community tags.
+        # 3 = Adult Only Sexual Content; 4 = Frequent/Gratuitous Nudity or Sexual Content.
+        # Keep ordinary mature/violent games; omit only explicitly sexual adult titles.
+        $explicitAdult=$false
+        foreach($descriptor in @(Get-Prop $item 'content_descriptorids' @())){
+            try {
+                $did=[int]$descriptor
+                if($did -eq 3 -or $did -eq 4){$explicitAdult=$true;break}
+            } catch {}
+        }
+        if($explicitAdult){continue}
+
         $platforms=Get-Prop $item 'platforms' $null
         if($null -ne $platforms){
             $win=Get-Prop $platforms 'windows' $false
@@ -248,7 +261,7 @@ Write-Host '============================================================' -Foreg
 Write-Host '             WINDOWS STEAM INDEX BUILD' -ForegroundColor Cyan
 Write-Host '============================================================' -ForegroundColor Cyan
 Write-Host ('Store country : {0}' -f $Country)
-Write-Host ('Source        : IStoreQueryService/Query (game-type apps)')
+Write-Host ('Source        : IStoreQueryService/Query (game-type apps; explicit adult sexual content excluded)')
 Write-Host ('Ordering      : sort=2 / AppID identifier order')
 Write-Host ('Batch size    : {0}' -f $BatchSize)
 Write-Host ('Checkpoint    : {0}' -f $StatePath)

@@ -320,7 +320,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
                 $safe=Escape-DailyIgdb ([string](Get-Prop $group[$j].curated 'title' ''))
                 # Fast pass: IGDB documents scalar platform membership as `where platforms = 130` for a single platform ID.
                 # A direct title-only fallback below independently verifies the returned platforms array.
-                [void]$parts.Add("query games `"$q`" { fields id,name,alternative_names.name,platforms,first_release_date,rating,rating_count,genres.id,genres.name,cover.image_id,summary; search `"$safe`"; where platforms = $platformId & version_parent = null; limit 10; };")
+                [void]$parts.Add("query games `"$q`" { fields id,name,alternative_names.name,platforms,first_release_date,rating,rating_count,genres.id,genres.name,cover.image_id,summary; search `"$safe`"; where platforms = $platformId & version_parent = null & themes != (42); limit 10; };")
             }
             try {
                 $responses=@(Invoke-DailyIgdb 'multiquery' ($parts -join "`n"))
@@ -377,7 +377,7 @@ function Resolve-IgdbOnlyCuratedRows([string]$Platform,$CuratedRows,[string]$Pri
                 $want=Norm $title
                 $safe=Escape-DailyIgdb $title
                 try {
-                    $body="fields id,name,alternative_names.name,platforms,first_release_date,rating,rating_count,genres.id,genres.name,cover.image_id,summary; search `"$safe`"; where version_parent = null; limit 20;"
+                    $body="fields id,name,alternative_names.name,platforms,first_release_date,rating,rating_count,genres.id,genres.name,cover.image_id,summary; search `"$safe`"; where version_parent = null & themes != (42); limit 20;"
                     $candidates=@(Invoke-DailyIgdb 'games' $body)
                     $exact=New-Object 'System.Collections.Generic.List[object]'
                     foreach($candidate in $candidates){

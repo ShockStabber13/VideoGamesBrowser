@@ -119,7 +119,7 @@ $started = [DateTimeOffset]::UtcNow
 while ($true) {
     $body = @"
 fields id,name,slug,game_type,version_parent,platforms,release_dates.platform,release_dates.date,first_release_date,updated_at;
-where id > $lastGameId & platforms != null;
+where id > $lastGameId & platforms != null & themes != (42);
 sort id asc;
 limit 500;
 "@

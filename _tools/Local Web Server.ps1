@@ -489,13 +489,13 @@ function Fetch-SwitchBatch($State) {
     $limit=500
     $now=[DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
     $offset=[int]$ps.releaseOffset
-    $body='fields game.id,game.name,game.slug,game.game_type.type,game.version_parent,game.first_release_date,date,y; ' +
+    $body='fields game.id,game.name,game.slug,game.game_type.type,game.version_parent,game.first_release_date,game.themes,date,y; ' +
           "where platform = 130 & date <= $now; sort id asc; limit $limit; offset $offset;"
     $rows=@(Invoke-IgdbEndpoint 'release_dates' $body)
     $records=@{}
     foreach($rd in $rows) {
         $g=$rd.game
-        if(!(Test-PlayableSwitch $g)){ continue }
+        if(!(Test-PlayableSwitch $g) -or (Test-IgdbEroticTheme $g)){ continue }
         $gid=$null;try{$gid=[long]$g.id}catch{}
         if(!$gid){ continue }
         $title=[string]$g.name
@@ -1006,14 +1006,14 @@ function Fetch-WindowsBatch($State) {
     $limit=500
     $now=[DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
     $offset=[int]$ps.releaseOffset
-    $body='fields game.id,game.name,game.slug,game.game_type.type,game.version_parent,game.first_release_date,date,y; ' +
+    $body='fields game.id,game.name,game.slug,game.game_type.type,game.version_parent,game.first_release_date,game.themes,date,y; ' +
           "where platform = 6 & date <= $now; sort id asc; limit $limit; offset $offset;"
     $rows=@(Invoke-IgdbEndpoint 'release_dates' $body)
 
     $records=@{}
     foreach($rd in $rows) {
         $g=$rd.game
-        if(!(Test-PlayableSwitch $g)){ continue }
+        if(!(Test-PlayableSwitch $g) -or (Test-IgdbEroticTheme $g)){ continue }
         $gid=$null;try{$gid=[long]$g.id}catch{}
         if(!$gid){ continue }
         $title=[string]$g.name
@@ -1343,8 +1343,23 @@ function Get-IgdbUpdatedAtRowsV6([string]$Endpoint,[long]$FromUnix,[long]$ToUnix
     }
     return $items.ToArray()
 }
+function Test-IgdbEroticTheme($Game) {
+    if($null -eq $Game){return $false}
+    try {
+        foreach($theme in @($Game.themes)) {
+            try {
+                $id=0L
+                if($theme -is [ValueType] -or $theme -is [string]){$id=[long]$theme}
+                elseif($theme.PSObject.Properties['id']){$id=[long]$theme.id}
+                if($id -eq 42L){return $true}
+            } catch {}
+        }
+    } catch {}
+    return $false
+}
 function Test-IgdbGameHasPlatformV6($Game,[long]$PlatformId) {
     if($null -eq $Game -or $PlatformId -le 0){return $false}
+    if(Test-IgdbEroticTheme $Game){return $false}
     try {
         foreach($p in @($Game.platforms)) {
             try {
@@ -1442,8 +1457,8 @@ function Initialize-IgdbUpdatedAtChangeCacheV6 {
     }
 
     Write-Host ("[IGDB] incremental updated_at window: {0} cached platforms" -f $eligible) -ForegroundColor DarkCyan
-    $releaseFields='fields id,platform,updated_at,game.id,game.name,game.slug,game.first_release_date,game.alternative_names.name,game.genres.id,game.rating,game.rating_count,game.platforms;'
-    $gameFields='fields id,name,slug,first_release_date,alternative_names.name,genres.id,rating,rating_count,platforms,updated_at;'
+    $releaseFields='fields id,platform,updated_at,game.id,game.name,game.slug,game.first_release_date,game.alternative_names.name,game.genres.id,game.rating,game.rating_count,game.platforms,game.themes;'
+    $gameFields='fields id,name,slug,first_release_date,alternative_names.name,genres.id,rating,rating_count,platforms,themes,updated_at;'
     $releaseRows=@(Get-IgdbUpdatedAtRowsV6 'release_dates' $minRelease $cutoff $releaseFields)
     $gameRows=@(Get-IgdbUpdatedAtRowsV6 'games' $minGame $cutoff $gameFields)
     Write-Host ("[IGDB] changed since oldest cached sync: {0:N0} release rows, {1:N0} game rows" -f $releaseRows.Count,$gameRows.Count) -ForegroundColor DarkGray
@@ -1948,7 +1963,7 @@ function Get-IgdbMetadataSearchBatch($Games) {
             $nameToGame[$resultName]=$game
             $safe=Escape-Igdb ([string]$game.title)
             $platformId=Get-IgdbPlatformId ([string]$game.platform)
-            $where=$(if($platformId){"where platforms = $platformId & version_parent = null;"}else{'where version_parent = null;'})
+            $where=$(if($platformId){"where platforms = $platformId & version_parent = null & themes != (42);"}else{'where version_parent = null & themes != (42);'})
             [void]$parts.Add("query games `"$resultName`" { $fields search `"$safe`"; $where limit 15; };")
         }
 
@@ -2341,7 +2356,7 @@ function Convert-IgdbCatalogRowToEntry([string]$Platform,$Row) {
 function Get-IgdbDirectGameRows([string]$Platform,[int]$Offset,[int]$Limit,[string]$Query,[long]$GenreId,[string]$Sort,$ExcludeIds) {
     $platformId=Get-IgdbPlatformId $Platform;if(!$platformId){throw "No IGDB platform ID for $Platform"}
     $Limit=[Math]::Min(500,[Math]::Max(1,$Limit));$Offset=[Math]::Max(0,$Offset)
-    $clauses=New-Object 'System.Collections.Generic.List[string]';[void]$clauses.Add("release_dates.platform = $platformId");[void]$clauses.Add('version_parent = null')
+    $clauses=New-Object 'System.Collections.Generic.List[string]';[void]$clauses.Add("release_dates.platform = $platformId");[void]$clauses.Add('version_parent = null');[void]$clauses.Add('themes != (42)')
     if($GenreId -gt 0){[void]$clauses.Add("genres = $GenreId")}
     $exclude=@($ExcludeIds | Where-Object {$_} | Select-Object -Unique)
     if($exclude.Count){[void]$clauses.Add("id != ($($exclude -join ','))")}
@@ -2405,7 +2420,7 @@ function Ensure-IgdbDailyPriority([string]$Platform,[int]$Target=200) {
     # Platforms without a curated 200-game chunk set get a lightweight top-200
     # seed in a single IGDB request. Existing curated Switch/Windows chunks are preserved.
     if($platformChunks.Count -lt $Target){
-        $top=@(Invoke-IgdbEndpoint 'games' ("fields id,name,slug,first_release_date,rating,rating_count,genres.id; where release_dates.platform = {0} & version_parent = null; sort rating_count desc; limit {1};" -f $platformId,[Math]::Min(500,$Target*2)))
+        $top=@(Invoke-IgdbEndpoint 'games' ("fields id,name,slug,first_release_date,rating,rating_count,genres.id; where release_dates.platform = {0} & version_parent = null & themes != (42); sort rating_count desc; limit {1};" -f $platformId,[Math]::Min(500,$Target*2)))
         foreach($r in $top){if($platformChunks.Count -ge $Target){break};$e=Convert-IgdbCatalogRowToEntry $Platform $r;if($null -eq $e){continue};$nk=Normalize-Name $e.title;if($chunkNorm.ContainsKey($nk)){continue};$tpl=Get-GenericDailyChunk $e
             $c=[pscustomobject]@{id=[string]$e.id;platform=$Platform;title=[string]$e.title;dailyChunk=[string]$tpl.dailyChunk;minutes=[int]$tpl.minutes;intensity=2;chunkability=[int]$tpl.chunkability;why='Auto-seeded so this system keeps 200 Daily Chunk games at the front; edit anytime.'}
             [void]$allChunks.Add($c);$platformChunks+=,$c;$chunkNorm[$nk]=$c;$cachedByNorm[$nk]=$e
@@ -2421,7 +2436,7 @@ function Ensure-IgdbDailyPriority([string]$Platform,[int]$Target=200) {
     # Resolve curated chunk titles ten at a time with IGDB Multi-Query, then cache IDs forever.
     for($base=0;$base -lt $unresolved.Count;$base+=10){
         $group=@($unresolved | Select-Object -Skip $base -First 10);$parts=New-Object 'System.Collections.Generic.List[string]';$map=@{}
-        for($i=0;$i -lt $group.Count;$i++){$x=$group[$i];$qn="p$i";$map[$qn]=$x;$safeTitle=Escape-Igdb ([string]$x.chunk.title);[void]$parts.Add("query games `"$qn`" { fields id,name,slug,first_release_date,rating,rating_count,genres.id; search `"$safeTitle`"; where release_dates.platform = $platformId & version_parent = null; limit 10; };")}
+        for($i=0;$i -lt $group.Count;$i++){$x=$group[$i];$qn="p$i";$map[$qn]=$x;$safeTitle=Escape-Igdb ([string]$x.chunk.title);[void]$parts.Add("query games `"$qn`" { fields id,name,slug,first_release_date,rating,rating_count,genres.id; search `"$safeTitle`"; where release_dates.platform = $platformId & version_parent = null & themes != (42); limit 10; };")}
         $responses=@(Invoke-IgdbEndpoint 'multiquery' ($parts -join "`n"))
         foreach($resp in $responses){$qn=[string]$resp.name;if(!$map.ContainsKey($qn)){continue};$x=$map[$qn];$want=Normalize-Name ([string]$x.chunk.title);$wantTok=Get-TitleTokenSignature ([string]$x.chunk.title);$chosen=$null
             foreach($r in @($resp.result)){if((Normalize-Name ([string]$r.name)) -eq $want){$chosen=$r;break}}
@@ -2433,7 +2448,7 @@ function Ensure-IgdbDailyPriority([string]$Platform,[int]$Target=200) {
     # If curated names could not be mapped, fill the priority group with popular
     # platform games and add editable generic chunk rows until 200 actual games exist.
     if($result.Count -lt $Target){
-        $top=@(Invoke-IgdbEndpoint 'games' ("fields id,name,slug,first_release_date,rating,rating_count,genres.id; where release_dates.platform = {0} & version_parent = null; sort rating_count desc; limit 500;" -f $platformId))
+        $top=@(Invoke-IgdbEndpoint 'games' ("fields id,name,slug,first_release_date,rating,rating_count,genres.id; where release_dates.platform = {0} & version_parent = null & themes != (42); sort rating_count desc; limit 500;" -f $platformId))
         foreach($r in $top){if($result.Count -ge $Target){break};$e=Convert-IgdbCatalogRowToEntry $Platform $r;if($null -eq $e){continue};$nk=Normalize-Name $e.title;if($resolvedNorm.ContainsKey($nk)){continue};$tpl=Get-GenericDailyChunk $e
             if(!$chunkNorm.ContainsKey($nk)){$c=[pscustomobject]@{id=[string]$e.id;platform=$Platform;title=[string]$e.title;dailyChunk=[string]$tpl.dailyChunk;minutes=[int]$tpl.minutes;intensity=2;chunkability=[int]$tpl.chunkability;why='Auto-seeded replacement for an unavailable Daily Chunk title; edit anytime.'};[void]$allChunks.Add($c);$chunkNorm[$nk]=$c}
             Set-Prop $e 'dailyPriority' $true;Set-Prop $e 'dailyOrder' (100000+$result.Count+1);[void]$result.Add($e);$resolvedNorm[$nk]=$true
@@ -3282,7 +3297,7 @@ function Get-IgdbPlatformTitleMap([string]$Platform) {
     $safeName=($Platform.ToLowerInvariant() -replace '[^a-z0-9]+','-').Trim('-')
     $mapPath=Join-Path $CacheRoot ("igdb-platform-release-map-v2-{0}.json" -f $safeName)
     $statePath=Join-Path $CacheRoot ("igdb-platform-release-map-v2-{0}-state.json" -f $safeName)
-    $desiredDiscoverySchema='games-platform-v1'
+    $desiredDiscoverySchema='games-platform-v2-no-erotic'
 
     $mapState=Read-Json $statePath ([pscustomobject]@{
         lastReleaseId=0;releaseRecords=0;lastGameId=0;gameRecords=0;complete=$false
@@ -3394,7 +3409,7 @@ function Get-IgdbPlatformTitleMap([string]$Platform) {
     }
 
     while($true) {
-        $body="fields id,name,slug,first_release_date,alternative_names.name,genres.id,rating,rating_count,platforms,updated_at; where platforms = ($platformId) & id > $lastGameId; sort id asc; limit 500;"
+        $body="fields id,name,slug,first_release_date,alternative_names.name,genres.id,rating,rating_count,platforms,themes,updated_at; where platforms = ($platformId) & themes != (42) & id > $lastGameId; sort id asc; limit 500;"
         $rows=@(Invoke-IgdbEndpoint 'games' $body)
         if(!$rows.Count){Set-Prop $mapState 'complete' $true;break}
         $maxGameId=$lastGameId
@@ -3471,7 +3486,7 @@ function Build-StaticCatalogCache {
             try{if($pst.PSObject.Properties['igdbMapRevision']){$catalogMapRevision=[long]$pst.igdbMapRevision}}catch{}
             $igdbCatalogOutOfSync=($currentMapRevision -gt 0 -and $catalogMapRevision -ne $currentMapRevision)
             $discoverySchema='';try{$discoverySchema=[string]$currentMapState.discoverySchema}catch{}
-            $discoveryNeedsMigration=($discoverySchema -ne 'games-platform-v1')
+            $discoveryNeedsMigration=($discoverySchema -ne 'games-platform-v2-no-erotic')
             if($pst.complete -and !$discoveryNeedsMigration -and !$igdbNeedsRefresh -and !$igdbCatalogOutOfSync -and $count -gt 0 -and $mode -eq $requiredMode -and $savedFingerprint -eq $expectedFingerprint) {
                 Write-Host ("[{0}] ANY-DAT intersection cache already complete: {1:N0} games" -f $platformName,$count) -ForegroundColor Green
             } else {
