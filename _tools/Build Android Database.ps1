@@ -74,6 +74,7 @@ try {
                 controllerSupport = $null
                 catalogSource = 'IGDB + ANY DAT'
                 matchedDatSources = @(Array-Of (Get-Prop $row 'preservationMatchedSources' @()) | ForEach-Object { [string]$_ })
+                releaseDateEpoch = [long](Get-Prop $row 'releaseDateEpoch' 0)
             }
             $json = $obj | ConvertTo-Json -Depth 12 -Compress
             if(!$first){ $writer.Write(',') } else { $first=$false }
@@ -92,14 +93,14 @@ try {
 
 $manifest = [ordered]@{
     format = 'gamebrowser-windows-catalog-v1'
-    schemaVersion = 1
+    schemaVersion = 2
     generatedAt = (Get-Date).ToUniversalTime().ToString('o')
     totalGames = $total
     datBackedPlatforms = $counts.Count
     igdbOnlyPlatforms = $modernPlatforms
     steamPlatforms = $steamPlatforms
     platformCounts = $counts.ToArray()
-    note = 'Contains DAT-backed platform catalogs only. Steam platforms and IGDB-only platforms remain live/on-demand on Android. Daily Chunks are distributed separately in GameBrowser-DailyChunks.zip.'
+    note = 'Contains DAT-backed platform catalogs only. releaseDateEpoch stores the full IGDB platform release date for local year/month/day sorting. Steam platforms and IGDB-only platforms remain live/on-demand on Android. Daily Chunks are distributed separately in GameBrowser-DailyChunks.zip.'
 }
 $manifestJson = $manifest | ConvertTo-Json -Depth 10
 [IO.File]::WriteAllText($ManifestOut,$manifestJson,$utf8NoBom)

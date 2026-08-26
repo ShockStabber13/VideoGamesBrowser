@@ -347,7 +347,7 @@ function Merge-Catalog([string]$Platform,$NewEntries) {
 
         if($byId.ContainsKey($id)) {
             $e=$byId[$id]
-            foreach($name in @('catalogSource','sourceId','sourceUrl','releaseYear','igdbId','switchReleaseDate','catalogRule','region','edition','windowsReleaseDate','catalogGenreIds','rating','ratingCount','dailyPriority','dailyOrder','controllerCategory','controllerSupport','fullControllerSupport','preservationProvider','preservationDatUrl','preservationMatchedSources','preservationMatchedSourceUrls','preservationSourceCount','preservationMatch','preservationTitles','preservationSerials','preservationVariantCount')) {
+            foreach($name in @('catalogSource','sourceId','sourceUrl','releaseYear','releaseDateEpoch','igdbId','switchReleaseDate','catalogRule','region','edition','windowsReleaseDate','catalogGenreIds','rating','ratingCount','dailyPriority','dailyOrder','controllerCategory','controllerSupport','fullControllerSupport','preservationProvider','preservationDatUrl','preservationMatchedSources','preservationMatchedSourceUrls','preservationSourceCount','preservationMatch','preservationTitles','preservationSerials','preservationVariantCount')) {
                 if($n.PSObject.Properties[$name]){ Set-Prop $e $name $n.$name }
             }
             continue
@@ -2244,12 +2244,16 @@ function Build-IgdbPreservationIntersectionCatalog([string]$Platform) {
 function Ensure-StaticCatalogBasicMetadata([string]$Platform) {
     $catalog=@(Read-Catalog);$games=@($catalog | Where-Object {$_.platform -eq $Platform -and $_.igdbId})
     if(!$games.Count){return}
-    $need=@($games | Where-Object {!$_.PSObject.Properties['catalogGenreIds'] -or !$_.PSObject.Properties['ratingCount'] -or !$_.PSObject.Properties['coverUrl'] -or !$_.PSObject.Properties['summary']})
+    $platformId=Get-IgdbPlatformId $Platform
+    $need=@($games | Where-Object {
+        $releaseEpoch=0L;try{if($_.PSObject.Properties['releaseDateEpoch']){$releaseEpoch=[long]$_.releaseDateEpoch}}catch{}
+        !$_.PSObject.Properties['catalogGenreIds'] -or !$_.PSObject.Properties['ratingCount'] -or !$_.PSObject.Properties['coverUrl'] -or !$_.PSObject.Properties['summary'] -or $releaseEpoch -le 0
+    })
     if(!$need.Count){return}
-    Write-Host ("[{0}] filling lightweight genre/rating index for {1:N0} games..." -f $Platform,$need.Count) -ForegroundColor DarkCyan
+    Write-Host ("[{0}] filling lightweight genre/rating/full-release-date index for {1:N0} games..." -f $Platform,$need.Count) -ForegroundColor DarkCyan
     for($i=0;$i -lt $need.Count;$i+=500){
         $group=@($need | Select-Object -Skip $i -First 500);$ids=@($group | ForEach-Object {[long]$_.igdbId});if(!$ids.Count){continue}
-        $rows=@(Invoke-IgdbEndpoint 'games' ("fields id,slug,first_release_date,rating,rating_count,genres.id,genres.name,cover.image_id,summary; where id = ({0}); limit 500;" -f ($ids -join ',')))
+        $rows=@(Invoke-IgdbEndpoint 'games' ("fields id,slug,first_release_date,release_dates.platform,release_dates.date,rating,rating_count,genres.id,genres.name,cover.image_id,summary; where id = ({0}); limit 500;" -f ($ids -join ',')))
         $by=@{};foreach($g in $group){$by[[string]$g.igdbId]=$g}
         foreach($r in $rows){$k=[string]$r.id;if(!$by.ContainsKey($k)){continue};$g=$by[$k]
             $gids=New-Object 'System.Collections.Generic.List[long]'
@@ -2261,7 +2265,26 @@ function Ensure-StaticCatalogBasicMetadata([string]$Platform) {
             try{Set-Prop $g 'rating' ([double]$r.rating)}catch{};try{Set-Prop $g 'ratingCount' ([long]$r.rating_count)}catch{}
             try{if($r.cover.image_id){Set-Prop $g 'coverUrl' ("https://images.igdb.com/igdb/image/upload/t_cover_big/$($r.cover.image_id).jpg")}}catch{}
             try{if($r.summary){Set-Prop $g 'summary' ([string]$r.summary)}else{Set-Prop $g 'summary' ''}}catch{}
-            try{if(!$g.releaseYear -and $r.first_release_date){Set-Prop $g 'releaseYear' ([DateTimeOffset]::FromUnixTimeSeconds([long]$r.first_release_date).Year)}}catch{}
+
+            # Use the earliest dated release for THIS platform. A title may have several
+            # regional release rows; all of them retain month/day precision. Only when
+            # IGDB has no dated platform row do we fall back to game.first_release_date.
+            $releaseEpoch=0L
+            try {
+                foreach($rd in @($r.release_dates)) {
+                    $rp=0L;$rdDate=0L
+                    try{$rp=[long]$rd.platform}catch{}
+                    try{$rdDate=[long]$rd.date}catch{}
+                    if($rp -eq $platformId -and $rdDate -gt 0 -and ($releaseEpoch -le 0 -or $rdDate -lt $releaseEpoch)){$releaseEpoch=$rdDate}
+                }
+            } catch {}
+            if($releaseEpoch -le 0){try{if($r.first_release_date){$releaseEpoch=[long]$r.first_release_date}}catch{}}
+            Set-Prop $g 'releaseDateEpoch' ([long]$releaseEpoch)
+            if($releaseEpoch -gt 0){
+                try{Set-Prop $g 'releaseYear' ([DateTimeOffset]::FromUnixTimeSeconds($releaseEpoch).Year)}catch{}
+            } elseif(!$g.releaseYear) {
+                try{if($r.first_release_date){Set-Prop $g 'releaseYear' ([DateTimeOffset]::FromUnixTimeSeconds([long]$r.first_release_date).Year)}}catch{}
+            }
         }
     }
     Save-Catalog $catalog
