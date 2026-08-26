@@ -1,14 +1,24 @@
 CURATED FEATURED GAMES
 ======================
 
-GitHub no longer creates or chooses Featured games.
-
-When ChatGPT gives you a curated Featured update, place this file here:
+GitHub does not choose Featured membership. Put your curated file here:
 
   featured_game_index.json
 
-Commit + push it. The "Update Featured Games" workflow validates, packages and publishes:
+The publishing workflow accepts either an older rich row or the compact row below, but the
+release ZIP is ALWAYS rewritten to exactly these fields:
+
+  title
+  source              Steam | IGDB:<platform>
+  id                  Steam AppID or IGDB game ID
+  rating              Steam review % or IGDB rating
+  releaseDateEpoch    Unix seconds
+
+No poster, summary, genres, controller support, year, order, or other metadata is published in
+the Featured direct index.
+
+Commit + push it. "Update Featured Games" validates, compacts, packages and publishes:
 
   https://github.com/ShockStabber13/VideoGamesBrowser/releases/download/featured-latest/GameBrowser-Featured.zip
 
-The workflow does NOT call IGDB, Steam or DAT builders and does NOT rank, score, substitute or auto-fill games.
+Ratings are SORT KEYS only. They never choose Featured membership.

@@ -16,6 +16,7 @@ $CatalogRoot = Join-Path $CacheRoot 'platform-catalogs'
 $WindowsSteamLegacyCachePath = Join-Path $CacheRoot 'daily-chunk-windows-steam-v1.json'
 $WindowsSteamCachePath = Join-Path $CacheRoot 'daily-chunk-windows-steam-v2.json'
 $SteamTitleIndexPath = Join-Path $CacheRoot 'steam-game-title-index-v1.json'
+$SteamSortMetadataPath = Join-Path $CacheRoot 'steam-compact-sort-metadata-v1.json'
 $OutRoot = Join-Path $Root '_android'
 $ChunksOut = Join-Path $OutRoot 'daily_chunks.json'
 $SeriesOut = Join-Path $OutRoot 'daily_chunk_series.json'
@@ -244,6 +245,7 @@ function Convert-DailyIgdbGame([string]$Platform,$Curated,$Game,[int]$Order) {
         title=$title
         igdbId=[long]$gid
         releaseYear=[int]$year
+        releaseDateEpoch=[long]$ts
         rating=To-Double (Get-Prop $Game 'rating' 0.0)
         catalogGenreIds=$genreIds.ToArray()
         catalogGenres=$genreNames.ToArray()
@@ -1199,6 +1201,7 @@ foreach($pcfg in @($config.platforms)){
             steamAppId=$sid
             controllerSupport=[string](Get-Prop $row 'controllerSupport' '')
             year=To-Int (Get-Prop $row 'releaseYear' (Get-Prop $row 'year' 0))
+            releaseDateEpoch=To-Long (Get-Prop $row 'releaseDateEpoch' 0)
             rating=$(if($platform -eq 'Windows'){0.0}else{To-Double (Get-Prop $row 'rating' 0.0)})
             genreIds=@(Array-Of (Get-Prop $row 'catalogGenreIds' (Get-Prop $row 'genreIds' @())) | ForEach-Object {To-Int $_} | Where-Object {$_ -gt 0})
             genreNames=@(Array-Of (Get-Prop $row 'catalogGenres' (Get-Prop $row 'genreNames' @())) | ForEach-Object {[string]$_} | Where-Object {$_})
@@ -1252,6 +1255,7 @@ foreach($pcfg in @($config.platforms)){
             steamAppId=$sid
             controllerSupport=$controller
             year=To-Int (Get-Prop $row 'releaseYear' (Get-Prop $row 'year' 0))
+            releaseDateEpoch=To-Long (Get-Prop $row 'releaseDateEpoch' 0)
             rating=To-Double (Get-Prop $row 'rating' 0.0)
             genreIds=@(Array-Of (Get-Prop $row 'catalogGenreIds' (Get-Prop $row 'genreIds' @())) | ForEach-Object {To-Int $_} | Where-Object {$_ -gt 0})
             genreNames=@(Array-Of (Get-Prop $row 'catalogGenres' (Get-Prop $row 'genreNames' @())) | ForEach-Object {[string]$_} | Where-Object {$_})
@@ -1270,12 +1274,148 @@ foreach($pcfg in @($config.platforms)){
     }
 }
 
+# ---------- Minimal compact sort metadata ----------
+# Featured and Daily Chunk packages deliberately publish only identity + the three local sort
+# keys (title, rating, releaseDateEpoch). Daily adds only its Daily Chunk fields.
+function Get-FallbackReleaseEpoch($Row) {
+    $epoch=To-Long (Get-Prop $Row 'releaseDateEpoch' 0)
+    if($epoch -gt 0){ return $epoch }
+    $year=To-Int (Get-Prop $Row 'releaseYear' (Get-Prop $Row 'year' 0))
+    if($year -le 0){ return 0L }
+    try { return [DateTimeOffset]::new([DateTime]::new($year,1,1,0,0,0,[DateTimeKind]::Utc)).ToUnixTimeSeconds() } catch { return 0L }
+}
+function Get-IgdbCompactSortMetadata($Rows) {
+    $result=@{}
+    $ids=@($Rows | Where-Object { ([string](Get-Prop $_ 'platform' '')) -ne 'Windows' } | ForEach-Object { Extract-IgdbId $_ } | Where-Object {$_ -gt 0} | Select-Object -Unique)
+    for($start=0;$start -lt $ids.Count;$start+=500){
+        $group=@($ids | Select-Object -Skip $start -First 500)
+        if($group.Count -eq 0){ continue }
+        try {
+            $body="fields id,first_release_date,rating; where id = ($($group -join ',')); limit 500;"
+            foreach($g in @(Invoke-DailyIgdb 'games' $body)){
+                $gid=To-Long (Get-Prop $g 'id' 0); if($gid -le 0){continue}
+                $result[[string]$gid]=[pscustomobject]@{
+                    rating=To-Double (Get-Prop $g 'rating' 0.0)
+                    releaseDateEpoch=To-Long (Get-Prop $g 'first_release_date' 0)
+                }
+            }
+        } catch {
+            if(!$Quiet){ Write-Warning ("IGDB compact sort metadata refresh failed for one batch: "+$_.Exception.Message) }
+        }
+    }
+    return $result
+}
+function Read-SteamCompactSortCache {
+    $cache=@{}
+    if(!(Test-Path -LiteralPath $SteamSortMetadataPath)){ return $cache }
+    try {
+        foreach($row in @(Flatten-Objects (Get-Content -LiteralPath $SteamSortMetadataPath -Raw -Encoding UTF8 | ConvertFrom-Json))){
+            $sid=[string](Get-Prop $row 'steamAppId' '')
+            if($sid -match '^\d+$'){
+                $cache[$sid]=[pscustomobject]@{
+                    steamAppId=$sid
+                    rating=To-Double (Get-Prop $row 'rating' 0.0)
+                    releaseDateEpoch=To-Long (Get-Prop $row 'releaseDateEpoch' 0)
+                    checkedAt=[string](Get-Prop $row 'checkedAt' '')
+                }
+            }
+        }
+    } catch {}
+    return $cache
+}
+function Get-SteamCompactSortMetadata($Rows) {
+    $cache=Read-SteamCompactSortCache
+    $ids=@($Rows | Where-Object { ([string](Get-Prop $_ 'platform' '')) -eq 'Windows' } | ForEach-Object {[string](Get-Prop $_ 'steamAppId' '')} | Where-Object {$_ -match '^\d+$'} | Select-Object -Unique)
+    $need=@($ids | Where-Object {
+        !$cache.ContainsKey($_) -or (To-Long (Get-Prop $cache[$_] 'releaseDateEpoch' 0)) -le 0 -or (To-Double (Get-Prop $cache[$_] 'rating' 0.0)) -le 0.0
+    })
+    if(!$Quiet -and $need.Count -gt 0){ Write-Host ("[Windows] refreshing local sort metadata for {0} Steam games..." -f $need.Count) -ForegroundColor DarkCyan }
+    $n=0
+    foreach($sid in $need){
+        $n++
+        $releaseEpoch=0L;$rating=0.0
+        # Release date from the public Steam Store appdetails endpoint.
+        try {
+            $url='https://store.steampowered.com/api/appdetails?appids='+[uri]::EscapeDataString($sid)+'&cc=us&l=english'
+            $r=Invoke-RestMethod -Method Get -Uri $url -Headers @{'User-Agent'='Mozilla/5.0';'Accept'='application/json,text/plain,*/*'} -TimeoutSec 45
+            $entry=Get-Prop $r $sid $null
+            if($entry -and $entry.success -eq $true -and $entry.data){
+                $dateText=[string](Get-Prop (Get-Prop $entry.data 'release_date' $null) 'date' '')
+                if($dateText){
+                    $parsed=[DateTimeOffset]::MinValue
+                    if([DateTimeOffset]::TryParse($dateText,[Globalization.CultureInfo]::InvariantCulture,[Globalization.DateTimeStyles]::AssumeUniversal,[ref]$parsed)){
+                        $releaseEpoch=$parsed.ToUniversalTime().ToUnixTimeSeconds()
+                    }
+                }
+            }
+        } catch {}
+        # Steam user-review percentage. This is the same 0..100 concept used by the Android
+        # "Steam Review Score" sort, not Metacritic and not recommendation-count popularity.
+        try {
+            $reviewUrl='https://store.steampowered.com/appreviews/'+[uri]::EscapeDataString($sid)+'?json=1&language=all&purchase_type=all&num_per_page=0'
+            $rr=Invoke-RestMethod -Method Get -Uri $reviewUrl -Headers @{'User-Agent'='Mozilla/5.0';'Accept'='application/json,text/plain,*/*'} -TimeoutSec 45
+            $qs=Get-Prop $rr 'query_summary' $null
+            $total=To-Long (Get-Prop $qs 'total_reviews' 0);$positive=To-Long (Get-Prop $qs 'total_positive' 0)
+            if($total -gt 0){ $rating=[Math]::Round(($positive*100.0)/$total,4) }
+        } catch {}
+        $old=$(if($cache.ContainsKey($sid)){$cache[$sid]}else{$null})
+        if($releaseEpoch -le 0){$releaseEpoch=To-Long (Get-Prop $old 'releaseDateEpoch' 0)}
+        if($rating -le 0){$rating=To-Double (Get-Prop $old 'rating' 0.0)}
+        $cache[$sid]=[pscustomobject]@{steamAppId=$sid;rating=$rating;releaseDateEpoch=$releaseEpoch;checkedAt=(Get-Date).ToUniversalTime().ToString('o')}
+        if(!$Quiet -and ($n % 25 -eq 0 -or $n -eq $need.Count)){ Write-Host ("[Windows] compact sort metadata: {0}/{1}" -f $n,$need.Count) -ForegroundColor DarkGray }
+        Start-Sleep -Milliseconds 120
+    }
+    try {
+        $rowsOut=@($cache.GetEnumerator() | Sort-Object Name | ForEach-Object {$_.Value})
+        [IO.File]::WriteAllText($SteamSortMetadataPath,($rowsOut | ConvertTo-Json -Depth 6), (New-Object System.Text.UTF8Encoding($false)))
+    } catch {}
+    return $cache
+}
+function New-CompactIndexRows($Rows,[bool]$Daily,$IgdbMeta,$SteamMeta) {
+    $out=New-Object 'System.Collections.Generic.List[object]'
+    foreach($row in @($Rows)){
+        $platform=[string](Get-Prop $row 'platform' '')
+        $title=[string](Get-Prop $row 'title' '')
+        if(!$platform -or !$title){continue}
+        $source='';$idValue=$null;$rating=To-Double (Get-Prop $row 'rating' 0.0);$releaseEpoch=Get-FallbackReleaseEpoch $row
+        if($platform -eq 'Windows'){
+            $sid=[string](Get-Prop $row 'steamAppId' '');if($sid -notmatch '^\d+$'){continue}
+            $source='Steam';$idValue=[long]$sid
+            if($SteamMeta.ContainsKey($sid)){
+                $rating=To-Double (Get-Prop $SteamMeta[$sid] 'rating' $rating)
+                $releaseEpoch=To-Long (Get-Prop $SteamMeta[$sid] 'releaseDateEpoch' $releaseEpoch)
+            }
+        } else {
+            $gid=Extract-IgdbId $row;if($gid -le 0){continue}
+            $source='IGDB:'+$platform;$idValue=[long]$gid
+            if($IgdbMeta.ContainsKey([string]$gid)){
+                $rating=To-Double (Get-Prop $IgdbMeta[[string]$gid] 'rating' $rating)
+                $releaseEpoch=To-Long (Get-Prop $IgdbMeta[[string]$gid] 'releaseDateEpoch' $releaseEpoch)
+            }
+        }
+        $obj=[ordered]@{title=$title;source=$source;id=$idValue;rating=$rating;releaseDateEpoch=[long]$releaseEpoch}
+        if($Daily){
+            $obj['dailyChunk']=[string](Get-Prop $row 'dailyChunk' '')
+            $obj['minutes']=To-Int (Get-Prop $row 'minutes' (Get-Prop $row 'chunkMinutes' 30))
+            $obj['chunkability']=To-Int (Get-Prop $row 'chunkability' 4)
+        }
+        [void]$out.Add([pscustomobject]$obj)
+    }
+    return $out.ToArray()
+}
+
+$allCompactRows=@($direct.ToArray())+@($featured.ToArray())
+$igdbCompactMeta=Get-IgdbCompactSortMetadata $allCompactRows
+$steamCompactMeta=Get-SteamCompactSortMetadata $allCompactRows
+$compactDaily=@(New-CompactIndexRows $direct.ToArray() $true $igdbCompactMeta $steamCompactMeta)
+$compactFeatured=@(New-CompactIndexRows $featured.ToArray() $false $igdbCompactMeta $steamCompactMeta)
+
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $packageChunks=@($direct.ToArray() | ForEach-Object { [pscustomobject]@{ id=([string]$_.platform+'::'+[string]$_.title); platform=[string]$_.platform; title=[string]$_.title; dailyChunk=[string]$_.dailyChunk; minutes=[int]$_.minutes; chunkability=[int]$_.chunkability } })
 [IO.File]::WriteAllText($ChunksOut,($packageChunks | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
 [IO.File]::WriteAllText($SeriesOut,($series | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
-[IO.File]::WriteAllText($IndexOut,($direct.ToArray() | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
-[IO.File]::WriteAllText($FeaturedOut,($featured.ToArray() | ConvertTo-Json -Depth 12 -Compress),$utf8NoBom)
+[IO.File]::WriteAllText($IndexOut,($compactDaily | ConvertTo-Json -Depth 8 -Compress),$utf8NoBom)
+[IO.File]::WriteAllText($FeaturedOut,($compactFeatured | ConvertTo-Json -Depth 8 -Compress),$utf8NoBom)
 
 $counts = @($platformCounts.GetEnumerator() | Sort-Object Name | ForEach-Object {
     [pscustomobject]@{ platform=[string]$_.Name; chunks=[int]$_.Value }
@@ -1287,7 +1427,7 @@ $featuredCounts=@($featuredPlatformCounts.GetEnumerator() | Sort-Object Name | F
 $chunkSourceCounts=@($direct.ToArray() | Group-Object chunkSource | Sort-Object Name | ForEach-Object { [pscustomobject]@{source=[string]$_.Name;games=[int]$_.Count} })
 $manifest = [ordered]@{
     format = 'gamebrowser-daily-chunks-v3'
-    schemaVersion = 3
+    schemaVersion = 4
     generatedAt = (Get-Date).ToUniversalTime().ToString('o')
     totalChunks = $packageChunks.Count
     directIndexGames = $direct.Count
@@ -1296,19 +1436,19 @@ $manifest = [ordered]@{
     chunkSourceCounts = $chunkSourceCounts
     platformCounts = $counts
     directIndexPlatformCounts = $indexCounts
-    note = 'Independent Daily Chunk package. Daily Chunks are quality-only: exact game-specific rule, then franchise rule; there is NO generic/genre fallback. Featured Games are published separately in GameBrowser-Featured.zip.'
+    note = 'Independent Daily Chunk package. direct index schema: source + id + title + rating + releaseDateEpoch + Daily Chunk fields only. Daily Chunks are quality-only: exact game-specific rule, then franchise rule; there is NO generic/genre fallback. Featured Games are published separately.'
 }
 [IO.File]::WriteAllText($ManifestOut,($manifest | ConvertTo-Json -Depth 10),$utf8NoBom)
 
 $featuredManifest = [ordered]@{
-    format = 'gamebrowser-featured-v1'
-    schemaVersion = 1
+    format = 'gamebrowser-featured-v2'
+    schemaVersion = 2
     generatedAt = (Get-Date).ToUniversalTime().ToString('o')
     featuredGames = $featured.Count
     featuredCuratedChoices = $featuredCurated.Count
     featuredPlatformCounts = $featuredCounts
     selectionPolicy = 'hand-curated-only'
-    note = 'Featured membership comes ONLY from featured-games-curated.json. Ratings, Steam review scores, popularity and Daily Chunk order do not select or rank Featured games. Invalid/ambiguous entries are omitted without replacement.'
+    note = 'Featured membership comes ONLY from featured-games-curated.json. Published index stores only source + id + title + rating + releaseDateEpoch. Ratings never select Featured membership. Invalid/ambiguous entries are omitted without replacement.'
 }
 [IO.File]::WriteAllText($FeaturedManifestOut,($featuredManifest | ConvertTo-Json -Depth 10),$utf8NoBom)
 

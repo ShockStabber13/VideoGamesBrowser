@@ -1,16 +1,23 @@
 CURATED DAILY CHUNKS
 ====================
 
-GitHub no longer creates or chooses Daily Chunks.
-
-When ChatGPT gives you a curated Daily Chunk update, place these three files here:
+Place these curated files in this folder:
 
   daily_chunks.json
   daily_chunk_series.json
   daily_chunk_index.json
 
-Commit + push them. The "Update Daily Chunks" workflow validates, packages and publishes:
+The direct daily_chunk_index.json release is ALWAYS rewritten to exactly:
 
-  https://github.com/ShockStabber13/VideoGamesBrowser/releases/download/dat-catalogs-latest/GameBrowser-DailyChunks.zip
+  title
+  source              Steam | IGDB:<platform>
+  id                  Steam AppID or IGDB game ID
+  rating              Steam review % or IGDB rating
+  releaseDateEpoch    Unix seconds
+  dailyChunk
+  minutes
+  chunkability
 
-The workflow does NOT call IGDB, Steam or DAT builders and does NOT add/fill games.
+No poster, summary, genres, controller support, year, order, chunk rule/provenance, or other rich
+metadata is published in the direct index. Rich chunk provenance may exist in the curated source
+for validation, but GitHub strips it before packaging.
