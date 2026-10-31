@@ -3,7 +3,7 @@ name: Update IGDB Platform Index
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 4 * * *'
+    - cron: '30 4 * * 0-6'
       timezone: 'Asia/Singapore'
 
 concurrency:
