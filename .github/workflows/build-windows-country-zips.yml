@@ -3,7 +3,7 @@ name: Update Windows Indexes
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 8 * * *'
+    - cron: '30 8 * * 0-6'
       timezone: 'Asia/Singapore'
 
 concurrency:
