@@ -3,7 +3,7 @@ name: Update DAT Catalogs
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 5 * * *'
+    - cron: '30 5 * * 0-6'
       timezone: 'Asia/Singapore'
 
 concurrency:
