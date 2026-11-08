@@ -1,0 +1,480 @@
+[
+  {
+    "platform": "Nintendo Switch",
+    "title": "Kirby and the Forgotten Land"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Pikmin 4"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Metroid Prime Remastered"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Xenoblade Chronicles 3"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Bayonetta 3"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "The Legend of Zelda: Echoes of Wisdom"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Triangle Strategy"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Octopath Traveler II"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Splatoon 3"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Paper Mario: The Thousand-Year Door"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Super Mario 3D World + Bowser's Fury"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "A Short Hike"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Tunic"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Sea of Stars"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Vampire Survivors"
+  },
+  {
+    "platform": "GameCube",
+    "title": "TimeSplitters 2"
+  },
+  {
+    "platform": "GameCube",
+    "title": "Star Wars Rogue Squadron II: Rogue Leader"
+  },
+  {
+    "platform": "GameCube",
+    "title": "Super Monkey Ball 2"
+  },
+  {
+    "platform": "GameCube",
+    "title": "SSX Tricky"
+  },
+  {
+    "platform": "GameCube",
+    "title": "Tales of Symphonia"
+  },
+  {
+    "platform": "GameCube",
+    "title": "Billy Hatcher and the Giant Egg"
+  },
+  {
+    "platform": "GameCube",
+    "title": "Sonic Adventure 2: Battle"
+  },
+  {
+    "platform": "Wii U",
+    "title": "SteamWorld Dig"
+  },
+  {
+    "platform": "Wii U",
+    "title": "Affordable Space Adventures"
+  },
+  {
+    "platform": "Wii U",
+    "title": "The Legend of Zelda: Twilight Princess HD"
+  },
+  {
+    "platform": "Wii U",
+    "title": "Shovel Knight: Treasure Trove"
+  },
+  {
+    "platform": "Nintendo 3DS",
+    "title": "Radiant Historia: Perfect Chronology"
+  },
+  {
+    "platform": "Nintendo 3DS",
+    "title": "Ever Oasis"
+  },
+  {
+    "platform": "Nintendo 3DS",
+    "title": "Shovel Knight"
+  },
+  {
+    "platform": "Nintendo 3DS",
+    "title": "Professor Layton vs. Phoenix Wright: Ace Attorney"
+  },
+  {
+    "platform": "Nintendo 3DS",
+    "title": "WarioWare Gold"
+  },
+  {
+    "platform": "PS2",
+    "title": "ICO"
+  },
+  {
+    "platform": "PS2",
+    "title": "Yakuza"
+  },
+  {
+    "platform": "PS2",
+    "title": "Yakuza 2"
+  },
+  {
+    "platform": "PS2",
+    "title": "Ace Combat 5: The Unsung War"
+  },
+  {
+    "platform": "PS2",
+    "title": "Soulcalibur II"
+  },
+  {
+    "platform": "PS2",
+    "title": "Onimusha 3: Demon Siege"
+  },
+  {
+    "platform": "PS2",
+    "title": "Persona 3 FES"
+  },
+  {
+    "platform": "PS2",
+    "title": "Tony Hawk's Underground"
+  },
+  {
+    "platform": "PS2",
+    "title": "Midnight Club 3: DUB Edition"
+  },
+  {
+    "platform": "PS2",
+    "title": "Need for Speed: Underground 2"
+  },
+  {
+    "platform": "PS2",
+    "title": "TimeSplitters: Future Perfect"
+  },
+  {
+    "platform": "PSP",
+    "title": "LocoRoco"
+  },
+  {
+    "platform": "PSP",
+    "title": "Patapon"
+  },
+  {
+    "platform": "PSP",
+    "title": "Patapon 2"
+  },
+  {
+    "platform": "PSP",
+    "title": "Jeanne d'Arc"
+  },
+  {
+    "platform": "PSP",
+    "title": "Tactics Ogre: Let Us Cling Together"
+  },
+  {
+    "platform": "PSP",
+    "title": "Persona 3 Portable"
+  },
+  {
+    "platform": "PSP",
+    "title": "Kingdom Hearts Birth by Sleep"
+  },
+  {
+    "platform": "PSP",
+    "title": "Wipeout Pure"
+  },
+  {
+    "platform": "PSP",
+    "title": "Daxter"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Gravity Rush"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Tearaway"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Freedom Wars"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Soul Sacrifice Delta"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Oreshika: Tainted Bloodlines"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Killzone: Mercenary"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Severed"
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Spelunky"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Crazy Taxi"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Sonic Adventure"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Shenmue"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Skies of Arcadia"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Jet Set Radio"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Power Stone 2"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "ChuChu Rocket!"
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Rez"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Fable II"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Lost Odyssey"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Blue Dragon"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Viva Piñata"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Gears of War 2"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Halo 3"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Skate 3"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Geometry Wars: Retro Evolved 2"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Alan Wake"
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Forza Motorsport 4"
+  },
+  {
+    "platform": "PS4",
+    "title": "Nioh 2"
+  },
+  {
+    "platform": "PS4",
+    "title": "The Witness"
+  },
+  {
+    "platform": "PS4",
+    "title": "Yakuza 0"
+  },
+  {
+    "platform": "PS4",
+    "title": "Monster Hunter: World"
+  },
+  {
+    "platform": "PS4",
+    "title": "The Last Guardian"
+  },
+  {
+    "platform": "PS4",
+    "title": "Tetris Effect"
+  },
+  {
+    "platform": "PS4",
+    "title": "Cuphead"
+  },
+  {
+    "platform": "PS4",
+    "title": "Death's Door"
+  },
+  {
+    "platform": "PS5",
+    "title": "Sea of Stars"
+  },
+  {
+    "platform": "PS5",
+    "title": "Sifu"
+  },
+  {
+    "platform": "PS5",
+    "title": "Cocoon"
+  },
+  {
+    "platform": "PS5",
+    "title": "Animal Well"
+  },
+  {
+    "platform": "PS5",
+    "title": "Prince of Persia: The Lost Crown"
+  },
+  {
+    "platform": "PS5",
+    "title": "Hi-Fi Rush"
+  },
+  {
+    "platform": "PS5",
+    "title": "The Talos Principle 2"
+  },
+  {
+    "platform": "Windows",
+    "title": "Cuphead",
+    "steamAppId": "268910"
+  },
+  {
+    "platform": "Windows",
+    "title": "Vampire Survivors",
+    "steamAppId": "1794680"
+  },
+  {
+    "platform": "Windows",
+    "title": "Tunic",
+    "steamAppId": "553420"
+  },
+  {
+    "platform": "Windows",
+    "title": "Inscryption",
+    "steamAppId": "1092790"
+  },
+  {
+    "platform": "Windows",
+    "title": "Pizza Tower",
+    "steamAppId": "2231450"
+  },
+  {
+    "platform": "Windows",
+    "title": "Animal Well",
+    "steamAppId": "813230"
+  },
+  {
+    "platform": "Windows",
+    "title": "DAVE THE DIVER",
+    "steamAppId": "1868140"
+  },
+  {
+    "platform": "Windows",
+    "title": "Return of the Obra Dinn",
+    "steamAppId": "653530"
+  },
+  {
+    "platform": "Windows",
+    "title": "SIGNALIS",
+    "steamAppId": "1262350"
+  },
+  {
+    "platform": "Windows",
+    "title": "Katana ZERO",
+    "steamAppId": "460950"
+  },
+  {
+    "platform": "Windows",
+    "title": "Baba Is You",
+    "steamAppId": "736260"
+  },
+  {
+    "platform": "Windows",
+    "title": "A Short Hike",
+    "steamAppId": "1055540"
+  },
+  {
+    "platform": "Windows",
+    "title": "Cocoon",
+    "steamAppId": "1497440"
+  },
+  {
+    "platform": "Windows",
+    "title": "The Case of the Golden Idol",
+    "steamAppId": "1677770"
+  },
+  {
+    "platform": "Windows",
+    "title": "Ori and the Will of the Wisps",
+    "steamAppId": "1057090"
+  },
+  {
+    "platform": "Windows",
+    "title": "Sea of Stars",
+    "steamAppId": "1244090"
+  },
+  {
+    "platform": "Windows",
+    "title": "DREDGE",
+    "steamAppId": "1562430"
+  },
+  {
+    "platform": "Windows",
+    "title": "Spelunky 2",
+    "steamAppId": "418530"
+  },
+  {
+    "platform": "Windows",
+    "title": "Monster Train",
+    "steamAppId": "1102190"
+  },
+  {
+    "platform": "Windows",
+    "title": "Psychonauts 2",
+    "steamAppId": "607080"
+  },
+  {
+    "platform": "Windows",
+    "title": "Chants of Sennaar",
+    "steamAppId": "1931770"
+  },
+  {
+    "platform": "Windows",
+    "title": "Balatro",
+    "steamAppId": "2379780"
+  }
+]

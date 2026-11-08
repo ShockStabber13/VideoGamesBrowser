@@ -1,0 +1,252 @@
+[
+  {
+    "platform": "Windows",
+    "title": "Vampire Survivors",
+    "dailyChunk": "Complete one 30-minute run with a new character or weapon, then use your unlocks to plan your next build.",
+    "minutes": 30,
+    "chunkability": 5,
+    "steamAppId": "1794680"
+  },
+  {
+    "platform": "Windows",
+    "title": "Inscryption",
+    "dailyChunk": "Win the next set of card battles, investigate one fresh cabin clue, and end after the next safe transition.",
+    "minutes": 40,
+    "chunkability": 4,
+    "steamAppId": "1092790"
+  },
+  {
+    "platform": "Windows",
+    "title": "Animal Well",
+    "dailyChunk": "Discover one new tool, hidden passage or collectible cluster, then return to the nearest save telephone.",
+    "minutes": 30,
+    "chunkability": 5,
+    "steamAppId": "813230"
+  },
+  {
+    "platform": "Windows",
+    "title": "Return of the Obra Dinn",
+    "dailyChunk": "Examine a new set of memories, identify two crew fates, and check your deductions before stopping.",
+    "minutes": 35,
+    "chunkability": 5,
+    "steamAppId": "653530"
+  },
+  {
+    "platform": "Windows",
+    "title": "SIGNALIS",
+    "dailyChunk": "Solve one facility puzzle section and reach the next save room, then organize your limited inventory.",
+    "minutes": 40,
+    "chunkability": 4,
+    "steamAppId": "1262350"
+  },
+  {
+    "platform": "Windows",
+    "title": "Baba Is You",
+    "dailyChunk": "Solve five new rule-manipulation puzzles, revisiting one difficult stage to find an alternate solution.",
+    "minutes": 25,
+    "chunkability": 5,
+    "steamAppId": "736260"
+  },
+  {
+    "platform": "Windows",
+    "title": "Pizza Tower",
+    "dailyChunk": "Clear one floor's stage or improve one P-rank attempt, then stop back at the hub.",
+    "minutes": 30,
+    "chunkability": 5,
+    "steamAppId": "2231450"
+  },
+  {
+    "platform": "Windows",
+    "title": "Cocoon",
+    "dailyChunk": "Finish one complete orb/world puzzle chain and stop after opening the next area.",
+    "minutes": 35,
+    "chunkability": 5,
+    "steamAppId": "1497440"
+  },
+  {
+    "platform": "Windows",
+    "title": "Chants of Sennaar",
+    "dailyChunk": "Decode one new set of symbols, validate the notebook entries, and reach the next checkpoint.",
+    "minutes": 35,
+    "chunkability": 5,
+    "steamAppId": "1931770"
+  },
+  {
+    "platform": "Windows",
+    "title": "The Case of the Golden Idol",
+    "dailyChunk": "Investigate one scene until every identity and event deduction is complete, then move to the case list.",
+    "minutes": 35,
+    "chunkability": 5,
+    "steamAppId": "1677770"
+  },
+  {
+    "platform": "Windows",
+    "title": "Monster Train",
+    "dailyChunk": "Complete one full climb or a fixed sequence of battles, then adjust your clan and deck plan for tomorrow.",
+    "minutes": 40,
+    "chunkability": 5,
+    "steamAppId": "1102190"
+  },
+  {
+    "platform": "Windows",
+    "title": "Spelunky 2",
+    "dailyChunk": "Make three deliberate runs practicing the same route, then record which trap or enemy ended each attempt.",
+    "minutes": 30,
+    "chunkability": 5,
+    "steamAppId": "418530"
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Bayonetta 3",
+    "dailyChunk": "Clear one chapter and revisit one combat verse to practice an unfamiliar Demon Slave combination.",
+    "minutes": 40,
+    "chunkability": 5
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Kirby and the Forgotten Land",
+    "dailyChunk": "Clear three stages or one world boss, then rescue missed Waddle Dees before returning to town.",
+    "minutes": 30,
+    "chunkability": 5
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Metroid Prime Remastered",
+    "dailyChunk": "Reach the next elevator or major artifact objective, backtrack for one upgrade, and save.",
+    "minutes": 40,
+    "chunkability": 5
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Pikmin 4",
+    "dailyChunk": "Complete one in-game exploration day, rescue castaways, and review your next cave route at the base.",
+    "minutes": 35,
+    "chunkability": 5
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "The Legend of Zelda: Echoes of Wisdom",
+    "dailyChunk": "Solve one major rift or dungeon puzzle block, test a new echo combination, and save at the next waypoint.",
+    "minutes": 35,
+    "chunkability": 5
+  },
+  {
+    "platform": "Nintendo Switch",
+    "title": "Triangle Strategy",
+    "dailyChunk": "Finish one tactical battle and the associated camp conversations, then prepare your party for the next chapter.",
+    "minutes": 45,
+    "chunkability": 4
+  },
+  {
+    "platform": "PSP",
+    "title": "Jeanne d'Arc",
+    "dailyChunk": "Finish one story battle, distribute skill stones and equipment, and save at the next map node.",
+    "minutes": 40,
+    "chunkability": 5
+  },
+  {
+    "platform": "PSP",
+    "title": "Patapon",
+    "dailyChunk": "Complete two rhythm-command missions, equip the tribe for its next challenge, and stop at the village.",
+    "minutes": 25,
+    "chunkability": 5
+  },
+  {
+    "platform": "PSP",
+    "title": "LocoRoco",
+    "dailyChunk": "Clear two stages and retry one to rescue additional LocoRoco or MuiMui before returning to the stage map.",
+    "minutes": 25,
+    "chunkability": 5
+  },
+  {
+    "platform": "PS2",
+    "title": "ICO",
+    "dailyChunk": "Solve one castle-navigation puzzle sequence, escort Yorda to a new safe bench, and save there.",
+    "minutes": 35,
+    "chunkability": 4
+  },
+  {
+    "platform": "PS2",
+    "title": "TimeSplitters: Future Perfect",
+    "dailyChunk": "Complete one full story mission, then try one arcade challenge before returning to the menu.",
+    "minutes": 35,
+    "chunkability": 5
+  },
+  {
+    "platform": "PS2",
+    "title": "Ace Combat 5: The Unsung War",
+    "dailyChunk": "Complete one sortie from briefing to debrief, assign aircraft and squadron roles, then stop.",
+    "minutes": 35,
+    "chunkability": 5
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Jet Set Radio",
+    "dailyChunk": "Finish one graffiti mission and one optional score run, then stop at the hideout.",
+    "minutes": 30,
+    "chunkability": 5
+  },
+  {
+    "platform": "Dreamcast",
+    "title": "Skies of Arcadia",
+    "dailyChunk": "Reach the next town, dungeon save point, or airship objective, then check your equipment and discoveries.",
+    "minutes": 45,
+    "chunkability": 4
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Fable II",
+    "dailyChunk": "Complete one quest chain and a short property or relationship task, then save before traveling onward.",
+    "minutes": 40,
+    "chunkability": 4
+  },
+  {
+    "platform": "Xbox 360",
+    "title": "Lost Odyssey",
+    "dailyChunk": "Finish one dungeon section or boss, read one unlocked dream, and save at the next checkpoint.",
+    "minutes": 45,
+    "chunkability": 4
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Tearaway",
+    "dailyChunk": "Finish one paper-crafted chapter, find two hidden presents, and stop at the next scrapbook transition.",
+    "minutes": 30,
+    "chunkability": 5
+  },
+  {
+    "platform": "PS Vita",
+    "title": "Gravity Rush",
+    "dailyChunk": "Complete one story mission and one gravity-race challenge, then return to a safe district.",
+    "minutes": 35,
+    "chunkability": 5
+  },
+  {
+    "platform": "PS4",
+    "title": "The Witness",
+    "dailyChunk": "Solve one complete panel-puzzle cluster and note the rule you learned before moving to another region.",
+    "minutes": 35,
+    "chunkability": 5
+  },
+  {
+    "platform": "PS4",
+    "title": "Nioh 2",
+    "dailyChunk": "Finish one mission or sub-mission, sort Yokai Soul Cores and loot, and stop at the shrine/menu.",
+    "minutes": 45,
+    "chunkability": 4
+  },
+  {
+    "platform": "PS5",
+    "title": "Animal Well",
+    "dailyChunk": "Explore one new puzzle path and make a small note of unresolved mysteries before saving.",
+    "minutes": 30,
+    "chunkability": 5
+  },
+  {
+    "platform": "PS5",
+    "title": "Sea of Stars",
+    "dailyChunk": "Reach one story camp or boss checkpoint, explore for a nearby treasure, and save.",
+    "minutes": 40,
+    "chunkability": 4
+  }
+]

@@ -10,6 +10,9 @@ on:
       - main
     paths:
       - '_curated/featured/featured_game_index.json'
+      - '_curated/featured/additions.json'
+      - 'featured-games-curated.json'
+      - '_tools/Prepare-Curated-Sources.py'
 
 concurrency:
   group: update-featured-games
@@ -26,6 +29,27 @@ jobs:
     steps:
       - name: Checkout curated data
         uses: actions/checkout@v4
+
+      - name: Set up Python for verified curated merge
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Restore existing release membership and merge new curation
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          New-Item -ItemType Directory -Force -Path '_curated\_build_inputs' | Out-Null
+          gh release download featured-latest --repo $env:GITHUB_REPOSITORY --pattern 'GameBrowser-Featured.zip' --dir '_curated\_build_inputs' --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to restore existing curated release.' }
+          gh release download igdb-index-latest --repo $env:GITHUB_REPOSITORY --pattern 'GameBrowser-IGDB-Platform-Index.zip' --dir '_curated\_build_inputs' --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to verify additions against the current IGDB index.' }
+          gh release download dat-catalogs-latest --repo $env:GITHUB_REPOSITORY --pattern 'GameBrowser-Data.zip' --dir '_curated\_build_inputs' --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to check strict DAT-backed membership.' }
+          python '_tools/Prepare-Curated-Sources.py' Featured
+          if ($LASTEXITCODE -ne 0) { throw 'Curated merge failed; no release will be overwritten.' }
 
       - name: Validate and package curated Featured Games
         shell: pwsh
