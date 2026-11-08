@@ -13,6 +13,7 @@ on:
       - '_curated/featured/additions.json'
       - 'featured-games-curated.json'
       - '_tools/Prepare-Curated-Sources.py'
+      - '_curated/quality-review.json'
 
 concurrency:
   group: update-featured-games

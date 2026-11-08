@@ -6,6 +6,7 @@ A failed/ambiguous identification is skipped, never substituted with a guessed g
 """
 import csv
 import io
+from datetime import datetime, timezone
 import json
 import re
 import sys
@@ -23,6 +24,7 @@ INPUTS = ROOT / "_curated" / "_build_inputs"
 PLATFORMS = json.loads((ROOT / "platforms.json").read_text(encoding="utf-8-sig"))["platforms"]
 CONFIG = {p["name"]: p for p in PLATFORMS}
 SKIPPED = defaultdict(int)
+QUALITY = json.loads((ROOT / '_curated' / 'quality-review.json').read_text(encoding='utf-8'))
 
 def read_json(path):
     return json.loads(Path(path).read_text(encoding="utf-8-sig"))
@@ -75,6 +77,7 @@ def validated_existing(original, label):
 def make_platform_lookup():
     lookup = defaultdict(set)
     memberships = set()
+    release_dates = {}
     path = INPUTS / "GameBrowser-IGDB-Platform-Index.zip"
     with zipfile.ZipFile(path) as archive:
         with archive.open("igdb-games-platforms.csv") as file:
@@ -85,9 +88,17 @@ def make_platform_lookup():
                 game_id = int(identifier)
                 lookup[(name, title)].add(game_id)
                 memberships.add((name, game_id))
+                date_text = row.get('release_date') or row.get('first_release_date') or ''
+                if date_text:
+                    try:
+                        epoch = int(datetime.fromisoformat(date_text.replace('Z', '+00:00')).replace(tzinfo=timezone.utc).timestamp())
+                        if epoch > 0:
+                            release_dates[(name, game_id)] = epoch
+                    except (ValueError, OverflowError):
+                        pass
     if len(memberships) < 1000:
         raise ValueError("IGDB index is unexpectedly empty")
-    return lookup, memberships
+    return lookup, memberships, release_dates
 
 def dat_memberships():
     catalog = rows(zip_json(INPUTS / "GameBrowser-Data.zip", "game_catalog.json"))
@@ -97,7 +108,7 @@ def dat_memberships():
         raise ValueError("DAT-backed catalog is unexpectedly empty")
     return result
 
-TITLE_MAP, PLATFORM_IDS = make_platform_lookup()
+TITLE_MAP, PLATFORM_IDS, PLATFORM_DATES = make_platform_lookup()
 DAT_IDS = dat_memberships()
 FEATURED_ORIGINAL = rows(read_json(ROOT / "featured-games-curated.json")["games"])
 STEAM_IDS = {norm(x["title"]): str(x["steamAppId"])
@@ -174,12 +185,131 @@ def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+
+def fix_mojibake(value):
+    """Undo the UTF-8-as-Latin-1 corruption visible in some older DAT/index titles."""
+    text = str(value or "")
+    if not any(seq in text for seq in ("Ã", "Â", "â€")):
+        return text
+    for codec in ("cp1252", "latin-1"):
+        try:
+            clean = text.encode(codec).decode("utf-8")
+            if clean.count("Ã") + clean.count("Â") < text.count("Ã") + text.count("Â"):
+                SKIPPED["repaired mojibake titles"] += 1
+                return clean
+        except (UnicodeError, LookupError):
+            continue
+    return text
+
+def set_verified_release_dates(items):
+    updates = 0
+    for item in items:
+        if item.get("releaseDateEpoch"):
+            continue
+        source = str(item.get("source") or "")
+        if not source.startswith("IGDB:"):
+            continue
+        platform = source[5:]
+        aliases = {norm(platform)} | {norm(x) for x in CONFIG.get(platform, {}).get("igdbNames", [])}
+        try:
+            gid = int(item["id"])
+        except (ValueError, KeyError, TypeError):
+            continue
+        stamps = [PLATFORM_DATES[(p, gid)] for p in aliases if (p, gid) in PLATFORM_DATES]
+        if stamps:
+            item["releaseDateEpoch"] = min(stamps)
+            updates += 1
+    return updates
+
+def featured_quality_gate(items):
+    exclusions = {(e["source"], int(e["id"])) for e in QUALITY.get("featuredExclusions", [])}
+    kept = [x for x in items if identity(x) not in exclusions]
+    if len(kept) != len(items):
+        print(f"Featured quality gate: removed {len(items) - len(kept)} verified alias/duplicate rows.")
+    return kept
+
+def improve_daily_entries(items, rich):
+    """Refresh verified game-specific tasks and correct mismatched franchise instructions."""
+    exact = {}
+    for x in read_json(ROOT / "daily-chunk-game-specific.json"):
+        platform, title = norm(x.get("platform")), norm(x.get("title"))
+        if not platform or not title or not x.get("dailyChunk"):
+            continue
+        exact[(platform, title)] = x
+    for x in read_json(ROOT / "_curated" / "daily-chunks" / "additions.json"):
+        if x.get("dailyChunk"):
+            exact[(norm(x.get("platform")), norm(x.get("title")))] = x
+
+    changes = {}
+    upgraded_specific = corrected_mismatch = title_fixes = 0
+    for x in items:
+        source = x.get("source", "")
+        platform = source[5:] if source.startswith("IGDB:") else "Windows"
+        old_title = x.get("title", "")
+        fixed_title = fix_mojibake(old_title)
+        if fixed_title != old_title:
+            x["title"] = fixed_title
+            title_fixes += 1
+        key = (norm(platform), norm(fixed_title))
+        original_rule = str(x.get("dailyChunk") or "")
+        specific = exact.get(key)
+        if specific:
+            specific_rule = str(specific.get("dailyChunk") or "").strip()
+            if len(specific_rule) >= 45 and specific_rule != original_rule:
+                x["dailyChunk"] = specific_rule
+                x["minutes"] = max(15, min(60, int(specific.get("minutes") or x.get("minutes") or 30)))
+                x["chunkability"] = max(1, min(5, int(specific.get("chunkability") or x.get("chunkability") or 4)))
+                upgraded_specific += 1
+        current_rule = str(x.get("dailyChunk") or "")
+        for rule in QUALITY.get("dailyOverrides", []):
+            title_pattern = rule.get("pattern", "")
+            if not title_pattern or not re.search(title_pattern, norm(fixed_title)):
+                continue
+            blocked = rule.get("notPattern")
+            if blocked and re.search(blocked, norm(fixed_title)):
+                continue
+            expected = rule.get("when", "").casefold()
+            if expected and expected not in current_rule.casefold():
+                continue
+            if current_rule != rule["dailyChunk"]:
+                x["dailyChunk"] = rule["dailyChunk"]
+                x["minutes"] = int(rule["minutes"])
+                x["chunkability"] = int(rule["chunkability"])
+                corrected_mismatch += 1
+            break
+        if not x.get("dailyChunk") or len(x["dailyChunk"]) < 40:
+            raise ValueError("Unusable curated Daily Chunk instruction: " + str(x.get("title")))
+        if str(x.get("dailyChunk")) != original_rule or fixed_title != old_title:
+            changes[key] = x
+
+    rich_updates = 0
+    for row in rich:
+        old_title = str(row.get("title") or "")
+        clean_title = fix_mojibake(old_title)
+        key = (norm(row.get("platform")), norm(clean_title))
+        changed = changes.get(key)
+        if changed:
+            row["title"] = changed["title"]
+            row["dailyChunk"] = changed["dailyChunk"]
+            row["minutes"] = changed["minutes"]
+            row["chunkability"] = changed["chunkability"]
+            row["id"] = str(row.get("platform")) + "::" + changed["title"]
+            rich_updates += 1
+        elif clean_title != old_title:
+            row["title"] = clean_title
+            row["id"] = str(row.get("platform")) + "::" + clean_title
+            rich_updates += 1
+    print(f"Daily quality gate: {upgraded_specific} verified per-game improvements; {corrected_mismatch} wrong-genre franchise goals corrected; {title_fixes} display titles repaired; {rich_updates} detailed rows synchronized.")
+    return items, rich
+
 def main(mode):
     if mode == "Featured":
         baseline = INPUTS / "GameBrowser-Featured.zip"
         original = rows(zip_json(baseline, "featured_game_index.json"))
         additions = read_json(ROOT / "_curated" / "featured" / "additions.json")
         final, appended = merge(original, FEATURED_ORIGINAL, additions)
+        final = featured_quality_gate(final)
+        print(f'Featured live platform dates populated: {set_verified_release_dates(final)}')
         write_json(ROOT / "_curated" / "featured" / "featured_game_index.json", final)
     elif mode == "DailyChunks":
         baseline = INPUTS / "GameBrowser-DailyChunks.zip"
@@ -199,6 +329,8 @@ def main(mode):
                              "minutes": compact["minutes"], "chunkability": compact["chunkability"],
                              "chunkSource": "game-specific"})
                 existing_rich.add(key)
+        final, rich = improve_daily_entries(final, rich)
+        print(f'Daily verified platform dates populated: {set_verified_release_dates(final)}')
         out = ROOT / "_curated" / "daily-chunks"
         write_json(out / "daily_chunks.json", rich)
         write_json(out / "daily_chunk_series.json", series)

@@ -15,6 +15,7 @@ on:
       - '_curated/daily-chunks/additions.json'
       - 'daily-chunk-game-specific.json'
       - '_tools/Prepare-Curated-Sources.py'
+      - '_curated/quality-review.json'
 
 concurrency:
   group: update-daily-chunks

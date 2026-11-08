@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "intent": "Quality over quantity: correct obvious genre/franchise gameplay mismatches, prefer verified game-specific rules, preserve appropriate franchise rules, and never add unverified IDs.",
+  "featuredExclusions": [
+    {
+      "source": "IGDB:Dreamcast",
+      "id": 398453,
+      "title": "Jet Set Radio",
+      "reason": "Duplicate regional title for the original Dreamcast Jet Grind Radio (IGDB 1569)."
+    }
+  ],
+  "dailyOverrides": [
+    {
+      "pattern": "\\bsonic\\b.*\\b(racing|racers|riders|drift)\\b|\\bsonic r\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Finish a three-race cup or one timed championship event, then spend one retry improving your best lap or placing.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bsonic\\b.*\\b(pinball|spinball)\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Complete two focused pinball table runs, aiming to unlock one new bonus area or beat a personal score before stopping.",
+      "minutes": 25,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bsonic chronicles\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Complete one dialogue-and-battle quest segment, recruit or train a party member, then save at the next safe checkpoint.",
+      "minutes": 35,
+      "chunkability": 4
+    },
+    {
+      "pattern": "\\bsonic shuffle\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Finish one full board game or a fixed series of minigames, then stop at the match results screen.",
+      "minutes": 35,
+      "chunkability": 4
+    },
+    {
+      "pattern": "\\bpokemon snap\\b|\\bnew pokemon snap\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Complete one photo expedition, submit your best pictures for evaluation, then revisit one route for a specific missing species.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon pinball\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Play two pinball table runs, target one new Pokémon capture or evolution, then stop after saving your Pokédex progress.",
+      "minutes": 25,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon mystery dungeon\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Finish one rescue request or dungeon expedition, return to the base, then reorganize items before ending the session.",
+      "minutes": 35,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon ranger\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Finish one Ranger mission or major capture challenge, then return to a safe point before taking another assignment.",
+      "minutes": 35,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon puzzle\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Complete one puzzle league or five timed challenge rounds, then retry one tough board for a higher combo score.",
+      "minutes": 25,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon stadium\\b|\\bpokemon battle revolution\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Complete one tournament bracket or a three-battle set, then update your rental or trained team for the next opponent.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon trading card game\\b|\\bpokemon tcg\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Win two trainer card duels, adjust one deck strategy, then save before challenging the next club or opponent.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon conquest\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Complete one kingdom battle and a short team-training round, then prepare the next territory to capture.",
+      "minutes": 35,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon dash\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Complete one Grand Prix cup or three race courses, then retry the most difficult course for a better finish.",
+      "minutes": 25,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bdetective pikachu\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Resolve one investigation clue chain and interview the next set of witnesses, then stop at the following case checkpoint.",
+      "minutes": 35,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpokemon rumble\\b",
+      "when": "Reach the next town",
+      "dailyChunk": "Clear one toy Pokémon arena or map block, recruit a few useful fighters, then stop at the hub.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bresident evil\\b.*\\b(umbrella chronicles|darkside chronicles)\\b",
+      "when": "typewriter checkpoint",
+      "dailyChunk": "Finish one on-rails shooting scenario chapter, retry a stage for better accuracy if time allows, then stop at stage select.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bresident evil\\b.*\\b(survivor|dead aim)\\b",
+      "when": "typewriter checkpoint",
+      "dailyChunk": "Clear one first-person action area or boss encounter, then reload supplies and stop at the next save point.",
+      "minutes": 35,
+      "chunkability": 4
+    },
+    {
+      "pattern": "\\bfinal fantasy tactics\\b|\\bfinal fantasy tactics advance\\b",
+      "when": "Complete one story segment",
+      "dailyChunk": "Finish one tactical battle or job-board mission, allocate job points and equipment, then save before the next encounter.",
+      "minutes": 40,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bspider man\\b.*\\b(edge of time|shattered dimensions|friend or foe)\\b",
+      "when": "nearby activity/crime",
+      "dailyChunk": "Clear one self-contained action chapter or boss encounter and upgrade one combat ability before moving to the next level.",
+      "minutes": 35,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bpac man 2 the new adventures\\b",
+      "when": "high-score run",
+      "dailyChunk": "Complete one side-scrolling adventure scene by solving its interaction puzzles, then stop at the next story transition.",
+      "minutes": 30,
+      "chunkability": 4
+    },
+    {
+      "pattern": "\\bpac man world\\b",
+      "when": "high-score run",
+      "dailyChunk": "Clear one platforming level, collect nearby Pac-Dots and fruit, then return to level select after an optional bonus run.",
+      "minutes": 25,
+      "chunkability": 5
+    },
+    {
+      "pattern": "^donkey kong$|^donkey kong jr$|^donkey kong 3$",
+      "when": "world section",
+      "dailyChunk": "Play three short arcade attempts and aim to clear one higher board or improve your personal best before stopping.",
+      "minutes": 20,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bmetroid prime pinball\\b",
+      "when": "save station",
+      "dailyChunk": "Play two pinball table missions, aim for one artifact or multiball goal, then stop after banking the high score.",
+      "minutes": 25,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\blegend of zelda\\b",
+      "when": "shrine/dungeon",
+      "notPattern": "\\b(breath of the wild|tears of the kingdom)\\b",
+      "dailyChunk": "Finish one dungeon or side-quest objective, uncover a nearby secret or heart piece, and save at the next safe location.",
+      "minutes": 40,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bsuper mario (bros|world)\\b",
+      "when": "star/moon/secret",
+      "notPattern": "\\bsuper mario (galaxy|odyssey|64)\\b",
+      "dailyChunk": "Clear four to six platforming stages or one world, revisit a secret exit if available, then stop at the map screen.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bsonic 3d blast\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Clear one complete isometric act by collecting its Flickies, then make one focused special-stage attempt before stopping.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bsonic adventure\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Finish one character mission or stage, then retry for a better emblem or rank before switching characters.",
+      "minutes": 30,
+      "chunkability": 5
+    },
+    {
+      "pattern": "\\bsonic boom rise of lyric\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Complete one character-swapping adventure stage and its nearby collectible route, then stop at the next hub.",
+      "minutes": 35,
+      "chunkability": 4
+    },
+    {
+      "pattern": "\\bsonic labyrinth\\b",
+      "when": "Clear one zone",
+      "dailyChunk": "Clear one maze stage by collecting the keys, then make a timed retry before moving to the next zone.",
+      "minutes": 25,
+      "chunkability": 5
+    }
+  ]
+}
