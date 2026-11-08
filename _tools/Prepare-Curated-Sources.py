@@ -14,6 +14,10 @@ import zipfile
 from collections import defaultdict
 from pathlib import Path
 
+# GitHub Windows runners may default to cp1252; game titles contain Unicode characters.
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ROOT / "_curated" / "_build_inputs"
 PLATFORMS = json.loads((ROOT / "platforms.json").read_text(encoding="utf-8-sig"))["platforms"]
