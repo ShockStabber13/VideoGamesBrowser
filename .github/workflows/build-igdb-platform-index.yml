@@ -129,7 +129,7 @@ jobs:
             Write-Host "Latest commit is $([math]::Round($daysOld, 1)) days old; no keepalive needed."
           }
 
-dispatch-data-builds:
+  dispatch-data-builds:
     name: Activate and dispatch DAT / Windows publishing
     if: github.event_name == 'push' || (github.event_name == 'schedule' && (github.event.schedule == '37 4 * * *' || github.event.schedule == '37 6 * * *'))
     runs-on: ubuntu-latest
