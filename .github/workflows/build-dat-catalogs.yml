@@ -2,9 +2,7 @@ name: Update DAT Catalogs
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '37 4 * * *'
-      timezone: 'Asia/Singapore'
+  # Daily 04:37 Asia/Singapore: dispatched by build-igdb-platform-index.yml.
 
 concurrency:
   group: update-dat-catalogs

@@ -3,8 +3,16 @@ name: Update IGDB Platform Index
 on:
   workflow_dispatch:
   schedule:
+    - cron: '37 4 * * *'
+      timezone: 'Asia/Singapore'
+    - cron: '37 6 * * *'
+      timezone: 'Asia/Singapore'
     - cron: '37 8 * * *'
       timezone: 'Asia/Singapore'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-igdb-platform-index.yml'
 
 concurrency:
   group: update-igdb-platform-index
@@ -12,9 +20,11 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   build:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '37 8 * * *')
     runs-on: windows-latest
     timeout-minutes: 180
 
@@ -118,3 +128,38 @@ jobs:
           } else {
             Write-Host "Latest commit is $([math]::Round($daysOld, 1)) days old; no keepalive needed."
           }
+
+dispatch-data-builds:
+    name: Activate and dispatch DAT / Windows publishing
+    if: github.event_name == 'push' || (github.event_name == 'schedule' && (github.event.schedule == '37 4 * * *' || github.event.schedule == '37 6 * * *'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Dispatch the workflow due at the Singapore time slot
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TRIGGER_EVENT: ${{ github.event_name }}
+          CRON_EXPRESSION: ${{ github.event.schedule }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          targets=()
+          if [[ "$TRIGGER_EVENT" == "push" ]]; then
+            # Bootstrap check: enables workflows disabled during inactivity and runs each once.
+            targets=(build-dat-catalogs.yml build-windows-country-zips.yml)
+          elif [[ "$CRON_EXPRESSION" == "37 4 * * *" ]]; then
+            targets=(build-dat-catalogs.yml)
+          elif [[ "$CRON_EXPRESSION" == "37 6 * * *" ]]; then
+            targets=(build-windows-country-zips.yml)
+          else
+            echo "No scheduled data workflow is due."
+            exit 0
+          fi
+          for workflow in "${targets[@]}"; do
+            echo "Enabling $workflow if needed..."
+            gh workflow enable "$workflow" --repo "$GITHUB_REPOSITORY"
+            echo "Dispatching $workflow..."
+            gh workflow run "$workflow" --repo "$GITHUB_REPOSITORY" --ref main
+            echo "Successfully dispatched $workflow"
+          done
+

@@ -2,9 +2,7 @@ name: Update Windows Indexes
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '37 6 * * *'
-      timezone: 'Asia/Singapore'
+  # Daily 06:37 Asia/Singapore: dispatched by build-igdb-platform-index.yml.
 
 concurrency:
   group: update-windows-indexes
