@@ -2,6 +2,9 @@ name: Update Featured Games
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '37 10 * * *'
+      timezone: 'Asia/Singapore'
   push:
     branches:
       - main
@@ -61,3 +64,29 @@ jobs:
             if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
           }
           Write-Host "Published: https://github.com/$repo/releases/download/featured-latest/GameBrowser-Featured.zip"
+
+      - name: Publish dated Featured Games release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $date = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(8)).ToString('yyyyMMdd')
+          $repo = $env:GITHUB_REPOSITORY
+          $tag = "featured-$date"
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title "Featured Games ($date)" --notes "Daily VideoGamesBrowser data snapshot, Singapore date $date. The permanent *-latest download URLs remain unchanged."
+            if ($LASTEXITCODE -ne 0) { throw "Failed to create dated release $tag" }
+          }
+          $files = @(
+            '_android\GameBrowser-Featured.zip',
+            '_android\GameBrowser-Featured.sha256'
+
+          )
+          foreach ($path in $files) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Missing daily release asset: $path" }
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path to $tag" }
+          }
+          Write-Host "Published daily snapshot: $tag"

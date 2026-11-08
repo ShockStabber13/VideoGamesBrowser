@@ -3,7 +3,7 @@ name: Update DAT Catalogs
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 5 * * 0-6'
+    - cron: '37 4 * * *'
       timezone: 'Asia/Singapore'
 
 concurrency:
@@ -96,3 +96,38 @@ jobs:
             if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
           }
           Write-Host 'Published: https://github.com/'$repo'/releases/download/dat-catalogs-latest/GameBrowser-Data.zip'
+
+      - name: Publish dated DAT Catalogs + Daily Chunks release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $date = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(8)).ToString('yyyyMMdd')
+          $repo = $env:GITHUB_REPOSITORY
+          $tag = "dat-catalogs-$date"
+          # The earlier Daily Chunks workflow refreshes these stable assets first.
+          $chunksDir = Join-Path $env:RUNNER_TEMP 'daily-chunks-for-snapshot'
+          New-Item -ItemType Directory -Path $chunksDir -Force | Out-Null
+          gh release download dat-catalogs-latest --repo $repo --pattern 'GameBrowser-DailyChunks.*' --dir $chunksDir
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to retrieve the latest Daily Chunks for the dated catalog release.' }
+          foreach ($name in @('GameBrowser-DailyChunks.zip','GameBrowser-DailyChunks.sha256')) {
+            if (!(Test-Path -LiteralPath (Join-Path $chunksDir $name))) { throw "Missing Daily Chunks snapshot asset: $name" }
+          }
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title "DAT Catalogs + Daily Chunks ($date)" --notes "Daily VideoGamesBrowser data snapshot, Singapore date $date. The permanent *-latest download URLs remain unchanged."
+            if ($LASTEXITCODE -ne 0) { throw "Failed to create dated release $tag" }
+          }
+          $files = @(
+            '_android\GameBrowser-Data.zip',
+            '_android\GameBrowser-Data.sha256',
+            (Join-Path $chunksDir 'GameBrowser-DailyChunks.zip'),
+            (Join-Path $chunksDir 'GameBrowser-DailyChunks.sha256')
+          )
+          foreach ($path in $files) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Missing daily release asset: $path" }
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path to $tag" }
+          }
+          Write-Host "Published daily snapshot: $tag"

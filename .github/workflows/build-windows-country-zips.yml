@@ -3,7 +3,7 @@ name: Update Windows Indexes
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 8 * * 0-6'
+    - cron: '37 6 * * *'
       timezone: 'Asia/Singapore'
 
 concurrency:
@@ -112,3 +112,32 @@ jobs:
             gh release upload $tag $path --repo $repo --clobber
             if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
           }
+
+      - name: Publish dated Windows Indexes release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $date = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(8)).ToString('yyyyMMdd')
+          $repo = $env:GITHUB_REPOSITORY
+          $tag = "windows-$date"
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title "Windows Indexes ($date)" --notes "Daily VideoGamesBrowser data snapshot, Singapore date $date. The permanent *-latest download URLs remain unchanged."
+            if ($LASTEXITCODE -ne 0) { throw "Failed to create dated release $tag" }
+          }
+          $files = @(
+            'release-assets\GameBrowser-Windows-US.zip',
+            'release-assets\GameBrowser-Windows-GB.zip',
+            'release-assets\GameBrowser-Windows-SG.zip',
+            'release-assets\GameBrowser-Windows-CA.zip',
+            'release-assets\GameBrowser-Windows-MY.zip'
+
+          )
+          foreach ($path in $files) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Missing daily release asset: $path" }
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path to $tag" }
+          }
+          Write-Host "Published daily snapshot: $tag"

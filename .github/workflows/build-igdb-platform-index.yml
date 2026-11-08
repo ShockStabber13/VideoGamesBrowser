@@ -3,7 +3,7 @@ name: Update IGDB Platform Index
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 4 * * 0-6'
+    - cron: '37 8 * * *'
       timezone: 'Asia/Singapore'
 
 concurrency:
@@ -69,3 +69,52 @@ jobs:
             if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path" }
           }
           Write-Host "Published: https://github.com/$repo/releases/download/igdb-index-latest/GameBrowser-IGDB-Platform-Index.zip"
+
+      - name: Publish dated IGDB Platform Index release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $date = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(8)).ToString('yyyyMMdd')
+          $repo = $env:GITHUB_REPOSITORY
+          $tag = "igdb-index-$date"
+          gh release view $tag --repo $repo *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo $repo --title "IGDB Platform Index ($date)" --notes "Daily VideoGamesBrowser data snapshot, Singapore date $date. The permanent *-latest download URLs remain unchanged."
+            if ($LASTEXITCODE -ne 0) { throw "Failed to create dated release $tag" }
+          }
+          $files = @(
+            '_android\GameBrowser-IGDB-Platform-Index.zip',
+            '_android\GameBrowser-IGDB-Platform-Index.zip.sha256'
+
+          )
+          foreach ($path in $files) {
+            if (!(Test-Path -LiteralPath $path)) { throw "Missing daily release asset: $path" }
+            gh release upload $tag $path --repo $repo --clobber
+            if ($LASTEXITCODE -ne 0) { throw "Failed to upload $path to $tag" }
+          }
+          Write-Host "Published daily snapshot: $tag"
+
+      - name: Prevent the 60-day public-repository schedule shutdown
+        if: github.event_name == 'schedule'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          git fetch origin main
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot fetch main to inspect repository activity.' }
+          git checkout -B main origin/main
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot check out main for keepalive.' }
+          $lastCommit = [long]((git log -1 --format=%ct).Trim())
+          $daysOld = ([DateTimeOffset]::UtcNow.ToUnixTimeSeconds() - $lastCommit) / 86400
+          if ($daysOld -ge 40) {
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit --allow-empty -m 'chore: keep scheduled data publishing active'
+            if ($LASTEXITCODE -ne 0) { throw 'Keepalive commit failed.' }
+            git push origin HEAD:main
+            if ($LASTEXITCODE -ne 0) { throw 'Keepalive push failed.' }
+            Write-Host 'Created a keepalive commit to prevent GitHub schedule deactivation.'
+          } else {
+            Write-Host "Latest commit is $([math]::Round($daysOld, 1)) days old; no keepalive needed."
+          }

@@ -2,6 +2,9 @@ name: Update Daily Chunks
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '37 2 * * *'
+      timezone: 'Asia/Singapore'
   push:
     branches:
       - main
